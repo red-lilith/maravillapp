@@ -1,0 +1,120 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block titulo %} {% endblock titulo %}  | MARAVILLAPP</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/admin/css/admin.css' %}" rel="stylesheet">
+    <link href="{% static 'dist/css/business-casual.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+{% block css %}
+    <style type="text/css">
+        body {
+            font-family: 'Lora';
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url({% static 'dist/img/delicious-food.jpg' %});
+            background: linear-gradient(rgba(47, 23, 15, 0.65)), url({% static 'dist/img/delicious-food.jpg' %});
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .cta .cta-inner {
+            padding: 0.5rem !important;
+            background: rgba(47, 23, 15, 10);
+        }
+
+        .cta .cta-inner:before {
+            border: 0.25rem solid rgba(47, 23, 15, 10) !important;
+        }
+
+        .list-group-item {
+            color: rgba(255,255,255,.85) !important;
+            background: none !important;
+            border: none !important;
+        }
+
+        .card {
+            background: rgba(47, 23, 15, 10);
+            width: 90%;
+        }
+
+    </style>
+{% endblock css %}
+
+<body>
+<h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Una franquicia más</span>
+    <span class="site-heading-lower">Un franquiciado X</span>
+</h1>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Bienvenido</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active px-lg-4">
+                        <a href="{% url 'clientes:home' %}" class="logo">
+                            <img class="img_logo" src="{% static 'dist/img/logo.png' %}">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav mx-auto">
+                <li id="productos" class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes:productos' %}">Productos</a>
+                </li>
+                <li class="nav-item active px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes:tienda' %}">Tienda</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes:acerca_de' %}">Acerca de</a>
+                </li>
+            </ul>
+            {% include 'barra_sesion.html' %}
+        </div>
+    </div>
+</nav>
+<!-- Main content -->
+{% block contenido %}
+
+
+{% endblock contenido %}
+
+<footer class="footer text-faded text-center py-5">
+    <div class="container">
+        <p class="m-0 small">Copyright &copy; MARAVILLAPP 2019</p>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+{% block js %}
+{% endblock js %}
+
+
+</body>
+
+</html>

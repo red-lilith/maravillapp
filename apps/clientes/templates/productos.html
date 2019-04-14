@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+{% block miga_pan %}{% endblock miga_pan %}
+{% block titulo %}Productos{% endblock titulo %}
+
+{% block contenido %}
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="product-item-title d-flex">
+                    <div class="bg-faded p-5 d-flex mr-auto rounded">
+                        <h2 class="section-heading mb-0">
+                            <span class="section-heading-upper">Deliciosas Comidas, Buenos Sabores</span>
+                            <span class="section-heading-lower">Carnes, Pastas y más</span>
+                        </h2>
+                    </div>
+                </div>
+                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'dist/img/producto-01.jpg' %}" alt="">
+                <div class="product-item-description d-flex ml-auto">
+                    <div class="bg-faded p-5 rounded">
+                        <p class="mb-0"> Entre nuestros productos puedes encontrar pollo, carne, comidas rápidas, pastas y más, perfectos para el desayuno y la comida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="product-item-title d-flex">
+                    <div class="bg-faded p-5 d-flex ml-auto rounded">
+                        <h2 class="section-heading mb-0">
+                            <span class="section-heading-upper">Bebidas Deliciosas</span>
+                            <span class="section-heading-lower">Cerveza, gaseosas y más</span>
+                        </h2>
+                    </div>
+                </div>
+                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'dist/img/producto-02.jpg' %}" alt="">
+                <div class="product-item-description d-flex mr-auto">
+                    <div class="bg-faded p-5 rounded">
+                        <p class="mb-0"> Deliciosas bebidas para refrescarte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock contenido %}
+{% block js %}
+
+{% endblock js %}

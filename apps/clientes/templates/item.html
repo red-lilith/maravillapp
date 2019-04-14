@@ -1,0 +1,29 @@
+{% extends 'base_tienda.html' %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+{% block miga_pan %}{% endblock miga_pan %}
+{% block titulo %}Un producto x{% endblock titulo %}
+
+{% block contenido %}
+
+    <div class="col-lg-9">
+        <div class="card mt-4">
+            <img class="card-img-top img-item img-fluid" src="{% static 'dist/img/testing.jpg' %}"alt="">
+            <div class="card-body">
+                <h4>$24.99</h4>
+                <span style="font-size: 30px" class="section-heading mb-5 text-uppercase">
+                    Pollito
+                </span>
+                <p class="h-color" class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                <button class="btn btn-outline-warning btn-circle btn-sm "><i class="fas fa-cart-plus"></i> Añadir al Carrito </button>
+            </div>
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.col-lg-9 -->
+
+
+{% endblock contenido %}
+
+
