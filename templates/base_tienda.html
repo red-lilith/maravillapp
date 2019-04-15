@@ -21,7 +21,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static 'dist/css/business-casual.min.css' %}" rel="stylesheet">
-    <link href="{% static 'vendor/admin/css/admin.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/skins/css/principal_brown.css' %}" rel="stylesheet">
 
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -30,12 +30,8 @@
 {% block css %}
     <style type="text/css">
         body {
-            font-family: 'Lora';
             background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url({% static 'dist/img/delicious-food.jpg' %});
             background: linear-gradient(rgba(47, 23, 15, 0.65)), url({% static 'dist/img/delicious-food.jpg' %});
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
         }
     </style>
 {% endblock css %}

@@ -1,5 +1,25 @@
+.cta .cta-inner {
+    padding: 0.5rem !important;
+    background: rgba(47, 23, 15, 10);
+}
+
+.cta .cta-inner:before {
+    border: 0.25rem solid rgba(47, 23, 15, 10) !important;
+}
+
+.list-group-item {
+    color: rgba(255,255,255,.85) !important;
+    background: none !important;
+    border: none !important;
+}
+
+.card {
+    background: rgba(47, 23, 15, 10);
+    width: 90%;
+}
+
 .breadcrumb {
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
 .nav-item.active {
     color: #e6a756;

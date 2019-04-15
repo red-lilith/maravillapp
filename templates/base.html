@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet">
-    <link href="{% static 'vendor/admin/css/admin.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/skins/css/principal_brown.css' %}" rel="stylesheet">
     <link href="{% static 'dist/css/business-casual.min.css' %}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
@@ -26,34 +26,9 @@
 {% block css %}
     <style type="text/css">
         body {
-            font-family: 'Lora';
             background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url({% static 'dist/img/delicious-food.jpg' %});
             background: linear-gradient(rgba(47, 23, 15, 0.65)), url({% static 'dist/img/delicious-food.jpg' %});
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
         }
-
-        .cta .cta-inner {
-            padding: 0.5rem !important;
-            background: rgba(47, 23, 15, 10);
-        }
-
-        .cta .cta-inner:before {
-            border: 0.25rem solid rgba(47, 23, 15, 10) !important;
-        }
-
-        .list-group-item {
-            color: rgba(255,255,255,.85) !important;
-            background: none !important;
-            border: none !important;
-        }
-
-        .card {
-            background: rgba(47, 23, 15, 10);
-            width: 90%;
-        }
-
     </style>
 {% endblock css %}
 
@@ -84,7 +59,7 @@
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes:productos' %}">Productos</a>
                 </li>
                 <li class="nav-item active px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes:tienda' %}">Tienda</a>
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'productos:tienda' %}">Tienda</a>
                 </li>
                 <li class="nav-item px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes:acerca_de' %}">Acerca de</a>

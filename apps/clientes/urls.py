@@ -7,9 +7,10 @@ app_name = 'clientes'
 
 urlpatterns = [
     path('home', home, name='home'),
-    path('login', login, name='login'),
-    path('productos', productos, name='productos'),
-    path('tienda', tienda, name='tienda'),
-    path('producto', item, name='item'), #<slug:slug>
+    path('registro', registrarme, name='registrarme'),
+    path('login', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='login.html'),
+        name='login'),
+    #path('salir', auth_views.LogoutView.as_view(), name='salir'),
+    path('nuestros-productos', productos, name='productos'),
     path('acerca_de', acerca_de, name='acerca_de'),
 ]
