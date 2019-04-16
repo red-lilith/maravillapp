@@ -48,7 +48,7 @@
             <div>
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active px-lg-4">
-                        <a href="{% url 'clientes:home' %}" class="logo">
+                        <a href="{% url 'usuarios:home' %}" class="logo">
                             <img class="img_logo" src="{% static 'dist/img/logo.png' %}">
                         </a>
                     </li>
@@ -56,13 +56,13 @@
             </div>
             <ul class="navbar-nav mx-auto">
                 <li id="productos" class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes:productos' %}">Productos</a>
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'usuarios:productos' %}">Productos</a>
                 </li>
                 <li class="nav-item active px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'productos:tienda' %}">Tienda</a>
                 </li>
                 <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="{% url 'clientes:acerca_de' %}">Acerca de</a>
+                    <a class="nav-link text-uppercase text-expanded" href="{% url 'usuarios:acerca_de' %}">Acerca de</a>
                 </li>
             </ul>
             {% include 'barra_sesion.html' %}
