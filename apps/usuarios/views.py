@@ -8,7 +8,7 @@ def home(request):
 
 def dashboard(request):
     #usuario = request.user
-    return render(request, 'dashboard.html')
+    return render(request, 'inicio_admin.html')
 
 def login(request):
     #usuario = request.user

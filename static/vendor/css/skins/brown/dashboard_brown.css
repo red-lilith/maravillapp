@@ -1,0 +1,34 @@
+
+.bg-gradient {
+    background-color: rgb(103, 43, 33);
+    background-size: cover;
+}
+.text-color {
+    color: #e6a756;
+}
+
+.navbar {
+    background-color: rgb(103, 43, 33);
+}
+.nav-link {
+    color: #e6a756 !important;
+}
+
+.nav-item {
+    color: #e6a756 !important;
+}
+.sidebar-brand {
+    color: #e6a756 !important;
+}
+
+.username {
+    color: #e6a756 !important;
+}
+
+.text-brown {
+    color: rgba(47, 23, 15, 10);;
+}
+
+.fas {
+    color: #dc9755 !important;
+}

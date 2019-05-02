@@ -12,7 +12,7 @@
     <title>{% block titulo %} {% endblock titulo %} | MARAVILLAPP</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
@@ -20,8 +20,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static 'dist/css/business-casual.min.css' %}" rel="stylesheet">
-    <link href="{% static 'vendor/skins/css/principal_brown.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/business-casual.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/skins/brown/principal_brown.css' %}" rel="stylesheet">
 
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -30,8 +30,8 @@
 {% block css %}
     <style type="text/css">
         body {
-            background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url({% static 'dist/img/delicious-food.jpg' %});
-            background: linear-gradient(rgba(47, 23, 15, 0.65)), url({% static 'dist/img/delicious-food.jpg' %});
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url({% static 'vendor/img/delicious-food.jpg' %});
+            background: linear-gradient(rgba(47, 23, 15, 0.65)), url({% static 'vendor/img/delicious-food.jpg' %});
         }
     </style>
 {% endblock css %}
@@ -51,7 +51,7 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active px-lg-4">
                         <a href="{% url 'usuarios:home' %}" class="logo">
-                            <img class="img_logo" src="{% static 'dist/img/logo.png' %}">
+                            <img class="img_logo" src="{% static 'vendor/img/logo.png' %}">
                         </a>
                     </li>
                 </ul>
@@ -106,7 +106,7 @@
 
 <!-- Bootstrap core JavaScript -->
 <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 
 </html>
