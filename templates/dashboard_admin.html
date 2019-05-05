@@ -34,19 +34,19 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'usuarios:home' %}">
             <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+
             </div>
-            <div class="sidebar-brand-text mx-3">MARAVILLAPP</div>
+            <div class="sidebar-brand-text mx-3"> <i class="fas fa-drumstick-bite"></i> MARAVILLAPP</div>
         </a>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0 text-color">
+        <hr class="sidebar-divider my-0 default-color">
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <a class="nav-link" href="{% url 'usuarios:dashboard' %}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Inicio</span></a>
         </li>
 
         <!-- Divider -->
@@ -59,12 +59,12 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Digitadores</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-gradient-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Opciones</h6>
                     <a class="collapse-item" href="#">Consultar</a>
                     <a class="collapse-item" href="#">Crear Digitador</a>
@@ -77,7 +77,7 @@
                 <span>Clientes</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
+                <div class="bg-gradient-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Opciones</h6>
                     <a class="collapse-item" href="#">Consultar</a>
                 </div>
@@ -94,12 +94,12 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Inventario</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
+            <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-gradient-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Opciones</h6>
                     <a class="collapse-item" href="#">Consultar</a>
                     <a class="collapse-item" href="#">Añadir producto</a>
@@ -108,12 +108,12 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Ventas</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
+            <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-gradient-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Opciones</h6>
                     <a class="collapse-item" href="#">Reportes</a>
                     <a class="collapse-item" href="#">Listado de ventas</a>
@@ -133,17 +133,17 @@
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" style="background-color: transparent" class="d-flex flex-column">
 
         <!-- Main Content -->
         <div id="content">
 
             <!-- Topbar -->
-            {% include 'barra_dashboard.html' %}
+            {% include 'barra_usuarios.html' %}
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-            <div class="container-fluid">
+            <div style="background-color: rgba(255,255,255,.7)" class="container-fluid">
                 {% block contenido %}
 
 
@@ -157,7 +157,7 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <footer class="default-color sticky-footer bg-gradient">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
                     <span>Copyright &copy; MaravillAPP 2019</span>

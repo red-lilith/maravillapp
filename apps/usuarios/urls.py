@@ -8,6 +8,8 @@ app_name = 'usuarios'
 urlpatterns = [
     path('home', home, name='home'),
     path('dashboard', dashboard, name='dashboard'),
+    path('cuenta', datos, name='datos'),
+    path('contrasena', contrasena, name='contrasena'),
     path('registro', registrarme, name='registrarme'),
     path('login', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='login.html'),
         name='login'),

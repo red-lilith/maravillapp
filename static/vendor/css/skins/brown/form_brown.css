@@ -1,8 +1,3 @@
-.container-login100 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("/static/vendor/img/delicious-food.jpg");
-    background: linear-gradient(rgba(47, 23, 15, 0.65)),url("/static/vendor/img/delicious-food.jpg");
-}
-
 .login100-form-title {
     color: rgba(47, 23, 15, 10);
 }
@@ -41,5 +36,51 @@ a:hover {
 .btn-face:hover,
 .btn-google:hover {
     border-color:  rgba(47, 23, 15, 0.65);
+}
+
+.wrap-login100 {
+    width: 60%;
+}
+
+.wrap-input100 {
+    width: 48%;
+}
+
+.wrap-pass {
+    width: 30%;
+}
+
+.wrap-input-pass {
+    width: 100%;
+}
+
+.mi-margin {
+    margin: 1rem;
+}
+
+.mi-margin-sides {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+@media screen and (max-width: 450px) {
+    .wrap-login100, .wrap-input100, .wrap-pass {
+        width: 100%;
+    }
+    .mi-margin-sides {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+}
+
+.input100 {
+    font-size: 16px;
+    line-height: 1;
+    color: #686868;
+}
+
+.login100-form-btn {
+    font-size: 14px;
+    line-height: 1;
 }
 
