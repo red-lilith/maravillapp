@@ -15,5 +15,4 @@ urlpatterns = [
         name='login'),
     #path('salir', auth_views.LogoutView.as_view(), name='salir'),
     path('nuestros-productos', productos, name='productos'),
-    path('acerca_de', acerca_de, name='acerca_de'),
 ]

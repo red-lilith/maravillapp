@@ -6,22 +6,58 @@
 {% block titulo %}Un producto x{% endblock titulo %}
 
 {% block contenido %}
-
-    <div class="mi-card col-lg-9">
-        <div class="card mt-4">
-            <img class="card-img-top img-item img-fluid" src="{% static 'vendor/img/testing.jpg' %}" alt="">
-            <div class="card-body">
-                <h4>$24.99</h4>
-                <span style="font-size: 30px" class="section-heading mb-5 text-uppercase">
+    <section class="page-section cta intro-text bg-faded pt-2">
+        <div class="row mx-0">
+            <div class="col-lg-8 pl-4">
+                <div class="card mt-4 mr-0 pr-0">
+                    <img class="card-img-top img-item img-fluid" src="{% static 'vendor/img/testing.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h4 class="header-text-box">$24.99</h4>
+                        <span class="mb-5 subtitle-box text-uppercase">
                     Pollito
                 </span>
-                <p class="h-color" class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                <button class="btn btn-outline-warning btn-circle btn-sm "><i class="fas fa-cart-plus"></i> Añadir al Carrito </button>
+                        <p class="text-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                        <button class="btn btn-outline-warning text-btn btn-sm"><i class="fas fa-cart-plus"></i> Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 pr-4">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h4 class="subtitle-box mb-2 text-uppercase"><b>Otros Productos</b></h4>
+                        <div class="row">
+                            <div class="pl-1 pr-1  col-lg-6">
+                                <a href="#"><img class="card-img-top rounded" height="60%" src="{% static 'vendor/img/testing.jpg' %}" alt=""></a>
+                                <span>
+                                    <a class="pb-2 text-box" href="{% url 'productos:item' %}">Un Pollito</a>
+                                </span>
+                            </div>
+                            <div class="pl-1 pr-1 col-lg-6">
+                                <a href="#"><img class="card-img-top rounded" height="60%" src="{% static 'vendor/img/product01.jpg' %}" alt=""></a>
+                                <span>
+                                    <a class="pb-2 text-box" href="{% url 'productos:item' %}">Una Lasañita</a>
+                                </span>
+                            </div>
+                            <div class="pl-1 pr-1 col-lg-6">
+                                <a href="#"><img class="card-img-top rounded" height="60%" src="{% static 'vendor/img/product02.jpg' %}" alt=""></a>
+                                <span>
+                                    <a class="pb-2 text-box" href="{% url 'productos:item' %}">Un Juguito</a>
+                                </span>
+                            </div>
+                            <div class="pl-1 pr-1 col-lg-6">
+                                <a href="#"><img class="card-img-top rounded" height="60%" src="{% static 'vendor/img/producto-02.jpg' %}" alt=""></a>
+                                <span>
+                                    <a class="pb-2 text-box" href="{% url 'productos:item' %}">Muchos Juguitos</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card -->
             </div>
         </div>
-        <!-- /.card -->
-    </div>
-    <!-- /.col-lg-9 -->
+    </section>
 
 
 {% endblock contenido %}

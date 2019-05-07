@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lovers Quarrel|BenchNine|Smythe">
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
@@ -32,36 +33,39 @@
 
 <body>
 <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <span class="site-heading-upper text-primary mb-3">Una franquicia más</span>
-    <span class="site-heading-lower">Un franquiciado X</span>
+    <span class="site-heading-upper text-primary mb-3">FRANQUICIA MARAVILLA</span>
+    <span class="site-heading-lower">Alimentos Procesados</span>
 </h1>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
     <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Bienvenido</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <div>
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active px-lg-4">
-                        <a style="font-size: 1rem" class="nav-link text-uppercase" href="{% url 'usuarios:home' %}"><i class="fas fa-drumstick-bite"></i> MARAVILLAPP</a>
+                    <li class="nav-item active px-lg-5">
+                        <a style="font-size: 1rem" class="nav-link active logo" href="{% url 'usuarios:home' %}"><i class="fas fa-drumstick-bite"></i> Maravillapp</a>
                     </li>
                 </ul>
             </div>
             <ul class="navbar-nav mx-auto">
                 <li id="productos" class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="{% url 'usuarios:productos' %}">Productos</a>
+                    <a class="nav-link nav-link-menu" href="{% url 'usuarios:productos' %}"><i class="fas fa-utensils"></i> Nuestros Productos</a>
                 </li>
-                <li class="nav-item active px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="{% url 'productos:tienda' %}"><i class="fas fa-store"></i> Tienda</a>
-                </li>
-                <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="{% url 'usuarios:acerca_de' %}">Acerca de</a>
+                <li class="nav-item active px-lg-4 dropdown">
+                    <a class="nav-link nav-link-menu dropdown-toggle" href="#" id="tiendasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="nav-link mr-2 d-none d-lg-inline nav-link-op"><i class="fas fa-store"></i> Tiendas</span>
+                    </a>
+                    <div class="dropdown-menu bg-gradient dropdown-menu-right shadow animated--grow-in" aria-labelledby="tiendasDropdown">
+                        <a class="dropdown-item" href="{% url 'productos:tienda' %}">
+                            Tenant 1
+                        </a>
+                    </div>
                 </li>
             </ul>
-            {% include 'barra_cliente.html' %}
+            {% include 'barra_no_sesion.html' %}
         </div>
     </div>
 </nav>

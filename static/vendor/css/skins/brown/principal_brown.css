@@ -18,11 +18,6 @@ body {
     border: none !important;
 }
 
-.card {
-    background: rgba(47, 23, 15, 10);
-    width: 90%;
-}
-
 .breadcrumb {
     background-color: transparent !important;
 }
@@ -65,6 +60,9 @@ body {
 
 .item-text {
     color: black !important;
+    font-family: 'BenchNine', sans-serif !important;
+    font-size: 25px;
+    font-style: normal;
 }
 
 ul{
@@ -72,7 +70,7 @@ ul{
 }
 .card {
     background: rgba(255,255,255,.85);
-    width: 90%;
+    width: 100%;
 }
 
 .page-section {
@@ -92,9 +90,65 @@ ul{
 .navbar-nav {
     margin-left: 40%;
 }
-.navbar {
-    font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+.nav-link {
+    font-family: 'BenchNine', sans-serif !important;
     font-weight: 800;
+    font-size: 22px !important;
+}
+
+.logo{
+    font-family: 'Lovers Quarrel', sans-serif !important;
+    font-weight: 100 !important;
+    font-size: 40px !important;
+    color: #dc9755 !important;
+}
+
+.nav-link-menu {
+    font-size: 25px !important;
+    font-weight: 100 !important;
+}
+
+.nav-link-op {
+    font-size: 22px !important;
+    font-weight: 200 !important;
+}
+
+.title-box{
+    font-family: 'BenchNine', sans-serif !important;
+    font-weight: 100 !important;
+    font-size: 40px !important;
+    color: #dc9755 !important;
+}
+
+.subtitle-box{
+    font-family: 'BenchNine', sans-serif !important;
+    font-weight: 100 !important;
+    font-size: 30px !important;
+    color: #dc9755 !important;
+}
+
+.header-text-box{
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 200 !important;
+    font-size: 25px !important;
+    color: #2c2c2c !important;
+}
+
+.text-box{
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    color: #2c2c2c !important;
+}
+
+.text-btn {
+    font-family: 'BenchNine', sans-serif !important;
+}
+.bg-gradient {
+    background-color: rgba(47,23,15,.9);
+}
+.default-color {
+    color: #dc9755 !important;
 }
 .img_logo {
     height: 30px;
@@ -108,10 +162,7 @@ ul{
 .section-heading .section-heading-lower {
     font-size: 1.5rem !important;
 }
-.section-heading .section-heading-lower2 {
-    font-size: 1.2rem !important;
-    margin-bottom: 5px;
-}
+
 .list-hours {
     width: 100% !important;
     text-align: center !important;
@@ -156,8 +207,8 @@ ul{
 
 .dropdown {
     cursor: pointer;
-    color: rgba(255,255,255,.7);
-    font-family: Poppins-Regular, sans-serif !important;
+    color: #dc9755 !important;
+    font-family: 'Raleway', sans-serif !important;
     font-size: 16px !important;
     font-weight: 400 !important;
 }
@@ -184,15 +235,11 @@ ul{
     height: 2rem;
     width: 2rem;
 }
-.nav-item-right {
-
-}
-
 .dropdown-menu {
     cursor: pointer;
     min-width: 8rem !important;
-    background-color: rgba(255,255,255,10);
-    border: 1px solid rgba(47, 23, 15, 0.65);
+    background-color: rgba(47,23,15,.9) !important;
+    border: 1px solid #dc9755 !important;
     font-family: Poppins-Regular, sans-serif !important;
     font-size: 16px !important;
     font-weight: 400 !important;
@@ -206,12 +253,51 @@ ul{
 }
 .dropdown ul.dropdown-menu:before {
     content: "";
-    border-bottom: 10px solid rgba(255,255,255,.8);
+    border-bottom: 10px solid #dc9755 !important;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
     position: absolute;
     top: -10px;
     right: 100px;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #dc9755 !important;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: rgba(47,23,15,10) !important;
+  text-decoration: none;
+  background-color: #dc9755 !important;
+}
+
+.fas, .fa, .far {
+    color: #dc853b !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #be834b !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: #dc9755 !important;
+}
+
+.nav-link .active {
+    color: #dc9755 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+    color: #a77245 !important;
 }
 
 .fas {
@@ -225,3 +311,4 @@ ul{
 .far {
     color: #dc9755 !important;
 }
+

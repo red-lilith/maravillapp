@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 def home(request):
     #usuario = request.user
-    return render(request, 'home.html')
+    return render(request, 'home_franquicia.html')
 
 def dashboard(request):
     #usuario = request.user
@@ -29,7 +29,3 @@ def registrarme(request):
 def productos(request):
     #usuario = request.user
     return render(request, 'productos.html')
-
-def acerca_de(request):
-    #usuario = request.user
-    return render(request, 'acerca_de.html')

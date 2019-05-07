@@ -5,35 +5,33 @@
 {% block titulo %}Cambiar Contraseña{% endblock titulo %}
 
 {% block contenido %}
-    <div class="row mi-margin-sides bg-gradient-white d-flex justify-content-center">
-        <div class="mi-margin d-flex justify-content-center">
-            <div class="wrap-login100 wrap-pass p-l-50 p-r-50 p-t-50 p-b-30">
-                <form class="login100-form validate-form" method="post"> {% csrf_token %}
-                    <span class="login100-form-title p-b-40">
+    <div class="mi-margin d-flex justify-content-center">
+        <div class="wrap-login100 wrap-pass p-l-50 p-r-50 p-t-50 p-b-30">
+            <form class="login100-form validate-form" method="post"> {% csrf_token %}
+                <span class="login100-form-title p-b-40">
 						Cambiar Contraseña
 					</span>
-                    <div class="wrap-input-pass wrap-input100 validate-input m-b-12" data-validate = "Se requiere contraseña">
-                        <input class="input100" type="password" name="pass" placeholder="Contraseña">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                <div class="wrap-input-pass wrap-input100 validate-input m-b-12" data-validate = "Se requiere contraseña">
+                    <input class="input100" type="password" name="pass" placeholder="Contraseña">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
 							<span class="lnr lnr-lock"></span>
 						</span>
-                    </div>
-                    <div style="width: 100%;" class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere contraseña">
-                        <input class="input100" type="password" name="confirmar_pass" placeholder="Confirmar Contraseña">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                </div>
+                <div style="width: 100%;" class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere contraseña">
+                    <input class="input100" type="password" name="confirmar_pass" placeholder="Confirmar Contraseña">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
 							<span class="lnr lnr-lock"></span>
 						</span>
-                    </div>
+                </div>
 
-                    <div class="container-login100-form-btn p-t-25">
-                        <button type="submit" class="login100-form-btn">
-                            Actualizar Contraseña
-                        </button>
-                    </div>
-                </form>
-            </div>
+                <div class="container-login100-form-btn p-t-25">
+                    <button type="submit" class="login100-form-btn">
+                        Actualizar Contraseña
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 {% endblock contenido %}

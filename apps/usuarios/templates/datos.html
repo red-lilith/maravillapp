@@ -5,70 +5,68 @@
 {% block titulo %}Datos Personales{% endblock titulo %}
 
 {% block contenido %}
-    <div class="row mi-margin-sides bg-gradient-white d-flex justify-content-center">
-        <div class="mi-margin d-flex justify-content-center">
-            <div class="wrap-login100 p-l-50 p-r-50 p-t-50 p-b-30">
-                <form class="login100-form validate-form" method="post"> {% csrf_token %}
-                    <span class="login100-form-title p-b-40">
+    <div class="row mi-margin-sides d-flex justify-content-center">
+        <div class="wrap-login100 p-l-50 p-r-50 p-t-50 p-b-30">
+            <form class="login100-form validate-form" method="post"> {% csrf_token %}
+                <span class="login100-form-title p-b-40">
 						Datos Personales
 					</span>
-                    <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere al menos un nombre">
-                        <input class="input100" type="text" name="nombres_apellidos" placeholder="Nombres y Apellidos">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere al menos un nombre">
+                    <input class="input100" type="text" name="nombres_apellidos" placeholder="Nombres y Apellidos">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
 							<span class="lnr lnr-user"></span>
 						</span>
-                    </div>
+                </div>
 
-                    <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere el número de documento">
-                        <!-- AQUI EL FORM -->
-                        <input class="input100" type="text" name="documento" placeholder="Documento de Identidad">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere el número de documento">
+                    <!-- AQUI EL FORM -->
+                    <input class="input100" type="text" name="documento" placeholder="Documento de Identidad">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
 							<span class="lnr lnr-license"></span>
 						</span>
-                    </div>
+                </div>
 
-                    <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere un número telefónico">
-                        <!-- AQUI EL FORM -->
-                        <input class="input100" type="text" name="telefono" placeholder="Teléfono">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere un número telefónico">
+                    <!-- AQUI EL FORM -->
+                    <input class="input100" type="text" name="telefono" placeholder="Teléfono">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
 							<span class="lnr lnr-phone"></span>
 						</span>
-                    </div>
+                </div>
 
-                    <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere una dirección">
-                        <!-- AQUI EL FORM -->
-                        <input class="input100" type="text" name="direccion" placeholder="Dirección de residencia">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere una dirección">
+                    <!-- AQUI EL FORM -->
+                    <input class="input100" type="text" name="direccion" placeholder="Dirección de residencia">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
 							<span class="lnr lnr-book"></span>
 						</span>
-                    </div>
+                </div>
 
-                    <div class="wrap-input100 validate-input m-b-12" data-validate = "Nombre de usuario inválido">
-                        <input class="input100" type="text" name="nombre_usuario" placeholder="Nombre de usuario">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                <div class="wrap-input100 validate-input m-b-12" data-validate = "Nombre de usuario inválido">
+                    <input class="input100" type="text" name="nombre_usuario" placeholder="Nombre de usuario">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
 							<span class="lnr lnr-user"></span>
 						</span>
-                    </div>
-                    <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere correo válido: ex@abc.xyz">
-                        <input class="input100" type="text" name="email" placeholder="Correo Electrónico">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
+                </div>
+                <div class="wrap-input100 validate-input m-b-12" data-validate = "Se requiere correo válido: ex@abc.xyz">
+                    <input class="input100" type="text" name="email" placeholder="Correo Electrónico">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
 							<span class="lnr lnr-envelope"></span>
 						</span>
-                    </div>
+                </div>
 
-                    <div class="container-login100-form-btn p-t-25">
-                        <button type="submit" class="login100-form-btn">
-                            Actualizar Datos
-                        </button>
-                    </div>
-                </form>
-            </div>
+                <div class="container-login100-form-btn p-t-25">
+                    <button type="submit" class="login100-form-btn">
+                        Actualizar Datos
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 {% endblock contenido %}

@@ -17,12 +17,12 @@
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lovers Quarrel|BenchNine|Smythe">
 
     <!-- Custom styles for this template -->
     <link href="{% static 'vendor/css/business-casual.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/css/skins/brown/principal_brown.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/sb-admin-2.min.css' %}" rel="stylesheet">
 
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -33,73 +33,65 @@
     </style>
 {% endblock css %}
 
-<body>
+<body id="page-top">
 <!-- Header Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
     <div class="container">
-
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Bienvenido</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <div>
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active px-lg-4">
-
-                        <a style="font-size: 1rem" class="nav-link username text-uppercase" href="{% url 'usuarios:home' %}"><i class="fas fa-drumstick-bite"></i> MARAVILLAPP</a>
+                        <a style="font-size: 1rem" class="nav-link active logo" href="{% url 'productos:tienda' %}"><i class="fas fa-drumstick-bite"></i> Maravillapp</a>
                     </li>
                 </ul>
             </div>
-            {% include 'barra_no_sesion.html' %}
+            <ul class="navbar-nav mx-auto">
+                <li id="productos" class="nav-item px-lg-1">
+                    <a class="nav-link nav-link-menu" href="{% url 'productos:tienda' %}">| Nuestro Menú |</a>
+                </li>
+                <li class="nav-item active px-lg-1">
+                    <a class="nav-link nav-link-menu" href="#">| Promociones |</a>
+                </li>
+                <li class="nav-item active px-lg-1">
+                    <a class="nav-link nav-link-menu" href="#">| Domicilios |</a>
+                </li>
+                <li class="nav-item active px-lg-1">
+                    <a class="nav-link nav-link-menu" href="#">| Nosotros |</a>
+                </li>
+            </ul>
+            {% include 'barra_cliente.html' %}
         </div>
-
     </div>
 </nav>
 <!-- Navigation -->
 
 <!-- Main content -->
-<section class="page-section cta intro-text left-0 bg-faded p-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 mx-auto">
-                <div class="mi-cta-inner text-center rounded">
-                    <h2 class="section-heading mb-5">
-                        <a class="item-text" href="{% url 'productos:tienda' %}"><span class="section-heading-lower"><b>PRODUCTOS</b></span></a>
-                    </h2>
-                    <ul class="list-group list-hours">
-                        <li class="list-item">
-                            <a class="item-text" href="#">Carnes/Pollos</a>
-                        </li>
-                        <li class="list-item">
-                            <a class="item-text" href="#">Pastas</a>
-                        </li>
-                        <li class="list-item">
-                            <a class="item-text" href="#">Comidas Rápidas</a>
-                        </li>
-                        <li class="list-item">
-                            <a class="item-text" href="#">Combos Infantiles</a>
-                        </li>
-                        <li class="list-item">
-                            <a class="item-text" href="#">Bebidas</a>
-                        </li>
-                        <li class="list-item">
-                            <a class="item-text" href="#">Adiciones</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            {% block contenido %}
+{% block contenido %}
 
-            {% endblock contenido %}
+{% endblock contenido %}
+<!-- Footer -->
+<footer class="default-color sticky-footer bg-gradient">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Maravillapp 2019</span>
         </div>
     </div>
-</section>
+</footer>
+<!-- End of Footer -->
+
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
 <script src="{% static 'vendor/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/js/sb-admin-2.min.js' %}"></script>
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 </body>
 
 </html>
