@@ -1,0 +1,187 @@
+{% extends 'base_tenant.html' %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+{% block miga_pan %}{% endblock miga_pan %}
+{% block titulo %}Home{% endblock titulo %}
+
+
+{% block contenido %}
+    <section class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url({% static 'coffee_template/images/bg_1.jpg' %});">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                    <div class="col-md-8 col-sm-12 text-center ftco-animate">
+                        <span class="subheading">Bienvenido</span>
+                        <h1 class="mb-4">Deliciosas Comidas, Buenos Sabores</h1>
+                        <p class="mb-4 mb-md-5">Entre nuestros productos puedes encontrar pollo,
+                            carne, comidas rápidas, pastas y más, perfectos para el desayuno y la comida.</p>
+                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Ordena Ahora</a>
+                            <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Ver Menú</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url({% static 'coffee_template/images/bg_2.jpg' %});">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                    <div class="col-md-8 col-sm-12 text-center ftco-animate">
+                        <span class="subheading">Bienvenido</span>
+                        <h1 class="mb-4">Bebidas Deliciosas &amp; Refrescantes</h1>
+                        <p class="mb-4 mb-md-5">Deliciosas bebidas para refrescarte.</p>
+                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Ordenar Ahora</a>
+                            <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Ver Menú</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <span class="flaticon-choices"></span>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Fácil de Comprar</h3>
+                            <p>Compra con tan solo un clic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <span class="flaticon-delivery-truck"></span>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Entregas Rápidas</h3>
+                            <p>Te lo entregamos en la puerta de tu casa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <span class="flaticon-coffee-bean"></span></div>
+                        <div class="media-body">
+                            <h3 class="heading">Comidas de Calidad</h3>
+                            <p>Comidas preparadas con los mejores productos e ingredientes de calidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 pr-md-5">
+                    <div class="heading-section text-md-right ftco-animate">
+                        <span class="subheading">Descubre</span>
+                        <h2 class="mb-4">Nuestro Menú</h2>
+                        <p class="mb-4">Cada uno de los productos que ofrecemos es elaborado y producido con la mejor calidad.
+                            Pollo, pastas, comidas rápidas, fritos, bebidas, carnes, pescados, menú infantil y la línea de combos.</p>
+                        <p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">Ver Menú Completo</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="menu-entry">
+                                <a href="#" class="img" style="background-image: url({% static 'coffee_template/images/dish-1.jpg' %});"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-entry mt-lg-4">
+                                <a href="#" class="img" style="background-image: url({% static 'coffee_template/images/drink-1.jpg' %});"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-entry">
+                                <a href="#" class="img" style="background-image: url({% static 'coffee_template/images/image_1.jpg' %});"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="menu-entry mt-lg-4">
+                                <a href="#" class="img" style="background-image: url({% static 'coffee_template/images/dish-5.jpg' %});"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url({% static 'coffee_template/images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <div class="icon"><span class="flaticon-coffee-cup"></span></div>
+                                    <strong class="number" data-number="100">0</strong>
+                                    <span>Algún numero</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <div class="icon"><span class="flaticon-coffee-cup"></span></div>
+                                    <strong class="number" data-number="85">0</strong>
+                                    <span>Algún numero</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <div class="icon"><span class="flaticon-chef"></span></div>
+                                    <strong class="number" data-number="10567">0</strong>
+                                    <span>Algún numero</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                                <div class="text">
+                                    <div class="icon"><span class="flaticon-coffee-cup"></span></div>
+                                    <strong class="number" data-number="900">0</strong>
+                                    <span>Algún numero</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-appointment">
+        <div class="overlay"></div>
+        <div class="container-wrap">
+            <div class="row no-gutters d-md-flex align-items-center">
+                <div class="col-md-12 d-flex align-self-stretch">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock contenido %}
+{% block js %}
+
+{% endblock js %}

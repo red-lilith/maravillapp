@@ -1,0 +1,85 @@
+{% extends 'base_perfil.html' %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+{% block titulo %}Cuenta{% endblock titulo %}
+
+
+{% block contenido %}
+    <section class="ftco-section">
+        <div class="container">
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Datos Personales</span></p>
+            <div class="row align-items-center">
+                <div class="col-xl-12 ftco-animate">
+                    <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
+                        <h3 class="mb-4 billing-heading">Datos Personales</h3>
+                        <div class="row align-items-end">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Nombres y Apellidos</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="id">Documento de Identidad</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="ciudad">Ciudad</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="barrio">Barrio</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="direccion">Dirección</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="tel" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="usuario">Nombre de Usuario</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="emailaddress">Correo Electrónico</label>
+                                    <input type="email" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12 align-items-end">
+                            <div class="form-group mt-4">
+                                <div class="text-center w-full p-t-30 p-b-22">
+                                    <p><a href="#"class="btn btn-primary py-4 px-4">Actualizar Datos</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div> <!-- .col-md-8 -->
+            </div>
+        </div>
+    </section>
+{% endblock contenido %}
+{% block js %}
+
+{% endblock js %}

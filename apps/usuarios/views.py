@@ -2,30 +2,34 @@ from django.http.response import JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
+def principal(request):
+    #usuario = request.user
+    return render(request, 'usuarios/home_franquicia.html')
+
 def home(request):
     #usuario = request.user
-    return render(request, 'home_franquicia.html')
+    return render(request, 'usuarios/home_tenant.html')
 
 def dashboard(request):
     #usuario = request.user
-    return render(request, 'inicio_admin.html')
+    return render(request, 'usuarios/dash_admin.html')
 
 def datos(request):
     #usuario = request.user
-    return render(request, 'datos.html')
+    return render(request, 'usuarios/datos.html')
 
 def contrasena(request):
     #usuario = request.user
-    return render(request, 'contrasena.html')
+    return render(request, 'usuarios/contrasena.html')
 
 def login(request):
     #usuario = request.user
-    return render(request, 'login.html')
+    return render(request, 'usuarios/login.html')
 
 def registrarme(request):
     #usuario = request.user
-    return render(request, 'registro.html')
+    return render(request, 'usuarios/registro.html')
 
-def productos(request):
+def carrito(request):
     #usuario = request.user
-    return render(request, 'productos.html')
+    return render(request, 'usuarios/carrito.html')

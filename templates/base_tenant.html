@@ -1,0 +1,130 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <title>Franquicia Maravilla | {% block titulo %} {% endblock titulo %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'coffee_template/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/style.css' %}">
+</head>
+
+{% block css %}
+{% endblock css %}
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'usuarios:home' %}">Maravilla<small>Franquicias</small></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="{% url 'usuarios:home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{% url 'productos:menu' %}" class="nav-link">Nuestro Menú</a></li>
+                <li class="nav-item"><a href="{% url 'productos:tienda' %}" class="nav-link">Tienda</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Promociones</a></li>
+                {% include 'nav_login.html' %}
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+    {% block contenido %}
+
+    {% endblock contenido %}
+
+<footer class="ftco-footer ftco-section img">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-6 col-md-6 mb-5 mb-md-5">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Acerca de Nosotros</h2>
+                    <p>La empresa Maravilla es una franquicia individual de carácter nacional para la elaboración, producción,
+                        promoción y comercialización de alimentos procesados en diferentes líneas.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Servicios</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-2 d-block">Elaboración</a></li>
+                        <li><a href="#" class="py-2 d-block">Ventas</a></li>
+                        <li><a href="#" class="py-2 d-block">Entregas</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">¿Preguntas?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">La dirección, Cali, Valle del Cauca, Colombia</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+57 el teléfono</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">el correo</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Maravillapp.
+                    Todos los derechos reservados.</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="{% static 'coffee_template/js/jquery.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/popper.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'coffee_template/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/aos.js' %}"></script>
+<script src="{% static 'coffee_template/js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/bootstrap-datepicker.js' %}"></script>
+<script src="{% static 'coffee_template/js/jquery.timepicker.min.js' %}"></script>
+<script src="{% static 'coffee_template/js/scrollax.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="{% static 'coffee_template/js/google-map.js' %}"></script>
+<script src="{% static 'coffee_template/js/main.js' %}"></script>
+
+</body>
+</html>

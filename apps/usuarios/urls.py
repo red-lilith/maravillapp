@@ -6,13 +6,14 @@ from django.contrib.auth import views as auth_views
 app_name = 'usuarios'
 
 urlpatterns = [
+    path('franquicia-maravilla', principal, name='principal'),
     path('home', home, name='home'),
     path('dashboard', dashboard, name='dashboard'),
     path('cuenta', datos, name='datos'),
     path('contrasena', contrasena, name='contrasena'),
     path('registro', registrarme, name='registrarme'),
-    path('login', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='login.html'),
-        name='login'),
+    path('carrito', carrito, name='carrito'),
+    path('login', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='usuarios/login.html'),
+         name='login'),
     #path('salir', auth_views.LogoutView.as_view(), name='salir'),
-    path('nuestros-productos', productos, name='productos'),
 ]

@@ -8,4 +8,5 @@ app_name = 'productos'
 urlpatterns = [
     path('tienda/', tienda, name='tienda'),
     path('item/', item, name='item'), #<slug:slug>
+    path('menu/', menu, name='menu'), #<slug:slug>
 ]
