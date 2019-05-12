@@ -1,0 +1,79 @@
+{% extends 'base_perfil.html' %}
+{# Load the tag library #}
+{% load bootstrap4 %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block css %}
+<style media="screen">
+.centerImage
+{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+{% endblock css %}
+{% block contenido %}
+<section class="ftco-section center">
+  <div class = "container">
+    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Detalle del producto</span></p>
+    <div class="row justify-content-center">
+      <div class="col-xl-6 ftco-animate">
+        <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
+          <h3 class="mb-4 billing-heading">Detalle del producto</h3>
+          <div class="col-md-12">
+              <div class="form-group">
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                   {% if object.imagen  %}
+                      <img style="width: 400px; height: 200px;" src="{{object.imagen.url}}" class="img img-fluid centerImage ">
+                   {% else %}
+                     <img style="width: 400px; height: 200px; " src="{% static 'vendor/img/producto-01.jpg' %}" class="img img-fluid centerImage">
+                   {% endif %}
+                 </div>
+               </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input class="form-control" id="id_nombre" type="text" name="nombre" placeholder="Nombre" value="{{object.nombre}}" disabled="true">
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <input class="form-control" id="id_descripcion" type="text" name="descripcion" placeholder="Descripcion" value="{{object.descripcion}}" disabled="true">
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Precio</label>
+                        <input class="form-control" id="id_precio" type="text" name="precio" placeholder="Precio" value="{{object.precio}}" disabled="true">
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <input class="form-control" id="id_estado" type="text" name="estado" placeholder="Estado" value="{{object.estado|yesno:"Disponible,No disponible"}}" disabled="true">
+                    </div>
+                </div>
+              </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock contenido %}
+{% block js %}
+<script>
+</script>
+{% endblock js %}

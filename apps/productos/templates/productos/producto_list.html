@@ -1,0 +1,86 @@
+{% extends 'base_perfil.html' %}
+{# Load the tag library #}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'dist/css/dataTables.bootstrap4.min.css' %}">
+<style media="screen"></style>
+{% endblock css %}
+{% block contenido %}
+<section class="ftco-section">
+  <div class = "container">
+    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Lista de productos</span></p>
+     <div class="row align-items-center">
+        <div class="col-xl-12 ftco-animate">
+          <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
+            <h3 class="mb-4 billing-heading">Lista de productos</h3>
+            <div class="row align-items-end">
+
+               <div class="col-xl-12 ftco-animate">
+                     <table id="tabla_items" class="table table-striped  dt-responsive">
+                        <thead class="thead-dark ">
+                           <tr>
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Descripción</th>
+                              <th scope="col">Precio</th>
+                              <th scope="col">Estado</th>
+                              <th scope="col">Acciones</th>
+                           </tr>
+                        </thead>
+                        <tbody >
+                           {% for producto in producto_list %}
+                           <tr>
+                              <td>
+                                 {{producto.nombre}}
+                               </td>
+                               <td>
+                                  {{producto.descripcion}}
+                                </td>
+                              <td>
+                                 {{producto.precio}}
+                              </td>
+                              <td>
+                              {{ producto.estado|yesno:"Disponible,No disponible"}}
+                               </td>
+                              <td >
+                                 <a href="{% url 'productos:producto_detalle' producto.id %}">
+                                    <span  class="btn btn-info">
+                                       <h6>Ver detalle</h6>
+                                    </span>
+                                 </a>
+                                 <a href="{% url 'productos:producto_actualizar' producto.id %}">
+                                    <span class="btn btn-primary">
+                                       <h6>Modificar</h6>
+                                    </span>
+                                 </a>
+                                  <a href="{% url 'productos:producto_eliminar' producto.id %}">
+                                    <span class="btn btn-danger">
+                                       <h6>Eliminar</h6>
+                                    </span>
+                                 </a>
+                              </td>
+                           </tr>
+                           {% endfor %}
+                        </tbody>
+                     </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+          </form>
+
+</section>
+
+{% endblock contenido %}
+
+{% block js %}
+<script type="text/javascript" language="javascript" src="{% static 'dist/js/jquery-3.3.1.js' %}"></script>
+<script type="text/javascript" language="javascript" src="{% static 'dist/js/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" language="javascript" src="{% static 'dist/js/dataTables.bootstrap4.min.js' %}"></script>
+<script>
+   $(document).ready(function() {
+     $('#tabla_items').DataTable();
+   } );
+</script>
+
+{% endblock js %}
