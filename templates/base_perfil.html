@@ -30,13 +30,15 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'usuarios:home' %}">Maravilla<small>Franquicias</small></a>
+        <a class="navbar-brand" href="{% url 'usuarios:home' %}">Maravilla<small>{{tenant.nombre}}</small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="{% url 'usuarios:home' %}" class="nav-link">Ir a la Tienda</a></li>
+                <li class="nav-item"><a href="{% url 'productos:menu' %}" class="nav-link">Nuestro Menú</a></li>
+                <li class="nav-item"><a href="{% url 'productos:tienda' %}" class="nav-link">Tienda</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Promociones</a></li>
                 {% include 'nav_login.html' %}
             </ul>
         </div>

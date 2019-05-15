@@ -7,12 +7,12 @@ from .forms import *
 
 
 def home(request):
-    #usuario = request.user
-    return render(request, 'tenants/home_franquicia.html')
+    public = Tenant.objects.get(schema_name='public')
+    return render(request, 'tenants/home_franquicia.html', {'public': public})
 
 def dashboard(request):
-    #usuario = request.user
-    return render(request, 'tenants/dash_super.html')
+    public = Tenant.objects.get(schema_name='public')
+    return render(request, 'tenants/dash_super.html', {'public': public})
 
 def tenant_crear(request):
     form = TenantForm()

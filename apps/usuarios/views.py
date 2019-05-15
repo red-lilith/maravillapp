@@ -1,30 +1,31 @@
 from django.http.response import JsonResponse
 from django.shortcuts import render
+from apps.tenants.models import *
 
 def home(request):
-    #usuario = request.user
-    return render(request, 'usuarios/home_tenant.html')
+    tenant_data = Tenant.objects.get(schema_name='t1')
+    return render(request, 'usuarios/home_tenant.html', {'tenant': tenant_data})
 
 def dashboard(request):
-    #usuario = request.user
-    return render(request, 'usuarios/dash_admin.html')
+    tenant_data = Tenant.objects.get(schema_name='t1')
+    return render(request, 'usuarios/dash_admin.html', {'tenant': tenant_data})
 
 def datos(request):
-    #usuario = request.user
-    return render(request, 'usuarios/datos.html')
+    tenant_data = Tenant.objects.get(schema_name='t1')
+    return render(request, 'usuarios/datos.html', {'tenant': tenant_data})
 
 def contrasena(request):
-    #usuario = request.user
-    return render(request, 'usuarios/contrasena.html')
+    tenant_data = Tenant.objects.get(schema_name='t1')
+    return render(request, 'usuarios/contrasena.html', {'tenant': tenant_data})
 
 def login(request):
-    #usuario = request.user
-    return render(request, 'usuarios/login.html')
+    tenant_data = Tenant.objects.get(schema_name='t1')
+    return render(request, 'usuarios/login.html', {'tenant': tenant_data})
 
 def registrarme(request):
-    #usuario = request.user
-    return render(request, 'usuarios/registro.html')
+    tenant_data = Tenant.objects.get(schema_name='t1')
+    return render(request, 'usuarios/registro.html', {'tenant': tenant_data})
 
 def carrito(request):
-    #usuario = request.user
-    return render(request, 'usuarios/carrito.html')
+    tenant_data = Tenant.objects.get(schema_name='t1')
+    return render(request, 'usuarios/carrito.html', {'tenant': tenant_data})
