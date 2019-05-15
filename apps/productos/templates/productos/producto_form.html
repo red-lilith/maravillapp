@@ -13,7 +13,9 @@
 
     <section class="ftco-section center">
         <div class = "container">
-            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Crear Productos</span></p>
+<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'tenants:home' %}">Home</a></span>
+                <span class="mr-2"><a href="{% url 'productos:productos_listar' %}">Listar Productos</a></span>
+                <span>Crear Producto</span></p>
             <div class="row justify-content-center">
                 <div class="col-xl-9 ftco-animate">
                     <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">

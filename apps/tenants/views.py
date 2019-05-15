@@ -10,6 +10,10 @@ def home(request):
     #usuario = request.user
     return render(request, 'tenants/home_franquicia.html')
 
+def dashboard(request):
+    #usuario = request.user
+    return render(request, 'tenants/dash_super.html')
+
 def tenant_crear(request):
     form = TenantForm()
     if request.method == 'POST':

@@ -1,0 +1,268 @@
+{% extends 'base_maravilla.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+
+
+{% block css %}
+    <style type="text/css">
+
+        .line, .bar{
+            width: 99% !important;
+            height: 250px !important;
+        }
+        .polar, .pie, .doughnut, .radar {
+            width: 100% !important;
+        }
+    </style>
+
+{% endblock css %}
+
+{% block titulo %} Dashboard {% endblock titulo %}
+
+{% block contenido %}
+
+    <section class="pb-1 ftco-section center">
+        <div class = "pb-1 container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 ftco-animate">
+                    <div class="p-5 line-chart ftco-bg-dark">
+                        <div class="row justify-content-start">
+                            <div class="col-xl-9 ftco-animate ">
+                                <h3 class="mb-4 billing-heading">Gráfico de Ventas Anuales</h3>
+                            </div>
+                        </div>
+                        <canvas id="line" class="line p-2"> </canvas>
+                        <script>
+                            var lineChartData = {
+                                labels : ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"],
+                                datasets : [
+                                    {
+                                        fillColor : "rgba(255, 255, 255, 0.71)",
+                                        strokeColor : "white",
+                                        pointColor : "white",
+                                        pointStrokeColor : "#fff",
+                                        data : [28,48,40,19,96,27,100,59,90,81,56,55]
+                                    },
+                                    {
+                                        fillColor : "rgba(220, 133, 59, 0.71)",
+                                        strokeColor : "#dc853b",
+                                        pointColor : "#dc853b",
+                                        pointStrokeColor : "#fff",
+                                        data : [100,59,90,81,56,55,28,48,40,19,96,27]
+                                    },
+                                    {
+                                        fillColor : "rgba(103, 43, 33, 0.71)",
+                                        strokeColor : "#672b21",
+                                        pointColor : "#672b21",
+                                        pointStrokeColor : "#fff",
+                                        data : [28,48,40,81,56,55,19,96,27,100,59,90]
+                                    }
+                                ]
+
+                            };
+                            new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-2 pb-1 ftco-section center">
+        <div class = "container">
+            <div class="row justify-content-center">
+                <div class = "pr-2 col-xl-6 container">
+                    <div class="ftco-animate ftco-bg-dark">
+                        <div class="p-5 polararea">
+                            <div class="row justify-content-start">
+                                <div class="col-xl-12 ftco-animate">
+                                    <h3 class="mb-4 billing-heading">Productos más Vendidos</h3>
+                                </div>
+                            </div>
+                            <canvas id="polarArea" class="polar"></canvas>
+                            <script>
+                                var chartData = [
+                                    {
+                                        value : Math.random(),
+                                        color: "#C49B63"
+                                    },
+                                    {
+                                        value : Math.random(),
+                                        color: "#672b21"
+                                    },
+                                    {
+                                        value : Math.random(),
+                                        color: "#dc853b"
+                                    },
+                                    {
+                                        value : Math.random(),
+                                        color: "white"
+                                    },
+                                    {
+                                        value : Math.random(),
+                                        color: "#4b9538"
+                                    },
+                                    {
+                                        value : Math.random(),
+                                        color: "#2c2c2c"
+                                    }
+                                ];
+                                new Chart(document.getElementById("polarArea").getContext("2d")).PolarArea(chartData);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class = "pl-2 col-xl-6 container">
+                    <div class="ftco-animate ftco-bg-dark">
+                        <div class="p-5 chart-other">
+                            <div class="row justify-content-start">
+                                <div class="col-xl-12 ftco-animate">
+                                    <h3 class="mb-4 billing-heading">Ventas por Tenant</h3>
+                                </div>
+                            </div>
+                            <canvas id="pie" class="pie"></canvas>
+                            <script>
+                                var pieData = [
+                                    {
+                                        value: 30,
+                                        color:"#b88547"
+                                    },
+                                    {
+                                        value : 50,
+                                        color : "#672b21"
+                                    },
+                                    {
+                                        value : 100,
+                                        color : "#8bc34a"
+                                    }
+
+                                ];
+                                new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-2 pb-1 ftco-section center">
+        <div class = "container">
+            <div class="row justify-content-center">
+                <div class = "pr-2 col-xl-6 container">
+                    <div class="ftco-animate ftco-bg-dark">
+                        <div class="p-5 dygno">
+                            <div class="row justify-content-start">
+                                <div class="col-xl-12 ftco-animate">
+                                    <h3 class="mb-4 billing-heading">Una donita</h3>
+                                </div>
+                            </div>
+                            <canvas id="doughnut" class="doughnut"></canvas>
+                            <script>
+                                var doughnutData = [
+                                    {
+                                        value: 30,
+                                        color:"#421d15"
+                                    },
+                                    {
+                                        value : 50,
+                                        color : "#dc853b"
+                                    },
+                                    {
+                                        value : 100,
+                                        color : "#63bc41"
+                                    },
+                                    {
+                                        value : 40,
+                                        color : "#55bcb3"
+                                    },
+                                ];
+                                new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class = "pl-2 col-xl-6 container">
+                    <div class="ftco-animate ftco-bg-dark">
+                        <div class="p-5 revenue">
+                            <div class="row justify-content-start">
+                                <div class="col-xl-12 ftco-animate">
+                                    <h3 class="mb-4 billing-heading">Una cosa rara</h3>
+                                </div>
+                            </div>
+                            <canvas id="radar" class="radar"></canvas>
+                            <script>
+                                var radarChartData = {
+                                    labels : ["","","","","","",""],
+                                    datasets : [
+                                        {
+                                            fillColor : "rgba(220, 133, 59, 0.83)",
+                                            strokeColor : "#dc853b",
+                                            pointColor : "#dc853b",
+                                            pointStrokeColor : "#fff",
+                                            data : [65,59,90,81,56,55,40]
+                                        },
+                                        {
+                                            fillColor : "rgba(103, 43, 33, 0.82)",
+                                            strokeColor : "#672b21",
+                                            pointColor : "#672b21",
+                                            pointStrokeColor : "#fff",
+                                            data : [28,48,40,19,96,27,100]
+                                        }
+                                    ]
+
+                                };
+                                new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-2 pb-1  ftco-section center">
+        <div class = "pb-1 container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 ftco-animate">
+                    <div class="p-5 glocy-chart ftco-bg-dark">
+                        <div class="row justify-content-start">
+                            <div class="col-xl-9 ftco-animate ">
+                                <h3 class="mb-4 billing-heading">Unas barritas</h3>
+                            </div>
+                        </div>
+                        <canvas id="bar" class="bar"></canvas>
+                        <script>
+                            var barChartData = {
+                            labels : ["Ene","Feb","Mar","Abr","May","Jun","Jul"],
+                            datasets : [
+                                {
+                                    fillColor : "#55bcb3",
+                                    data : [65,59,90,81,56,55,40]
+                                },
+                                {
+                                    fillColor : "#d59755",
+                                    data : [28,48,40,19,96,27,100]
+                                }
+                            ]
+
+                        };
+                            new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock contenido %}
+
+{% block js %}
+    <script>
+        $(function () {
+
+
+        });
+
+    </script>
+
+{% endblock js %}
