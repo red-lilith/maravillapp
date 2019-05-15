@@ -1,4 +1,4 @@
-{% extends 'base_perfil.html' %}
+{% extends 'base_maravilla.html' %}
 {# Load the tag library #}
 {% load bootstrap4 %}
 {% load static %}
@@ -6,89 +6,83 @@
 {% load widget_tweaks %}
 
 {% block css %}
-<style media="screen">
-input[type="file"]::-webkit-file-upload-button {
-vertical-align: middle;
-  height: 80%;
-  width: 70%;
-  margin-top: 1%;
-}
-input[type="checkbox"]{
-
-    outline:0.2px solid gray;
-    outline-offset: -2px;
-}
-
-</style>
+<link rel="stylesheet" media="screen" href="{% static 'coffee_template/css/producto-crear.css' %}">
 {% endblock css %}
 
 {% block contenido %}
 
-<section class="ftco-section center">
-  <div class = "container">
-    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Crear Productos</span></p>
-     <div class="row justify-content-center">
-        <div class="col-xl-6 ftco-animate">
-              <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
-                {% csrf_token %}
-                <h3 class="mb-4 billing-heading">Crear producto</h3>
-                <div class="row align-items-end">
-                  <div class="col-md-12">
-                      <div class="form-group">
-                          <label for="names">Nombre</label>
-                          {% render_field form.nombre class="form-control" %}
-                      </div>
-                  </div>
-                  <div class="w-100"></div>
-                  <div class="col-md-12">
-                      <div class="form-group">
-                          <label for="names">Descripción</label>
-                          {% render_field form.descripcion class="form-control" %}
-                      </div>
-                 </div>
-                  <div class="w-100"></div>
-                  <div class="col-md-12">
-                      <div class="form-group">
-                          <label for="names">Precio</label>
-                          {% render_field form.precio class="form-control" %}
-                         </div>
-                  </div>
-                  <div class="w-100"></div>
-                  <div class="col-md-12">
-                      <div class="form-group">
-                          <label>Imagen</label>
-                          {% render_field form.imagen class="form-control" %}
-                      </div>
-                  </div>
-                  <div class="w-100"></div>
-                  <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Estado</label>
-                        <div class="w-40"></div>
-                        {% render_field form.estado  %}
-                  </div>
-                </div>
+    <section class="ftco-section center">
+        <div class = "container">
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Crear Productos</span></p>
+            <div class="row justify-content-center">
+                <div class="col-xl-9 ftco-animate">
+                    <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
+                        {% csrf_token %}
 
-                <div class="w-100"></div>
-                <div class="col-md-12 align-items-end">
-                <div class="form-group mt-4">
-                    <div class="text-center w-full p-t-30 p-b-22">
-                      <input class="btn btn-primary  py-4 px-4"  type="submit"  value="Crear" />
-                    </div>
+                        <div class="row align-items-end">
+                            <div class="col-xl-9 ftco-animate">
+                                <h3 class="mb-4 billing-heading">Crear producto</h3>
+                            </div>
+                            <div class="col-xl-3 ftco-animate ">
+                                <p><a href="{% url 'productos:productos_listar' %}" style="width: 160px;" class="btn btn-white btn-outline-white p-2">Ver Inventario</a></p>
+                            </div>
+                        </div>
+                        <div class="row align-items-end">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Nombre</label>
+                                    {% render_field form.nombre class="form-control" %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Precio</label>
+                                    {% render_field form.precio class="form-control" %}
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="names">Descripción</label>
+                                    {% render_field form.descripcion class="form-control" rows="5" style="text-align:justify;"%}
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Imagen</label>
+                                    {% render_field form.imagen class="form-control" %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    <div class="w-30"></div>
+                                    {% render_field form.estado %}
+                                </div>
+                            </div>
+
+                            <div class="w-100"></div>
+                            <div class="col-md-12 align-items-end">
+                                <div class="form-group mt-2">
+                                    <div class="text-center w-full p-t-15 p-b-15">
+                                        <input class="btn btn-primary py-4 px-4"  type="submit"  value="Crear Producto" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
                 </div>
             </div>
-
-              </div>
-
-              </form>
         </div>
-     </div>
-  </div>
-</section>
+    </section>
 
 {% endblock contenido %}
 
 {% block js %}
-<script>
-</script>
+    <script>
+    </script>
 {% endblock js %}

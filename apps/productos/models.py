@@ -25,8 +25,8 @@ class Ingrediente(models.Model):
 class Producto(models.Model):
 
 	nombre= models.CharField(max_length=200)
-	descripcion = models.CharField(max_length=350)
-	precio = models.IntegerField(default=0, blank=False)
+	descripcion = models.TextField(max_length=500)
+	precio = models.PositiveIntegerField()
 	estado = models.BooleanField(default=True)
 	imagen = models.FileField(upload_to="productos_imagenes/", null=True, blank=True)
 

@@ -43,3 +43,5 @@ class ProductoActualizar(SuccessMessageMixin, UpdateView):
 
 class ProductoEliminar(DeleteView):
     model = Producto
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("productos:productos_listar")
