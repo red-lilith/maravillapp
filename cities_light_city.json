@@ -1,0 +1,4422 @@
+[
+{
+ "model": "cities_light.city",
+ "pk": 1,
+ "fields": {
+  "name": "Zipaquir\u00e1",
+  "name_ascii": "Zipaquira",
+  "slug": "zipaquira",
+  "geoname_id": 3665542,
+  "alternate_names": "",
+  "display_name": "Zipaquir\u00e1, Cundinamarca, Colombia",
+  "search_names": "zipaquiracolombia zipaquiracundinamarcacolombia zipaquiracundinamarcarepublicadecolombia zipaquiracundinamarcarepublicofcolombia zipaquirarepublicadecolombia zipaquirarepublicofcolombia",
+  "latitude": "5.02208",
+  "longitude": "-74.00481",
+  "region": 19,
+  "country": 1,
+  "population": 91235,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 2,
+ "fields": {
+  "name": "Zarzal",
+  "name_ascii": "Zarzal",
+  "slug": "zarzal",
+  "geoname_id": 3665559,
+  "alternate_names": "",
+  "display_name": "Zarzal, Valle del Cauca, Colombia",
+  "search_names": "zarzalcolombia zarzalrepublicadecolombia zarzalrepublicofcolombia zarzalvalledelcaucacolombia zarzalvalledelcaucarepublicadecolombia zarzalvalledelcaucarepublicofcolombia",
+  "latitude": "4.39462",
+  "longitude": "-76.07150",
+  "region": 3,
+  "country": 1,
+  "population": 28761,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 3,
+ "fields": {
+  "name": "Zaragoza",
+  "name_ascii": "Zaragoza",
+  "slug": "zaragoza",
+  "geoname_id": 3665566,
+  "alternate_names": "",
+  "display_name": "Zaragoza, Antioquia, Colombia",
+  "search_names": "zaragozaantioquiacolombia zaragozaantioquiarepublicadecolombia zaragozaantioquiarepublicofcolombia zaragozacolombia zaragozarepublicadecolombia zaragozarepublicofcolombia",
+  "latitude": "7.48971",
+  "longitude": "-74.86919",
+  "region": 32,
+  "country": 1,
+  "population": 18795,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 4,
+ "fields": {
+  "name": "Yumbo",
+  "name_ascii": "Yumbo",
+  "slug": "yumbo",
+  "geoname_id": 3665657,
+  "alternate_names": "",
+  "display_name": "Yumbo, Valle del Cauca, Colombia",
+  "search_names": "yumbocolombia yumborepublicadecolombia yumborepublicofcolombia yumbovalledelcaucacolombia yumbovalledelcaucarepublicadecolombia yumbovalledelcaucarepublicofcolombia",
+  "latitude": "3.58234",
+  "longitude": "-76.49146",
+  "region": 3,
+  "country": 1,
+  "population": 71436,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 5,
+ "fields": {
+  "name": "Yopal",
+  "name_ascii": "Yopal",
+  "slug": "yopal",
+  "geoname_id": 3665688,
+  "alternate_names": "",
+  "display_name": "Yopal, Casanare, Colombia",
+  "search_names": "yopalcasanarecolombia yopalcasanarerepublicadecolombia yopalcasanarerepublicofcolombia yopalcolombia yopalrepublicadecolombia yopalrepublicofcolombia",
+  "latitude": "5.33775",
+  "longitude": "-72.39586",
+  "region": 24,
+  "country": 1,
+  "population": 61029,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 6,
+ "fields": {
+  "name": "Yarumal",
+  "name_ascii": "Yarumal",
+  "slug": "yarumal",
+  "geoname_id": 3665741,
+  "alternate_names": "",
+  "display_name": "Yarumal, Antioquia, Colombia",
+  "search_names": "yarumalantioquiacolombia yarumalantioquiarepublicadecolombia yarumalantioquiarepublicofcolombia yarumalcolombia yarumalrepublicadecolombia yarumalrepublicofcolombia",
+  "latitude": "6.96321",
+  "longitude": "-75.41738",
+  "region": 32,
+  "country": 1,
+  "population": 22368,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 7,
+ "fields": {
+  "name": "Viterbo",
+  "name_ascii": "Viterbo",
+  "slug": "viterbo",
+  "geoname_id": 3665851,
+  "alternate_names": "",
+  "display_name": "Viterbo, Caldas, Colombia",
+  "search_names": "viterbocaldascolombia viterbocaldasrepublicadecolombia viterbocaldasrepublicofcolombia viterbocolombia viterborepublicadecolombia viterborepublicofcolombia",
+  "latitude": "5.06242",
+  "longitude": "-75.87159",
+  "region": 26,
+  "country": 1,
+  "population": 15216,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 8,
+ "fields": {
+  "name": "Villeta",
+  "name_ascii": "Villeta",
+  "slug": "villeta",
+  "geoname_id": 3665895,
+  "alternate_names": "",
+  "display_name": "Villeta, Cundinamarca, Colombia",
+  "search_names": "villetacolombia villetacundinamarcacolombia villetacundinamarcarepublicadecolombia villetacundinamarcarepublicofcolombia villetarepublicadecolombia villetarepublicofcolombia",
+  "latitude": "5.00886",
+  "longitude": "-74.47226",
+  "region": 19,
+  "country": 1,
+  "population": 20689,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 9,
+ "fields": {
+  "name": "Villavicencio",
+  "name_ascii": "Villavicencio",
+  "slug": "villavicencio",
+  "geoname_id": 3665900,
+  "alternate_names": "",
+  "display_name": "Villavicencio, Meta, Colombia",
+  "search_names": "villavicenciocolombia villavicenciometacolombia villavicenciometarepublicadecolombia villavicenciometarepublicofcolombia villavicenciorepublicadecolombia villavicenciorepublicofcolombia",
+  "latitude": "4.14200",
+  "longitude": "-73.62664",
+  "region": 13,
+  "country": 1,
+  "population": 321717,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 10,
+ "fields": {
+  "name": "Villa del Rosario",
+  "name_ascii": "Villa del Rosario",
+  "slug": "villa-del-rosario",
+  "geoname_id": 3665913,
+  "alternate_names": "",
+  "display_name": "Villa del Rosario, Norte de Santander, Colombia",
+  "search_names": "villadelrosariocolombia villadelrosarionortedesantandercolombia villadelrosarionortedesantanderrepublicadecolombia villadelrosarionortedesantanderrepublicofcolombia villadelrosariorepublicadecolombia villadelrosariorepublicofcolombia",
+  "latitude": "7.83389",
+  "longitude": "-72.47417",
+  "region": 11,
+  "country": 1,
+  "population": 64951,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 11,
+ "fields": {
+  "name": "Villanueva",
+  "name_ascii": "Villanueva",
+  "slug": "villanueva",
+  "geoname_id": 3665934,
+  "alternate_names": "",
+  "display_name": "Villanueva, La Guajira, Colombia",
+  "search_names": "villanuevacolombia villanuevalaguajiracolombia villanuevalaguajirarepublicadecolombia villanuevalaguajirarepublicofcolombia villanuevarepublicadecolombia villanuevarepublicofcolombia",
+  "latitude": "10.60768",
+  "longitude": "-72.97901",
+  "region": 15,
+  "country": 1,
+  "population": 18699,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 12,
+ "fields": {
+  "name": "Villanueva",
+  "name_ascii": "Villanueva",
+  "slug": "villanueva",
+  "geoname_id": 3665951,
+  "alternate_names": "",
+  "display_name": "Villanueva, Casanare, Colombia",
+  "search_names": "villanuevacasanarecolombia villanuevacasanarerepublicadecolombia villanuevacasanarerepublicofcolombia villanuevacolombia villanuevarepublicadecolombia villanuevarepublicofcolombia",
+  "latitude": "5.28333",
+  "longitude": "-71.96667",
+  "region": 24,
+  "country": 1,
+  "population": 20032,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 13,
+ "fields": {
+  "name": "Villamar\u00eda",
+  "name_ascii": "Villamaria",
+  "slug": "villamaria",
+  "geoname_id": 3665973,
+  "alternate_names": "",
+  "display_name": "Villamar\u00eda, Caldas, Colombia",
+  "search_names": "villamariacaldascolombia villamariacaldasrepublicadecolombia villamariacaldasrepublicofcolombia villamariacolombia villamariarepublicadecolombia villamariarepublicofcolombia",
+  "latitude": "5.04565",
+  "longitude": "-75.51474",
+  "region": 26,
+  "country": 1,
+  "population": 35302,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 14,
+ "fields": {
+  "name": "Valledupar",
+  "name_ascii": "Valledupar",
+  "slug": "valledupar",
+  "geoname_id": 3666304,
+  "alternate_names": "",
+  "display_name": "Valledupar, Cesar, Colombia",
+  "search_names": "valleduparcesarcolombia valleduparcesarrepublicadecolombia valleduparcesarrepublicofcolombia valleduparcolombia valleduparrepublicadecolombia valleduparrepublicofcolombia",
+  "latitude": "10.46314",
+  "longitude": "-73.25322",
+  "region": 22,
+  "country": 1,
+  "population": 308237,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 15,
+ "fields": {
+  "name": "Urrao",
+  "name_ascii": "Urrao",
+  "slug": "urrao",
+  "geoname_id": 3666395,
+  "alternate_names": "",
+  "display_name": "Urrao, Antioquia, Colombia",
+  "search_names": "urraoantioquiacolombia urraoantioquiarepublicadecolombia urraoantioquiarepublicofcolombia urraocolombia urraorepublicadecolombia urraorepublicofcolombia",
+  "latitude": "6.31696",
+  "longitude": "-76.13420",
+  "region": 32,
+  "country": 1,
+  "population": 18846,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 16,
+ "fields": {
+  "name": "Villa de San Diego de Ubat\u00e9",
+  "name_ascii": "Villa de San Diego de Ubate",
+  "slug": "villa-de-san-diego-de-ubate",
+  "geoname_id": 3666519,
+  "alternate_names": "",
+  "display_name": "Villa de San Diego de Ubat\u00e9, Cundinamarca, Colombia",
+  "search_names": "villadesandiegodeubatecolombia villadesandiegodeubatecundinamarcacolombia villadesandiegodeubatecundinamarcarepublicadecolombia villadesandiegodeubatecundinamarcarepublicofcolombia villadesandiegodeubaterepublicadecolombia villadesandiegodeubaterepublicofcolombia",
+  "latitude": "5.30933",
+  "longitude": "-73.81575",
+  "region": 19,
+  "country": 1,
+  "population": 20485,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 17,
+ "fields": {
+  "name": "Turbo",
+  "name_ascii": "Turbo",
+  "slug": "turbo",
+  "geoname_id": 3666570,
+  "alternate_names": "",
+  "display_name": "Turbo, Antioquia, Colombia",
+  "search_names": "turboantioquiacolombia turboantioquiarepublicadecolombia turboantioquiarepublicofcolombia turbocolombia turborepublicadecolombia turborepublicofcolombia",
+  "latitude": "8.09263",
+  "longitude": "-76.72822",
+  "region": 32,
+  "country": 1,
+  "population": 50508,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 18,
+ "fields": {
+  "name": "Turbaco",
+  "name_ascii": "Turbaco",
+  "slug": "turbaco",
+  "geoname_id": 3666577,
+  "alternate_names": "",
+  "display_name": "Turbaco, Bol\u00edvar, Colombia",
+  "search_names": "turbacobolivarcolombia turbacobolivarrepublicadecolombia turbacobolivarrepublicofcolombia turbacocolombia turbacorepublicadecolombia turbacorepublicofcolombia",
+  "latitude": "10.32944",
+  "longitude": "-75.41137",
+  "region": 28,
+  "country": 1,
+  "population": 56171,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 19,
+ "fields": {
+  "name": "T\u00faquerres",
+  "name_ascii": "Tuquerres",
+  "slug": "tuquerres",
+  "geoname_id": 3666582,
+  "alternate_names": "",
+  "display_name": "T\u00faquerres, Nari\u00f1o, Colombia",
+  "search_names": "tuquerrescolombia tuquerresnarinocolombia tuquerresnarinorepublicadecolombia tuquerresnarinorepublicofcolombia tuquerresrepublicadecolombia tuquerresrepublicofcolombia",
+  "latitude": "1.08647",
+  "longitude": "-77.61858",
+  "region": 12,
+  "country": 1,
+  "population": 20184,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 20,
+ "fields": {
+  "name": "Tunja",
+  "name_ascii": "Tunja",
+  "slug": "tunja",
+  "geoname_id": 3666608,
+  "alternate_names": "",
+  "display_name": "Tunja, Boyac\u00e1, Colombia",
+  "search_names": "tunjaboyacacolombia tunjaboyacarepublicadecolombia tunjaboyacarepublicofcolombia tunjacolombia tunjarepublicadecolombia tunjarepublicofcolombia",
+  "latitude": "5.53528",
+  "longitude": "-73.36778",
+  "region": 27,
+  "country": 1,
+  "population": 117479,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 21,
+ "fields": {
+  "name": "Tumaco",
+  "name_ascii": "Tumaco",
+  "slug": "tumaco",
+  "geoname_id": 3666640,
+  "alternate_names": "",
+  "display_name": "Tumaco, Nari\u00f1o, Colombia",
+  "search_names": "tumacocolombia tumaconarinocolombia tumaconarinorepublicadecolombia tumaconarinorepublicofcolombia tumacorepublicadecolombia tumacorepublicofcolombia",
+  "latitude": "1.79112",
+  "longitude": "-78.79275",
+  "region": 12,
+  "country": 1,
+  "population": 86713,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 22,
+ "fields": {
+  "name": "Tulu\u00e1",
+  "name_ascii": "Tulua",
+  "slug": "tulua",
+  "geoname_id": 3666645,
+  "alternate_names": "",
+  "display_name": "Tulu\u00e1, Valle del Cauca, Colombia",
+  "search_names": "tuluacolombia tuluarepublicadecolombia tuluarepublicofcolombia tuluavalledelcaucacolombia tuluavalledelcaucarepublicadecolombia tuluavalledelcaucarepublicofcolombia",
+  "latitude": "4.08466",
+  "longitude": "-76.19536",
+  "region": 3,
+  "country": 1,
+  "population": 165501,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 23,
+ "fields": {
+  "name": "Santiago de Tol\u00fa",
+  "name_ascii": "Santiago de Tolu",
+  "slug": "santiago-de-tolu",
+  "geoname_id": 3666939,
+  "alternate_names": "Tol\u00fa",
+  "display_name": "Santiago de Tol\u00fa, Sucre, Colombia",
+  "search_names": "santiagodetolucolombia santiagodetolurepublicadecolombia santiagodetolurepublicofcolombia santiagodetolusucrecolombia santiagodetolusucrerepublicadecolombia santiagodetolusucrerepublicofcolombia tolucolombia tolurepublicadecolombia tolurepublicofcolombia tolusucrecolombia tolusucrerepublicadecolombia tolusucrerepublicofcolombia",
+  "latitude": "9.52392",
+  "longitude": "-75.58139",
+  "region": 5,
+  "country": 1,
+  "population": 27390,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 24,
+ "fields": {
+  "name": "Tierralta",
+  "name_ascii": "Tierralta",
+  "slug": "tierralta",
+  "geoname_id": 3667158,
+  "alternate_names": "",
+  "display_name": "Tierralta, C\u00f3rdoba, Colombia",
+  "search_names": "tierraltacolombia tierraltacordobacolombia tierraltacordobarepublicadecolombia tierraltacordobarepublicofcolombia tierraltarepublicadecolombia tierraltarepublicofcolombia",
+  "latitude": "8.17361",
+  "longitude": "-76.05917",
+  "region": 20,
+  "country": 1,
+  "population": 26242,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 25,
+ "fields": {
+  "name": "Tame",
+  "name_ascii": "Tame",
+  "slug": "tame",
+  "geoname_id": 3667478,
+  "alternate_names": "",
+  "display_name": "Tame, Arauca, Colombia",
+  "search_names": "tamearaucacolombia tamearaucarepublicadecolombia tamearaucarepublicofcolombia tamecolombia tamerepublicadecolombia tamerepublicofcolombia",
+  "latitude": "6.46065",
+  "longitude": "-71.73618",
+  "region": 31,
+  "country": 1,
+  "population": 29099,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 26,
+ "fields": {
+  "name": "Sucre",
+  "name_ascii": "Sucre",
+  "slug": "sucre",
+  "geoname_id": 3667728,
+  "alternate_names": "",
+  "display_name": "Sucre, Sucre, Colombia",
+  "search_names": "sucrecolombia sucrerepublicadecolombia sucrerepublicofcolombia sucresucrecolombia sucresucrerepublicadecolombia sucresucrerepublicofcolombia",
+  "latitude": "8.81136",
+  "longitude": "-74.72084",
+  "region": 5,
+  "country": 1,
+  "population": 23210,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 27,
+ "fields": {
+  "name": "Sons\u00f3n",
+  "name_ascii": "Sonson",
+  "slug": "sonson",
+  "geoname_id": 3667820,
+  "alternate_names": "",
+  "display_name": "Sons\u00f3n, Antioquia, Colombia",
+  "search_names": "sonsonantioquiacolombia sonsonantioquiarepublicadecolombia sonsonantioquiarepublicofcolombia sonsoncolombia sonsonrepublicadecolombia sonsonrepublicofcolombia",
+  "latitude": "5.71062",
+  "longitude": "-75.31069",
+  "region": 32,
+  "country": 1,
+  "population": 17232,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 28,
+ "fields": {
+  "name": "Soledad",
+  "name_ascii": "Soledad",
+  "slug": "soledad",
+  "geoname_id": 3667849,
+  "alternate_names": "",
+  "display_name": "Soledad, Atl\u00e1ntico, Colombia",
+  "search_names": "soledadatlanticocolombia soledadatlanticorepublicadecolombia soledadatlanticorepublicofcolombia soledadcolombia soledadrepublicadecolombia soledadrepublicofcolombia",
+  "latitude": "10.91843",
+  "longitude": "-74.76459",
+  "region": 30,
+  "country": 1,
+  "population": 342556,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 29,
+ "fields": {
+  "name": "Sogamoso",
+  "name_ascii": "Sogamoso",
+  "slug": "sogamoso",
+  "geoname_id": 3667873,
+  "alternate_names": "",
+  "display_name": "Sogamoso, Boyac\u00e1, Colombia",
+  "search_names": "sogamosoboyacacolombia sogamosoboyacarepublicadecolombia sogamosoboyacarepublicofcolombia sogamosocolombia sogamosorepublicadecolombia sogamosorepublicofcolombia",
+  "latitude": "5.71434",
+  "longitude": "-72.93391",
+  "region": 27,
+  "country": 1,
+  "population": 126551,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 30,
+ "fields": {
+  "name": "Socorro",
+  "name_ascii": "Socorro",
+  "slug": "socorro",
+  "geoname_id": 3667887,
+  "alternate_names": "",
+  "display_name": "Socorro, Santander, Colombia",
+  "search_names": "socorrocolombia socorrorepublicadecolombia socorrorepublicofcolombia socorrosantandercolombia socorrosantanderrepublicadecolombia socorrosantanderrepublicofcolombia",
+  "latitude": "6.46838",
+  "longitude": "-73.26022",
+  "region": 6,
+  "country": 1,
+  "population": 17752,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 31,
+ "fields": {
+  "name": "Soacha",
+  "name_ascii": "Soacha",
+  "slug": "soacha",
+  "geoname_id": 3667905,
+  "alternate_names": "",
+  "display_name": "Soacha, Cundinamarca, Colombia",
+  "search_names": "soachacolombia soachacundinamarcacolombia soachacundinamarcarepublicadecolombia soachacundinamarcarepublicofcolombia soacharepublicadecolombia soacharepublicofcolombia",
+  "latitude": "4.57937",
+  "longitude": "-74.21682",
+  "region": 19,
+  "country": 1,
+  "population": 313945,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 32,
+ "fields": {
+  "name": "Sincelejo",
+  "name_ascii": "Sincelejo",
+  "slug": "sincelejo",
+  "geoname_id": 3667983,
+  "alternate_names": "",
+  "display_name": "Sincelejo, Sucre, Colombia",
+  "search_names": "sincelejocolombia sincelejorepublicadecolombia sincelejorepublicofcolombia sincelejosucrecolombia sincelejosucrerepublicadecolombia sincelejosucrerepublicofcolombia",
+  "latitude": "9.30472",
+  "longitude": "-75.39778",
+  "region": 5,
+  "country": 1,
+  "population": 261187,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 33,
+ "fields": {
+  "name": "San Luis de Sinc\u00e9",
+  "name_ascii": "San Luis de Since",
+  "slug": "san-luis-de-since",
+  "geoname_id": 3667991,
+  "alternate_names": "",
+  "display_name": "San Luis de Sinc\u00e9, Sucre, Colombia",
+  "search_names": "sanluisdesincecolombia sanluisdesincerepublicadecolombia sanluisdesincerepublicofcolombia sanluisdesincesucrecolombia sanluisdesincesucrerepublicadecolombia sanluisdesincesucrerepublicofcolombia",
+  "latitude": "9.24391",
+  "longitude": "-75.14675",
+  "region": 5,
+  "country": 1,
+  "population": 30768,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 34,
+ "fields": {
+  "name": "Sibat\u00e9",
+  "name_ascii": "Sibate",
+  "slug": "sibate",
+  "geoname_id": 3668087,
+  "alternate_names": "",
+  "display_name": "Sibat\u00e9, Cundinamarca, Colombia",
+  "search_names": "sibatecolombia sibatecundinamarcacolombia sibatecundinamarcarepublicadecolombia sibatecundinamarcarepublicofcolombia sibaterepublicadecolombia sibaterepublicofcolombia",
+  "latitude": "4.49154",
+  "longitude": "-74.25957",
+  "region": 19,
+  "country": 1,
+  "population": 23208,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 35,
+ "fields": {
+  "name": "Sevilla",
+  "name_ascii": "Sevilla",
+  "slug": "sevilla",
+  "geoname_id": 3668132,
+  "alternate_names": "",
+  "display_name": "Sevilla, Valle del Cauca, Colombia",
+  "search_names": "sevillacolombia sevillarepublicadecolombia sevillarepublicofcolombia sevillavalledelcaucacolombia sevillavalledelcaucarepublicadecolombia sevillavalledelcaucarepublicofcolombia",
+  "latitude": "4.26425",
+  "longitude": "-75.93085",
+  "region": 3,
+  "country": 1,
+  "population": 41612,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 36,
+ "fields": {
+  "name": "Segovia",
+  "name_ascii": "Segovia",
+  "slug": "segovia",
+  "geoname_id": 3668175,
+  "alternate_names": "",
+  "display_name": "Segovia, Antioquia, Colombia",
+  "search_names": "segoviaantioquiacolombia segoviaantioquiarepublicadecolombia segoviaantioquiarepublicofcolombia segoviacolombia segoviarepublicadecolombia segoviarepublicofcolombia",
+  "latitude": "7.07993",
+  "longitude": "-74.69890",
+  "region": 32,
+  "country": 1,
+  "population": 39938,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 37,
+ "fields": {
+  "name": "Santuario",
+  "name_ascii": "Santuario",
+  "slug": "santuario",
+  "geoname_id": 3668323,
+  "alternate_names": "",
+  "display_name": "Santuario, Antioquia, Colombia",
+  "search_names": "santuarioantioquiacolombia santuarioantioquiarepublicadecolombia santuarioantioquiarepublicofcolombia santuariocolombia santuariorepublicadecolombia santuariorepublicofcolombia",
+  "latitude": "6.13833",
+  "longitude": "-75.26417",
+  "region": 32,
+  "country": 1,
+  "population": 17722,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 38,
+ "fields": {
+  "name": "Santo Tom\u00e1s",
+  "name_ascii": "Santo Tomas",
+  "slug": "santo-tomas",
+  "geoname_id": 3668332,
+  "alternate_names": "",
+  "display_name": "Santo Tom\u00e1s, Atl\u00e1ntico, Colombia",
+  "search_names": "santotomasatlanticocolombia santotomasatlanticorepublicadecolombia santotomasatlanticorepublicofcolombia santotomascolombia santotomasrepublicadecolombia santotomasrepublicofcolombia",
+  "latitude": "10.75773",
+  "longitude": "-74.75451",
+  "region": 30,
+  "country": 1,
+  "population": 25847,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 39,
+ "fields": {
+  "name": "Santa Rosa de Cabal",
+  "name_ascii": "Santa Rosa de Cabal",
+  "slug": "santa-rosa-de-cabal",
+  "geoname_id": 3668454,
+  "alternate_names": "",
+  "display_name": "Santa Rosa de Cabal, Risaralda, Colombia",
+  "search_names": "santarosadecabalcolombia santarosadecabalrepublicadecolombia santarosadecabalrepublicofcolombia santarosadecabalrisaraldacolombia santarosadecabalrisaraldarepublicadecolombia santarosadecabalrisaraldarepublicofcolombia",
+  "latitude": "4.86806",
+  "longitude": "-75.62139",
+  "region": 8,
+  "country": 1,
+  "population": 57928,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 40,
+ "fields": {
+  "name": "Santander de Quilichao",
+  "name_ascii": "Santander de Quilichao",
+  "slug": "santander-de-quilichao",
+  "geoname_id": 3668572,
+  "alternate_names": "",
+  "display_name": "Santander de Quilichao, Cauca, Colombia",
+  "search_names": "santanderdequilichaocaucacolombia santanderdequilichaocaucarepublicadecolombia santanderdequilichaocaucarepublicofcolombia santanderdequilichaocolombia santanderdequilichaorepublicadecolombia santanderdequilichaorepublicofcolombia",
+  "latitude": "3.00945",
+  "longitude": "-76.48494",
+  "region": 23,
+  "country": 1,
+  "population": 40798,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 41,
+ "fields": {
+  "name": "Santa Marta",
+  "name_ascii": "Santa Marta",
+  "slug": "santa-marta",
+  "geoname_id": 3668605,
+  "alternate_names": "",
+  "display_name": "Santa Marta, Magdalena, Colombia",
+  "search_names": "santamartacolombia santamartamagdalenacolombia santamartamagdalenarepublicadecolombia santamartamagdalenarepublicofcolombia santamartarepublicadecolombia santamartarepublicofcolombia",
+  "latitude": "11.24079",
+  "longitude": "-74.19904",
+  "region": 14,
+  "country": 1,
+  "population": 431781,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 42,
+ "fields": {
+  "name": "Santa Luc\u00eda",
+  "name_ascii": "Santa Lucia",
+  "slug": "santa-lucia",
+  "geoname_id": 3668655,
+  "alternate_names": "",
+  "display_name": "Santa Luc\u00eda, Atl\u00e1ntico, Colombia",
+  "search_names": "santaluciaatlanticocolombia santaluciaatlanticorepublicadecolombia santaluciaatlanticorepublicofcolombia santaluciacolombia santaluciarepublicadecolombia santaluciarepublicofcolombia",
+  "latitude": "10.32420",
+  "longitude": "-74.96017",
+  "region": 30,
+  "country": 1,
+  "population": 15760,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 43,
+ "fields": {
+  "name": "San Onofre",
+  "name_ascii": "San Onofre",
+  "slug": "san-onofre",
+  "geoname_id": 3669218,
+  "alternate_names": "",
+  "display_name": "San Onofre, Sucre, Colombia",
+  "search_names": "sanonofrecolombia sanonofrerepublicadecolombia sanonofrerepublicofcolombia sanonofresucrecolombia sanonofresucrerepublicadecolombia sanonofresucrerepublicofcolombia",
+  "latitude": "9.73586",
+  "longitude": "-75.52626",
+  "region": 5,
+  "country": 1,
+  "population": 32957,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 44,
+ "fields": {
+  "name": "San Mart\u00edn",
+  "name_ascii": "San Martin",
+  "slug": "san-martin",
+  "geoname_id": 3669332,
+  "alternate_names": "",
+  "display_name": "San Mart\u00edn, Meta, Colombia",
+  "search_names": "sanmartincolombia sanmartinmetacolombia sanmartinmetarepublicadecolombia sanmartinmetarepublicofcolombia sanmartinrepublicadecolombia sanmartinrepublicofcolombia",
+  "latitude": "3.69637",
+  "longitude": "-73.69957",
+  "region": 13,
+  "country": 1,
+  "population": 16273,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 45,
+ "fields": {
+  "name": "San Marcos",
+  "name_ascii": "San Marcos",
+  "slug": "san-marcos",
+  "geoname_id": 3669346,
+  "alternate_names": "",
+  "display_name": "San Marcos, Sucre, Colombia",
+  "search_names": "sanmarcoscolombia sanmarcosrepublicadecolombia sanmarcosrepublicofcolombia sanmarcossucrecolombia sanmarcossucrerepublicadecolombia sanmarcossucrerepublicofcolombia",
+  "latitude": "8.65972",
+  "longitude": "-75.12809",
+  "region": 5,
+  "country": 1,
+  "population": 36549,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 46,
+ "fields": {
+  "name": "San Juan Nepomuceno",
+  "name_ascii": "San Juan Nepomuceno",
+  "slug": "san-juan-nepomuceno",
+  "geoname_id": 3669454,
+  "alternate_names": "",
+  "display_name": "San Juan Nepomuceno, Bol\u00edvar, Colombia",
+  "search_names": "sanjuannepomucenobolivarcolombia sanjuannepomucenobolivarrepublicadecolombia sanjuannepomucenobolivarrepublicofcolombia sanjuannepomucenocolombia sanjuannepomucenorepublicadecolombia sanjuannepomucenorepublicofcolombia",
+  "latitude": "9.95157",
+  "longitude": "-75.08198",
+  "region": 28,
+  "country": 1,
+  "population": 29619,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 47,
+ "fields": {
+  "name": "San Juan del Cesar",
+  "name_ascii": "San Juan del Cesar",
+  "slug": "san-juan-del-cesar",
+  "geoname_id": 3669469,
+  "alternate_names": "",
+  "display_name": "San Juan del Cesar, La Guajira, Colombia",
+  "search_names": "sanjuandelcesarcolombia sanjuandelcesarlaguajiracolombia sanjuandelcesarlaguajirarepublicadecolombia sanjuandelcesarlaguajirarepublicofcolombia sanjuandelcesarrepublicadecolombia sanjuandelcesarrepublicofcolombia",
+  "latitude": "10.77107",
+  "longitude": "-73.00314",
+  "region": 15,
+  "country": 1,
+  "population": 26848,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 48,
+ "fields": {
+  "name": "San Jacinto",
+  "name_ascii": "San Jacinto",
+  "slug": "san-jacinto",
+  "geoname_id": 3669736,
+  "alternate_names": "",
+  "display_name": "San Jacinto, Bol\u00edvar, Colombia",
+  "search_names": "sanjacintobolivarcolombia sanjacintobolivarrepublicadecolombia sanjacintobolivarrepublicofcolombia sanjacintocolombia sanjacintorepublicadecolombia sanjacintorepublicofcolombia",
+  "latitude": "9.82767",
+  "longitude": "-75.12170",
+  "region": 28,
+  "country": 1,
+  "population": 20265,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 49,
+ "fields": {
+  "name": "San Gil",
+  "name_ascii": "San Gil",
+  "slug": "san-gil",
+  "geoname_id": 3669808,
+  "alternate_names": "",
+  "display_name": "San Gil, Santander, Colombia",
+  "search_names": "sangilcolombia sangilrepublicadecolombia sangilrepublicofcolombia sangilsantandercolombia sangilsantanderrepublicadecolombia sangilsantanderrepublicofcolombia",
+  "latitude": "6.55952",
+  "longitude": "-73.13637",
+  "region": 6,
+  "country": 1,
+  "population": 33592,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 50,
+ "fields": {
+  "name": "San Carlos",
+  "name_ascii": "San Carlos",
+  "slug": "san-carlos",
+  "geoname_id": 3669997,
+  "alternate_names": "",
+  "display_name": "San Carlos, C\u00f3rdoba, Colombia",
+  "search_names": "sancarloscolombia sancarloscordobacolombia sancarloscordobarepublicadecolombia sancarloscordobarepublicofcolombia sancarlosrepublicadecolombia sancarlosrepublicofcolombia",
+  "latitude": "8.79577",
+  "longitude": "-75.69947",
+  "region": 20,
+  "country": 1,
+  "population": 24615,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 51,
+ "fields": {
+  "name": "San Carlos",
+  "name_ascii": "San Carlos",
+  "slug": "san-carlos",
+  "geoname_id": 3669998,
+  "alternate_names": "",
+  "display_name": "San Carlos, Antioquia, Colombia",
+  "search_names": "sancarlosantioquiacolombia sancarlosantioquiarepublicadecolombia sancarlosantioquiarepublicofcolombia sancarloscolombia sancarlosrepublicadecolombia sancarlosrepublicofcolombia",
+  "latitude": "7.79177",
+  "longitude": "-74.77316",
+  "region": 32,
+  "country": 1,
+  "population": 22678,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 52,
+ "fields": {
+  "name": "San Benito Abad",
+  "name_ascii": "San Benito Abad",
+  "slug": "san-benito-abad",
+  "geoname_id": 3670038,
+  "alternate_names": "",
+  "display_name": "San Benito Abad, Sucre, Colombia",
+  "search_names": "sanbenitoabadcolombia sanbenitoabadrepublicadecolombia sanbenitoabadrepublicofcolombia sanbenitoabadsucrecolombia sanbenitoabadsucrerepublicadecolombia sanbenitoabadsucrerepublicofcolombia",
+  "latitude": "8.92901",
+  "longitude": "-75.02709",
+  "region": 5,
+  "country": 1,
+  "population": 18181,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 53,
+ "fields": {
+  "name": "San Andr\u00e9s",
+  "name_ascii": "San Andres",
+  "slug": "san-andres",
+  "geoname_id": 3670218,
+  "alternate_names": "",
+  "display_name": "San Andr\u00e9s, San Andres y Providencia, Colombia",
+  "search_names": "sanandrescolombia sanandresrepublicadecolombia sanandresrepublicofcolombia sanandressanandresyprovidenciacolombia sanandressanandresyprovidenciarepublicadecolombia sanandressanandresyprovidenciarepublicofcolombia",
+  "latitude": "12.58317",
+  "longitude": "-81.70636",
+  "region": 7,
+  "country": 1,
+  "population": 58257,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 54,
+ "fields": {
+  "name": "Sampu\u00e9s",
+  "name_ascii": "Sampues",
+  "slug": "sampues",
+  "geoname_id": 3670280,
+  "alternate_names": "",
+  "display_name": "Sampu\u00e9s, Sucre, Colombia",
+  "search_names": "sampuescolombia sampuesrepublicadecolombia sampuesrepublicofcolombia sampuessucrecolombia sampuessucrerepublicadecolombia sampuessucrerepublicofcolombia",
+  "latitude": "9.18361",
+  "longitude": "-75.38167",
+  "region": 5,
+  "country": 1,
+  "population": 21204,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 55,
+ "fields": {
+  "name": "Salamina",
+  "name_ascii": "Salamina",
+  "slug": "salamina",
+  "geoname_id": 3670370,
+  "alternate_names": "",
+  "display_name": "Salamina, Caldas, Colombia",
+  "search_names": "salaminacaldascolombia salaminacaldasrepublicadecolombia salaminacaldasrepublicofcolombia salaminacolombia salaminarepublicadecolombia salaminarepublicofcolombia",
+  "latitude": "5.40733",
+  "longitude": "-75.48749",
+  "region": 26,
+  "country": 1,
+  "population": 18076,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 56,
+ "fields": {
+  "name": "Sahag\u00fan",
+  "name_ascii": "Sahagun",
+  "slug": "sahagun",
+  "geoname_id": 3670419,
+  "alternate_names": "",
+  "display_name": "Sahag\u00fan, C\u00f3rdoba, Colombia",
+  "search_names": "sahaguncolombia sahaguncordobacolombia sahaguncordobarepublicadecolombia sahaguncordobarepublicofcolombia sahagunrepublicadecolombia sahagunrepublicofcolombia",
+  "latitude": "8.94617",
+  "longitude": "-75.44275",
+  "region": 20,
+  "country": 1,
+  "population": 59188,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 57,
+ "fields": {
+  "name": "Sabanalarga",
+  "name_ascii": "Sabanalarga",
+  "slug": "sabanalarga",
+  "geoname_id": 3670502,
+  "alternate_names": "",
+  "display_name": "Sabanalarga, Atl\u00e1ntico, Colombia",
+  "search_names": "sabanalargaatlanticocolombia sabanalargaatlanticorepublicadecolombia sabanalargaatlanticorepublicofcolombia sabanalargacolombia sabanalargarepublicadecolombia sabanalargarepublicofcolombia",
+  "latitude": "10.63072",
+  "longitude": "-74.92214",
+  "region": 30,
+  "country": 1,
+  "population": 68535,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 58,
+ "fields": {
+  "name": "Sabanagrande",
+  "name_ascii": "Sabanagrande",
+  "slug": "sabanagrande",
+  "geoname_id": 3670513,
+  "alternate_names": "",
+  "display_name": "Sabanagrande, Atl\u00e1ntico, Colombia",
+  "search_names": "sabanagrandeatlanticocolombia sabanagrandeatlanticorepublicadecolombia sabanagrandeatlanticorepublicofcolombia sabanagrandecolombia sabanagranderepublicadecolombia sabanagranderepublicofcolombia",
+  "latitude": "10.79115",
+  "longitude": "-74.76059",
+  "region": 30,
+  "country": 1,
+  "population": 24880,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 59,
+ "fields": {
+  "name": "Roldanillo",
+  "name_ascii": "Roldanillo",
+  "slug": "roldanillo",
+  "geoname_id": 3670644,
+  "alternate_names": "",
+  "display_name": "Roldanillo, Valle del Cauca, Colombia",
+  "search_names": "roldanillocolombia roldanillorepublicadecolombia roldanillorepublicofcolombia roldanillovalledelcaucacolombia roldanillovalledelcaucarepublicadecolombia roldanillovalledelcaucarepublicofcolombia",
+  "latitude": "4.41256",
+  "longitude": "-76.15457",
+  "region": 3,
+  "country": 1,
+  "population": 27561,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 60,
+ "fields": {
+  "name": "Riosucio",
+  "name_ascii": "Riosucio",
+  "slug": "riosucio",
+  "geoname_id": 3670719,
+  "alternate_names": "",
+  "display_name": "Riosucio, Caldas, Colombia",
+  "search_names": "riosuciocaldascolombia riosuciocaldasrepublicadecolombia riosuciocaldasrepublicofcolombia riosuciocolombia riosuciorepublicadecolombia riosuciorepublicofcolombia",
+  "latitude": "5.42164",
+  "longitude": "-75.70318",
+  "region": 26,
+  "country": 1,
+  "population": 18950,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 61,
+ "fields": {
+  "name": "Rionegro",
+  "name_ascii": "Rionegro",
+  "slug": "rionegro",
+  "geoname_id": 3670730,
+  "alternate_names": "",
+  "display_name": "Rionegro, Antioquia, Colombia",
+  "search_names": "rionegroantioquiacolombia rionegroantioquiarepublicadecolombia rionegroantioquiarepublicofcolombia rionegrocolombia rionegrorepublicadecolombia rionegrorepublicofcolombia",
+  "latitude": "6.15515",
+  "longitude": "-75.37371",
+  "region": 32,
+  "country": 1,
+  "population": 62291,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 62,
+ "fields": {
+  "name": "Riohacha",
+  "name_ascii": "Riohacha",
+  "slug": "riohacha",
+  "geoname_id": 3670745,
+  "alternate_names": "Rio de la Hacha",
+  "display_name": "Riohacha, La Guajira, Colombia",
+  "search_names": "riodelahachacolombia riodelahachalaguajiracolombia riodelahachalaguajirarepublicadecolombia riodelahachalaguajirarepublicofcolombia riodelahacharepublicadecolombia riodelahacharepublicofcolombia riohachacolombia riohachalaguajiracolombia riohachalaguajirarepublicadecolombia riohachalaguajirarepublicofcolombia riohacharepublicadecolombia riohacharepublicofcolombia",
+  "latitude": "11.54444",
+  "longitude": "-72.90722",
+  "region": 15,
+  "country": 1,
+  "population": 92431,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 63,
+ "fields": {
+  "name": "Repel\u00f3n",
+  "name_ascii": "Repelon",
+  "slug": "repelon",
+  "geoname_id": 3670874,
+  "alternate_names": "",
+  "display_name": "Repel\u00f3n, Atl\u00e1ntico, Colombia",
+  "search_names": "repelonatlanticocolombia repelonatlanticorepublicadecolombia repelonatlanticorepublicofcolombia repeloncolombia repelonrepublicadecolombia repelonrepublicofcolombia",
+  "latitude": "10.49520",
+  "longitude": "-75.12448",
+  "region": 30,
+  "country": 1,
+  "population": 18685,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 64,
+ "fields": {
+  "name": "Quimbaya",
+  "name_ascii": "Quimbaya",
+  "slug": "quimbaya",
+  "geoname_id": 3671098,
+  "alternate_names": "",
+  "display_name": "Quimbaya, Quind\u00edo, Colombia",
+  "search_names": "quimbayacolombia quimbayadepartamentodelquindiocolombia quimbayadepartamentodelquindiorepublicadecolombia quimbayadepartamentodelquindiorepublicofcolombia quimbayaquindiocolombia quimbayaquindiorepublicadecolombia quimbayaquindiorepublicofcolombia quimbayarepublicadecolombia quimbayarepublicofcolombia",
+  "latitude": "4.62306",
+  "longitude": "-75.76278",
+  "region": 9,
+  "country": 1,
+  "population": 31391,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 65,
+ "fields": {
+  "name": "Quibd\u00f3",
+  "name_ascii": "Quibdo",
+  "slug": "quibdo",
+  "geoname_id": 3671116,
+  "alternate_names": "",
+  "display_name": "Quibd\u00f3, Choc\u00f3, Colombia",
+  "search_names": "quibdochococolombia quibdochocorepublicadecolombia quibdochocorepublicofcolombia quibdocolombia quibdorepublicadecolombia quibdorepublicofcolombia",
+  "latitude": "5.69188",
+  "longitude": "-76.65835",
+  "region": 21,
+  "country": 1,
+  "population": 75104,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 66,
+ "fields": {
+  "name": "Puerto Tejada",
+  "name_ascii": "Puerto Tejada",
+  "slug": "puerto-tejada",
+  "geoname_id": 3671315,
+  "alternate_names": "",
+  "display_name": "Puerto Tejada, Cauca, Colombia",
+  "search_names": "puertotejadacaucacolombia puertotejadacaucarepublicadecolombia puertotejadacaucarepublicofcolombia puertotejadacolombia puertotejadarepublicadecolombia puertotejadarepublicofcolombia",
+  "latitude": "3.23114",
+  "longitude": "-76.41668",
+  "region": 23,
+  "country": 1,
+  "population": 53674,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 67,
+ "fields": {
+  "name": "Puerto Santander",
+  "name_ascii": "Puerto Santander",
+  "slug": "puerto-santander",
+  "geoname_id": 3671325,
+  "alternate_names": "",
+  "display_name": "Puerto Santander, Norte de Santander, Colombia",
+  "search_names": "puertosantandercolombia puertosantandernortedesantandercolombia puertosantandernortedesantanderrepublicadecolombia puertosantandernortedesantanderrepublicofcolombia puertosantanderrepublicadecolombia puertosantanderrepublicofcolombia",
+  "latitude": "8.36361",
+  "longitude": "-72.40630",
+  "region": 11,
+  "country": 1,
+  "population": 16275,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 68,
+ "fields": {
+  "name": "Puerto L\u00f3pez",
+  "name_ascii": "Puerto Lopez",
+  "slug": "puerto-lopez",
+  "geoname_id": 3671418,
+  "alternate_names": "",
+  "display_name": "Puerto L\u00f3pez, Meta, Colombia",
+  "search_names": "puertolopezcolombia puertolopezmetacolombia puertolopezmetarepublicadecolombia puertolopezmetarepublicofcolombia puertolopezrepublicadecolombia puertolopezrepublicofcolombia",
+  "latitude": "4.09912",
+  "longitude": "-72.95647",
+  "region": 13,
+  "country": 1,
+  "population": 16678,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 69,
+ "fields": {
+  "name": "Puerto Colombia",
+  "name_ascii": "Puerto Colombia",
+  "slug": "puerto-colombia",
+  "geoname_id": 3671497,
+  "alternate_names": "",
+  "display_name": "Puerto Colombia, Atl\u00e1ntico, Colombia",
+  "search_names": "puertocolombiaatlanticocolombia puertocolombiaatlanticorepublicadecolombia puertocolombiaatlanticorepublicofcolombia puertocolombiacolombia puertocolombiarepublicadecolombia puertocolombiarepublicofcolombia",
+  "latitude": "10.98778",
+  "longitude": "-74.95472",
+  "region": 30,
+  "country": 1,
+  "population": 26227,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 70,
+ "fields": {
+  "name": "Puerto Boyac\u00e1",
+  "name_ascii": "Puerto Boyaca",
+  "slug": "puerto-boyaca",
+  "geoname_id": 3671531,
+  "alternate_names": "",
+  "display_name": "Puerto Boyac\u00e1, Boyac\u00e1, Colombia",
+  "search_names": "puertoboyacaboyacacolombia puertoboyacaboyacarepublicadecolombia puertoboyacaboyacarepublicofcolombia puertoboyacacolombia puertoboyacarepublicadecolombia puertoboyacarepublicofcolombia",
+  "latitude": "5.97600",
+  "longitude": "-74.58516",
+  "region": 27,
+  "country": 1,
+  "population": 27310,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 71,
+ "fields": {
+  "name": "Puerto Berr\u00edo",
+  "name_ascii": "Puerto Berrio",
+  "slug": "puerto-berrio",
+  "geoname_id": 3671540,
+  "alternate_names": "",
+  "display_name": "Puerto Berr\u00edo, Antioquia, Colombia",
+  "search_names": "puertoberrioantioquiacolombia puertoberrioantioquiarepublicadecolombia puertoberrioantioquiarepublicofcolombia puertoberriocolombia puertoberriorepublicadecolombia puertoberriorepublicofcolombia",
+  "latitude": "6.49156",
+  "longitude": "-74.40326",
+  "region": 32,
+  "country": 1,
+  "population": 33983,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 72,
+ "fields": {
+  "name": "Puerto As\u00eds",
+  "name_ascii": "Puerto Asis",
+  "slug": "puerto-asis",
+  "geoname_id": 3671549,
+  "alternate_names": "",
+  "display_name": "Puerto As\u00eds, Putumayo, Colombia",
+  "search_names": "puertoasiscolombia puertoasisputumayocolombia puertoasisputumayorepublicadecolombia puertoasisputumayorepublicofcolombia puertoasisrepublicadecolombia puertoasisrepublicofcolombia",
+  "latitude": "0.50514",
+  "longitude": "-76.49571",
+  "region": 10,
+  "country": 1,
+  "population": 29782,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 73,
+ "fields": {
+  "name": "Pradera",
+  "name_ascii": "Pradera",
+  "slug": "pradera",
+  "geoname_id": 3671772,
+  "alternate_names": "",
+  "display_name": "Pradera, Valle del Cauca, Colombia",
+  "search_names": "praderacolombia praderarepublicadecolombia praderarepublicofcolombia praderavalledelcaucacolombia praderavalledelcaucarepublicadecolombia praderavalledelcaucarepublicofcolombia",
+  "latitude": "3.42111",
+  "longitude": "-76.24472",
+  "region": 3,
+  "country": 1,
+  "population": 44630,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 74,
+ "fields": {
+  "name": "Popay\u00e1n",
+  "name_ascii": "Popayan",
+  "slug": "popayan",
+  "geoname_id": 3671916,
+  "alternate_names": "",
+  "display_name": "Popay\u00e1n, Cauca, Colombia",
+  "search_names": "popayancaucacolombia popayancaucarepublicadecolombia popayancaucarepublicofcolombia popayancolombia popayanrepublicadecolombia popayanrepublicofcolombia",
+  "latitude": "2.43823",
+  "longitude": "-76.61316",
+  "region": 23,
+  "country": 1,
+  "population": 258653,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 75,
+ "fields": {
+  "name": "Planeta Rica",
+  "name_ascii": "Planeta Rica",
+  "slug": "planeta-rica",
+  "geoname_id": 3672068,
+  "alternate_names": "",
+  "display_name": "Planeta Rica, C\u00f3rdoba, Colombia",
+  "search_names": "planetaricacolombia planetaricacordobacolombia planetaricacordobarepublicadecolombia planetaricacordobarepublicofcolombia planetaricarepublicadecolombia planetaricarepublicofcolombia",
+  "latitude": "8.41150",
+  "longitude": "-75.58508",
+  "region": 20,
+  "country": 1,
+  "population": 37297,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 76,
+ "fields": {
+  "name": "Pivijay",
+  "name_ascii": "Pivijay",
+  "slug": "pivijay",
+  "geoname_id": 3672093,
+  "alternate_names": "",
+  "display_name": "Pivijay, Magdalena, Colombia",
+  "search_names": "pivijaycolombia pivijaymagdalenacolombia pivijaymagdalenarepublicadecolombia pivijaymagdalenarepublicofcolombia pivijayrepublicadecolombia pivijayrepublicofcolombia",
+  "latitude": "10.46167",
+  "longitude": "-74.61621",
+  "region": 14,
+  "country": 1,
+  "population": 33492,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 77,
+ "fields": {
+  "name": "Pitalito",
+  "name_ascii": "Pitalito",
+  "slug": "pitalito",
+  "geoname_id": 3672110,
+  "alternate_names": "",
+  "display_name": "Pitalito, Huila, Colombia",
+  "search_names": "pitalitocolombia pitalitohuilacolombia pitalitohuilarepublicadecolombia pitalitohuilarepublicofcolombia pitalitorepublicadecolombia pitalitorepublicofcolombia",
+  "latitude": "1.85371",
+  "longitude": "-76.05071",
+  "region": 16,
+  "country": 1,
+  "population": 53685,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 78,
+ "fields": {
+  "name": "Piedecuesta",
+  "name_ascii": "Piedecuesta",
+  "slug": "piedecuesta",
+  "geoname_id": 3672328,
+  "alternate_names": "",
+  "display_name": "Piedecuesta, Santander, Colombia",
+  "search_names": "piedecuestacolombia piedecuestarepublicadecolombia piedecuestarepublicofcolombia piedecuestasantandercolombia piedecuestasantanderrepublicadecolombia piedecuestasantanderrepublicofcolombia",
+  "latitude": "6.98789",
+  "longitude": "-73.04953",
+  "region": 6,
+  "country": 1,
+  "population": 86387,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 79,
+ "fields": {
+  "name": "Pereira",
+  "name_ascii": "Pereira",
+  "slug": "pereira",
+  "geoname_id": 3672486,
+  "alternate_names": "",
+  "display_name": "Pereira, Risaralda, Colombia",
+  "search_names": "pereiracolombia pereirarepublicadecolombia pereirarepublicofcolombia pereirarisaraldacolombia pereirarisaraldarepublicadecolombia pereirarisaraldarepublicofcolombia",
+  "latitude": "4.81333",
+  "longitude": "-75.69611",
+  "region": 8,
+  "country": 1,
+  "population": 440118,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 80,
+ "fields": {
+  "name": "Payand\u00e9",
+  "name_ascii": "Payande",
+  "slug": "payande",
+  "geoname_id": 3672664,
+  "alternate_names": "",
+  "display_name": "Payand\u00e9, Tolima, Colombia",
+  "search_names": "payandecolombia payanderepublicadecolombia payanderepublicofcolombia payandetolimacolombia payandetolimarepublicadecolombia payandetolimarepublicofcolombia",
+  "latitude": "4.29750",
+  "longitude": "-75.09667",
+  "region": 4,
+  "country": 1,
+  "population": 37496,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 81,
+ "fields": {
+  "name": "Pat\u00eda",
+  "name_ascii": "Patia",
+  "slug": "patia",
+  "geoname_id": 3672761,
+  "alternate_names": "",
+  "display_name": "Pat\u00eda, Cauca, Colombia",
+  "search_names": "patiacaucacolombia patiacaucarepublicadecolombia patiacaucarepublicofcolombia patiacolombia patiarepublicadecolombia patiarepublicofcolombia",
+  "latitude": "2.06895",
+  "longitude": "-77.05273",
+  "region": 23,
+  "country": 1,
+  "population": 20807,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 82,
+ "fields": {
+  "name": "Pasto",
+  "name_ascii": "Pasto",
+  "slug": "pasto",
+  "geoname_id": 3672778,
+  "alternate_names": "",
+  "display_name": "Pasto, Nari\u00f1o, Colombia",
+  "search_names": "pastocolombia pastonarinocolombia pastonarinorepublicadecolombia pastonarinorepublicofcolombia pastorepublicadecolombia pastorepublicofcolombia",
+  "latitude": "1.21361",
+  "longitude": "-77.28111",
+  "region": 12,
+  "country": 1,
+  "population": 382236,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 83,
+ "fields": {
+  "name": "Pamplona",
+  "name_ascii": "Pamplona",
+  "slug": "pamplona",
+  "geoname_id": 3673045,
+  "alternate_names": "",
+  "display_name": "Pamplona, Norte de Santander, Colombia",
+  "search_names": "pamplonacolombia pamplonanortedesantandercolombia pamplonanortedesantanderrepublicadecolombia pamplonanortedesantanderrepublicofcolombia pamplonarepublicadecolombia pamplonarepublicofcolombia",
+  "latitude": "7.37565",
+  "longitude": "-72.64795",
+  "region": 11,
+  "country": 1,
+  "population": 53587,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 84,
+ "fields": {
+  "name": "Palmira",
+  "name_ascii": "Palmira",
+  "slug": "palmira",
+  "geoname_id": 3673164,
+  "alternate_names": "",
+  "display_name": "Palmira, Valle del Cauca, Colombia",
+  "search_names": "palmiracolombia palmirarepublicadecolombia palmirarepublicofcolombia palmiravalledelcaucacolombia palmiravalledelcaucarepublicadecolombia palmiravalledelcaucarepublicofcolombia",
+  "latitude": "3.53944",
+  "longitude": "-76.30361",
+  "region": 3,
+  "country": 1,
+  "population": 247986,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 85,
+ "fields": {
+  "name": "Palmar de Varela",
+  "name_ascii": "Palmar de Varela",
+  "slug": "palmar-de-varela",
+  "geoname_id": 3673220,
+  "alternate_names": "",
+  "display_name": "Palmar de Varela, Atl\u00e1ntico, Colombia",
+  "search_names": "palmardevarelaatlanticocolombia palmardevarelaatlanticorepublicadecolombia palmardevarelaatlanticorepublicofcolombia palmardevarelacolombia palmardevarelarepublicadecolombia palmardevarelarepublicofcolombia",
+  "latitude": "10.74055",
+  "longitude": "-74.75443",
+  "region": 30,
+  "country": 1,
+  "population": 28084,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 86,
+ "fields": {
+  "name": "Belalc\u00e1zar",
+  "name_ascii": "Belalcazar",
+  "slug": "belalcazar",
+  "geoname_id": 3673398,
+  "alternate_names": "Belalc\u00e1zer;Paez;P\u00e1ez",
+  "display_name": "Belalc\u00e1zar, Cauca, Colombia",
+  "search_names": "belalcazarcaucacolombia belalcazarcaucarepublicadecolombia belalcazarcaucarepublicofcolombia belalcazarcolombia belalcazarrepublicadecolombia belalcazarrepublicofcolombia belalcazercaucacolombia belalcazercaucarepublicadecolombia belalcazercaucarepublicofcolombia belalcazercolombia belalcazerrepublicadecolombia belalcazerrepublicofcolombia paezcaucacolombia paezcaucarepublicadecolombia paezcaucarepublicofcolombia paezcolombia paezrepublicadecolombia paezrepublicofcolombia",
+  "latitude": "2.64644",
+  "longitude": "-75.97269",
+  "region": 23,
+  "country": 1,
+  "population": 31800,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 87,
+ "fields": {
+  "name": "Padua",
+  "name_ascii": "Padua",
+  "slug": "padua",
+  "geoname_id": 3673404,
+  "alternate_names": "",
+  "display_name": "Padua, Tolima, Colombia",
+  "search_names": "paduacolombia paduarepublicadecolombia paduarepublicofcolombia paduatolimacolombia paduatolimarepublicadecolombia paduatolimarepublicofcolombia",
+  "latitude": "5.13429",
+  "longitude": "-75.14001",
+  "region": 4,
+  "country": 1,
+  "population": 19311,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 88,
+ "fields": {
+  "name": "Pacho",
+  "name_ascii": "Pacho",
+  "slug": "pacho",
+  "geoname_id": 3673424,
+  "alternate_names": "",
+  "display_name": "Pacho, Cundinamarca, Colombia",
+  "search_names": "pachocolombia pachocundinamarcacolombia pachocundinamarcarepublicadecolombia pachocundinamarcarepublicofcolombia pachorepublicadecolombia pachorepublicofcolombia",
+  "latitude": "5.13278",
+  "longitude": "-74.15977",
+  "region": 19,
+  "country": 1,
+  "population": 16698,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 89,
+ "fields": {
+  "name": "Oca\u00f1a",
+  "name_ascii": "Ocana",
+  "slug": "ocana",
+  "geoname_id": 3673662,
+  "alternate_names": "",
+  "display_name": "Oca\u00f1a, Norte de Santander, Colombia",
+  "search_names": "ocanacolombia ocananortedesantandercolombia ocananortedesantanderrepublicadecolombia ocananortedesantanderrepublicofcolombia ocanarepublicadecolombia ocanarepublicofcolombia",
+  "latitude": "8.23773",
+  "longitude": "-73.35604",
+  "region": 11,
+  "country": 1,
+  "population": 83511,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 90,
+ "fields": {
+  "name": "Neiva",
+  "name_ascii": "Neiva",
+  "slug": "neiva",
+  "geoname_id": 3673899,
+  "alternate_names": "",
+  "display_name": "Neiva, Huila, Colombia",
+  "search_names": "neivacolombia neivahuilacolombia neivahuilarepublicadecolombia neivahuilarepublicofcolombia neivarepublicadecolombia neivarepublicofcolombia",
+  "latitude": "2.92730",
+  "longitude": "-75.28189",
+  "region": 16,
+  "country": 1,
+  "population": 352855,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 91,
+ "fields": {
+  "name": "Mosquera",
+  "name_ascii": "Mosquera",
+  "slug": "mosquera",
+  "geoname_id": 3674292,
+  "alternate_names": "",
+  "display_name": "Mosquera, Cundinamarca, Colombia",
+  "search_names": "mosqueracolombia mosqueracundinamarcacolombia mosqueracundinamarcarepublicadecolombia mosqueracundinamarcarepublicofcolombia mosquerarepublicadecolombia mosquerarepublicofcolombia",
+  "latitude": "4.70592",
+  "longitude": "-74.23021",
+  "region": 19,
+  "country": 1,
+  "population": 27005,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 92,
+ "fields": {
+  "name": "Morales",
+  "name_ascii": "Morales",
+  "slug": "morales",
+  "geoname_id": 3674412,
+  "alternate_names": "",
+  "display_name": "Morales, Bol\u00edvar, Colombia",
+  "search_names": "moralesbolivarcolombia moralesbolivarrepublicadecolombia moralesbolivarrepublicofcolombia moralescolombia moralesrepublicadecolombia moralesrepublicofcolombia",
+  "latitude": "8.27520",
+  "longitude": "-73.86884",
+  "region": 28,
+  "country": 1,
+  "population": 20375,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 93,
+ "fields": {
+  "name": "Monter\u00eda",
+  "name_ascii": "Monteria",
+  "slug": "monteria",
+  "geoname_id": 3674453,
+  "alternate_names": "",
+  "display_name": "Monter\u00eda, C\u00f3rdoba, Colombia",
+  "search_names": "monteriacolombia monteriacordobacolombia monteriacordobarepublicadecolombia monteriacordobarepublicofcolombia monteriarepublicadecolombia monteriarepublicofcolombia",
+  "latitude": "8.74798",
+  "longitude": "-75.88143",
+  "region": 20,
+  "country": 1,
+  "population": 272420,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 94,
+ "fields": {
+  "name": "Montenegro",
+  "name_ascii": "Montenegro",
+  "slug": "montenegro",
+  "geoname_id": 3674463,
+  "alternate_names": "",
+  "display_name": "Montenegro, Quind\u00edo, Colombia",
+  "search_names": "montenegrocolombia montenegrodepartamentodelquindiocolombia montenegrodepartamentodelquindiorepublicadecolombia montenegrodepartamentodelquindiorepublicofcolombia montenegroquindiocolombia montenegroquindiorepublicadecolombia montenegroquindiorepublicofcolombia montenegrorepublicadecolombia montenegrorepublicofcolombia",
+  "latitude": "4.56639",
+  "longitude": "-75.75111",
+  "region": 9,
+  "country": 1,
+  "population": 36499,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 95,
+ "fields": {
+  "name": "Montel\u00edbano",
+  "name_ascii": "Montelibano",
+  "slug": "montelibano",
+  "geoname_id": 3674470,
+  "alternate_names": "",
+  "display_name": "Montel\u00edbano, C\u00f3rdoba, Colombia",
+  "search_names": "montelibanocolombia montelibanocordobacolombia montelibanocordobarepublicadecolombia montelibanocordobarepublicofcolombia montelibanorepublicadecolombia montelibanorepublicofcolombia",
+  "latitude": "7.97917",
+  "longitude": "-75.42020",
+  "region": 20,
+  "country": 1,
+  "population": 85000,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 96,
+ "fields": {
+  "name": "Momp\u00f3s",
+  "name_ascii": "Mompos",
+  "slug": "mompos",
+  "geoname_id": 3674597,
+  "alternate_names": "",
+  "display_name": "Momp\u00f3s, Bol\u00edvar, Colombia",
+  "search_names": "momposbolivarcolombia momposbolivarrepublicadecolombia momposbolivarrepublicofcolombia momposcolombia momposrepublicadecolombia momposrepublicofcolombia",
+  "latitude": "9.24194",
+  "longitude": "-74.42667",
+  "region": 28,
+  "country": 1,
+  "population": 30861,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 97,
+ "fields": {
+  "name": "Mocoa",
+  "name_ascii": "Mocoa",
+  "slug": "mocoa",
+  "geoname_id": 3674654,
+  "alternate_names": "",
+  "display_name": "Mocoa, Putumayo, Colombia",
+  "search_names": "mocoacolombia mocoaputumayocolombia mocoaputumayorepublicadecolombia mocoaputumayorepublicofcolombia mocoarepublicadecolombia mocoarepublicofcolombia",
+  "latitude": "1.15284",
+  "longitude": "-76.65208",
+  "region": 10,
+  "country": 1,
+  "population": 22035,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 98,
+ "fields": {
+  "name": "Melgar",
+  "name_ascii": "Melgar",
+  "slug": "melgar",
+  "geoname_id": 3674885,
+  "alternate_names": "",
+  "display_name": "Melgar, Tolima, Colombia",
+  "search_names": "melgarcolombia melgarrepublicadecolombia melgarrepublicofcolombia melgartolimacolombia melgartolimarepublicadecolombia melgartolimarepublicofcolombia",
+  "latitude": "4.20475",
+  "longitude": "-74.64075",
+  "region": 4,
+  "country": 1,
+  "population": 25980,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 99,
+ "fields": {
+  "name": "Medell\u00edn",
+  "name_ascii": "Medellin",
+  "slug": "medellin",
+  "geoname_id": 3674962,
+  "alternate_names": "",
+  "display_name": "Medell\u00edn, Antioquia, Colombia",
+  "search_names": "medellinantioquiacolombia medellinantioquiarepublicadecolombia medellinantioquiarepublicofcolombia medellincolombia medellinrepublicadecolombia medellinrepublicofcolombia",
+  "latitude": "6.25184",
+  "longitude": "-75.56359",
+  "region": 32,
+  "country": 1,
+  "population": 1999979,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 100,
+ "fields": {
+  "name": "San Sebasti\u00e1n de Mariquita",
+  "name_ascii": "San Sebastian de Mariquita",
+  "slug": "san-sebastian-de-mariquita",
+  "geoname_id": 3675252,
+  "alternate_names": "Mariquita",
+  "display_name": "San Sebasti\u00e1n de Mariquita, Tolima, Colombia",
+  "search_names": "mariquitacolombia mariquitarepublicadecolombia mariquitarepublicofcolombia mariquitatolimacolombia mariquitatolimarepublicadecolombia mariquitatolimarepublicofcolombia sansebastiandemariquitacolombia sansebastiandemariquitarepublicadecolombia sansebastiandemariquitarepublicofcolombia sansebastiandemariquitatolimacolombia sansebastiandemariquitatolimarepublicadecolombia sansebastiandemariquitatolimarepublicofcolombia",
+  "latitude": "5.19889",
+  "longitude": "-74.89295",
+  "region": 4,
+  "country": 1,
+  "population": 23104,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 101,
+ "fields": {
+  "name": "Marinilla",
+  "name_ascii": "Marinilla",
+  "slug": "marinilla",
+  "geoname_id": 3675263,
+  "alternate_names": "",
+  "display_name": "Marinilla, Antioquia, Colombia",
+  "search_names": "marinillaantioquiacolombia marinillaantioquiarepublicadecolombia marinillaantioquiarepublicofcolombia marinillacolombia marinillarepublicadecolombia marinillarepublicofcolombia",
+  "latitude": "6.17358",
+  "longitude": "-75.33621",
+  "region": 32,
+  "country": 1,
+  "population": 24171,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 102,
+ "fields": {
+  "name": "Mar\u00eda la Baja",
+  "name_ascii": "Maria la Baja",
+  "slug": "maria-la-baja",
+  "geoname_id": 3675287,
+  "alternate_names": "",
+  "display_name": "Mar\u00eda la Baja, Bol\u00edvar, Colombia",
+  "search_names": "marialabajabolivarcolombia marialabajabolivarrepublicadecolombia marialabajabolivarrepublicofcolombia marialabajacolombia marialabajarepublicadecolombia marialabajarepublicofcolombia",
+  "latitude": "9.98320",
+  "longitude": "-75.30155",
+  "region": 28,
+  "country": 1,
+  "population": 23401,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 103,
+ "fields": {
+  "name": "Manzanares",
+  "name_ascii": "Manzanares",
+  "slug": "manzanares",
+  "geoname_id": 3675409,
+  "alternate_names": "",
+  "display_name": "Manzanares, Caldas, Colombia",
+  "search_names": "manzanarescaldascolombia manzanarescaldasrepublicadecolombia manzanarescaldasrepublicofcolombia manzanarescolombia manzanaresrepublicadecolombia manzanaresrepublicofcolombia",
+  "latitude": "5.25397",
+  "longitude": "-75.15403",
+  "region": 26,
+  "country": 1,
+  "population": 16278,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 104,
+ "fields": {
+  "name": "Manizales",
+  "name_ascii": "Manizales",
+  "slug": "manizales",
+  "geoname_id": 3675443,
+  "alternate_names": "",
+  "display_name": "Manizales, Caldas, Colombia",
+  "search_names": "manizalescaldascolombia manizalescaldasrepublicadecolombia manizalescaldasrepublicofcolombia manizalescolombia manizalesrepublicadecolombia manizalesrepublicofcolombia",
+  "latitude": "5.06889",
+  "longitude": "-75.51738",
+  "region": 26,
+  "country": 1,
+  "population": 357814,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 105,
+ "fields": {
+  "name": "Malambo",
+  "name_ascii": "Malambo",
+  "slug": "malambo",
+  "geoname_id": 3675595,
+  "alternate_names": "",
+  "display_name": "Malambo, Atl\u00e1ntico, Colombia",
+  "search_names": "malamboatlanticocolombia malamboatlanticorepublicadecolombia malamboatlanticorepublicofcolombia malambocolombia malamborepublicadecolombia malamborepublicofcolombia",
+  "latitude": "10.85953",
+  "longitude": "-74.77386",
+  "region": 30,
+  "country": 1,
+  "population": 101534,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 106,
+ "fields": {
+  "name": "M\u00e1laga",
+  "name_ascii": "Malaga",
+  "slug": "malaga",
+  "geoname_id": 3675605,
+  "alternate_names": "",
+  "display_name": "M\u00e1laga, Santander, Colombia",
+  "search_names": "malagacolombia malagarepublicadecolombia malagarepublicofcolombia malagasantandercolombia malagasantanderrepublicadecolombia malagasantanderrepublicofcolombia",
+  "latitude": "6.69903",
+  "longitude": "-72.73233",
+  "region": 6,
+  "country": 1,
+  "population": 18739,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 107,
+ "fields": {
+  "name": "Maicao",
+  "name_ascii": "Maicao",
+  "slug": "maicao",
+  "geoname_id": 3675657,
+  "alternate_names": "",
+  "display_name": "Maicao, La Guajira, Colombia",
+  "search_names": "maicaocolombia maicaolaguajiracolombia maicaolaguajirarepublicadecolombia maicaolaguajirarepublicofcolombia maicaorepublicadecolombia maicaorepublicofcolombia",
+  "latitude": "11.37837",
+  "longitude": "-72.23950",
+  "region": 15,
+  "country": 1,
+  "population": 130348,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 108,
+ "fields": {
+  "name": "Magangu\u00e9",
+  "name_ascii": "Magangue",
+  "slug": "magangue",
+  "geoname_id": 3675692,
+  "alternate_names": "",
+  "display_name": "Magangu\u00e9, Bol\u00edvar, Colombia",
+  "search_names": "maganguebolivarcolombia maganguebolivarrepublicadecolombia maganguebolivarrepublicofcolombia maganguecolombia maganguerepublicadecolombia maganguerepublicofcolombia",
+  "latitude": "9.24202",
+  "longitude": "-74.75467",
+  "region": 28,
+  "country": 1,
+  "population": 100313,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 109,
+ "fields": {
+  "name": "Madrid",
+  "name_ascii": "Madrid",
+  "slug": "madrid",
+  "geoname_id": 3675707,
+  "alternate_names": "",
+  "display_name": "Madrid, Cundinamarca, Colombia",
+  "search_names": "madridcolombia madridcundinamarcacolombia madridcundinamarcarepublicadecolombia madridcundinamarcarepublicofcolombia madridrepublicadecolombia madridrepublicofcolombia",
+  "latitude": "4.73245",
+  "longitude": "-74.26419",
+  "region": 19,
+  "country": 1,
+  "population": 50437,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 110,
+ "fields": {
+  "name": "Los Patios",
+  "name_ascii": "Los Patios",
+  "slug": "los-patios",
+  "geoname_id": 3675975,
+  "alternate_names": "",
+  "display_name": "Los Patios, Norte de Santander, Colombia",
+  "search_names": "lospatioscolombia lospatiosnortedesantandercolombia lospatiosnortedesantanderrepublicadecolombia lospatiosnortedesantanderrepublicofcolombia lospatiosrepublicadecolombia lospatiosrepublicofcolombia",
+  "latitude": "7.83793",
+  "longitude": "-72.50370",
+  "region": 11,
+  "country": 1,
+  "population": 58661,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 111,
+ "fields": {
+  "name": "Lorica",
+  "name_ascii": "Lorica",
+  "slug": "lorica",
+  "geoname_id": 3676397,
+  "alternate_names": "",
+  "display_name": "Lorica, C\u00f3rdoba, Colombia",
+  "search_names": "loricacolombia loricacordobacolombia loricacordobarepublicadecolombia loricacordobarepublicofcolombia loricarepublicadecolombia loricarepublicofcolombia",
+  "latitude": "9.23648",
+  "longitude": "-75.81350",
+  "region": 20,
+  "country": 1,
+  "population": 40605,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 112,
+ "fields": {
+  "name": "L\u00edbano",
+  "name_ascii": "Libano",
+  "slug": "libano",
+  "geoname_id": 3676604,
+  "alternate_names": "",
+  "display_name": "L\u00edbano, Tolima, Colombia",
+  "search_names": "libanocolombia libanorepublicadecolombia libanorepublicofcolombia libanotolimacolombia libanotolimarepublicadecolombia libanotolimarepublicofcolombia",
+  "latitude": "4.92180",
+  "longitude": "-75.06232",
+  "region": 4,
+  "country": 1,
+  "population": 28211,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 113,
+ "fields": {
+  "name": "Leticia",
+  "name_ascii": "Leticia",
+  "slug": "leticia",
+  "geoname_id": 3676623,
+  "alternate_names": "",
+  "display_name": "Leticia, Amazonas, Colombia",
+  "search_names": "leticiaamazonascolombia leticiaamazonasrepublicadecolombia leticiaamazonasrepublicofcolombia leticiacolombia leticiadepartamentodelamazonascolombia leticiadepartamentodelamazonasrepublicadecolombia leticiadepartamentodelamazonasrepublicofcolombia leticiarepublicadecolombia leticiarepublicofcolombia",
+  "latitude": "-4.21528",
+  "longitude": "-69.94056",
+  "region": 33,
+  "country": 1,
+  "population": 29666,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 114,
+ "fields": {
+  "name": "L\u00e9rida",
+  "name_ascii": "Lerida",
+  "slug": "lerida",
+  "geoname_id": 3676626,
+  "alternate_names": "",
+  "display_name": "L\u00e9rida, Tolima, Colombia",
+  "search_names": "leridacolombia leridarepublicadecolombia leridarepublicofcolombia leridatolimacolombia leridatolimarepublicadecolombia leridatolimarepublicofcolombia",
+  "latitude": "4.86242",
+  "longitude": "-74.90977",
+  "region": 4,
+  "country": 1,
+  "population": 20069,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 115,
+ "fields": {
+  "name": "La Virginia",
+  "name_ascii": "La Virginia",
+  "slug": "la-virginia",
+  "geoname_id": 3676720,
+  "alternate_names": "",
+  "display_name": "La Virginia, Risaralda, Colombia",
+  "search_names": "lavirginiacolombia lavirginiarepublicadecolombia lavirginiarepublicofcolombia lavirginiarisaraldacolombia lavirginiarisaraldarepublicadecolombia lavirginiarisaraldarepublicofcolombia",
+  "latitude": "4.89972",
+  "longitude": "-75.88250",
+  "region": 8,
+  "country": 1,
+  "population": 33835,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 116,
+ "fields": {
+  "name": "La Uni\u00f3n",
+  "name_ascii": "La Union",
+  "slug": "la-union",
+  "geoname_id": 3676928,
+  "alternate_names": "",
+  "display_name": "La Uni\u00f3n, Valle del Cauca, Colombia",
+  "search_names": "launioncolombia launionrepublicadecolombia launionrepublicofcolombia launionvalledelcaucacolombia launionvalledelcaucarepublicadecolombia launionvalledelcaucarepublicofcolombia",
+  "latitude": "4.53282",
+  "longitude": "-76.10318",
+  "region": 3,
+  "country": 1,
+  "population": 23459,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 117,
+ "fields": {
+  "name": "La Uni\u00f3n",
+  "name_ascii": "La Union",
+  "slug": "la-union",
+  "geoname_id": 3676934,
+  "alternate_names": "",
+  "display_name": "La Uni\u00f3n, Nari\u00f1o, Colombia",
+  "search_names": "launioncolombia launionnarinocolombia launionnarinorepublicadecolombia launionnarinorepublicofcolombia launionrepublicadecolombia launionrepublicofcolombia",
+  "latitude": "1.60450",
+  "longitude": "-77.13152",
+  "region": 12,
+  "country": 1,
+  "population": 15061,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 118,
+ "fields": {
+  "name": "La Tebaida",
+  "name_ascii": "La Tebaida",
+  "slug": "la-tebaida",
+  "geoname_id": 3677010,
+  "alternate_names": "",
+  "display_name": "La Tebaida, Quind\u00edo, Colombia",
+  "search_names": "latebaidacolombia latebaidadepartamentodelquindiocolombia latebaidadepartamentodelquindiorepublicadecolombia latebaidadepartamentodelquindiorepublicofcolombia latebaidaquindiocolombia latebaidaquindiorepublicadecolombia latebaidaquindiorepublicofcolombia latebaidarepublicadecolombia latebaidarepublicofcolombia",
+  "latitude": "4.45265",
+  "longitude": "-75.78746",
+  "region": 9,
+  "country": 1,
+  "population": 27098,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 119,
+ "fields": {
+  "name": "La Plata",
+  "name_ascii": "La Plata",
+  "slug": "la-plata",
+  "geoname_id": 3678097,
+  "alternate_names": "",
+  "display_name": "La Plata, Huila, Colombia",
+  "search_names": "laplatacolombia laplatahuilacolombia laplatahuilarepublicadecolombia laplatahuilarepublicofcolombia laplatarepublicadecolombia laplatarepublicofcolombia",
+  "latitude": "2.39341",
+  "longitude": "-75.89232",
+  "region": 16,
+  "country": 1,
+  "population": 19275,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 120,
+ "fields": {
+  "name": "La Mesa",
+  "name_ascii": "La Mesa",
+  "slug": "la-mesa",
+  "geoname_id": 3678405,
+  "alternate_names": "",
+  "display_name": "La Mesa, Cundinamarca, Colombia",
+  "search_names": "lamesacolombia lamesacundinamarcacolombia lamesacundinamarcarepublicadecolombia lamesacundinamarcarepublicofcolombia lamesarepublicadecolombia lamesarepublicofcolombia",
+  "latitude": "5.26667",
+  "longitude": "-73.91667",
+  "region": 19,
+  "country": 1,
+  "population": 26699,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 121,
+ "fields": {
+  "name": "La Jagua de Ibirico",
+  "name_ascii": "La Jagua de Ibirico",
+  "slug": "la-jagua-de-ibirico",
+  "geoname_id": 3678674,
+  "alternate_names": "",
+  "display_name": "La Jagua de Ibirico, Cesar, Colombia",
+  "search_names": "lajaguadeibiricocesarcolombia lajaguadeibiricocesarrepublicadecolombia lajaguadeibiricocesarrepublicofcolombia lajaguadeibiricocolombia lajaguadeibiricorepublicadecolombia lajaguadeibiricorepublicofcolombia",
+  "latitude": "9.56228",
+  "longitude": "-73.33405",
+  "region": 22,
+  "country": 1,
+  "population": 18555,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 122,
+ "fields": {
+  "name": "La Estrella",
+  "name_ascii": "La Estrella",
+  "slug": "la-estrella",
+  "geoname_id": 3679065,
+  "alternate_names": "",
+  "display_name": "La Estrella, Antioquia, Colombia",
+  "search_names": "laestrellaantioquiacolombia laestrellaantioquiarepublicadecolombia laestrellaantioquiarepublicofcolombia laestrellacolombia laestrellarepublicadecolombia laestrellarepublicofcolombia",
+  "latitude": "6.15769",
+  "longitude": "-75.64317",
+  "region": 32,
+  "country": 1,
+  "population": 49386,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 123,
+ "fields": {
+  "name": "La Dorada",
+  "name_ascii": "La Dorada",
+  "slug": "la-dorada",
+  "geoname_id": 3679277,
+  "alternate_names": "",
+  "display_name": "La Dorada, Caldas, Colombia",
+  "search_names": "ladoradacaldascolombia ladoradacaldasrepublicadecolombia ladoradacaldasrepublicofcolombia ladoradacolombia ladoradarepublicadecolombia ladoradarepublicofcolombia",
+  "latitude": "5.44783",
+  "longitude": "-74.66311",
+  "region": 26,
+  "country": 1,
+  "population": 81950,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 124,
+ "fields": {
+  "name": "La Ceja",
+  "name_ascii": "La Ceja",
+  "slug": "la-ceja",
+  "geoname_id": 3679554,
+  "alternate_names": "",
+  "display_name": "La Ceja, Antioquia, Colombia",
+  "search_names": "lacejaantioquiacolombia lacejaantioquiarepublicadecolombia lacejaantioquiarepublicofcolombia lacejacolombia lacejarepublicadecolombia lacejarepublicofcolombia",
+  "latitude": "6.03131",
+  "longitude": "-75.43333",
+  "region": 32,
+  "country": 1,
+  "population": 36584,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 125,
+ "fields": {
+  "name": "Jamund\u00ed",
+  "name_ascii": "Jamundi",
+  "slug": "jamundi",
+  "geoname_id": 3680387,
+  "alternate_names": "",
+  "display_name": "Jamund\u00ed, Valle del Cauca, Colombia",
+  "search_names": "jamundicolombia jamundirepublicadecolombia jamundirepublicofcolombia jamundivalledelcaucacolombia jamundivalledelcaucarepublicadecolombia jamundivalledelcaucarepublicofcolombia",
+  "latitude": "3.26074",
+  "longitude": "-76.53499",
+  "region": 3,
+  "country": 1,
+  "population": 44833,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 126,
+ "fields": {
+  "name": "Itag\u00fc\u00ed",
+  "name_ascii": "Itaguei",
+  "slug": "itaguei",
+  "geoname_id": 3680450,
+  "alternate_names": "",
+  "display_name": "Itag\u00fc\u00ed, Antioquia, Colombia",
+  "search_names": "itaguiantioquiacolombia itaguiantioquiarepublicadecolombia itaguiantioquiarepublicofcolombia itaguicolombia itaguirepublicadecolombia itaguirepublicofcolombia",
+  "latitude": "6.18461",
+  "longitude": "-75.59913",
+  "region": 32,
+  "country": 1,
+  "population": 281853,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 127,
+ "fields": {
+  "name": "Ipiales",
+  "name_ascii": "Ipiales",
+  "slug": "ipiales",
+  "geoname_id": 3680539,
+  "alternate_names": "",
+  "display_name": "Ipiales, Nari\u00f1o, Colombia",
+  "search_names": "ipialescolombia ipialesnarinocolombia ipialesnarinorepublicadecolombia ipialesnarinorepublicofcolombia ipialesrepublicadecolombia ipialesrepublicofcolombia",
+  "latitude": "0.82501",
+  "longitude": "-77.63966",
+  "region": 12,
+  "country": 1,
+  "population": 77729,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 128,
+ "fields": {
+  "name": "Ibagu\u00e9",
+  "name_ascii": "Ibague",
+  "slug": "ibague",
+  "geoname_id": 3680656,
+  "alternate_names": "",
+  "display_name": "Ibagu\u00e9, Tolima, Colombia",
+  "search_names": "ibaguecolombia ibaguerepublicadecolombia ibaguerepublicofcolombia ibaguetolimacolombia ibaguetolimarepublicadecolombia ibaguetolimarepublicofcolombia",
+  "latitude": "4.43889",
+  "longitude": "-75.23222",
+  "region": 4,
+  "country": 1,
+  "population": 421685,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 129,
+ "fields": {
+  "name": "Honda",
+  "name_ascii": "Honda",
+  "slug": "honda",
+  "geoname_id": 3680840,
+  "alternate_names": "",
+  "display_name": "Honda, Tolima, Colombia",
+  "search_names": "hondacolombia hondarepublicadecolombia hondarepublicofcolombia hondatolimacolombia hondatolimarepublicadecolombia hondatolimarepublicofcolombia",
+  "latitude": "5.20856",
+  "longitude": "-74.73584",
+  "region": 4,
+  "country": 1,
+  "population": 28158,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 130,
+ "fields": {
+  "name": "Guacar\u00ed",
+  "name_ascii": "Guacari",
+  "slug": "guacari",
+  "geoname_id": 3681797,
+  "alternate_names": "",
+  "display_name": "Guacar\u00ed, Valle del Cauca, Colombia",
+  "search_names": "guacaricolombia guacarirepublicadecolombia guacarirepublicofcolombia guacarivalledelcaucacolombia guacarivalledelcaucarepublicadecolombia guacarivalledelcaucarepublicofcolombia",
+  "latitude": "3.76383",
+  "longitude": "-76.33292",
+  "region": 3,
+  "country": 1,
+  "population": 19637,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 131,
+ "fields": {
+  "name": "Granada",
+  "name_ascii": "Granada",
+  "slug": "granada",
+  "geoname_id": 3681957,
+  "alternate_names": "",
+  "display_name": "Granada, Meta, Colombia",
+  "search_names": "granadacolombia granadametacolombia granadametarepublicadecolombia granadametarepublicofcolombia granadarepublicadecolombia granadarepublicofcolombia",
+  "latitude": "3.54625",
+  "longitude": "-73.70687",
+  "region": 13,
+  "country": 1,
+  "population": 32365,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 132,
+ "fields": {
+  "name": "Gir\u00f3n",
+  "name_ascii": "Giron",
+  "slug": "giron",
+  "geoname_id": 3682018,
+  "alternate_names": "",
+  "display_name": "Gir\u00f3n, Santander, Colombia",
+  "search_names": "gironcolombia gironrepublicadecolombia gironrepublicofcolombia gironsantandercolombia gironsantanderrepublicadecolombia gironsantanderrepublicofcolombia",
+  "latitude": "7.06820",
+  "longitude": "-73.16981",
+  "region": 6,
+  "country": 1,
+  "population": 108466,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 133,
+ "fields": {
+  "name": "Girardot City",
+  "name_ascii": "Girardot City",
+  "slug": "girardot-city",
+  "geoname_id": 3682028,
+  "alternate_names": "",
+  "display_name": "Girardot City, Cundinamarca, Colombia",
+  "search_names": "girardotcitycolombia girardotcitycundinamarcacolombia girardotcitycundinamarcarepublicadecolombia girardotcitycundinamarcarepublicofcolombia girardotcityrepublicadecolombia girardotcityrepublicofcolombia",
+  "latitude": "4.30079",
+  "longitude": "-74.80754",
+  "region": 19,
+  "country": 1,
+  "population": 130289,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 134,
+ "fields": {
+  "name": "Garz\u00f3n",
+  "name_ascii": "Garzon",
+  "slug": "garzon",
+  "geoname_id": 3682108,
+  "alternate_names": "",
+  "display_name": "Garz\u00f3n, Huila, Colombia",
+  "search_names": "garzoncolombia garzonhuilacolombia garzonhuilarepublicadecolombia garzonhuilarepublicofcolombia garzonrepublicadecolombia garzonrepublicofcolombia",
+  "latitude": "2.19593",
+  "longitude": "-75.62777",
+  "region": 16,
+  "country": 1,
+  "population": 29451,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 135,
+ "fields": {
+  "name": "Galapa",
+  "name_ascii": "Galapa",
+  "slug": "galapa",
+  "geoname_id": 3682238,
+  "alternate_names": "",
+  "display_name": "Galapa, Atl\u00e1ntico, Colombia",
+  "search_names": "galapaatlanticocolombia galapaatlanticorepublicadecolombia galapaatlanticorepublicofcolombia galapacolombia galaparepublicadecolombia galaparepublicofcolombia",
+  "latitude": "10.89686",
+  "longitude": "-74.88600",
+  "region": 30,
+  "country": 1,
+  "population": 19732,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 136,
+ "fields": {
+  "name": "Fusagasug\u00e1",
+  "name_ascii": "Fusagasuga",
+  "slug": "fusagasuga",
+  "geoname_id": 3682274,
+  "alternate_names": "",
+  "display_name": "Fusagasug\u00e1, Cundinamarca, Colombia",
+  "search_names": "fusagasugacolombia fusagasugacundinamarcacolombia fusagasugacundinamarcarepublicadecolombia fusagasugacundinamarcarepublicofcolombia fusagasugarepublicadecolombia fusagasugarepublicofcolombia",
+  "latitude": "4.33646",
+  "longitude": "-74.36378",
+  "region": 19,
+  "country": 1,
+  "population": 88820,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 137,
+ "fields": {
+  "name": "Funza",
+  "name_ascii": "Funza",
+  "slug": "funza",
+  "geoname_id": 3682281,
+  "alternate_names": "",
+  "display_name": "Funza, Cundinamarca, Colombia",
+  "search_names": "funzacolombia funzacundinamarcacolombia funzacundinamarcarepublicadecolombia funzacundinamarcarepublicofcolombia funzarepublicadecolombia funzarepublicofcolombia",
+  "latitude": "4.71638",
+  "longitude": "-74.21195",
+  "region": 19,
+  "country": 1,
+  "population": 54421,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 138,
+ "fields": {
+  "name": "Fundaci\u00f3n",
+  "name_ascii": "Fundacion",
+  "slug": "fundacion",
+  "geoname_id": 3682292,
+  "alternate_names": "",
+  "display_name": "Fundaci\u00f3n, Magdalena, Colombia",
+  "search_names": "fundacioncolombia fundacionmagdalenacolombia fundacionmagdalenarepublicadecolombia fundacionmagdalenarepublicofcolombia fundacionrepublicadecolombia fundacionrepublicofcolombia",
+  "latitude": "10.52066",
+  "longitude": "-74.18504",
+  "region": 14,
+  "country": 1,
+  "population": 59175,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 139,
+ "fields": {
+  "name": "Fresno",
+  "name_ascii": "Fresno",
+  "slug": "fresno",
+  "geoname_id": 3682330,
+  "alternate_names": "",
+  "display_name": "Fresno, Tolima, Colombia",
+  "search_names": "fresnocolombia fresnorepublicadecolombia fresnorepublicofcolombia fresnotolimacolombia fresnotolimarepublicadecolombia fresnotolimarepublicofcolombia",
+  "latitude": "5.15264",
+  "longitude": "-75.03624",
+  "region": 4,
+  "country": 1,
+  "population": 17668,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 140,
+ "fields": {
+  "name": "Fonseca",
+  "name_ascii": "Fonseca",
+  "slug": "fonseca",
+  "geoname_id": 3682374,
+  "alternate_names": "",
+  "display_name": "Fonseca, La Guajira, Colombia",
+  "search_names": "fonsecacolombia fonsecalaguajiracolombia fonsecalaguajirarepublicadecolombia fonsecalaguajirarepublicofcolombia fonsecarepublicadecolombia fonsecarepublicofcolombia",
+  "latitude": "10.88606",
+  "longitude": "-72.84870",
+  "region": 15,
+  "country": 1,
+  "population": 23509,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 141,
+ "fields": {
+  "name": "Floridablanca",
+  "name_ascii": "Floridablanca",
+  "slug": "floridablanca",
+  "geoname_id": 3682385,
+  "alternate_names": "",
+  "display_name": "Floridablanca, Santander, Colombia",
+  "search_names": "floridablancacolombia floridablancarepublicadecolombia floridablancarepublicofcolombia floridablancasantandercolombia floridablancasantanderrepublicadecolombia floridablancasantanderrepublicofcolombia",
+  "latitude": "7.06222",
+  "longitude": "-73.08644",
+  "region": 6,
+  "country": 1,
+  "population": 252267,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 142,
+ "fields": {
+  "name": "Florida",
+  "name_ascii": "Florida",
+  "slug": "florida",
+  "geoname_id": 3682393,
+  "alternate_names": "",
+  "display_name": "Florida, Valle del Cauca, Colombia",
+  "search_names": "floridacolombia floridarepublicadecolombia floridarepublicofcolombia floridavalledelcaucacolombia floridavalledelcaucarepublicadecolombia floridavalledelcaucarepublicofcolombia",
+  "latitude": "3.32230",
+  "longitude": "-76.23480",
+  "region": 3,
+  "country": 1,
+  "population": 47173,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 143,
+ "fields": {
+  "name": "Florencia",
+  "name_ascii": "Florencia",
+  "slug": "florencia",
+  "geoname_id": 3682426,
+  "alternate_names": "",
+  "display_name": "Florencia, Caquet\u00e1, Colombia",
+  "search_names": "florenciacaquetacolombia florenciacaquetarepublicadecolombia florenciacaquetarepublicofcolombia florenciacolombia florenciarepublicadecolombia florenciarepublicofcolombia",
+  "latitude": "1.61438",
+  "longitude": "-75.60623",
+  "region": 25,
+  "country": 1,
+  "population": 130337,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 144,
+ "fields": {
+  "name": "Flandes",
+  "name_ascii": "Flandes",
+  "slug": "flandes",
+  "geoname_id": 3682458,
+  "alternate_names": "",
+  "display_name": "Flandes, Tolima, Colombia",
+  "search_names": "flandescolombia flandesrepublicadecolombia flandesrepublicofcolombia flandestolimacolombia flandestolimarepublicadecolombia flandestolimarepublicofcolombia",
+  "latitude": "4.29005",
+  "longitude": "-74.81612",
+  "region": 4,
+  "country": 1,
+  "population": 20919,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 145,
+ "fields": {
+  "name": "Facatativ\u00e1",
+  "name_ascii": "Facatativa",
+  "slug": "facatativa",
+  "geoname_id": 3682516,
+  "alternate_names": "",
+  "display_name": "Facatativ\u00e1, Cundinamarca, Colombia",
+  "search_names": "facatativacolombia facatativacundinamarcacolombia facatativacundinamarcarepublicadecolombia facatativacundinamarcarepublicofcolombia facatativarepublicadecolombia facatativarepublicofcolombia",
+  "latitude": "4.81367",
+  "longitude": "-74.35453",
+  "region": 19,
+  "country": 1,
+  "population": 94611,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 146,
+ "fields": {
+  "name": "Espinal",
+  "name_ascii": "Espinal",
+  "slug": "espinal",
+  "geoname_id": 3682573,
+  "alternate_names": "",
+  "display_name": "Espinal, Tolima, Colombia",
+  "search_names": "espinalcolombia espinalrepublicadecolombia espinalrepublicofcolombia espinaltolimacolombia espinaltolimarepublicadecolombia espinaltolimarepublicofcolombia",
+  "latitude": "4.14924",
+  "longitude": "-74.88429",
+  "region": 4,
+  "country": 1,
+  "population": 56213,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 147,
+ "fields": {
+  "name": "Envigado",
+  "name_ascii": "Envigado",
+  "slug": "envigado",
+  "geoname_id": 3682631,
+  "alternate_names": "",
+  "display_name": "Envigado, Antioquia, Colombia",
+  "search_names": "envigadoantioquiacolombia envigadoantioquiarepublicadecolombia envigadoantioquiarepublicofcolombia envigadocolombia envigadorepublicadecolombia envigadorepublicofcolombia",
+  "latitude": "6.17591",
+  "longitude": "-75.59174",
+  "region": 32,
+  "country": 1,
+  "population": 163007,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 148,
+ "fields": {
+  "name": "El Ret\u00e9n",
+  "name_ascii": "El Reten",
+  "slug": "el-reten",
+  "geoname_id": 3683233,
+  "alternate_names": "",
+  "display_name": "El Ret\u00e9n, Magdalena, Colombia",
+  "search_names": "elretencolombia elretenmagdalenacolombia elretenmagdalenarepublicadecolombia elretenmagdalenarepublicofcolombia elretenrepublicadecolombia elretenrepublicofcolombia",
+  "latitude": "10.61135",
+  "longitude": "-74.26824",
+  "region": 14,
+  "country": 1,
+  "population": 15901,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 149,
+ "fields": {
+  "name": "El Copey",
+  "name_ascii": "El Copey",
+  "slug": "el-copey",
+  "geoname_id": 3684452,
+  "alternate_names": "",
+  "display_name": "El Copey, Cesar, Colombia",
+  "search_names": "elcopeycesarcolombia elcopeycesarrepublicadecolombia elcopeycesarrepublicofcolombia elcopeycolombia elcopeyrepublicadecolombia elcopeyrepublicofcolombia",
+  "latitude": "10.15031",
+  "longitude": "-73.96140",
+  "region": 22,
+  "country": 1,
+  "population": 18136,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 150,
+ "fields": {
+  "name": "El Charco",
+  "name_ascii": "El Charco",
+  "slug": "el-charco",
+  "geoname_id": 3684579,
+  "alternate_names": "",
+  "display_name": "El Charco, Nari\u00f1o, Colombia",
+  "search_names": "elcharcocolombia elcharconarinocolombia elcharconarinorepublicadecolombia elcharconarinorepublicofcolombia elcharcorepublicadecolombia elcharcorepublicofcolombia",
+  "latitude": "2.47926",
+  "longitude": "-78.10972",
+  "region": 12,
+  "country": 1,
+  "population": 28673,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 151,
+ "fields": {
+  "name": "El Cerrito",
+  "name_ascii": "El Cerrito",
+  "slug": "el-cerrito",
+  "geoname_id": 3684615,
+  "alternate_names": "",
+  "display_name": "El Cerrito, Valle del Cauca, Colombia",
+  "search_names": "elcerritocolombia elcerritorepublicadecolombia elcerritorepublicofcolombia elcerritovalledelcaucacolombia elcerritovalledelcaucarepublicadecolombia elcerritovalledelcaucarepublicofcolombia",
+  "latitude": "3.68549",
+  "longitude": "-76.31372",
+  "region": 3,
+  "country": 1,
+  "population": 38390,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 152,
+ "fields": {
+  "name": "El Carmen de Bol\u00edvar",
+  "name_ascii": "El Carmen de Bolivar",
+  "slug": "el-carmen-de-bolivar",
+  "geoname_id": 3684666,
+  "alternate_names": "",
+  "display_name": "El Carmen de Bol\u00edvar, Bol\u00edvar, Colombia",
+  "search_names": "elcarmendebolivarbolivarcolombia elcarmendebolivarbolivarrepublicadecolombia elcarmendebolivarbolivarrepublicofcolombia elcarmendebolivarcolombia elcarmendebolivarrepublicadecolombia elcarmendebolivarrepublicofcolombia",
+  "latitude": "9.71740",
+  "longitude": "-75.12023",
+  "region": 28,
+  "country": 1,
+  "population": 47957,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 153,
+ "fields": {
+  "name": "El Banco",
+  "name_ascii": "El Banco",
+  "slug": "el-banco",
+  "geoname_id": 3684917,
+  "alternate_names": "",
+  "display_name": "El Banco, Magdalena, Colombia",
+  "search_names": "elbancocolombia elbancomagdalenacolombia elbancomagdalenarepublicadecolombia elbancomagdalenarepublicofcolombia elbancorepublicadecolombia elbancorepublicofcolombia",
+  "latitude": "9.00114",
+  "longitude": "-73.97581",
+  "region": 14,
+  "country": 1,
+  "population": 54522,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 154,
+ "fields": {
+  "name": "El Bagre",
+  "name_ascii": "El Bagre",
+  "slug": "el-bagre",
+  "geoname_id": 3684945,
+  "alternate_names": "",
+  "display_name": "El Bagre, Antioquia, Colombia",
+  "search_names": "elbagreantioquiacolombia elbagreantioquiarepublicadecolombia elbagreantioquiarepublicofcolombia elbagrecolombia elbagrerepublicadecolombia elbagrerepublicofcolombia",
+  "latitude": "7.60347",
+  "longitude": "-74.80951",
+  "region": 32,
+  "country": 1,
+  "population": 40798,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 155,
+ "fields": {
+  "name": "Duitama",
+  "name_ascii": "Duitama",
+  "slug": "duitama",
+  "geoname_id": 3685084,
+  "alternate_names": "",
+  "display_name": "Duitama, Boyac\u00e1, Colombia",
+  "search_names": "duitamaboyacacolombia duitamaboyacarepublicadecolombia duitamaboyacarepublicofcolombia duitamacolombia duitamarepublicadecolombia duitamarepublicofcolombia",
+  "latitude": "5.82450",
+  "longitude": "-73.03408",
+  "region": 27,
+  "country": 1,
+  "population": 92040,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 156,
+ "fields": {
+  "name": "Dosquebradas",
+  "name_ascii": "Dosquebradas",
+  "slug": "dosquebradas",
+  "geoname_id": 3685095,
+  "alternate_names": "Dos Quebradas",
+  "display_name": "Dosquebradas, Risaralda, Colombia",
+  "search_names": "dosquebradascolombia dosquebradasrepublicadecolombia dosquebradasrepublicofcolombia dosquebradasrisaraldacolombia dosquebradasrisaraldarepublicadecolombia dosquebradasrisaraldarepublicofcolombia",
+  "latitude": "4.83916",
+  "longitude": "-75.66727",
+  "region": 8,
+  "country": 1,
+  "population": 179583,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 157,
+ "fields": {
+  "name": "Darien",
+  "name_ascii": "Darien",
+  "slug": "darien",
+  "geoname_id": 3685273,
+  "alternate_names": "",
+  "display_name": "Darien, Valle del Cauca, Colombia",
+  "search_names": "dariencolombia darienrepublicadecolombia darienrepublicofcolombia darienvalledelcaucacolombia darienvalledelcaucarepublicadecolombia darienvalledelcaucarepublicofcolombia",
+  "latitude": "3.93135",
+  "longitude": "-76.48481",
+  "region": 3,
+  "country": 1,
+  "population": 15763,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 158,
+ "fields": {
+  "name": "Curuman\u00ed",
+  "name_ascii": "Curumani",
+  "slug": "curumani",
+  "geoname_id": 3685335,
+  "alternate_names": "",
+  "display_name": "Curuman\u00ed, Cesar, Colombia",
+  "search_names": "curumanicesarcolombia curumanicesarrepublicadecolombia curumanicesarrepublicofcolombia curumanicolombia curumanirepublicadecolombia curumanirepublicofcolombia",
+  "latitude": "9.19992",
+  "longitude": "-73.54274",
+  "region": 22,
+  "country": 1,
+  "population": 22084,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 159,
+ "fields": {
+  "name": "Cumaribo",
+  "name_ascii": "Cumaribo",
+  "slug": "cumaribo",
+  "geoname_id": 3685435,
+  "alternate_names": "",
+  "display_name": "Cumaribo, Vichada, Colombia",
+  "search_names": "cumaribocolombia cumariborepublicadecolombia cumariborepublicofcolombia cumaribovichadacolombia cumaribovichadarepublicadecolombia cumaribovichadarepublicofcolombia",
+  "latitude": "4.44552",
+  "longitude": "-69.79897",
+  "region": 1,
+  "country": 1,
+  "population": 23990,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 160,
+ "fields": {
+  "name": "C\u00facuta",
+  "name_ascii": "Cucuta",
+  "slug": "cucuta",
+  "geoname_id": 3685533,
+  "alternate_names": "",
+  "display_name": "C\u00facuta, Norte de Santander, Colombia",
+  "search_names": "cucutacolombia cucutanortedesantandercolombia cucutanortedesantanderrepublicadecolombia cucutanortedesantanderrepublicofcolombia cucutarepublicadecolombia cucutarepublicofcolombia",
+  "latitude": "7.89391",
+  "longitude": "-72.50782",
+  "region": 11,
+  "country": 1,
+  "population": 721398,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 161,
+ "fields": {
+  "name": "Corozal",
+  "name_ascii": "Corozal",
+  "slug": "corozal",
+  "geoname_id": 3685823,
+  "alternate_names": "",
+  "display_name": "Corozal, Sucre, Colombia",
+  "search_names": "corozalcolombia corozalrepublicadecolombia corozalrepublicofcolombia corozalsucrecolombia corozalsucrerepublicadecolombia corozalsucrerepublicofcolombia",
+  "latitude": "9.31847",
+  "longitude": "-75.29330",
+  "region": 5,
+  "country": 1,
+  "population": 39800,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 162,
+ "fields": {
+  "name": "Corinto",
+  "name_ascii": "Corinto",
+  "slug": "corinto",
+  "geoname_id": 3685871,
+  "alternate_names": "",
+  "display_name": "Corinto, Cauca, Colombia",
+  "search_names": "corintocaucacolombia corintocaucarepublicadecolombia corintocaucarepublicofcolombia corintocolombia corintorepublicadecolombia corintorepublicofcolombia",
+  "latitude": "3.17301",
+  "longitude": "-76.26275",
+  "region": 23,
+  "country": 1,
+  "population": 16579,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 163,
+ "fields": {
+  "name": "Copacabana",
+  "name_ascii": "Copacabana",
+  "slug": "copacabana",
+  "geoname_id": 3685949,
+  "alternate_names": "Municipio de Copacabana",
+  "display_name": "Copacabana, Antioquia, Colombia",
+  "search_names": "copacabanaantioquiacolombia copacabanaantioquiarepublicadecolombia copacabanaantioquiarepublicofcolombia copacabanacolombia copacabanarepublicadecolombia copacabanarepublicofcolombia municipiodecopacabanaantioquiacolombia municipiodecopacabanaantioquiarepublicadecolombia municipiodecopacabanaantioquiarepublicofcolombia municipiodecopacabanacolombia municipiodecopacabanarepublicadecolombia municipiodecopacabanarepublicofcolombia",
+  "latitude": "6.34633",
+  "longitude": "-75.50888",
+  "region": 32,
+  "country": 1,
+  "population": 49169,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 164,
+ "fields": {
+  "name": "Circasia",
+  "name_ascii": "Circasia",
+  "slug": "circasia",
+  "geoname_id": 3686233,
+  "alternate_names": "",
+  "display_name": "Circasia, Quind\u00edo, Colombia",
+  "search_names": "circasiacolombia circasiadepartamentodelquindiocolombia circasiadepartamentodelquindiorepublicadecolombia circasiadepartamentodelquindiorepublicofcolombia circasiaquindiocolombia circasiaquindiorepublicadecolombia circasiaquindiorepublicofcolombia circasiarepublicadecolombia circasiarepublicofcolombia",
+  "latitude": "4.61889",
+  "longitude": "-75.63583",
+  "region": 9,
+  "country": 1,
+  "population": 20113,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 165,
+ "fields": {
+  "name": "Ci\u00e9naga de Oro",
+  "name_ascii": "Cienaga de Oro",
+  "slug": "cienaga-de-oro",
+  "geoname_id": 3686272,
+  "alternate_names": "",
+  "display_name": "Ci\u00e9naga de Oro, C\u00f3rdoba, Colombia",
+  "search_names": "cienagadeorocolombia cienagadeorocordobacolombia cienagadeorocordobarepublicadecolombia cienagadeorocordobarepublicofcolombia cienagadeororepublicadecolombia cienagadeororepublicofcolombia",
+  "latitude": "8.87443",
+  "longitude": "-75.62028",
+  "region": 20,
+  "country": 1,
+  "population": 17623,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 166,
+ "fields": {
+  "name": "Ci\u00e9naga",
+  "name_ascii": "Cienaga",
+  "slug": "cienaga",
+  "geoname_id": 3686279,
+  "alternate_names": "",
+  "display_name": "Ci\u00e9naga, Magdalena, Colombia",
+  "search_names": "cienagacolombia cienagamagdalenacolombia cienagamagdalenarepublicadecolombia cienagamagdalenarepublicofcolombia cienagarepublicadecolombia cienagarepublicofcolombia",
+  "latitude": "11.00703",
+  "longitude": "-74.24765",
+  "region": 14,
+  "country": 1,
+  "population": 88311,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 167,
+ "fields": {
+  "name": "Chiriguan\u00e1",
+  "name_ascii": "Chiriguana",
+  "slug": "chiriguana",
+  "geoname_id": 3686479,
+  "alternate_names": "",
+  "display_name": "Chiriguan\u00e1, Cesar, Colombia",
+  "search_names": "chiriguanacesarcolombia chiriguanacesarrepublicadecolombia chiriguanacesarrepublicofcolombia chiriguanacolombia chiriguanarepublicadecolombia chiriguanarepublicofcolombia",
+  "latitude": "9.36238",
+  "longitude": "-73.60313",
+  "region": 22,
+  "country": 1,
+  "population": 15181,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 168,
+ "fields": {
+  "name": "Chiquinquir\u00e1",
+  "name_ascii": "Chiquinquira",
+  "slug": "chiquinquira",
+  "geoname_id": 3686513,
+  "alternate_names": "",
+  "display_name": "Chiquinquir\u00e1, Boyac\u00e1, Colombia",
+  "search_names": "chiquinquiraboyacacolombia chiquinquiraboyacarepublicadecolombia chiquinquiraboyacarepublicofcolombia chiquinquiracolombia chiquinquirarepublicadecolombia chiquinquirarepublicofcolombia",
+  "latitude": "5.61637",
+  "longitude": "-73.81748",
+  "region": 27,
+  "country": 1,
+  "population": 45294,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 169,
+ "fields": {
+  "name": "Chin\u00fa",
+  "name_ascii": "Chinu",
+  "slug": "chinu",
+  "geoname_id": 3686540,
+  "alternate_names": "",
+  "display_name": "Chin\u00fa, C\u00f3rdoba, Colombia",
+  "search_names": "chinucolombia chinucordobacolombia chinucordobarepublicadecolombia chinucordobarepublicofcolombia chinurepublicadecolombia chinurepublicofcolombia",
+  "latitude": "9.10569",
+  "longitude": "-75.39812",
+  "region": 20,
+  "country": 1,
+  "population": 19596,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 170,
+ "fields": {
+  "name": "Chinchin\u00e1",
+  "name_ascii": "Chinchina",
+  "slug": "chinchina",
+  "geoname_id": 3686561,
+  "alternate_names": "",
+  "display_name": "Chinchin\u00e1, Caldas, Colombia",
+  "search_names": "chinchinacaldascolombia chinchinacaldasrepublicadecolombia chinchinacaldasrepublicofcolombia chinchinacolombia chinchinarepublicadecolombia chinchinarepublicofcolombia",
+  "latitude": "4.98250",
+  "longitude": "-75.60361",
+  "region": 26,
+  "country": 1,
+  "population": 68512,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 171,
+ "fields": {
+  "name": "Chimichagua",
+  "name_ascii": "Chimichagua",
+  "slug": "chimichagua",
+  "geoname_id": 3686585,
+  "alternate_names": "",
+  "display_name": "Chimichagua, Cesar, Colombia",
+  "search_names": "chimichaguacesarcolombia chimichaguacesarrepublicadecolombia chimichaguacesarrepublicofcolombia chimichaguacolombia chimichaguarepublicadecolombia chimichaguarepublicofcolombia",
+  "latitude": "9.25778",
+  "longitude": "-73.81228",
+  "region": 22,
+  "country": 1,
+  "population": 16746,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 172,
+ "fields": {
+  "name": "Chigorod\u00f3",
+  "name_ascii": "Chigorodo",
+  "slug": "chigorodo",
+  "geoname_id": 3686636,
+  "alternate_names": "",
+  "display_name": "Chigorod\u00f3, Antioquia, Colombia",
+  "search_names": "chigorodoantioquiacolombia chigorodoantioquiarepublicadecolombia chigorodoantioquiarepublicofcolombia chigorodocolombia chigorodorepublicadecolombia chigorodorepublicofcolombia",
+  "latitude": "7.66638",
+  "longitude": "-76.68106",
+  "region": 32,
+  "country": 1,
+  "population": 48443,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 173,
+ "fields": {
+  "name": "Ch\u00eda",
+  "name_ascii": "Chia",
+  "slug": "chia",
+  "geoname_id": 3686675,
+  "alternate_names": "",
+  "display_name": "Ch\u00eda, Cundinamarca, Colombia",
+  "search_names": "chiacolombia chiacundinamarcacolombia chiacundinamarcarepublicadecolombia chiacundinamarcarepublicofcolombia chiarepublicadecolombia chiarepublicofcolombia",
+  "latitude": "4.85876",
+  "longitude": "-74.05866",
+  "region": 19,
+  "country": 1,
+  "population": 64569,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 174,
+ "fields": {
+  "name": "Chaparral",
+  "name_ascii": "Chaparral",
+  "slug": "chaparral",
+  "geoname_id": 3686793,
+  "alternate_names": "",
+  "display_name": "Chaparral, Tolima, Colombia",
+  "search_names": "chaparralcolombia chaparralrepublicadecolombia chaparralrepublicofcolombia chaparraltolimacolombia chaparraltolimarepublicadecolombia chaparraltolimarepublicofcolombia",
+  "latitude": "3.72315",
+  "longitude": "-75.48316",
+  "region": 4,
+  "country": 1,
+  "population": 19982,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 175,
+ "fields": {
+  "name": "Ceret\u00e9",
+  "name_ascii": "Cerete",
+  "slug": "cerete",
+  "geoname_id": 3686922,
+  "alternate_names": "",
+  "display_name": "Ceret\u00e9, C\u00f3rdoba, Colombia",
+  "search_names": "ceretecolombia ceretecordobacolombia ceretecordobarepublicadecolombia ceretecordobarepublicofcolombia cereterepublicadecolombia cereterepublicofcolombia",
+  "latitude": "8.88479",
+  "longitude": "-75.79052",
+  "region": 20,
+  "country": 1,
+  "population": 55513,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 176,
+ "fields": {
+  "name": "Caucasia",
+  "name_ascii": "Caucasia",
+  "slug": "caucasia",
+  "geoname_id": 3687025,
+  "alternate_names": "",
+  "display_name": "Caucasia, Antioquia, Colombia",
+  "search_names": "caucasiaantioquiacolombia caucasiaantioquiarepublicadecolombia caucasiaantioquiarepublicofcolombia caucasiacolombia caucasiarepublicadecolombia caucasiarepublicofcolombia",
+  "latitude": "7.98654",
+  "longitude": "-75.19349",
+  "region": 32,
+  "country": 1,
+  "population": 58034,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 177,
+ "fields": {
+  "name": "Cartago",
+  "name_ascii": "Cartago",
+  "slug": "cartago",
+  "geoname_id": 3687230,
+  "alternate_names": "",
+  "display_name": "Cartago, Valle del Cauca, Colombia",
+  "search_names": "cartagocolombia cartagorepublicadecolombia cartagorepublicofcolombia cartagovalledelcaucacolombia cartagovalledelcaucarepublicadecolombia cartagovalledelcaucarepublicofcolombia",
+  "latitude": "4.74639",
+  "longitude": "-75.91167",
+  "region": 3,
+  "country": 1,
+  "population": 134827,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 178,
+ "fields": {
+  "name": "Cartagena",
+  "name_ascii": "Cartagena",
+  "slug": "cartagena",
+  "geoname_id": 3687238,
+  "alternate_names": "Cartagena de Indias",
+  "display_name": "Cartagena, Bol\u00edvar, Colombia",
+  "search_names": "cartagenabolivarcolombia cartagenabolivarrepublicadecolombia cartagenabolivarrepublicofcolombia cartagenacolombia cartagenadeindiasbolivarcolombia cartagenadeindiasbolivarrepublicadecolombia cartagenadeindiasbolivarrepublicofcolombia cartagenadeindiascolombia cartagenadeindiasrepublicadecolombia cartagenadeindiasrepublicofcolombia cartagenarepublicadecolombia cartagenarepublicofcolombia",
+  "latitude": "10.39972",
+  "longitude": "-75.51444",
+  "region": 28,
+  "country": 1,
+  "population": 952024,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 179,
+ "fields": {
+  "name": "Carmen de Viboral",
+  "name_ascii": "Carmen de Viboral",
+  "slug": "carmen-de-viboral",
+  "geoname_id": 3687318,
+  "alternate_names": "El Carmen de Viboral",
+  "display_name": "Carmen de Viboral, Antioquia, Colombia",
+  "search_names": "carmendeviboralantioquiacolombia carmendeviboralantioquiarepublicadecolombia carmendeviboralantioquiarepublicofcolombia carmendeviboralcolombia carmendeviboralrepublicadecolombia carmendeviboralrepublicofcolombia elcarmendeviboralantioquiacolombia elcarmendeviboralantioquiarepublicadecolombia elcarmendeviboralantioquiarepublicofcolombia elcarmendeviboralcolombia elcarmendeviboralrepublicadecolombia elcarmendeviboralrepublicofcolombia",
+  "latitude": "6.08236",
+  "longitude": "-75.33509",
+  "region": 32,
+  "country": 1,
+  "population": 21152,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 180,
+ "fields": {
+  "name": "Candelaria",
+  "name_ascii": "Candelaria",
+  "slug": "candelaria",
+  "geoname_id": 3687644,
+  "alternate_names": "",
+  "display_name": "Candelaria, Valle del Cauca, Colombia",
+  "search_names": "candelariacolombia candelariarepublicadecolombia candelariarepublicofcolombia candelariavalledelcaucacolombia candelariavalledelcaucarepublicadecolombia candelariavalledelcaucarepublicofcolombia",
+  "latitude": "3.40671",
+  "longitude": "-76.34819",
+  "region": 3,
+  "country": 1,
+  "population": 23989,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 181,
+ "fields": {
+  "name": "Campo de la Cruz",
+  "name_ascii": "Campo de la Cruz",
+  "slug": "campo-de-la-cruz",
+  "geoname_id": 3687758,
+  "alternate_names": "",
+  "display_name": "Campo de la Cruz, Atl\u00e1ntico, Colombia",
+  "search_names": "campodelacruzatlanticocolombia campodelacruzatlanticorepublicadecolombia campodelacruzatlanticorepublicofcolombia campodelacruzcolombia campodelacruzrepublicadecolombia campodelacruzrepublicofcolombia",
+  "latitude": "10.37808",
+  "longitude": "-74.88356",
+  "region": 30,
+  "country": 1,
+  "population": 22803,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 182,
+ "fields": {
+  "name": "Campoalegre",
+  "name_ascii": "Campoalegre",
+  "slug": "campoalegre",
+  "geoname_id": 3687806,
+  "alternate_names": "",
+  "display_name": "Campoalegre, Huila, Colombia",
+  "search_names": "campoalegrecolombia campoalegrehuilacolombia campoalegrehuilarepublicadecolombia campoalegrehuilarepublicofcolombia campoalegrerepublicadecolombia campoalegrerepublicofcolombia",
+  "latitude": "2.68489",
+  "longitude": "-75.32311",
+  "region": 16,
+  "country": 1,
+  "population": 22568,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 183,
+ "fields": {
+  "name": "Cali",
+  "name_ascii": "Cali",
+  "slug": "cali",
+  "geoname_id": 3687925,
+  "alternate_names": "Santiago de Cali",
+  "display_name": "Cali, Valle del Cauca, Colombia",
+  "search_names": "calicolombia calirepublicadecolombia calirepublicofcolombia calivalledelcaucacolombia calivalledelcaucarepublicadecolombia calivalledelcaucarepublicofcolombia santiagodecalicolombia santiagodecalirepublicadecolombia santiagodecalirepublicofcolombia santiagodecalivalledelcaucacolombia santiagodecalivalledelcaucarepublicadecolombia santiagodecalivalledelcaucarepublicofcolombia",
+  "latitude": "3.43722",
+  "longitude": "-76.52250",
+  "region": 3,
+  "country": 1,
+  "population": 2392877,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 184,
+ "fields": {
+  "name": "Caldas",
+  "name_ascii": "Caldas",
+  "slug": "caldas",
+  "geoname_id": 3687952,
+  "alternate_names": "",
+  "display_name": "Caldas, Antioquia, Colombia",
+  "search_names": "caldasantioquiacolombia caldasantioquiarepublicadecolombia caldasantioquiarepublicofcolombia caldascolombia caldasrepublicadecolombia caldasrepublicofcolombia",
+  "latitude": "6.09106",
+  "longitude": "-75.63569",
+  "region": 32,
+  "country": 1,
+  "population": 65565,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 185,
+ "fields": {
+  "name": "Calarc\u00e1",
+  "name_ascii": "Calarca",
+  "slug": "calarca",
+  "geoname_id": 3687964,
+  "alternate_names": "",
+  "display_name": "Calarc\u00e1, Quind\u00edo, Colombia",
+  "search_names": "calarcacolombia calarcadepartamentodelquindiocolombia calarcadepartamentodelquindiorepublicadecolombia calarcadepartamentodelquindiorepublicofcolombia calarcaquindiocolombia calarcaquindiorepublicadecolombia calarcaquindiorepublicofcolombia calarcarepublicadecolombia calarcarepublicofcolombia",
+  "latitude": "4.52949",
+  "longitude": "-75.64091",
+  "region": 9,
+  "country": 1,
+  "population": 62170,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 186,
+ "fields": {
+  "name": "Cajic\u00e1",
+  "name_ascii": "Cajica",
+  "slug": "cajica",
+  "geoname_id": 3688006,
+  "alternate_names": "",
+  "display_name": "Cajic\u00e1, Cundinamarca, Colombia",
+  "search_names": "cajicacolombia cajicacundinamarcacolombia cajicacundinamarcarepublicadecolombia cajicacundinamarcarepublicofcolombia cajicarepublicadecolombia cajicarepublicofcolombia",
+  "latitude": "4.91857",
+  "longitude": "-74.02799",
+  "region": 19,
+  "country": 1,
+  "population": 24999,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 187,
+ "fields": {
+  "name": "Caicedonia",
+  "name_ascii": "Caicedonia",
+  "slug": "caicedonia",
+  "geoname_id": 3688071,
+  "alternate_names": "",
+  "display_name": "Caicedonia, Valle del Cauca, Colombia",
+  "search_names": "caicedoniacolombia caicedoniarepublicadecolombia caicedoniarepublicofcolombia caicedoniavalledelcaucacolombia caicedoniavalledelcaucarepublicadecolombia caicedoniavalledelcaucarepublicofcolombia",
+  "latitude": "4.33240",
+  "longitude": "-75.82665",
+  "region": 3,
+  "country": 1,
+  "population": 32417,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 188,
+ "fields": {
+  "name": "Guadalajara de Buga",
+  "name_ascii": "Guadalajara de Buga",
+  "slug": "guadalajara-de-buga",
+  "geoname_id": 3688256,
+  "alternate_names": "",
+  "display_name": "Guadalajara de Buga, Valle del Cauca, Colombia",
+  "search_names": "guadalajaradebugacolombia guadalajaradebugarepublicadecolombia guadalajaradebugarepublicofcolombia guadalajaradebugavalledelcaucacolombia guadalajaradebugavalledelcaucarepublicadecolombia guadalajaradebugavalledelcaucarepublicofcolombia",
+  "latitude": "3.90089",
+  "longitude": "-76.29783",
+  "region": 3,
+  "country": 1,
+  "population": 118004,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 189,
+ "fields": {
+  "name": "Buenaventura",
+  "name_ascii": "Buenaventura",
+  "slug": "buenaventura",
+  "geoname_id": 3688451,
+  "alternate_names": "",
+  "display_name": "Buenaventura, Valle del Cauca, Colombia",
+  "search_names": "buenaventuracolombia buenaventurarepublicadecolombia buenaventurarepublicofcolombia buenaventuravalledelcaucacolombia buenaventuravalledelcaucarepublicadecolombia buenaventuravalledelcaucarepublicofcolombia",
+  "latitude": "3.88010",
+  "longitude": "-77.03116",
+  "region": 3,
+  "country": 1,
+  "population": 240387,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 191,
+ "fields": {
+  "name": "Bucaramanga",
+  "name_ascii": "Bucaramanga",
+  "slug": "bucaramanga",
+  "geoname_id": 3688465,
+  "alternate_names": "",
+  "display_name": "Bucaramanga, Santander, Colombia",
+  "search_names": "bucaramangacolombia bucaramangarepublicadecolombia bucaramangarepublicofcolombia bucaramangasantandercolombia bucaramangasantanderrepublicadecolombia bucaramangasantanderrepublicofcolombia",
+  "latitude": "7.12539",
+  "longitude": "-73.11980",
+  "region": 6,
+  "country": 1,
+  "population": 571820,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 192,
+ "fields": {
+  "name": "Bogot\u00e1",
+  "name_ascii": "Bogota",
+  "slug": "bogota",
+  "geoname_id": 3688689,
+  "alternate_names": "",
+  "display_name": "Bogot\u00e1, Bogota D.C., Colombia",
+  "search_names": "bogotabogotadccolombia bogotabogotadcrepublicadecolombia bogotabogotadcrepublicofcolombia bogotabogotadistritoespecialcolombia bogotabogotadistritoespecialrepublicadecolombia bogotabogotadistritoespecialrepublicofcolombia bogotacolombia bogotadistritocapitalcolombia bogotadistritocapitaldebogotacolombia bogotadistritocapitaldebogotarepublicadecolombia bogotadistritocapitaldebogotarepublicofcolombia bogotadistritocapitaldesantafedebogotacolombia bogotadistritocapitaldesantafedebogotarepublicadecolombia bogotadistritocapitaldesantafedebogotarepublicofcolombia bogotadistritocapitalrepublicadecolombia bogotadistritocapitalrepublicofcolombia bogotarepublicadecolombia bogotarepublicofcolombia",
+  "latitude": "4.60971",
+  "longitude": "-74.08175",
+  "region": 29,
+  "country": 1,
+  "population": 7674366,
+  "feature_code": "PPLC",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 193,
+ "fields": {
+  "name": "Bello",
+  "name_ascii": "Bello",
+  "slug": "bello",
+  "geoname_id": 3688928,
+  "alternate_names": "",
+  "display_name": "Bello, Antioquia, Colombia",
+  "search_names": "belloantioquiacolombia belloantioquiarepublicadecolombia belloantioquiarepublicofcolombia bellocolombia bellorepublicadecolombia bellorepublicofcolombia",
+  "latitude": "6.33732",
+  "longitude": "-75.55795",
+  "region": 32,
+  "country": 1,
+  "population": 392939,
+  "feature_code": "PPLA3",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 194,
+ "fields": {
+  "name": "Bel\u00e9n de Umbr\u00eda",
+  "name_ascii": "Belen de Umbria",
+  "slug": "belen-de-umbria",
+  "geoname_id": 3688989,
+  "alternate_names": "",
+  "display_name": "Bel\u00e9n de Umbr\u00eda, Risaralda, Colombia",
+  "search_names": "belendeumbriacolombia belendeumbriarepublicadecolombia belendeumbriarepublicofcolombia belendeumbriarisaraldacolombia belendeumbriarisaraldarepublicadecolombia belendeumbriarisaraldarepublicofcolombia",
+  "latitude": "5.20087",
+  "longitude": "-75.86865",
+  "region": 8,
+  "country": 1,
+  "population": 15698,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 195,
+ "fields": {
+  "name": "Barranquilla",
+  "name_ascii": "Barranquilla",
+  "slug": "barranquilla",
+  "geoname_id": 3689147,
+  "alternate_names": "",
+  "display_name": "Barranquilla, Atl\u00e1ntico, Colombia",
+  "search_names": "barranquillaatlanticocolombia barranquillaatlanticorepublicadecolombia barranquillaatlanticorepublicofcolombia barranquillacolombia barranquillarepublicadecolombia barranquillarepublicofcolombia",
+  "latitude": "10.96854",
+  "longitude": "-74.78132",
+  "region": 30,
+  "country": 1,
+  "population": 1380425,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 196,
+ "fields": {
+  "name": "Barrancas",
+  "name_ascii": "Barrancas",
+  "slug": "barrancas",
+  "geoname_id": 3689162,
+  "alternate_names": "",
+  "display_name": "Barrancas, La Guajira, Colombia",
+  "search_names": "barrancascolombia barrancaslaguajiracolombia barrancaslaguajirarepublicadecolombia barrancaslaguajirarepublicofcolombia barrancasrepublicadecolombia barrancasrepublicofcolombia",
+  "latitude": "10.95672",
+  "longitude": "-72.79456",
+  "region": 15,
+  "country": 1,
+  "population": 17350,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 197,
+ "fields": {
+  "name": "Barrancabermeja",
+  "name_ascii": "Barrancabermeja",
+  "slug": "barrancabermeja",
+  "geoname_id": 3689169,
+  "alternate_names": "",
+  "display_name": "Barrancabermeja, Santander, Colombia",
+  "search_names": "barrancabermejacolombia barrancabermejarepublicadecolombia barrancabermejarepublicofcolombia barrancabermejasantandercolombia barrancabermejasantanderrepublicadecolombia barrancabermejasantanderrepublicofcolombia",
+  "latitude": "7.06528",
+  "longitude": "-73.85472",
+  "region": 6,
+  "country": 1,
+  "population": 191403,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 198,
+ "fields": {
+  "name": "Barbosa",
+  "name_ascii": "Barbosa",
+  "slug": "barbosa",
+  "geoname_id": 3689205,
+  "alternate_names": "",
+  "display_name": "Barbosa, Antioquia, Colombia",
+  "search_names": "barbosaantioquiacolombia barbosaantioquiarepublicadecolombia barbosaantioquiarepublicofcolombia barbosacolombia barbosarepublicadecolombia barbosarepublicofcolombia",
+  "latitude": "6.43809",
+  "longitude": "-75.33136",
+  "region": 32,
+  "country": 1,
+  "population": 16707,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 199,
+ "fields": {
+  "name": "Barbosa",
+  "name_ascii": "Barbosa",
+  "slug": "barbosa",
+  "geoname_id": 3689206,
+  "alternate_names": "",
+  "display_name": "Barbosa, Santander, Colombia",
+  "search_names": "barbosacolombia barbosarepublicadecolombia barbosarepublicofcolombia barbosasantandercolombia barbosasantanderrepublicadecolombia barbosasantanderrepublicofcolombia",
+  "latitude": "5.93168",
+  "longitude": "-73.61507",
+  "region": 6,
+  "country": 1,
+  "population": 20372,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 200,
+ "fields": {
+  "name": "Baranoa",
+  "name_ascii": "Baranoa",
+  "slug": "baranoa",
+  "geoname_id": 3689235,
+  "alternate_names": "",
+  "display_name": "Baranoa, Atl\u00e1ntico, Colombia",
+  "search_names": "baranoaatlanticocolombia baranoaatlanticorepublicadecolombia baranoaatlanticorepublicofcolombia baranoacolombia baranoarepublicadecolombia baranoarepublicofcolombia",
+  "latitude": "10.79408",
+  "longitude": "-74.91640",
+  "region": 30,
+  "country": 1,
+  "population": 44078,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 201,
+ "fields": {
+  "name": "Ayapel",
+  "name_ascii": "Ayapel",
+  "slug": "ayapel",
+  "geoname_id": 3689381,
+  "alternate_names": "",
+  "display_name": "Ayapel, C\u00f3rdoba, Colombia",
+  "search_names": "ayapelcolombia ayapelcordobacolombia ayapelcordobarepublicadecolombia ayapelcordobarepublicofcolombia ayapelrepublicadecolombia ayapelrepublicofcolombia",
+  "latitude": "8.31372",
+  "longitude": "-75.13982",
+  "region": 20,
+  "country": 1,
+  "population": 22602,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 202,
+ "fields": {
+  "name": "Armenia",
+  "name_ascii": "Armenia",
+  "slug": "armenia",
+  "geoname_id": 3689560,
+  "alternate_names": "",
+  "display_name": "Armenia, Quind\u00edo, Colombia",
+  "search_names": "armeniacolombia armeniadepartamentodelquindiocolombia armeniadepartamentodelquindiorepublicadecolombia armeniadepartamentodelquindiorepublicofcolombia armeniaquindiocolombia armeniaquindiorepublicadecolombia armeniaquindiorepublicofcolombia armeniarepublicadecolombia armeniarepublicofcolombia",
+  "latitude": "4.53389",
+  "longitude": "-75.68111",
+  "region": 9,
+  "country": 1,
+  "population": 315328,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 203,
+ "fields": {
+  "name": "Arjona",
+  "name_ascii": "Arjona",
+  "slug": "arjona",
+  "geoname_id": 3689570,
+  "alternate_names": "",
+  "display_name": "Arjona, Bol\u00edvar, Colombia",
+  "search_names": "arjonabolivarcolombia arjonabolivarrepublicadecolombia arjonabolivarrepublicofcolombia arjonacolombia arjonarepublicadecolombia arjonarepublicofcolombia",
+  "latitude": "10.25444",
+  "longitude": "-75.34389",
+  "region": 28,
+  "country": 1,
+  "population": 50405,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 204,
+ "fields": {
+  "name": "Ariguan\u00ed",
+  "name_ascii": "Ariguani",
+  "slug": "ariguani",
+  "geoname_id": 3689589,
+  "alternate_names": "",
+  "display_name": "Ariguan\u00ed, Cesar, Colombia",
+  "search_names": "ariguanicesarcolombia ariguanicesarrepublicadecolombia ariguanicesarrepublicofcolombia ariguanicolombia ariguanirepublicadecolombia ariguanirepublicofcolombia",
+  "latitude": "10.25000",
+  "longitude": "-74.00000",
+  "region": 22,
+  "country": 1,
+  "population": 26246,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 205,
+ "fields": {
+  "name": "Arauca",
+  "name_ascii": "Arauca",
+  "slug": "arauca",
+  "geoname_id": 3689718,
+  "alternate_names": "",
+  "display_name": "Arauca, Arauca, Colombia",
+  "search_names": "araucaaraucacolombia araucaaraucarepublicadecolombia araucaaraucarepublicofcolombia araucacolombia araucarepublicadecolombia araucarepublicofcolombia",
+  "latitude": "7.08471",
+  "longitude": "-70.75908",
+  "region": 31,
+  "country": 1,
+  "population": 69264,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 206,
+ "fields": {
+  "name": "Aracataca",
+  "name_ascii": "Aracataca",
+  "slug": "aracataca",
+  "geoname_id": 3689759,
+  "alternate_names": "",
+  "display_name": "Aracataca, Magdalena, Colombia",
+  "search_names": "aracatacacolombia aracatacamagdalenacolombia aracatacamagdalenarepublicadecolombia aracatacamagdalenarepublicofcolombia aracatacarepublicadecolombia aracatacarepublicofcolombia",
+  "latitude": "10.59181",
+  "longitude": "-74.18983",
+  "region": 14,
+  "country": 1,
+  "population": 27704,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 207,
+ "fields": {
+  "name": "Apartad\u00f3",
+  "name_ascii": "Apartado",
+  "slug": "apartado",
+  "geoname_id": 3689798,
+  "alternate_names": "",
+  "display_name": "Apartad\u00f3, Antioquia, Colombia",
+  "search_names": "apartadoantioquiacolombia apartadoantioquiarepublicadecolombia apartadoantioquiarepublicofcolombia apartadocolombia apartadorepublicadecolombia apartadorepublicofcolombia",
+  "latitude": "7.88299",
+  "longitude": "-76.62587",
+  "region": 32,
+  "country": 1,
+  "population": 86438,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 208,
+ "fields": {
+  "name": "Anserma",
+  "name_ascii": "Anserma",
+  "slug": "anserma",
+  "geoname_id": 3689833,
+  "alternate_names": "",
+  "display_name": "Anserma, Risaralda, Colombia",
+  "search_names": "ansermacolombia ansermarepublicadecolombia ansermarepublicofcolombia ansermarisaraldacolombia ansermarisaraldarepublicadecolombia ansermarisaraldarepublicofcolombia",
+  "latitude": "5.33278",
+  "longitude": "-75.79111",
+  "region": 8,
+  "country": 1,
+  "population": 25242,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 209,
+ "fields": {
+  "name": "Andes",
+  "name_ascii": "Andes",
+  "slug": "andes",
+  "geoname_id": 3689899,
+  "alternate_names": "",
+  "display_name": "Andes, Antioquia, Colombia",
+  "search_names": "andesantioquiacolombia andesantioquiarepublicadecolombia andesantioquiarepublicofcolombia andescolombia andesrepublicadecolombia andesrepublicofcolombia",
+  "latitude": "5.65610",
+  "longitude": "-75.87877",
+  "region": 32,
+  "country": 1,
+  "population": 16419,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 210,
+ "fields": {
+  "name": "Andaluc\u00eda",
+  "name_ascii": "Andalucia",
+  "slug": "andalucia",
+  "geoname_id": 3689905,
+  "alternate_names": "",
+  "display_name": "Andaluc\u00eda, Valle del Cauca, Colombia",
+  "search_names": "andaluciacolombia andaluciarepublicadecolombia andaluciarepublicofcolombia andaluciavalledelcaucacolombia andaluciavalledelcaucarepublicadecolombia andaluciavalledelcaucarepublicofcolombia",
+  "latitude": "4.17061",
+  "longitude": "-76.16641",
+  "region": 3,
+  "country": 1,
+  "population": 17432,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 211,
+ "fields": {
+  "name": "Anaime",
+  "name_ascii": "Anaime",
+  "slug": "anaime",
+  "geoname_id": 3689952,
+  "alternate_names": "",
+  "display_name": "Anaime, Tolima, Colombia",
+  "search_names": "anaimecolombia anaimerepublicadecolombia anaimerepublicofcolombia anaimetolimacolombia anaimetolimarepublicadecolombia anaimetolimarepublicofcolombia",
+  "latitude": "4.39639",
+  "longitude": "-75.44500",
+  "region": 4,
+  "country": 1,
+  "population": 25715,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 212,
+ "fields": {
+  "name": "Aguazul",
+  "name_ascii": "Aguazul",
+  "slug": "aguazul",
+  "geoname_id": 3690316,
+  "alternate_names": "",
+  "display_name": "Aguazul, Casanare, Colombia",
+  "search_names": "aguazulcasanarecolombia aguazulcasanarerepublicadecolombia aguazulcasanarerepublicofcolombia aguazulcolombia aguazulrepublicadecolombia aguazulrepublicofcolombia",
+  "latitude": "5.17282",
+  "longitude": "-72.54706",
+  "region": 24,
+  "country": 1,
+  "population": 15669,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 213,
+ "fields": {
+  "name": "Aguadas",
+  "name_ascii": "Aguadas",
+  "slug": "aguadas",
+  "geoname_id": 3690431,
+  "alternate_names": "",
+  "display_name": "Aguadas, Caldas, Colombia",
+  "search_names": "aguadascaldascolombia aguadascaldasrepublicadecolombia aguadascaldasrepublicofcolombia aguadascolombia aguadasrepublicadecolombia aguadasrepublicofcolombia",
+  "latitude": "5.61161",
+  "longitude": "-75.45624",
+  "region": 26,
+  "country": 1,
+  "population": 19727,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 214,
+ "fields": {
+  "name": "Aguachica",
+  "name_ascii": "Aguachica",
+  "slug": "aguachica",
+  "geoname_id": 3690465,
+  "alternate_names": "",
+  "display_name": "Aguachica, Cesar, Colombia",
+  "search_names": "aguachicacesarcolombia aguachicacesarrepublicadecolombia aguachicacesarrepublicofcolombia aguachicacolombia aguachicarepublicadecolombia aguachicarepublicofcolombia",
+  "latitude": "8.30844",
+  "longitude": "-73.61660",
+  "region": 22,
+  "country": 1,
+  "population": 73360,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 215,
+ "fields": {
+  "name": "Acac\u00edas",
+  "name_ascii": "Acacias",
+  "slug": "acacias",
+  "geoname_id": 3690577,
+  "alternate_names": "",
+  "display_name": "Acac\u00edas, Meta, Colombia",
+  "search_names": "acaciascolombia acaciasmetacolombia acaciasmetarepublicadecolombia acaciasmetarepublicofcolombia acaciasrepublicadecolombia acaciasrepublicofcolombia",
+  "latitude": "3.98695",
+  "longitude": "-73.75797",
+  "region": 13,
+  "country": 1,
+  "population": 40627,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 216,
+ "fields": {
+  "name": "Morales",
+  "name_ascii": "Morales",
+  "slug": "morales",
+  "geoname_id": 3770718,
+  "alternate_names": "",
+  "display_name": "Morales, Cauca, Colombia",
+  "search_names": "moralescaucacolombia moralescaucarepublicadecolombia moralescaucarepublicofcolombia moralescolombia moralesrepublicadecolombia moralesrepublicofcolombia",
+  "latitude": "2.75446",
+  "longitude": "-76.62791",
+  "region": 23,
+  "country": 1,
+  "population": 29617,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 217,
+ "fields": {
+  "name": "Carepa",
+  "name_ascii": "Carepa",
+  "slug": "carepa",
+  "geoname_id": 3792375,
+  "alternate_names": "",
+  "display_name": "Carepa, Antioquia, Colombia",
+  "search_names": "carepaantioquiacolombia carepaantioquiarepublicadecolombia carepaantioquiarepublicofcolombia carepacolombia careparepublicadecolombia careparepublicofcolombia",
+  "latitude": "7.75849",
+  "longitude": "-76.65255",
+  "region": 32,
+  "country": 1,
+  "population": 20627,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 218,
+ "fields": {
+  "name": "Ciudad Bol\u00edvar",
+  "name_ascii": "Ciudad Bolivar",
+  "slug": "ciudad-bolivar",
+  "geoname_id": 3792376,
+  "alternate_names": "",
+  "display_name": "Ciudad Bol\u00edvar, Antioquia, Colombia",
+  "search_names": "ciudadbolivarantioquiacolombia ciudadbolivarantioquiarepublicadecolombia ciudadbolivarantioquiarepublicofcolombia ciudadbolivarcolombia ciudadbolivarrepublicadecolombia ciudadbolivarrepublicofcolombia",
+  "latitude": "5.85389",
+  "longitude": "-76.02528",
+  "region": 32,
+  "country": 1,
+  "population": 16225,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 219,
+ "fields": {
+  "name": "Agust\u00edn Codazzi",
+  "name_ascii": "Agustin Codazzi",
+  "slug": "agustin-codazzi",
+  "geoname_id": 3792383,
+  "alternate_names": "Agustin Codazzi",
+  "display_name": "Agust\u00edn Codazzi, Cesar, Colombia",
+  "search_names": "agustincodazzicesarcolombia agustincodazzicesarrepublicadecolombia agustincodazzicesarrepublicofcolombia agustincodazzicolombia agustincodazzirepublicadecolombia agustincodazzirepublicofcolombia",
+  "latitude": "10.03672",
+  "longitude": "-73.23558",
+  "region": 22,
+  "country": 1,
+  "population": 51478,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 220,
+ "fields": {
+  "name": "Plato",
+  "name_ascii": "Plato",
+  "slug": "plato",
+  "geoname_id": 3792392,
+  "alternate_names": "",
+  "display_name": "Plato, Magdalena, Colombia",
+  "search_names": "platocolombia platomagdalenacolombia platomagdalenarepublicadecolombia platomagdalenarepublicofcolombia platorepublicadecolombia platorepublicofcolombia",
+  "latitude": "9.79029",
+  "longitude": "-74.78244",
+  "region": 14,
+  "country": 1,
+  "population": 48606,
+  "feature_code": "PPLA2",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 221,
+ "fields": {
+  "name": "San Jos\u00e9 del Guaviare",
+  "name_ascii": "San Jose del Guaviare",
+  "slug": "san-jose-del-guaviare",
+  "geoname_id": 3828545,
+  "alternate_names": "",
+  "display_name": "San Jos\u00e9 del Guaviare, Guaviare, Colombia",
+  "search_names": "sanjosedelguaviarecolombia sanjosedelguaviareguaviarecolombia sanjosedelguaviareguaviarerepublicadecolombia sanjosedelguaviareguaviarerepublicofcolombia sanjosedelguaviarerepublicadecolombia sanjosedelguaviarerepublicofcolombia",
+  "latitude": "2.57286",
+  "longitude": "-72.64591",
+  "region": 17,
+  "country": 1,
+  "population": 22136,
+  "feature_code": "PPLA",
+  "timezone": "America/Bogota"
+ }
+},
+{
+ "model": "cities_light.city",
+ "pk": 222,
+ "fields": {
+  "name": "Piendamo",
+  "name_ascii": "Piendamo",
+  "slug": "piendamo",
+  "geoname_id": 8633918,
+  "alternate_names": "",
+  "display_name": "Piendamo, Cauca, Colombia",
+  "search_names": "piendamocaucacolombia piendamocaucarepublicadecolombia piendamocaucarepublicofcolombia piendamocolombia piendamorepublicadecolombia piendamorepublicofcolombia",
+  "latitude": "2.63918",
+  "longitude": "-76.53055",
+  "region": 23,
+  "country": 1,
+  "population": 44000,
+  "feature_code": "PPL",
+  "timezone": "America/Bogota"
+ }
+}
+]

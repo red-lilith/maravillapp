@@ -1,4 +1,4 @@
-{% extends 'base_perfil.html' %}
+{% extends 'base_dash.html' %}
 {# Load the tag library #}
 {% load bootstrap4 %}
 {% load static %}
@@ -13,18 +13,25 @@
     }
     </style>
 {% endblock css %}
-{% block titulo %}Registro{% endblock titulo %}
+{% block titulo %}Crear Digitador{% endblock titulo %}
 
 
 {% block contenido %}
     <section class="ftco-section">
     <div class="container">
-        <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Registro</span></p>
+        <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Crear Digitador</span></p>
         <div class="row align-items-center">
             <div class="col-xl-12 ftco-animate">
                 <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
                     {% csrf_token %}
-                    <h3 class="mb-4 billing-heading">Registro</h3>
+                    <div class="row justify-content-center">
+                            <div class="col-xl-10 ftco-animate">
+                                <h3 class="mb-4 billing-heading">Crear Digitador</h3>
+                            </div>
+                            <div class="col-xl-2 ftco-animate ">
+                                <p><a href="{% url 'usuarios:listar_digitadores' %}" style="width: 160px;" class="btn btn-primary p-2">Digitadores</a></p>
+                            </div>
+                        </div>
                     <div class="row align-items-end">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -76,7 +83,7 @@
                                 <label for="telefono">Teléfono</label>
                                 {% render_field form.telefono class="form-control" %}
                             </div>
-                        </div>
+                        </div>                        
                         <div class="w-100"></div>
                         <div class="col-md-6">
                             <div class="form-group">
@@ -94,35 +101,7 @@
                         <div class="col-md-12 align-items-end">
                             <div class="form-group mt-4">
                                 <div class="text-center w-full p-t-30 p-b-22">
-                                    <input class="btn btn-primary py-4 px-4"  type="submit"  value="Registrarme Ahora" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-md-12 align-items-end">
-                            <div class="form-group mt-4">
-                                <div class="text-center w-full p-t-30 p-b-22">
-                                    <span class="txt1">O inicia sesión con</span>
-                                </div>
-                                <div class="text-center w-full p-t-30 p-b-22">
-                                    <a href="#" class="btn-face m-b-10">
-                                        <i class="fa fa-facebook-official"></i>
-                                        Facebook | </a>
-                                    <a href="#" class="btn-google m-b-10">
-                                        <i class="fa fa-google"></i>
-                                        Google
-                                    </a>
-                                </div>
-                                <div class="text-center w-full p-t-30 p-b-22">
-                                    <span class="txt1">¿Ya eres Miembro?</span>
-                                    <a class="txt1 bo1 hov1" href="{% url 'usuarios:login' %}">
-                                        Iniciar Sesión
-                                    </a>
-                                </div>
-                                <div class="text-center w-full">
-                                    <a style="padding-top: 0" class="txt1 bo1 hov1" href="{% url 'usuarios:home' %}">
-                                        Ir a la Página Principal
-                                    </a>
+                                    <input class="btn btn-primary py-4 px-4"  type="submit"  value="Guardar Datos" />
                                 </div>
                             </div>
                         </div>
