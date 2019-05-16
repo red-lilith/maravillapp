@@ -7,7 +7,7 @@
 `INSERT INTO "tenants_dominio" ("domain", "is_primary", "tenant_id") VALUES
 ('127.0.0.1', true, 1);`
 
-[settings.py](https://drive.google.com/open?id=1Jhi46K85C62KqRmX9CHfCYSUi3o5UeRn)
+[settings.py](https://drive.google.com/open?id=1MXGMcfsgTpbDG_mCMkJy4S4tpjnyNqaF)
 
 [Template Bootstrap4](https://themewagon.com/themes/free-bootstrap-4-html5-coffee-website-template-coffee-blend/)
 
