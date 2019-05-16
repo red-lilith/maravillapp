@@ -16,6 +16,6 @@ class Usuario(AbstractUser):
     barrio = models.CharField(max_length=100)
     direccion = models.CharField(max_length=200)
     telefono = models.CharField(max_length=20)
-    tipo_usuario = models.CharField(max_length=15,choices=TIPOS_USUARIO)
+    tipo_usuario = models.CharField(max_length=15,choices=TIPOS_USUARIO, default='Cliente')
     USERNAME_FIELD = 'username'
 

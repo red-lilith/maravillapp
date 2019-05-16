@@ -1,0 +1,464 @@
+[
+{
+ "model": "cities_light.region",
+ "pk": 1,
+ "fields": {
+  "name": "Vichada",
+  "name_ascii": "Vichada",
+  "slug": "vichada",
+  "geoname_id": 3666082,
+  "alternate_names": "",
+  "display_name": "Vichada, Colombia",
+  "geoname_code": "31",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 2,
+ "fields": {
+  "name": "Vaup\u00e9s",
+  "name_ascii": "Vaupes",
+  "slug": "vaupes",
+  "geoname_id": 3666254,
+  "alternate_names": "",
+  "display_name": "Vaup\u00e9s, Colombia",
+  "geoname_code": "30",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 3,
+ "fields": {
+  "name": "Valle del Cauca",
+  "name_ascii": "Valle del Cauca",
+  "slug": "valle-del-cauca",
+  "geoname_id": 3666313,
+  "alternate_names": "",
+  "display_name": "Valle del Cauca, Colombia",
+  "geoname_code": "29",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 4,
+ "fields": {
+  "name": "Tolima",
+  "name_ascii": "Tolima",
+  "slug": "tolima",
+  "geoname_id": 3666951,
+  "alternate_names": "",
+  "display_name": "Tolima, Colombia",
+  "geoname_code": "28",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 5,
+ "fields": {
+  "name": "Sucre",
+  "name_ascii": "Sucre",
+  "slug": "sucre",
+  "geoname_id": 3667725,
+  "alternate_names": "",
+  "display_name": "Sucre, Colombia",
+  "geoname_code": "27",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 6,
+ "fields": {
+  "name": "Santander",
+  "name_ascii": "Santander",
+  "slug": "santander",
+  "geoname_id": 3668578,
+  "alternate_names": "",
+  "display_name": "Santander, Colombia",
+  "geoname_code": "26",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 7,
+ "fields": {
+  "name": "San Andres y Providencia",
+  "name_ascii": "San Andres y Providencia",
+  "slug": "san-andres-y-providencia",
+  "geoname_id": 3670205,
+  "alternate_names": "",
+  "display_name": "San Andres y Providencia, Colombia",
+  "geoname_code": "25",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 8,
+ "fields": {
+  "name": "Risaralda",
+  "name_ascii": "Risaralda",
+  "slug": "risaralda",
+  "geoname_id": 3670698,
+  "alternate_names": "",
+  "display_name": "Risaralda, Colombia",
+  "geoname_code": "24",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 9,
+ "fields": {
+  "name": "Quind\u00edo",
+  "name_ascii": "Quindio",
+  "slug": "quindio",
+  "geoname_id": 3671087,
+  "alternate_names": "Departamento del Quind\u00edo",
+  "display_name": "Quind\u00edo, Colombia",
+  "geoname_code": "23",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 10,
+ "fields": {
+  "name": "Putumayo",
+  "name_ascii": "Putumayo",
+  "slug": "putumayo",
+  "geoname_id": 3671178,
+  "alternate_names": "",
+  "display_name": "Putumayo, Colombia",
+  "geoname_code": "22",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 11,
+ "fields": {
+  "name": "Norte de Santander",
+  "name_ascii": "Norte de Santander",
+  "slug": "norte-de-santander",
+  "geoname_id": 3673798,
+  "alternate_names": "",
+  "display_name": "Norte de Santander, Colombia",
+  "geoname_code": "21",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 12,
+ "fields": {
+  "name": "Nari\u00f1o",
+  "name_ascii": "Narino",
+  "slug": "narino",
+  "geoname_id": 3674021,
+  "alternate_names": "",
+  "display_name": "Nari\u00f1o, Colombia",
+  "geoname_code": "20",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 13,
+ "fields": {
+  "name": "Meta",
+  "name_ascii": "Meta",
+  "slug": "meta",
+  "geoname_id": 3674810,
+  "alternate_names": "",
+  "display_name": "Meta, Colombia",
+  "geoname_code": "19",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 14,
+ "fields": {
+  "name": "Magdalena",
+  "name_ascii": "Magdalena",
+  "slug": "magdalena",
+  "geoname_id": 3675686,
+  "alternate_names": "",
+  "display_name": "Magdalena, Colombia",
+  "geoname_code": "38",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 15,
+ "fields": {
+  "name": "La Guajira",
+  "name_ascii": "La Guajira",
+  "slug": "la-guajira",
+  "geoname_id": 3678847,
+  "alternate_names": "",
+  "display_name": "La Guajira, Colombia",
+  "geoname_code": "17",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 16,
+ "fields": {
+  "name": "Huila",
+  "name_ascii": "Huila",
+  "slug": "huila",
+  "geoname_id": 3680692,
+  "alternate_names": "",
+  "display_name": "Huila, Colombia",
+  "geoname_code": "16",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 17,
+ "fields": {
+  "name": "Guaviare",
+  "name_ascii": "Guaviare",
+  "slug": "guaviare",
+  "geoname_id": 3681344,
+  "alternate_names": "",
+  "display_name": "Guaviare, Colombia",
+  "geoname_code": "14",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 18,
+ "fields": {
+  "name": "Guain\u00eda",
+  "name_ascii": "Guainia",
+  "slug": "guainia",
+  "geoname_id": 3681652,
+  "alternate_names": "",
+  "display_name": "Guain\u00eda, Colombia",
+  "geoname_code": "15",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 19,
+ "fields": {
+  "name": "Cundinamarca",
+  "name_ascii": "Cundinamarca",
+  "slug": "cundinamarca",
+  "geoname_id": 3685413,
+  "alternate_names": "",
+  "display_name": "Cundinamarca, Colombia",
+  "geoname_code": "33",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 20,
+ "fields": {
+  "name": "C\u00f3rdoba",
+  "name_ascii": "Cordoba",
+  "slug": "cordoba",
+  "geoname_id": 3685889,
+  "alternate_names": "",
+  "display_name": "C\u00f3rdoba, Colombia",
+  "geoname_code": "12",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 21,
+ "fields": {
+  "name": "Choc\u00f3",
+  "name_ascii": "Choco",
+  "slug": "choco",
+  "geoname_id": 3686431,
+  "alternate_names": "",
+  "display_name": "Choc\u00f3, Colombia",
+  "geoname_code": "11",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 22,
+ "fields": {
+  "name": "Cesar",
+  "name_ascii": "Cesar",
+  "slug": "cesar",
+  "geoname_id": 3686880,
+  "alternate_names": "",
+  "display_name": "Cesar, Colombia",
+  "geoname_code": "10",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 23,
+ "fields": {
+  "name": "Cauca",
+  "name_ascii": "Cauca",
+  "slug": "cauca",
+  "geoname_id": 3687029,
+  "alternate_names": "",
+  "display_name": "Cauca, Colombia",
+  "geoname_code": "09",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 24,
+ "fields": {
+  "name": "Casanare",
+  "name_ascii": "Casanare",
+  "slug": "casanare",
+  "geoname_id": 3687173,
+  "alternate_names": "",
+  "display_name": "Casanare, Colombia",
+  "geoname_code": "32",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 25,
+ "fields": {
+  "name": "Caquet\u00e1",
+  "name_ascii": "Caqueta",
+  "slug": "caqueta",
+  "geoname_id": 3687479,
+  "alternate_names": "",
+  "display_name": "Caquet\u00e1, Colombia",
+  "geoname_code": "08",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 26,
+ "fields": {
+  "name": "Caldas",
+  "name_ascii": "Caldas",
+  "slug": "caldas",
+  "geoname_id": 3687951,
+  "alternate_names": "",
+  "display_name": "Caldas, Colombia",
+  "geoname_code": "37",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 27,
+ "fields": {
+  "name": "Boyac\u00e1",
+  "name_ascii": "Boyaca",
+  "slug": "boyaca",
+  "geoname_id": 3688536,
+  "alternate_names": "",
+  "display_name": "Boyac\u00e1, Colombia",
+  "geoname_code": "36",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 28,
+ "fields": {
+  "name": "Bol\u00edvar",
+  "name_ascii": "Bolivar",
+  "slug": "bolivar",
+  "geoname_id": 3688650,
+  "alternate_names": "",
+  "display_name": "Bol\u00edvar, Colombia",
+  "geoname_code": "35",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 29,
+ "fields": {
+  "name": "Bogota D.C.",
+  "name_ascii": "Bogota D.C.",
+  "slug": "bogota-dc",
+  "geoname_id": 3688685,
+  "alternate_names": "Bogot\u00e1 Distrito Especial;Distrito Capital;Distrito Capital de Bogot\u00e1;Distrito Capital de Santaf\u00e9 de Bogot\u00e1",
+  "display_name": "Bogota D.C., Colombia",
+  "geoname_code": "34",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 30,
+ "fields": {
+  "name": "Atl\u00e1ntico",
+  "name_ascii": "Atlantico",
+  "slug": "atlantico",
+  "geoname_id": 3689436,
+  "alternate_names": "",
+  "display_name": "Atl\u00e1ntico, Colombia",
+  "geoname_code": "04",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 31,
+ "fields": {
+  "name": "Arauca",
+  "name_ascii": "Arauca",
+  "slug": "arauca",
+  "geoname_id": 3689717,
+  "alternate_names": "",
+  "display_name": "Arauca, Colombia",
+  "geoname_code": "03",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 32,
+ "fields": {
+  "name": "Antioquia",
+  "name_ascii": "Antioquia",
+  "slug": "antioquia",
+  "geoname_id": 3689815,
+  "alternate_names": "",
+  "display_name": "Antioquia, Colombia",
+  "geoname_code": "02",
+  "country": 1
+ }
+},
+{
+ "model": "cities_light.region",
+ "pk": 33,
+ "fields": {
+  "name": "Amazonas",
+  "name_ascii": "Amazonas",
+  "slug": "amazonas",
+  "geoname_id": 3689982,
+  "alternate_names": "Departamento del Amazonas",
+  "display_name": "Amazonas, Colombia",
+  "geoname_code": "01",
+  "country": 1
+ }
+}
+]

@@ -1,0 +1,18 @@
+[
+{
+ "model": "cities_light.country",
+ "pk": 1,
+ "fields": {
+  "name": "Colombia",
+  "name_ascii": "Colombia",
+  "slug": "colombia",
+  "geoname_id": 3686110,
+  "alternate_names": "Republic of Colombia;Rep\u00fablica de Colombia",
+  "code2": "CO",
+  "code3": "COL",
+  "continent": "SA",
+  "tld": "co",
+  "phone": "57"
+ }
+}
+]
