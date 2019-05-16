@@ -1,6 +1,9 @@
 {% extends 'base_perfil.html' %}
-{% load staticfiles %}
+{# Load the tag library #}
 {% load bootstrap4 %}
+{% load static %}
+{% load staticfiles %}
+{% load widget_tweaks %}
 
 {% block titulo %}Cuenta{% endblock titulo %}
 
@@ -14,68 +17,74 @@
                 <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
                     <h3 class="mb-4 billing-heading">Registro</h3>
                     <div class="row align-items-end">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="names">Nombres y Apellidos</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label for="nombres">Nombres</label>
+                                {% render_field form.first_name class="form-control" %}
                             </div>
                         </div>
-                        <div class="col-md-6">
+                         <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="apellidos">Apellidos</label>
+                                {% render_field form.last_name class="form-control" %}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="id">Documento de Identidad</label>
-                                <input type="text" class="form-control" placeholder="">
+                                {% render_field form.documento class="form-control" %}
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="ciudad">Ciudad</label>
-                                <input type="text" class="form-control" placeholder="">
+                                {% render_field form.ciudad class="form-control" %}
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="barrio">Barrio</label>
-                                <input type="text" class="form-control" placeholder="">
+                                {% render_field form.barrio class="form-control" %}
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="direccion">Dirección</label>
-                                <input type="text" class="form-control" placeholder="">
+                                {% render_field form.direccion class="form-control" %}
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="telefono">Teléfono</label>
-                                <input type="tel" class="form-control" placeholder="">
+                                {% render_field form.telefono class="form-control" %}
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="usuario">Nombre de Usuario</label>
-                                <input type="text" class="form-control" placeholder="">
+                                {% render_field form.username class="form-control" %}
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="emailaddress">Correo Electrónico</label>
-                                <input type="email" class="form-control" placeholder="">
+                                {% render_field form.email class="form-control" %}
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="pass1">Contraseña</label>
-                                <input type="password" class="form-control" placeholder="">
+                                {% render_field form.password class="form-control" type="password" %}
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="pass2">Confirmar Contraseña</label>
-                                <input type="password" class="form-control" placeholder="">
+                                {% render_field form.password class="form-control" type="password" %}
                             </div>
                         </div>
                         <div class="w-100"></div>

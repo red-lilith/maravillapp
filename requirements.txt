@@ -1,6 +1,7 @@
 Django==2.0.13
 django-appconf==1.0.2
 django-bootstrap4==0.0.8
+django-cities-light
 django-tenants==2.1.0
 django-select2==6.0.3
 gunicorn==19.8.1

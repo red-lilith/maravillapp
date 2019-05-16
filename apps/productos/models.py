@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Ingrediente(models.Model):
 
 	KG = "KILOGRAMO"
@@ -21,6 +23,7 @@ class Ingrediente(models.Model):
 	precio_por_unidad = models.DecimalField(max_digits=100, decimal_places=10)
 	cantidad = models.IntegerField(default=0, blank=False)
 	unidad = models.CharField(max_length=15,choices=TIPOS_UNIDADES)
+
 
 class Producto(models.Model):
 
