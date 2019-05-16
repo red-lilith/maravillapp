@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from apps.usuarios.models import *
 from apps.tenants.models import *
 from django.db import connection
+from django.contrib.auth.hashers import make_password
 from django.contrib.auth import login
 
 def home(request):
@@ -41,6 +42,16 @@ class Registro(SuccessMessageMixin, CreateView):
     model = Usuario
     fields = ['first_name', 'last_name', 'documento', 'ciudad', 'barrio', 'direccion', 'telefono', 'username', 'email', 'password']
 
+    def form_valid(self, form):
+        form_data =form.cleaned_data
+        try:
+            if form_data['password']:
+                form.instance.password= make_password(form_data['password'])
+        except KeyError:
+            pass
+
+        return super(Registro, self).form_valid(form)
+
     def get_success_url(self, **kwargs):
         return reverse_lazy("usuarios:home")
 
@@ -52,6 +63,13 @@ class CrearAdmin(SuccessMessageMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.tipo_usuario = 'Administrador'
+        form_data =form.cleaned_data
+        try:
+            if form_data['password']:
+                form.instance.password= make_password(form_data['password'])
+        except KeyError:
+            pass
+
         return super(CrearAdmin, self).form_valid(form)
 
     def get_success_url(self, **kwargs):
@@ -65,6 +83,13 @@ class CrearDigitador(SuccessMessageMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.tipo_usuario = 'Digitador'
+        form_data =form.cleaned_data
+        try:
+            if form_data['password']:
+                form.instance.password= make_password(form_data['password'])
+        except KeyError:
+            pass
+
         return super(CrearDigitador, self).form_valid(form)
 
     def get_success_url(self, **kwargs):

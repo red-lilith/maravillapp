@@ -23,5 +23,5 @@ urlpatterns = [
     path('carrito', carrito, name='carrito'),
     path('login', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='usuarios/login.html'),
          name='login'),
-    #path('salir', auth_views.LogoutView.as_view(), name='salir'),
+    path('salir', auth_views.LogoutView.as_view(), name='salir'),
 ]

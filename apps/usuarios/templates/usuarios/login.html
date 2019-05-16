@@ -11,26 +11,19 @@
             <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Entrar</span></p>
             <div class="row align-items-center">
                 <div class="col-xl-12 ftco-animate">
-                    <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
+                    <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
+                      {% csrf_token %}
+                      {% bootstrap_form form %}
                         <h3 class="mb-4 billing-heading">Iniciar Sesión</h3>
                         <div class="row align-items-end">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="emailaddress">Correo Electrónico</label>
-                                    <input type="email" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="pass1">Contraseña</label>
-                                    <input type="password" class="form-control" placeholder="">
-                                </div>
-                            </div>
+
+                          
                             <div class="w-100"></div>
                             <div class="col-md-12 align-items-end">
                                 <div class="form-group mt-4">
                                     <div class="text-center w-full p-t-30 p-b-22">
-                                        <p><a href="#"class="btn btn-primary py-4 px-4">Entrar Ahora</a></p>
+                                      <input class="btn btn-primary py-4 px-4"  type="submit"  value="Guardar Datos" />
+
                                     </div>
                                 </div>
                             </div>
