@@ -50,7 +50,9 @@
                       <div class="container">
                         <p class="mb-1"><a href="{% url 'productos:producto_detalle' producto.id %}" class="btn btn-outline-info custom-btn">Ver detalle</a></p>
                           <p class="mb-1"><a href="{% url 'productos:producto_actualizar' producto.id %}" class="btn btn-outline-warning custom-btn">Modificar</a></p>
-                          <p><a href="{% url 'productos:producto_eliminar' producto.id %}" class="btn btn-outline-danger custom-btn">Eliminar</a></p>
+                          <p class="mb-1"><a href="{% url 'productos:producto_eliminar' producto.id %}" class="btn btn-outline-danger custom-btn">Eliminar</a></p>
+                          <p><a href="{% url 'productos:ingredientes_producto_listar' producto.id %}" class="btn btn-outline-success custom-btn">Gestionar ingredientes</a></p>
+
                       </div>
                     </td>
                 </tr>

@@ -1,0 +1,87 @@
+{% extends 'base_maravilla.html' %}
+{# Load the tag library #}
+{% load static %}
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'dist/css/dataTables.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'coffee_template/css/producto-listar.css' %}">
+
+{% endblock css %}
+
+{% block contenido %}
+
+<section class="ftco-section center">
+  <div class="container">
+    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Lista de ingredientes</span></p>
+
+      <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 ftco-animate">
+                <h3 class="mb-4 billing-heading">Lista de ingredientes del producto {{nombre_producto}} </h3>
+            </div>
+            <div class="col-xl-2 ftco-animate" >
+                <p><a href="{% url 'productos:ingrediente_producto_crear' pk %}" style="width: 145px;" class="btn btn-primary p-2">Agregar Ingrediente</a></p>
+            </div>
+        </div>
+        <div class="table-responsive">
+
+          <table id="example" class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                  <th style="width: 20%">Imagen</th>
+                  <th style="width: 10%">Nombre</th>
+                  <th style="width: 10%">Precio</th>
+                  <th style="width: 10%">Cantidad</th>
+                  <th style="width: 15%">Unidad</th>
+                  <th style="width: 15%">Cantidad a</th>
+                  <th style="width: 20%">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for productoingrediente in productoingrediente_list %}
+
+                <tr>
+
+                      <td  style="width: 20%">
+                        {% if productoingrediente.ingrediente.imagen  %}
+                            <img style="width: 150px; height: 110px;" src="{{productoingrediente.ingrediente.imagen.url}}" class="img img-fluid centerImage ">
+                        {% else %}
+                            <img style="width: 150px; height: 110px; " src="{% static 'imagenes (acomodar)/no_image.jpg' %}" class="img img-fluid centerImage">
+                        {% endif %}
+                      </td>
+                      <td  style="width: 10%" >{{productoingrediente.ingrediente.nombre}}</td>
+                      <td  style="width: 10%">{{productoingrediente.ingrediente.precio_por_unidad}}</td>
+                      <td  style="width: 10%">{{productoingrediente.ingrediente.cantidad}}</td>
+                      <td  style="width: 15%">{{productoingrediente.ingrediente.unidad}}</td>
+                      <td  style="width: 15%">{{productoingrediente.cantidad_necesaria}}</td>
+                      <td style="width: 20%">
+                        <div class="container">
+                          <p><a href="{% url 'productos:ingrediente_producto_detalle' productoingrediente.id %}" class="btn btn-outline-info custom-btn">Ver detalle</a></p>
+                          <p><a href="{% url 'productos:ingrediente_producto_actualizar' productoingrediente.id %}" class="btn btn-outline-warning custom-btn">Modificar</a></p>
+                          <p><a href="{% url 'productos:ingrediente_producto_eliminar' productoingrediente.id %}" class="btn btn-outline-danger custom-btn">Eliminar</a></p>
+
+                        </div>
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </form>
+  </div>
+</section>
+{% endblock contenido %}
+
+{% block js %}
+<script type="text/javascript" language="javascript" src="{% static 'dist/js/jquery-3.3.1.js' %}"></script>
+<script type="text/javascript" language="javascript" src="{% static 'dist/js/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" language="javascript" src="{% static 'dist/js/dataTables.bootstrap4.min.js' %}"></script>
+<script>
+   $(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+
+{% endblock js %}
