@@ -6,21 +6,20 @@
 {% load widget_tweaks %}
 
 {% block css %}
-<link rel="stylesheet" media="screen" href="{% static 'coffee_template/css/producto-crear.css' %}">
+    <link rel="stylesheet" media="screen" href="{% static 'coffee_template/css/producto-crear.css' %}">
 {% endblock css %}
 
 {% block contenido %}
 
     <section class="ftco-section center">
         <div class = "container">
-<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'tenants:home' %}">Home</a></span>
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'tenants:home' %}">Home</a></span>
                 <span class="mr-2"><a href="{% url 'productos:productos_listar' %}">Listar Productos</a></span>
                 <span>Crear Producto</span></p>
             <div class="row justify-content-center">
                 <div class="col-xl-9 ftco-animate">
                     <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
                         {% csrf_token %}
-
                         <div class="row align-items-end">
                             <div class="col-xl-9 ftco-animate">
                                 <h3 class="mb-4 billing-heading">Crear producto</h3>
@@ -50,7 +49,6 @@
                                 </div>
                             </div>
                             <div class="w-100"></div>
-
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Imagen</label>
@@ -64,7 +62,6 @@
                                     {% render_field form.estado %}
                                 </div>
                             </div>
-
                             <div class="w-100"></div>
                             <div class="col-md-12 align-items-end">
                                 <div class="form-group mt-2">
@@ -73,9 +70,7 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </form>
                 </div>
             </div>

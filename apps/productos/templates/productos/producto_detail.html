@@ -6,7 +6,7 @@
 {% load widget_tweaks %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'coffee_template/css/producto-detalle.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/producto-detalle.css' %}">
 {% endblock css %}
 {% block contenido %}
 
@@ -16,7 +16,6 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 ftco-animate">
                     <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
-
                         <div class="row justify-content-center">
                             <div class="col-xl-8 ftco-animate">
                                 <h3 class="mb-4 billing-heading">Ver producto</h3>
@@ -25,53 +24,43 @@
                                 <p><a href="{% url 'productos:productos_listar' %}" style="width: 130px;" class="btn btn-white btn-outline-white p-2">Ver Inventario</a></p>
                             </div>
                         </div>
-
                         <div class="row align-items-end">
-
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  {% if object.imagen  %}
-                                      <img style="width: 450px; height: 250px;" src="{{object.imagen.url}}" class="img img-fluid centerImage ">
-                                  {% else %}
-                                      <img style="width: 450px; height: 250px; " src="{% static 'imagenes (acomodar)/no_image.jpg' %}" class="img img-fluid centerImage">
-                                  {% endif %}
-                              </div>
-                          </div>
-
-                          <div class="w-100"></div>
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <label for="names">Nombre</label>
-                                  <input class="form-control" id="id_nombre" type="text" name="nombre" placeholder="Nombre" value="{{object.nombre}}" disabled="true">
-                              </div>
-                          </div>
-
-                          <div class="w-100"></div>
-
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <label for="names">Descripción</label>
-                                  <textarea name="descripcion" cols="40" style="text-align:justify;" rows="5" maxlength="500" class="form-control"  disabled="true" required="" id="id_descripcion" > {{object.descripcion}}</textarea>
-                              </div>
-                          </div>
-
-                          <div class="w-100"></div>
-
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="names">Precio</label>
-                                  <input class="form-control" id="id_precio" type="text" name="precio" placeholder="Precio" value="{{object.precio}}" disabled="true">
-                                 </div>
-                          </div>
-
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="names">Estado</label>
-                                  <input class="form-control" id="id_estado" type="text" name="estado" placeholder="Estado" value="{{object.estado|yesno:"Disponible,No disponible"}}" disabled="true">
-                                 </div>
-                          </div>
-
-
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    {% if object.imagen  %}
+                                        <img style="width: 450px; height: 250px;" src="{{object.imagen.url}}" class="img img-fluid centerImage ">
+                                    {% else %}
+                                        <img style="width: 450px; height: 250px; " src="{% static 'imagenes (acomodar)/no_image.jpg' %}" class="img img-fluid centerImage">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="names">Nombre</label>
+                                    <input class="form-control" id="id_nombre" type="text" name="nombre" placeholder="Nombre" value="{{object.nombre}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="names">Descripción</label>
+                                    <textarea name="descripcion" cols="40" style="text-align:justify;" rows="5" maxlength="500" class="form-control"  disabled="true" required="" id="id_descripcion" > {{object.descripcion}}</textarea>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Precio</label>
+                                    <input class="form-control" id="id_precio" type="text" name="precio" placeholder="Precio" value="{{object.precio}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Estado</label>
+                                    <input class="form-control" id="id_estado" type="text" name="estado" placeholder="Estado" value="{{object.estado|yesno:"Disponible,No disponible"}}" disabled="true">
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -81,6 +70,6 @@
 
 {% endblock contenido %}
 {% block js %}
-<script>
-</script>
+    <script>
+    </script>
 {% endblock js %}

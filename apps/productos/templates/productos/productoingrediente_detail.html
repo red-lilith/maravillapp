@@ -6,7 +6,7 @@
 {% load widget_tweaks %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'coffee_template/css/producto-detalle.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/producto-detalle.css' %}">
 {% endblock css %}
 {% block contenido %}
 
@@ -16,7 +16,6 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 ftco-animate">
                     <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
-
                         <div class="row justify-content-center">
                             <div class="col-xl-8 ftco-animate">
                                 <h3 class="mb-4 billing-heading">Ver ingrediente </h3>
@@ -25,42 +24,36 @@
                                 <p><a href="{% url 'productos:ingredientes_producto_listar' producto_pk %}" style="width: 130px;" class="btn btn-white btn-outline-white p-2">Ver Ingredientes</a></p>
                             </div>
                         </div>
-
                         <div class="row align-items-end">
-
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  {% if object.ingrediente.imagen  %}
-                                      <img style="width: 450px; height: 250px;" src="{{object.ingrediente.imagen.url}}" class="img img-fluid centerImage ">
-                                  {% else %}
-                                      <img style="width: 450px; height: 250px; " src="{% static 'imagenes (acomodar)/no_image.jpg' %}" class="img img-fluid centerImage">
-                                  {% endif %}
-                              </div>
-                          </div>
-                          <div class="w-100"></div>
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <label for="names">Nombre del producto</label>
-                                  <input class="form-control" id="id_producto" type="text" name="producto" placeholder="producto" value="{{object.producto}}" disabled="true">
-                              </div>
-                          </div>
-                          <div class="w-100"></div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="names">Ingrediente</label>
-                                  <input class="form-control" id="id_ingrediente" type="text" name="ingrediente" placeholder="ingrediente" value="{{object.ingrediente}}" disabled="true">
-                              </div>
-                          </div>
-
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="names">Cantidad</label>
-                                  <input class="form-control" id="id_cantidad_necesaria" type="number" name="cantidad_necesaria" placeholder="Cantidad" value="{{object.cantidad_necesaria}}" disabled="true">
-                              </div>
-                          </div>
-
-
-
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    {% if object.ingrediente.imagen  %}
+                                        <img style="width: 450px; height: 250px;" src="{{object.ingrediente.imagen.url}}" class="img img-fluid centerImage ">
+                                    {% else %}
+                                        <img style="width: 450px; height: 250px; " src="{% static 'imagenes (acomodar)/no_image.jpg' %}" class="img img-fluid centerImage">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="names">Nombre del producto</label>
+                                    <input class="form-control" id="id_producto" type="text" name="producto" placeholder="producto" value="{{object.producto}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Ingrediente</label>
+                                    <input class="form-control" id="id_ingrediente" type="text" name="ingrediente" placeholder="ingrediente" value="{{object.ingrediente}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Cantidad</label>
+                                    <input class="form-control" id="id_cantidad_necesaria" type="number" name="cantidad_necesaria" placeholder="Cantidad" value="{{object.cantidad_necesaria}}" disabled="true">
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -70,6 +63,6 @@
 
 {% endblock contenido %}
 {% block js %}
-<script>
-</script>
+    <script>
+    </script>
 {% endblock js %}

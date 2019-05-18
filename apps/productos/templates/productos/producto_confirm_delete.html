@@ -5,63 +5,60 @@
 {% load staticfiles %}
 
 {% block css %}
-<style media="screen"></style>
+    <style media="screen"></style>
 {% endblock css %}
 
 {% block contenido %}
-<section class="ftco-section center">
-  <div class = "container">
-    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Eliminar producto</span></p>
-    <div class="row justify-content-center">
-    <div class="col-xl-6 ftco-animate">
-      <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
-                    {% csrf_token %}
-                    <div class="row justify-content-center">
-                        <div class="col-xl-8 ftco-animate">
-                            <h3 class="mb-4 billing-heading">Eliminar producto</h3>
-                        </div>
-                        <div class="col-xl-4 ftco-animate" >
-                            <p><a href="{% url 'productos:productos_listar' %}" style="width: 130px;" class="btn btn-white btn-outline-white p-2">Ver Inventario</a></p>
-                        </div>
-                    </div>
-                    <div class="row align-items-end">
-
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                {% if object.imagen  %}
-                                    <img style="width: 450px; height: 250px;" src="{{object.imagen.url}}" class="img img-fluid centerImage ">
-                                {% else %}
-                                    <img style="width: 450px; height: 250px; " src="{% static 'imagenes (acomodar)/no_image.jpg' %}" class="img img-fluid centerImage">
-                                {% endif %}
+    <section class="ftco-section center">
+        <div class = "container">
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Eliminar Producto</span></p>
+            <div class="row justify-content-center">
+                <div class="col-xl-6 ftco-animate">
+                    <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
+                        {% csrf_token %}
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 ftco-animate">
+                                <h3 class="mb-4 billing-heading">Eliminar Producto</h3>
+                            </div>
+                            <div class="col-xl-4 ftco-animate" >
+                                <p><a href="{% url 'productos:productos_listar' %}" style="width: 130px;" class="btn btn-white btn-outline-white p-2">Ver Inventario</a></p>
                             </div>
                         </div>
-                        <div class="w-100"></div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="names">Nombre</label>
-                                <input class="form-control" id="id_nombre" type="text" name="nombre" placeholder="Nombre" value="{{object.nombre}}" disabled="true">
+                        <div class="row align-items-end">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    {% if object.imagen  %}
+                                        <img style="width: 450px; height: 250px;" src="{{object.imagen.url}}" class="img img-fluid centerImage ">
+                                    {% else %}
+                                        <img style="width: 450px; height: 250px; " src="{% static 'imagenes (acomodar)/no_image.jpg' %}" class="img img-fluid centerImage">
+                                    {% endif %}
+                                </div>
                             </div>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-md-12 align-items-end">
-                            <div class="form-group mt-2">
-                                <div class="text-center w-full p-t-15 p-b-15">
-                                    <input class="btn btn-danger py-4 px-4"  type="submit"  value="Eliminar Producto" />
+                            <div class="w-100"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="names">Nombre</label>
+                                    <input class="form-control" id="id_nombre" type="text" name="nombre" placeholder="Nombre" value="{{object.nombre}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12 align-items-end">
+                                <div class="form-group mt-2">
+                                    <div class="text-center w-full p-t-15 p-b-15">
+                                        <input class="btn btn-danger py-4 px-4"  type="submit"  value="Eliminar Producto" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-                  </form>
-      </div>
-    </div>
-  </div>
-</section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock contenido %}
 
 {% block js %}
-<script>
-</script>
+    <script>
+    </script>
 {% endblock js %}

@@ -10,14 +10,15 @@ from django.db import connection
 def home(request):
     schema = connection.schema_name
     usuario = request.user
+    tenants = Dominio.objects.exclude(tenant__schema_name='public')
     public = Tenant.objects.get(schema_name=schema)
-    return render(request, 'tenants/home_franquicia.html', {'public': public})
+    return render(request, 'tenants/home_franquicia.html', {'public': public, 'usuario': usuario, 'tenants': tenants})
 
 def dashboard(request):
     schema = connection.schema_name
     usuario = request.user
     public = Tenant.objects.get(schema_name=schema)
-    return render(request, 'tenants/dash_super.html', {'public': public})
+    return render(request, 'tenants/dash_super.html', {'public': public, 'usuario': usuario})
 
 def tenant_crear(request):
     schema = connection.schema_name
@@ -42,21 +43,18 @@ def tenant_crear(request):
                     messages.success(request, "El tenant se ha registrado correctamente")
             except Exception:
                 messages.error(request, 'Ha ocurrido un error durante la creación del tenant, se abortó la operación')
-            return redirect('tenants:tenant_crear')
+            return redirect('tenants:tenants_listar')
         else:
             messages.error(request, "Por favor verificar los campos en rojo")
-    return render(request, 'tenants/tenant_form.html', {'form': form, 'public': public})
+    return render(request, 'tenants/tenant_form.html', {'form': form, 'public': public, 'usuario': usuario})
 
 def tenants_listar(request):
-    """
-    Permite registrar un cliente (tenant) en el sistema
-    :param request:
-    :return:
-    """
+    usuario = request.user
     dominios = Dominio.objects.exclude(tenant__schema_name='public').select_related('tenant')
-    return render(request, 'tenants/tenant_list.html', {'dominios': dominios})
+    return render(request, 'tenants/tenant_list.html', {'dominios': dominios, 'usuario': usuario})
 
 def tenant_modificar(request, id_tenant):
+    usuario = request.user
     tenant = Tenant.objects.get(id=id_tenant)
     if request.method == 'POST':
         form = TenantForm(request.POST, request.FILES, instance=tenant)
@@ -66,7 +64,7 @@ def tenant_modificar(request, id_tenant):
             return redirect('tenants:tenants_listar')
         else:
             messages.error(request, 'Por favor corrige los errores')
-            return render(request, 'tenants/tenant_form.html', {'form': form})
+            return render(request, 'tenants/tenant_form.html', {'form': form, 'usuario': usuario})
     else:
         form = TenantForm(instance=tenant)
-        return render(request, 'tenants/tenant_form.html', {'form': form})
+        return render(request, 'tenants/tenant_form.html', {'form': form, 'usuario': usuario})

@@ -39,7 +39,11 @@
                 <li class="nav-item"><a href="{% url 'productos:menu' %}" class="nav-link">Nuestro Menú</a></li>
                 <li class="nav-item"><a href="{% url 'productos:tienda' %}" class="nav-link">Tienda</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Promociones</a></li>
-                {% include 'nav_login.html' %}
+                {% if usuario.is_anonymous %}
+                    {% include 'nav_logout.html' %}
+                {% else %}
+                    {% include 'nav_login.html' %}
+                {% endif %}
             </ul>
         </div>
     </div>

@@ -33,7 +33,48 @@
 {% endblock css %}
 <body>
 
-{% include 'nav_dash.html' %}
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'usuarios:home' %}">Maravilla<small>Franquicias</small></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="{% url 'usuarios:dashboard' %}" class="nav-link">Dashboard</a></li>
+                {% if usuario.is_staff %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Gestionar Usuarios</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="{% url 'usuarios:listar_digitadores' %}">Digitadores</a>
+                            <a class="dropdown-item" href="#">Clientes</a>
+                        </div>
+                    </li>
+                {% endif %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Gestionar Tienda</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="#">Inventario</a>
+                        <a class="dropdown-item" href="#">Reportes</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">{{ usuario.username }}</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="{% url 'usuarios:datos' %}">Mi cuenta</a>
+                        <a class="dropdown-item" href="{% url 'usuarios:dashboard' %}">Dashboard</a>
+                        <a class="dropdown-item" href="{% url 'usuarios:contrasena' %}">Cambiar contraseña</a>
+                        <a class="dropdown-item" href="{% url 'usuarios:home' %}">Salir</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <!-- END nav -->
 
 {% block contenido %}
