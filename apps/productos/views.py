@@ -7,19 +7,19 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 # Create your views here.
 def tienda(request):
-    #usuario = request.user
-    return render(request, 'productos/tienda.html')
+    usuario = request.user
+    return render(request, 'productos/tienda.html', {'usuario': usuario})
 
 #def mi_item(slug):-
 #    return Producto.get_producto(slug)
 
 def item(request): #slug
-    #usuario = request.user
-    return render(request, 'productos/item.html') #{'peli': mi_item(slug)}
+    usuario = request.user
+    return render(request, 'productos/item.html', {'usuario': usuario}) #{'item': mi_item(slug)}
 
-def menu(request): #slug
-    #usuario = request.user
-    return render(request, 'productos/menu.html') #{'peli': mi_item(slug)}
+def menu(request):
+    usuario = request.user
+    return render(request, 'productos/menu.html', {'usuario': usuario})
 
 class ProductosListar(ListView):
     model =  Producto

@@ -14,6 +14,7 @@ def home(request):
     public = Tenant.objects.get(schema_name=schema)
     return render(request, 'tenants/home_franquicia.html', {'public': public, 'usuario': usuario, 'tenants': tenants})
 
+
 def dashboard(request):
     schema = connection.schema_name
     usuario = request.user
