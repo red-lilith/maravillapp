@@ -10,7 +10,7 @@ class TenantForm(forms.ModelForm):
 
     class Meta:
         model = Tenant
-        fields = ('nombre', 'administrador', 'paquete', 'direccion', 'telefono', 'schema_name',)
+        fields = ('nombre', 'pagado_hasta', 'paquete', 'direccion', 'telefono', 'schema_name',)
 
     def clean_schema_name(self):
         dir_tenant = self.cleaned_data["schema_name"]

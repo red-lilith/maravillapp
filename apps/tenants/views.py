@@ -21,6 +21,7 @@ def dashboard(request):
     public = Tenant.objects.get(schema_name=schema)
     return render(request, 'tenants/dash_super.html', {'public': public, 'usuario': usuario})
 
+
 def tenant_crear(request):
     schema = connection.schema_name
     usuario = request.user
@@ -49,10 +50,12 @@ def tenant_crear(request):
             messages.error(request, "Por favor verificar los campos en rojo")
     return render(request, 'tenants/tenant_form.html', {'form': form, 'public': public, 'usuario': usuario})
 
+
 def tenants_listar(request):
     usuario = request.user
     dominios = Dominio.objects.exclude(tenant__schema_name='public').select_related('tenant')
     return render(request, 'tenants/tenant_list.html', {'dominios': dominios, 'usuario': usuario})
+
 
 def tenant_modificar(request, id_tenant):
     usuario = request.user
@@ -69,3 +72,17 @@ def tenant_modificar(request, id_tenant):
     else:
         form = TenantForm(instance=tenant)
         return render(request, 'tenants/tenant_form.html', {'form': form, 'usuario': usuario})
+
+
+def tenant_desactivar(request, id_tenant):
+    tenant = Tenant.objects.get(id=id_tenant)
+    tenant.estado = False
+    Dominio.objects.delete(tenant_id=id_tenant)
+
+
+def tenant_activar(request, id_tenant):
+    tenant = Tenant.objects.get(id=id_tenant)
+    tenant.estado = True
+    Dominio.objects.create(domain='%s%s' % (tenant.schema_name, settings.DOMAIN), is_primary=True, tenant=tenant)
+
+

@@ -8,8 +8,6 @@ from apps.productos import views
 app_name = 'productos'
 
 urlpatterns = [
-    path('tienda/', tienda, name='tienda'),
-    path('item/', item, name='item'), #<slug:slug>
     path('menu/', menu, name='menu'), #<slug:slug>
     path('listar-productos', views.ProductosListar.as_view(), name='productos_listar'),
     path('listar-productos/<int:pk>', views.ProductoDetalle.as_view(), name='producto_detalle'),
@@ -29,5 +27,7 @@ urlpatterns = [
     path('listar-ingrediente-producto/<int:pk>', views.ProductoIngredienteDetalle.as_view(), name='ingrediente_producto_detalle'),
     path('eliminar-ingrediente-producto/<int:pk>', views.ProductoIngredienteEliminar.as_view(), name='ingrediente_producto_eliminar'),
 
+    path('tienda/', views.Tienda.as_view(template_name='productos/tienda.html'), name='tienda'),
+    path('ver-item/<int:pk>', views.Item.as_view(template_name='productos/item.html'), name='item'),
 
 ]

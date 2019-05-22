@@ -5,9 +5,9 @@
 
 {% block css %}
     <style type="text/css">
-    option {
-        color: black;
-    }
+        option {
+            color: black;
+        }
     </style>
 {% endblock css %}
 
@@ -26,11 +26,8 @@
                         {% csrf_token %}
 
                         <div class="row justify-content-center">
-                            <div class="col-xl-6 ftco-animate">
+                            <div class="col-xl-9 ftco-animate">
                                 <h3 class="mb-4 billing-heading">Crear Tenant</h3>
-                            </div>
-                            <div class="col-xl-3 ftco-animate ">
-                                <p><a href="{% url 'usuarios:crear_admin' %}" style="width: 160px;" class="btn btn-white btn-outline-white p-2">Crear Admin</a></p>
                             </div>
                             <div class="col-xl-3 ftco-animate ">
                                 <p><a href="{% url 'tenants:tenants_listar' %}" style="width: 160px;" class="btn btn-white btn-outline-white p-2">Ver Tenants</a></p>
@@ -41,19 +38,6 @@
                                 <div class="form-group">
                                     <label for="name">Nombre</label>
                                     {% bootstrap_field form.nombre show_label=False %}
-                                </div>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="admin">Administrador</label>
-                                    {% bootstrap_field form.administrador show_label=False %}
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="paquete">Paquete</label>
-                                    {% bootstrap_field form.paquete show_label=False %}
                                 </div>
                             </div>
                             <div class="w-100"></div>
@@ -70,13 +54,26 @@
                                 </div>
                             </div>
                             <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="paquete">Paquete</label>
+                                    {% bootstrap_field form.paquete show_label=False %}
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="fecha">Fecha Límite</label>
+                                    {% bootstrap_field form.pagado_hasta show_label=False %}
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="dominio">Subdominio</label>
                                     {% bootstrap_field form.schema_name show_label=False %}
                                 </div>
                             </div>
-
                             <div class="w-100"></div>
                             <div class="col-md-12 align-items-end">
                                 <div class="form-group mt-2">

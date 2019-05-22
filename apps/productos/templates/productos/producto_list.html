@@ -1,7 +1,9 @@
-{% extends 'base_maravilla.html' %}
+{% extends 'base_dash.html' %}
 {# Load the tag library #}
 {% load static %}
 {% load staticfiles %}
+
+{% block titulo %}Inventario{% endblock titulo %}
 
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static 'dist/css/dataTables.bootstrap4.min.css' %}">
@@ -14,14 +16,14 @@
     <section class="ftco-section center">
         <div class="container">
             <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span>
-                <span>Lista de Productos</span></p>
+                <span>Inventario</span></p>
             <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
                 <div class="row justify-content-center">
                     <div class="col-xl-10 ftco-animate">
-                        <h3 class="mb-4 billing-heading">Lista de Productos</h3>
+                        <h3 class="mb-4 billing-heading">Inventario</h3>
                     </div>
                     <div class="col-xl-2 ftco-animate" >
-                        <p><a href="{% url 'productos:producto_crear' %}" style="width: 145px;" class="btn btn-primary p-2">Crear Producto</a></p>
+                        <p><a href="{% url 'productos:producto_crear' %}" style="width: 145px;" class="btn btn-primary p-2">Agregar Producto</a></p>
                     </div>
                 </div>
                 <div class="table-responsive">

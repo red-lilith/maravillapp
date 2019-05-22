@@ -18,10 +18,10 @@ class Tenant(TenantMixin):
     Modelo que representará a los tenants en el sistema
     """
     nombre = models.CharField(max_length=100,  blank=False)
-    administrador = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='usuarios_usuario', null=False, default=1)
-    paquete = models.CharField(max_length=10, default='MINI', choices=TIPOS_PAQUETES)
     direccion = models.CharField(max_length=100,  blank=False)
     telefono = models.CharField(max_length=100,  blank=False)
+    paquete = models.CharField(max_length=10, default='MINI', choices=TIPOS_PAQUETES)
+    pagado_hasta = models.DateField()
     estado = models.BooleanField(default=True)
 
     def __str__(self):

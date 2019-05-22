@@ -1,21 +1,5 @@
 <li class="nav-item active"><a href="{% url 'tenants:dashboard' %}" class="nav-link">Dashboard</a></li>
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
-       aria-haspopup="true" aria-expanded="false">Gestionar Tenants</a>
-    <div class="dropdown-menu" aria-labelledby="dropdown04">
-        <a class="dropdown-item" href="{% url 'tenants:tenants_listar' %}">Tenants</a>
-        <a class="dropdown-item" href="{% url 'usuarios:listar_admins' %}">Administradores</a>
-    </div>
-</li>
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
-       aria-haspopup="true" aria-expanded="false">Gestionar Productos</a>
-    <div class="dropdown-menu" aria-labelledby="dropdown04">
-        <a class="dropdown-item" href="{% url 'productos:productos_listar' %}">Productos</a>
-        <a class="dropdown-item" href="{% url 'productos:ingredientes_listar' %}">Ingredientes</a>
-
-    </div>
-</li>
+<li class="nav-item"><a href="{% url 'tenants:tenants_listar' %}" class="nav-link">Gestionar Tenants</a></li>
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
        aria-haspopup="true" aria-expanded="false">{{ usuario.username }}</a>

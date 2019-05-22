@@ -1,5 +1,6 @@
 {% extends 'base_tenant.html' %}
 {% load staticfiles %}
+{% load static %}
 {% load bootstrap4 %}
 
 {% block titulo %}Tienda{% endblock titulo %}
@@ -14,6 +15,7 @@
                     <div class="row">
                         <div class="col-md-12 nav-link-wrap mb-5">
                             <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
                                 <a class="nav-link active" id="v-pills-0-tab" data-toggle="pill" href="#v-pills-0" role="tab" aria-controls="v-pills-0" aria-selected="true">Carnes/Pollos</a>
 
                                 <a class="nav-link" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="false">Pastas</a>
@@ -27,117 +29,150 @@
                                 <a class="nav-link" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-4" aria-selected="false">Adiciones</a>
                             </div>
                         </div>
+
                         <div class="col-md-12 d-flex align-items-center">
-
                             <div class="tab-content ftco-animate" id="v-pills-tabContent">
-
                                 <div class="tab-pane fade show active" id="v-pills-0" role="tabpanel" aria-labelledby="v-pills-0-tab">
                                     <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="menu-entry">
-                                                <a href="{% url 'productos:item' %}" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="{% url 'productos:item' %}">Coffee Capuccino</a></h3>
-                                                    <p>A small river named Duden flows by their place and supplies</p>
-                                                    <p class="price"><span>$5.90</span></p>
-                                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                        {% for producto in producto_list %}
+                                            {% if producto.tipo == "Carne/Pollo" %}
+                                                <div class="col-md-3">
+                                                    <div class="menu-entry">
+                                                        {% if object.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% else %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                                        {% endif %}
+                                                        <div class="text text-center pt-4">
+                                                            <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
+                                                            <p>{{ producto.descripcion }}</p>
+                                                            <p class="price"><span>${{ producto.precio }}</span></p>
+                                                            <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="menu-entry">
-                                                <a href="{% url 'productos:item' %}" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="{% url 'productos:item' %}">Coffee Capuccino</a></h3>
-                                                    <p>A small river named Duden flows by their place and supplies</p>
-                                                    <p class="price"><span>$5.90</span></p>
-                                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                                    <div class="row">
+                                        {% for producto in producto_list %}
+                                            {% if producto.tipo == "Pasta" %}
+                                                <div class="col-md-3">
+                                                    <div class="menu-entry">
+                                                        {% if object.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% else %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                                        {% endif %}
+                                                        <div class="text text-center pt-4">
+                                                            <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
+                                                            <p>{{ producto.descripcion }}</p>
+                                                            <p class="price"><span>${{ producto.precio }}</span></p>
+                                                            <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                                    <div class="row">
+                                        {% for producto in producto_list %}
+                                            {% if producto.tipo == "Comida Rápida" %}
+                                                <div class="col-md-3">
+                                                    <div class="menu-entry">
+                                                        {% if object.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% else %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                                        {% endif %}
+                                                        <div class="text text-center pt-4">
+                                                            <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
+                                                            <p>{{ producto.descripcion }}</p>
+                                                            <p class="price"><span>${{ producto.precio }}</span></p>
+                                                            <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+                                    <div class="row">
+                                        {% for producto in producto_list %}
+                                            {% if producto.tipo == "Infantil" %}
+                                                <div class="col-md-3">
+                                                    <div class="menu-entry">
+                                                        {% if object.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% else %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                                        {% endif %}
+                                                        <div class="text text-center pt-4">
+                                                            <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
+                                                            <p>{{ producto.descripcion }}</p>
+                                                            <p class="price"><span>${{ producto.precio }}</span></p>
+                                                            <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+                                    <div class="row">
+                                        {% for producto in producto_list %}
+                                            {% if producto.tipo == "Bebida" %}
+                                                <div class="col-md-3">
+                                                    <div class="menu-entry">
+                                                        {% if object.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% else %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                                        {% endif %}
+                                                        <div class="text text-center pt-4">
+                                                            <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
+                                                            <p>{{ producto.descripcion }}</p>
+                                                            <p class="price"><span>${{ producto.precio }}</span></p>
+                                                            <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show active" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
+                                    <div class="row">
+                                        {% for producto in producto_list %}
+                                            {% if producto.tipo == "Adición" %}
+                                                <div class="col-md-3">
+                                                    <div class="menu-entry">
+                                                        {% if object.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% else %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                                        {% endif %}
+                                                        <div class="text text-center pt-4">
+                                                            <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
+                                                            <p>{{ producto.descripcion }}</p>
+                                                            <p class="price"><span>${{ producto.precio }}</span></p>
+                                                            <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="menu-entry">
-                                                <a href="{% url 'productos:item' %}" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="{% url 'productos:item' %}">Coffee Capuccino</a></h3>
-                                                    <p>A small river named Duden flows by their place and supplies</p>
-                                                    <p class="price"><span>$5.90</span></p>
-                                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="menu-entry">
-                                                <a href="{% url 'productos:item' %}" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="{% url 'productos:item' %}">Coffee Capuccino</a></h3>
-                                                    <p>A small river named Duden flows by their place and supplies</p>
-                                                    <p class="price"><span>$5.90</span></p>
-                                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="menu-entry">
-                                                <a href="{% url 'productos:item' %}" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="{% url 'productos:item' %}">Coffee Capuccino</a></h3>
-                                                    <p>A small river named Duden flows by their place and supplies</p>
-                                                    <p class="price"><span>$5.90</span></p>
-                                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="menu-entry">
-                                                <a href="{% url 'productos:item' %}" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="{% url 'productos:item' %}">Coffee Capuccino</a></h3>
-                                                    <p>A small river named Duden flows by their place and supplies</p>
-                                                    <p class="price"><span>$5.90</span></p>
-                                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="menu-entry">
-                                                <a href="{% url 'productos:item' %}" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="{% url 'productos:item' %}">Coffee Capuccino</a></h3>
-                                                    <p>A small river named Duden flows by their place and supplies</p>
-                                                    <p class="price"><span>$5.90</span></p>
-                                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="menu-entry">
-                                                <a href="{% url 'productos:item' %}" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="{% url 'productos:item' %}">Coffee Capuccino</a></h3>
-                                                    <p>A small river named Duden flows by their place and supplies</p>
-                                                    <p class="price"><span>$5.90</span></p>
-                                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

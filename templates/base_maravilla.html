@@ -147,6 +147,17 @@
 
 {% block js %}
 
+    <script type="application/javascript">
+        $(function () {
+            $('#id_pagado_hasta').datepicker({
+                autoclose: true,
+                format: 'dd/mm/yyyy',
+                language: 'es',
+                orientation: 'bottom',
+                startDate: '+0d'
+            });
+        });
+    </script>
 {% endblock js %}
 
 </body>

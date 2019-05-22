@@ -1,6 +1,5 @@
 from django.db import models
-
-# Create your models here.
+from django_select2.forms import ModelSelect2Widget, Select2MultipleWidget
 
 
 class Ingrediente(models.Model):
@@ -35,8 +34,18 @@ class Ingrediente(models.Model):
 
 class Producto(models.Model):
 
+	TIPOS_PRODUCTOS = (
+		("Carne/Pollo", "Carne/Pollo"),
+		("Pasta", "Pasta"),
+		("Comida Rápida", "Comida Rápida"),
+		("Infantil", "Infantil"),
+		("Bebida", "Bebida"),
+		("Adición", "Adición")
+
+	)
 	nombre= models.CharField(max_length=200)
 	descripcion = models.TextField(max_length=500)
+	tipo = models.CharField(max_length=15, choices=TIPOS_PRODUCTOS)
 	precio = models.PositiveIntegerField()
 	estado = models.BooleanField(default=True)
 	imagen = models.FileField(upload_to="productos_imagenes/", null=True, blank=True)

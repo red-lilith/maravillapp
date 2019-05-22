@@ -1,4 +1,4 @@
-{% extends 'base_maravilla.html' %}
+{% extends 'base_dash.html' %}
 {# Load the tag library #}
 {% load bootstrap4 %}
 {% load static %}
@@ -7,13 +7,20 @@
 
 {% block css %}
     <link rel="stylesheet" media="screen" href="{% static 'coffee_template/css/producto-crear.css' %}">
+    <style type="text/css">
+        option {
+            color: black;
+        }
+    </style>
 {% endblock css %}
+
+{% block titulo %}Crear Producto{% endblock titulo %}
 
 {% block contenido %}
 
     <section class="ftco-section center">
         <div class = "container">
-            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'tenants:home' %}">Home</a></span>
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span>
                 <span class="mr-2"><a href="{% url 'productos:productos_listar' %}">Listar Productos</a></span>
                 <span>Crear Producto</span></p>
             <div class="row justify-content-center">
@@ -53,6 +60,12 @@
                                 <div class="form-group">
                                     <label>Imagen</label>
                                     {% render_field form.imagen class="form-control" %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="paquete">Tipo de Producto</label>
+                                    {% bootstrap_field form.tipo show_label=false %}
                                 </div>
                             </div>
                             <div class="col-md-6">
