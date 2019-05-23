@@ -34,7 +34,7 @@
                                 <th style="width: 10.5%" scope="col">Documento</th>
                                 <th style="width: 10.5%" scope="col">Nombres</th>
                                 <th style="width: 10.5%" scope="col">Apellidos</th>
-                                <th style="width: 12.5%" scope="col">Correo</th>
+                                <th style="width: 12.5%" scope="col">Correo Electrónico</th>
                                 <th style="width: 10.5%" scope="col">Estado</th>
                                 <th style="width: 14%" scope="col">Acciones</th>
                             </tr>
@@ -42,30 +42,30 @@
                             <tbody >
                             {% for usuario in usuario_list %}
                                 <tr>
-                                    <td style="width: 10.5%">
+                                    <td style="width: 5%">
                                         {{usuario.id}}
                                     </td>
                                     <td style="width: 10.5%">
                                         {{usuario.username}}
                                     </td>
-                                    <td  style="width: 10.5%">
+                                    <td  style="width: 6%">
                                         {{usuario.documento}}
                                     </td>
-                                    <td style="width: 10.5%">
+                                    <td style="width: 12.5%">
                                         {{usuario.first_name}}
                                     </td>
-                                    <td style="width: 12.5%">
+                                    <td style="width: 18%">
                                         {{usuario.last_name}}
                                     </td>
                                     <td style="width: 10.5%">
                                         {{usuario.email}}
                                     </td>
-                                    <td style="width: 10.5%">
-                                        {{ usuario.is_active|yesno:"Disponible,No disponible"}}
+                                    <td style="width: 8%">
+                                        {{ usuario.is_active|yesno:"Activo,Inactivo"}}
                                     </td>
                                     <td style="width: 14%">
 
-                                      <p class="mb-1"><a href="{% url 'usuarios:cliente_detalle' usuario.id %}" class="btn btn-outline-info custom-btn">Ver detalle</a></p>
+                                      <p class="mb-1"><a href="{% url 'usuarios:cliente_detalle' usuario.id %}" class="btn btn-outline-info custom-btn p-2">Ver detalle</a></p>
                                     </td>
                                 </tr>
                             {% endfor %}

@@ -12,6 +12,7 @@ urlpatterns = [
     path('registro', views.Registro.as_view(), name='registrarme'),
     path('mi-cuenta/<int:pk>', views.DatosActualizar.as_view(template_name='usuarios/datos.html'), name='datos'),
     path('contrasena/<int:pk>', views.ContrasenaActualizar.as_view(template_name='usuarios/contrasena.html'), name='contrasena'),
+    path('desactivar/<int:id_usuario>', usuario_desactivar, name='desactivar'),
 
     path('crear-digitador', views.CrearDigitador.as_view(template_name='usuarios/digitador_crear.html'), name='crear_digitador'),
     path('listar-digitadores', views.DigitadoresListar.as_view(template_name='usuarios/digitador_list.html'), name='listar_digitadores'),
@@ -26,5 +27,6 @@ urlpatterns = [
 
     path('login', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='usuarios/login.html'),
          name='login'),
+
     path('salir', auth_views.LogoutView.as_view(), name='salir'),
 ]

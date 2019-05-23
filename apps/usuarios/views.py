@@ -1,8 +1,9 @@
 from django.http.response import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth import views as auth_views
 from django.shortcuts import get_object_or_404
 from apps.usuarios.utilities import generar_pdf_usuarios
 from django.contrib.auth.views import LoginView
@@ -11,6 +12,7 @@ from apps.usuarios.models import *
 from apps.tenants.models import *
 from django.db import connection
 from django.contrib.auth.hashers import make_password
+from django.core.mail import send_mail
 
 
 def home(request):
@@ -77,7 +79,7 @@ class Registro(SuccessMessageMixin, CreateView):
         return context
 
     def get_success_url(self, **kwargs):
-        return reverse_lazy("usuarios:home")
+        return reverse_lazy("usuarios:login")
 
 
 class CrearDigitador(SuccessMessageMixin, CreateView):
@@ -118,14 +120,12 @@ class DigitadoresListar(ListView):
 
 
 def pdf_usuario(request, staff):
-    if staff:
-        digitadores = get_object_or_404(Usuario, is_superuser=False, is_staff=True)
-        if digitadores:
-            return generar_pdf_usuarios(digitadores, staff)
+    if staff == 1:
+        digitadores = Usuario.objects.filter(is_superuser=False, is_staff=True)
+        return generar_pdf_usuarios(digitadores, staff)
     else:
-        clientes = get_object_or_404(Usuario, is_superuser=False, is_staff=False)
-        if clientes:
-            return generar_pdf_usuarios(clientes, staff)
+        clientes = Usuario.objects.filter(is_superuser=False, is_staff=False)
+        return generar_pdf_usuarios(clientes, staff)
 
 
 class ClientesListar(ListView):
@@ -147,6 +147,16 @@ class UsuarioDetalle(DetailView):
         context = super(UsuarioDetalle, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
         return context
+
+
+def usuario_desactivar(request, id_usuario):
+    usuario = Usuario.objects.get(id=id_usuario)
+    usuario.is_active = False
+    usuario.save()
+    if not usuario.is_staff:
+        send_mail('Maravilla - Eliminación de cuenta', 'Este es un correo de prueba', 'maravilla.franquicias@gmail.com',
+                  ['dianagarco@gmail.com',], fail_silently=False)
+    return redirect('usuarios:salir')
 
 
 def carrito(request):

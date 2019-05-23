@@ -7,9 +7,9 @@
 
 {% block css %}
     <style type="text/css">
-    option {
-        color: black;
-    }
+        option {
+            color: black;
+        }
     </style>
 {% endblock css %}
 
@@ -25,7 +25,14 @@
                 <div class="col-xl-12 ftco-animate">
                     <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
                         {% csrf_token %}
-                        <h3 class="mb-4 billing-heading">Datos Personales</h3>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-10 ftco-animate">
+                                <h3 class="mb-4 billing-heading">Datos de la Cuenta</h3>
+                            </div>
+                            <div class="col-xl-2 ftco-animate">
+                                <p><a style="width: 143px;" class="btn btn-danger custom-btn p-2" data-toggle="modal" data-target="#desactivar">Eliminar Cuenta</a></p>
+                            </div>
+                        </div>
                         <div class="row align-items-end">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -99,6 +106,32 @@
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="desactivar">
+        <div class="modal-dialog">
+            <div class="modal-content ftco-bg-dark">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar Cuenta</h4>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    ¿Está seguro que desea eliminar esta cuenta?
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <p><a style="width: 143px;" class="btn btn-white btn-outline-white custom-btn p-2" data-dismiss="modal">No</a></p>
+                    <p><a href="{% url 'usuarios:desactivar' usuario.id %}" style="width: 143px;" class="btn btn-outline-danger custom-btn p-2">Si, eliminar</a></p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 {% endblock contenido %}
 {% block js %}
 

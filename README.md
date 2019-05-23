@@ -13,7 +13,9 @@
 
 **IMPORTAR cities a cada Tenant**
 `python manage.py tenant_command loaddata cities_light_country.json --schema="t1"`
+
 `python manage.py tenant_command loaddata cities_light_region.json --schema="t1"`
+
 `python manage.py tenant_command loaddata cities_light_city.json --schema="t1"`
 
 
@@ -23,4 +25,5 @@
 
 
 [Guía de django-bootstrap4](https://buildmedia.readthedocs.org/media/pdf/django-bootstrap4/latest/django-bootstrap4.pdf)
+
 
