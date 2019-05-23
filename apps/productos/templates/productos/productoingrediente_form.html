@@ -9,6 +9,8 @@
     <link rel="stylesheet" media="screen" href="{% static 'coffee_template/css/producto-crear.css' %}">
 {% endblock css %}
 
+{% block titulo %}Agregar Ingrediente a Producto{% endblock titulo %}
+
 {% block contenido %}
     {% if form.errors %}
         {% for field in form %}

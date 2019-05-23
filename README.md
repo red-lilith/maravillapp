@@ -1,8 +1,5 @@
 ## README
 
-**NOTA:** Debe crearse un superuser para cada tenant el cual será su administrador
-
-
 **SQL para Tenants**
 
 `INSERT INTO "tenants_tenant" ("schema_name", "nombre", "paquete", "direccion", "telefono","pagado_hasta","estado") VALUES
@@ -12,7 +9,11 @@
 ('127.0.0.1', true, 1);`
 
 
+**NOTA:** Debe crearse un superuser para cada tenant el cual será su administrador
+
 **IMPORTAR cities a cada Tenant**
+`python manage.py tenant_command loaddata cities_light_country.json --schema="t1"`
+`python manage.py tenant_command loaddata cities_light_region.json --schema="t1"`
 `python manage.py tenant_command loaddata cities_light_city.json --schema="t1"`
 
 

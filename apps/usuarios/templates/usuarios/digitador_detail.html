@@ -8,12 +8,15 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'coffee_template/css/producto-detalle.css' %}">
 {% endblock css %}
+
+{% block titulo %} Detalle Digitador {% endblock titulo %}
+
 {% block contenido %}
 
     <section class="ftco-section center">
         <div class = "container">
             <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span>
-                <span class="mr-2"><a href="{% url 'usuarios:listar_admins' %}">Digitadores</a></span>
+                <span class="mr-2"><a href="{% url 'usuarios:listar_digitadores' %}">Digitadores</a></span>
                 <span>Ver Digitador</span></p>
             <div class="row justify-content-center">
                 <div class="col-xl-8 ftco-animate">

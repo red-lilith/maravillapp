@@ -1,4 +1,5 @@
 maravillapp/settings.py
+venv/
 apps/*/migrations/
 **/__pycache__/
 *.log

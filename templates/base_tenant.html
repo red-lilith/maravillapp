@@ -41,6 +41,8 @@
                 <li class="nav-item"><a href="#" class="nav-link">Promociones</a></li>
                 {% if usuario.is_anonymous %}
                     {% include 'nav_logout.html' %}
+                {% elif usuario.is_staff %}
+                    {% include 'nav_dash.html' %}
                 {% else %}
                     {% include 'nav_login.html' %}
                 {% endif %}
