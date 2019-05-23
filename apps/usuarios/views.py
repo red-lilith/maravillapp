@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
+from django.shortcuts import get_object_or_404
+from apps.usuarios.utilities import generar_pdf_usuarios
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from apps.usuarios.models import *
@@ -103,14 +105,37 @@ class CrearDigitador(SuccessMessageMixin, CreateView):
         return reverse_lazy("usuarios:listar_digitadores")
 
 
-class UsuarioListar(ListView):
+class DigitadoresListar(ListView):
     model = Usuario
 
     def get_queryset(self):
         return Usuario.objects.filter(is_superuser=False, is_staff=True)
 
     def get_context_data(self, **kwargs):
-        context = super(UsuarioListar, self).get_context_data(**kwargs)
+        context = super(DigitadoresListar, self).get_context_data(**kwargs)
+        context['usuario'] = self.request.user
+        return context
+
+
+def pdf_usuario(request, staff):
+    if staff:
+        digitadores = get_object_or_404(Usuario, is_superuser=False, is_staff=True)
+        if digitadores:
+            return generar_pdf_usuarios(digitadores, staff)
+    else:
+        clientes = get_object_or_404(Usuario, is_superuser=False, is_staff=False)
+        if clientes:
+            return generar_pdf_usuarios(clientes, staff)
+
+
+class ClientesListar(ListView):
+    model = Usuario
+
+    def get_queryset(self):
+        return Usuario.objects.filter(is_superuser=False, is_staff=False)
+
+    def get_context_data(self, **kwargs):
+        context = super(ClientesListar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
         return context
 

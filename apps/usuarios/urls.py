@@ -13,9 +13,14 @@ urlpatterns = [
     path('mi-cuenta/<int:pk>', views.DatosActualizar.as_view(template_name='usuarios/datos.html'), name='datos'),
     path('contrasena/<int:pk>', views.ContrasenaActualizar.as_view(template_name='usuarios/contrasena.html'), name='contrasena'),
 
-    path('crear-digitador', views.CrearDigitador.as_view(template_name='usuarios/crear_digitador.html'), name='crear_digitador'),
-    path('listar-digitadores', views.UsuarioListar.as_view(template_name='usuarios/digitador_list.html'), name='listar_digitadores'),
+    path('crear-digitador', views.CrearDigitador.as_view(template_name='usuarios/digitador_crear.html'), name='crear_digitador'),
+    path('listar-digitadores', views.DigitadoresListar.as_view(template_name='usuarios/digitador_list.html'), name='listar_digitadores'),
     path('ver-digitador/<int:pk>', views.UsuarioDetalle.as_view(template_name='usuarios/digitador_detail.html'), name='digitador_detalle'),
+    path('pdf-digitadores/<int:staff>', pdf_usuario, name='pdf_digitadores'),
+
+    path('listar-clientes', views.ClientesListar.as_view(template_name='usuarios/cliente_list.html'), name='listar_clientes'),
+    path('ver-cliente/<int:pk>', views.UsuarioDetalle.as_view(template_name='usuarios/cliente_detail.html'), name='cliente_detalle'),
+    path('pdf-clientes/<staff>', pdf_usuario, name='pdf_clientes'),
 
     path('carrito', carrito, name='carrito'),
 

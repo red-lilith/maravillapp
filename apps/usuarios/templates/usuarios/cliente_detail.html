@@ -1,0 +1,86 @@
+{% extends 'base_dash.html' %}
+{# Load the tag library #}
+{% load bootstrap4 %}
+{% load static %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'coffee_template/css/producto-detalle.css' %}">
+{% endblock css %}
+
+{% block titulo %} Detalle Cliente {% endblock titulo %}
+
+{% block contenido %}
+
+    <section class="ftco-section center">
+        <div class = "container">
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span>
+                <span class="mr-2"><a href="{% url 'usuarios:listar_clientes' %}">Clientes</a></span>
+                <span>Ver Cliente</span></p>
+            <div class="row justify-content-center">
+                <div class="col-xl-8 ftco-animate">
+                    <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
+
+                        <div class="row justify-content-center">
+                            <div class="col-xl-9 ftco-animate">
+                                <h3 class="mb-4 billing-heading">Ver Cliente</h3>
+                            </div>
+                            <div class="col-xl-3 ftco-animate" >
+                                <p><a href="{% url 'usuarios:listar_clientes' %}" style="width: 130px;" class="btn btn-white btn-outline-white p-2">Clientes</a></p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-end">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Nombres</label>
+                                    <input class="form-control" type="text" value="{{object.first_name}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Apellidos</label>
+                                    <input class="form-control" type="text" value="{{object.last_name}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Ciudad</label>
+                                    <input class="form-control" type="text" value="{{object.ciudad.display_name}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Barrio</label>
+                                    <input class="form-control" type="text" value="{{object.barrio}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Dirección</label>
+                                    <input class="form-control" type="text" value="{{object.direccion}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="names">Teléfono</label>
+                                    <input class="form-control" type="text" value="{{object.telefono}}" disabled="true">
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock contenido %}
+{% block js %}
+    <script>
+    </script>
+{% endblock js %}
