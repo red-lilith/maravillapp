@@ -42,6 +42,8 @@ class DatosActualizar(SuccessMessageMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super(DatosActualizar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -55,6 +57,8 @@ class ContrasenaActualizar(SuccessMessageMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super(ContrasenaActualizar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -76,6 +80,8 @@ class Registro(SuccessMessageMixin, CreateView):
 
     def get_context_data(self, **kwargs):
         context = super(Registro, self).get_context_data(**kwargs)
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         context['usuario'] = self.request.user
         return context
 

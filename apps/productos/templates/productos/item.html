@@ -10,7 +10,9 @@
 {% block contenido %}
     <section class="ftco-section">
         <div class="container">
-            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Detalles del producto</span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span>
+                <span class="mr-2"><a href="{% url 'productos:tienda' %}">Tienda</a></span>
+                <span>Detalles del producto</span></p>
             <div class="row">
 
                 <div class="col-lg-6 mb-5 ftco-animate">
@@ -47,7 +49,7 @@
 
 
     <!--AQUÍ VA EL ÚLTIMO PRODUCTO DE CADA TIPO DE PRODUCTO -->
-    <section class="ftco-section">
+    <section class="ftco-gallery">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
@@ -56,50 +58,115 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
-                    <div class="menu-entry">
-                        <a href="#" class="img" style="background-image: url({% static 'coffee_template/images/menu-1.jpg' %});"></a>
-                        <div class="text text-center pt-4">
-                            <h3><a href="#">Coffee Capuccino</a></h3>
-                            <p>A small river named Duden flows by their place and supplies</p>
-                            <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                {% if not object.tipo == "Carne/Pollo" and carne %}
+                        <div class="col-md-3">
+                            <div class="menu-entry">
+                                {% if carne.imagen  %}
+                                    <a href="{% url 'productos:item' carne.id %}" class="img" style="background-image: url({{carne.imagen.url}});"></a>
+                                {% else %}
+                                    <a href="{% url 'productos:item' carne.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                {% endif %}
+                                <div class="text text-center pt-4">
+                                    <h3><a href="{% url 'productos:item' carne.id %}">{{ carne.nombre }}</a></h3>
+                                    {% if carne.descripcion|length < 31 %}
+                                        <p>{{ carne.descripcion }}</p>
+                                    {% else %}
+                                        <p>{{ carne.descripcion|truncatechars:30 }}</p>
+                                    {% endif %}
+                                    <p class="price"><span>${{ carne.precio }}</span></p>
+                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                </div>
+                            </div>
+                        </div>
+                {% endif %}
+
+                {% if not object.tipo == "Pasta" and pasta %}
+                        <div class="col-md-3">
+                            <div class="menu-entry">
+                                {% if pasta.imagen  %}
+                                    <a href="{% url 'productos:item' pasta.id %}" class="img" style="background-image: url({{pasta.imagen.url}});"></a>
+                                {% else %}
+                                    <a href="{% url 'productos:item' pasta.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                {% endif %}
+                                <div class="text text-center pt-4">
+                                    <h3><a href="{% url 'productos:item' pasta.id %}">{{ pasta.nombre }}</a></h3>
+                                    {% if pasta.descripcion|length < 31 %}
+                                        <p>{{ pasta.descripcion }}</p>
+                                    {% else %}
+                                        <p>{{ pasta.descripcion|truncatechars:30 }}</p>
+                                    {% endif %}
+                                    <p class="price"><span>${{ pasta.precio }}</span></p>
+                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                </div>
+                            </div>
+                        </div>
+                {% endif %}
+
+                {% if not object.tipo == "Comida Rápida" and rapida %}
+                        <div class="col-md-3">
+                            <div class="menu-entry">
+                                {% if rapida.imagen  %}
+                                    <a href="{% url 'productos:item' rapida.id %}" class="img" style="background-image: url({{rapida.imagen.url}});"></a>
+                                {% else %}
+                                    <a href="{% url 'productos:item' rapida.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                                {% endif %}
+                                <div class="text text-center pt-4">
+                                    <h3><a href="{% url 'productos:item' rapida.id %}">{{ rapida.nombre }}</a></h3>
+                                    {% if rapida.descripcion|length < 31 %}
+                                        <p>{{ rapida.descripcion }}</p>
+                                    {% else %}
+                                        <p>{{ rapida.descripcion|truncatechars:30 }}</p>
+                                    {% endif %}
+                                    <p class="price"><span>${{ rapida.precio }}</span></p>
+                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                </div>
+                            </div>
+                        </div>
+                {% endif %}
+
+                {% if not object.tipo == "Infantil" and infantil %}
+                    <div class="col-md-3">
+                        <div class="menu-entry">
+                            {% if infantil.imagen  %}
+                                <a href="{% url 'productos:item' infantil.id %}" class="img" style="background-image: url({{infantil.imagen.url}});"></a>
+                            {% else %}
+                                <a href="{% url 'productos:item' infantil.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                            {% endif %}
+                            <div class="text text-center pt-4">
+                                <h3><a href="{% url 'productos:item' infantil.id %}">{{ infantil.nombre }}</a></h3>
+                                {% if infantil.descripcion|length < 31 %}
+                                    <p>{{ infantil.descripcion }}</p>
+                                {% else %}
+                                    <p>{{ infantil.descripcion|truncatechars:30 }}</p>
+                                {% endif %}
+                                <p class="price"><span>${{ infantil.precio }}</span></p>
+                                <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="menu-entry">
-                        <a href="#" class="img" style="background-image: url(images/menu-2.jpg);"></a>
-                        <div class="text text-center pt-4">
-                            <h3><a href="#">Coffee Capuccino</a></h3>
-                            <p>A small river named Duden flows by their place and supplies</p>
-                            <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                {% endif %}
+
+                {% if not object.tipo == "Bebida" and bebida %}
+                    <div class="col-md-3">
+                        <div class="menu-entry">
+                            {% if bebida.imagen  %}
+                                <a href="{% url 'productos:item' bebida.id %}" class="img" style="background-image: url({{bebida.imagen.url}});"></a>
+                            {% else %}
+                                <a href="{% url 'productos:item' bebida.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
+                            {% endif %}
+                            <div class="text text-center pt-4">
+                                <h3><a href="{% url 'productos:item' bebida.id %}">{{ bebida.nombre }}</a></h3>
+                                {% if bebida.descripcion|length < 31 %}
+                                    <p>{{ bebida.descripcion }}</p>
+                                {% else %}
+                                    <p>{{ bebida.descripcion|truncatechars:30 }}</p>
+                                {% endif %}
+                                <p class="price"><span>${{ bebida.precio }}</span></p>
+                                <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="menu-entry">
-                        <a href="#" class="img" style="background-image: url(images/menu-3.jpg);"></a>
-                        <div class="text text-center pt-4">
-                            <h3><a href="#">Coffee Capuccino</a></h3>
-                            <p>A small river named Duden flows by their place and supplies</p>
-                            <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="menu-entry">
-                        <a href="#" class="img" style="background-image: url(images/menu-4.jpg);"></a>
-                        <div class="text text-center pt-4">
-                            <h3><a href="#">Coffee Capuccino</a></h3>
-                            <p>A small river named Duden flows by their place and supplies</p>
-                            <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-                        </div>
-                    </div>
-                </div>
+                {% endif %}
             </div>
         </div>
     </section>

@@ -4,6 +4,8 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
+from django.db import connection
+from apps.tenants.models import *
 from django.contrib import messages
 # Create your views here.
 
@@ -14,6 +16,8 @@ class Tienda(ListView):
     def get_context_data(self, **kwargs):
         context = super(Tienda, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
 
@@ -23,12 +27,14 @@ class Item(DetailView):
     def get_context_data(self, **kwargs):
         context = super(Item, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
+        context['carne'] = Producto.objects.filter(tipo="Carne/Pollo", estado=True).last()
+        context['pasta'] = Producto.objects.filter(tipo="Pasta", estado=True).last()
+        context['rapida'] = Producto.objects.filter(tipo="Comida Rápida", estado=True).last()
+        context['infantil'] = Producto.objects.filter(tipo="Infantil", estado=True).last()
+        context['bebida'] = Producto.objects.filter(tipo="Bebida", estado=True).last()
         return context
-
-
-def menu(request):
-    usuario = request.user
-    return render(request, 'productos/menu.html', {'usuario': usuario})
 
 
 class ProductosListar(ListView):
@@ -37,6 +43,8 @@ class ProductosListar(ListView):
     def get_context_data(self, **kwargs):
         context = super(ProductosListar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
 
@@ -46,6 +54,8 @@ class ProductoDetalle(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProductoDetalle, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
 
@@ -57,6 +67,8 @@ class ProductoCrear(SuccessMessageMixin, CreateView):
     def get_context_data(self, **kwargs):
         context = super(ProductoCrear, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -71,6 +83,8 @@ class ProductoActualizar(SuccessMessageMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super(ProductoActualizar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -83,6 +97,8 @@ class ProductoEliminar(DeleteView):
     def get_context_data(self, **kwargs):
         context = super(ProductoEliminar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -95,6 +111,8 @@ class IngredientesListar(ListView):
     def get_context_data(self, **kwargs):
         context = super(IngredientesListar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
 
@@ -104,6 +122,8 @@ class IngredienteDetalle(DetailView):
     def get_context_data(self, **kwargs):
         context = super(IngredienteDetalle, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
 
@@ -115,6 +135,8 @@ class IngredienteCrear(SuccessMessageMixin, CreateView):
     def get_context_data(self, **kwargs):
         context = super(IngredienteCrear, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -129,6 +151,8 @@ class IngredienteActualizar(SuccessMessageMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super(IngredienteActualizar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -141,6 +165,8 @@ class IngredienteEliminar(DeleteView):
     def get_context_data(self, **kwargs):
         context = super(IngredienteEliminar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -158,6 +184,8 @@ class ProductoIngredientesListar(ListView):
         producto = Producto.objects.get(pk = int(self.kwargs.get('pk')))
         context['nombre_producto'] = producto.nombre
         context['productoingrediente_list'] = ProductoIngrediente.objects.filter(producto__pk = pk)
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
 
@@ -170,6 +198,8 @@ class ProductoIngredienteDetalle(DetailView):
         pk = int(self.kwargs.get('pk'))
         producto = ProductoIngrediente.objects.get(pk = int(self.kwargs.get('pk'))).producto
         context['producto_pk'] = producto.pk
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
 
@@ -187,6 +217,8 @@ class ProductoIngredienteCrear(SuccessMessageMixin, CreateView):
         pk = int(self.kwargs.get('pk'))
         context['pk'] = pk
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -207,6 +239,8 @@ class ProductoIngredienteActualizar(SuccessMessageMixin, UpdateView):
         pk = int(self.kwargs.get('pk'))
         context['pk'] = pk
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):
@@ -224,6 +258,8 @@ class ProductoIngredienteEliminar(DeleteView):
         context['producto_pk'] = producto.pk
         context['pk'] = pk
         context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
         return context
 
     def get_success_url(self, **kwargs):

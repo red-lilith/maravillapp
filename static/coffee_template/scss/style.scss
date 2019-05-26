@@ -37,7 +37,7 @@ body {
 	line-height: 1.8;
 	font-weight: 300;
 	color: lighten($black,50%);
-	background: url(../images/bg_4.jpg) no-repeat fixed;
+	background: url(../../images/bg_4.jpg) no-repeat fixed;
 	background-size: cover;
 	&.menu-show {
 		overflow: hidden;
@@ -870,11 +870,11 @@ h1, h2, h3, h4, h5,
 			z-index: -1;
 		}
 		h3{
-			width: calc(100% - 80px;);
+			width: calc(100% - 80px);
 			font-size: 18px;
 			span{
 				background: $darken;
-				background: url(../images/bg_4.jpg) no-repeat fixed;
+				background: url(../../images/bg_4.jpg) no-repeat fixed;
 				padding-right: 20px;
 			}
 		}
@@ -883,7 +883,7 @@ h1, h2, h3, h4, h5,
 			color: $primary;
 			text-align: right;
 			background: $darken;
-			background: url(../images/bg_4.jpg) no-repeat fixed;
+			background: url(../../images/bg_4.jpg) no-repeat fixed;
 			font-size: 16px;
 		}
 	}

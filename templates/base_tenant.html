@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="{% url 'productos:menu' %}" class="nav-link">Nuestro Menú</a></li>
-                <li class="nav-item"><a href="{% url 'productos:tienda' %}" class="nav-link">Tienda</a></li>
+                <li class="nav-item active"><a href="{% url 'productos:tienda' %}" class="nav-link">Pide Ahora</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Promociones</a></li>
                 {% if usuario.is_anonymous %}
                     {% include 'nav_logout.html' %}
@@ -56,10 +56,10 @@
 
 {% endblock contenido %}
 
-<footer class="ftco-footer ftco-section img">
+<footer class="ftco-footer ftco-services bg-primary">
     <div class="overlay"></div>
     <div class="container">
-        <div class="row mb-5">
+        <div class="row">
             <div class="col-lg-6 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Acerca de Nosotros</h2>
@@ -97,7 +97,6 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-
                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>document.write(new Date().getFullYear());</script> Maravillapp.
                     Todos los derechos reservados.</a>

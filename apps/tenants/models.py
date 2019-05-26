@@ -8,9 +8,8 @@ from apps.usuarios.models import Usuario
 class Tenant(TenantMixin):
 
     TIPOS_PAQUETES = (
-        ("MINI", "Mini"),
-        ("BASICO", "Básico"),
-        ("PLUS", "Plus"),
+        ("BÁSICO", "Básico"),
+        ("STANDARD", "Standard"),
         ("PREMIUM", "Premium"),
     )
 
@@ -20,7 +19,7 @@ class Tenant(TenantMixin):
     nombre = models.CharField(max_length=100,  blank=False)
     direccion = models.CharField(max_length=100,  blank=False)
     telefono = models.CharField(max_length=100,  blank=False)
-    paquete = models.CharField(max_length=10, default='MINI', choices=TIPOS_PAQUETES)
+    paquete = models.CharField(max_length=10, default='BÁSICO', choices=TIPOS_PAQUETES)
     pagado_hasta = models.DateField()
     estado = models.BooleanField(default=True)
 

@@ -16,13 +16,13 @@
                         <div class="col-md-12 nav-link-wrap mb-5">
                             <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-                                <a class="nav-link active" id="v-pills-0-tab" data-toggle="pill" href="#v-pills-0" role="tab" aria-controls="v-pills-0" aria-selected="true">Carnes/Pollos</a>
+                                <a class="nav-link active" id="v-pills-0-tab" data-toggle="pill" href="#v-pills-0" role="tab" aria-controls="v-pills-0" aria-selected="true">Carne</a>
 
-                                <a class="nav-link" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="false">Pastas</a>
+                                <a class="nav-link" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="false">Pasta</a>
 
                                 <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Comidas Rápidas</a>
 
-                                <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Combos Infantiles</a>
+                                <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Menú Infantil</a>
 
                                 <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Bebidas</a>
 
@@ -35,17 +35,21 @@
                                 <div class="tab-pane fade show active" id="v-pills-0" role="tabpanel" aria-labelledby="v-pills-0-tab">
                                     <div class="row">
                                         {% for producto in producto_list %}
-                                            {% if producto.tipo == "Carne/Pollo" %}
-                                                <div class="col-md-3">
+                                            {% if producto.tipo == "Carne/Pollo" and producto.estado %}
+                                                <div class="col-md-4">
                                                     <div class="menu-entry">
-                                                        {% if object.imagen  %}
-                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% if producto.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{producto.imagen.url}});"></a>
                                                         {% else %}
                                                             <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
                                                         {% endif %}
                                                         <div class="text text-center pt-4">
                                                             <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
-                                                            <p>{{ producto.descripcion }}</p>
+                                                            {% if producto.descripcion|length < 31 %}
+                                                                <p>{{ producto.descripcion }}</p>
+                                                                {% else %}
+                                                                <p>{{ producto.descripcion|truncatechars:30 }}</p>
+                                                                {% endif %}
                                                             <p class="price"><span>${{ producto.precio }}</span></p>
                                                             <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                                         </div>
@@ -58,17 +62,21 @@
                                 <div class="tab-pane fade show" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
                                     <div class="row">
                                         {% for producto in producto_list %}
-                                            {% if producto.tipo == "Pasta" %}
-                                                <div class="col-md-3">
+                                            {% if producto.tipo == "Pasta" and producto.estado %}
+                                                <div class="col-lg-4">
                                                     <div class="menu-entry">
-                                                        {% if object.imagen  %}
-                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% if producto.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{producto.imagen.url}});"></a>
                                                         {% else %}
                                                             <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
                                                         {% endif %}
                                                         <div class="text text-center pt-4">
                                                             <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
-                                                            <p>{{ producto.descripcion }}</p>
+                                                            {% if producto.descripcion|length < 31 %}
+                                                                <p>{{ producto.descripcion }}</p>
+                                                                {% else %}
+                                                                <p>{{ producto.descripcion|truncatechars:30 }}</p>
+                                                                {% endif %}
                                                             <p class="price"><span>${{ producto.precio }}</span></p>
                                                             <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                                         </div>
@@ -81,17 +89,21 @@
                                 <div class="tab-pane fade show" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
                                     <div class="row">
                                         {% for producto in producto_list %}
-                                            {% if producto.tipo == "Comida Rápida" %}
-                                                <div class="col-md-3">
+                                            {% if producto.tipo == "Comida Rápida" and producto.estado %}
+                                                <div class="col-lg-4">
                                                     <div class="menu-entry">
-                                                        {% if object.imagen  %}
-                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% if producto.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{producto.imagen.url}});"></a>
                                                         {% else %}
                                                             <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
                                                         {% endif %}
                                                         <div class="text text-center pt-4">
                                                             <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
-                                                            <p>{{ producto.descripcion }}</p>
+                                                            {% if producto.descripcion|length < 31 %}
+                                                                <p>{{ producto.descripcion }}</p>
+                                                                {% else %}
+                                                                <p>{{ producto.descripcion|truncatechars:30 }}</p>
+                                                                {% endif %}
                                                             <p class="price"><span>${{ producto.precio }}</span></p>
                                                             <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                                         </div>
@@ -104,17 +116,21 @@
                                 <div class="tab-pane fade show" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
                                     <div class="row">
                                         {% for producto in producto_list %}
-                                            {% if producto.tipo == "Infantil" %}
-                                                <div class="col-md-3">
+                                            {% if producto.tipo == "Infantil" and producto.estado %}
+                                                <div class="col-lg-4">
                                                     <div class="menu-entry">
-                                                        {% if object.imagen  %}
-                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% if producto.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{producto.imagen.url}});"></a>
                                                         {% else %}
                                                             <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
                                                         {% endif %}
                                                         <div class="text text-center pt-4">
                                                             <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
-                                                            <p>{{ producto.descripcion }}</p>
+                                                            {% if producto.descripcion|length < 31 %}
+                                                                <p>{{ producto.descripcion }}</p>
+                                                                {% else %}
+                                                                <p>{{ producto.descripcion|truncatechars:30 }}</p>
+                                                                {% endif %}
                                                             <p class="price"><span>${{ producto.precio }}</span></p>
                                                             <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                                         </div>
@@ -127,17 +143,21 @@
                                 <div class="tab-pane fade show" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
                                     <div class="row">
                                         {% for producto in producto_list %}
-                                            {% if producto.tipo == "Bebida" %}
-                                                <div class="col-md-3">
+                                            {% if producto.tipo == "Bebida" and producto.estado %}
+                                                <div class="col-lg-4">
                                                     <div class="menu-entry">
-                                                        {% if object.imagen  %}
-                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% if producto.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{producto.imagen.url}});"></a>
                                                         {% else %}
                                                             <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
                                                         {% endif %}
                                                         <div class="text text-center pt-4">
                                                             <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
-                                                            <p>{{ producto.descripcion }}</p>
+                                                            {% if producto.descripcion|length < 31 %}
+                                                                <p>{{ producto.descripcion }}</p>
+                                                                {% else %}
+                                                                <p>{{ producto.descripcion|truncatechars:30 }}</p>
+                                                                {% endif %}
                                                             <p class="price"><span>${{ producto.precio }}</span></p>
                                                             <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                                         </div>
@@ -150,17 +170,21 @@
                                 <div class="tab-pane fade show active" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
                                     <div class="row">
                                         {% for producto in producto_list %}
-                                            {% if producto.tipo == "Adición" %}
-                                                <div class="col-md-3">
+                                            {% if producto.tipo == "Adición" and producto.estado %}
+                                                <div class="col-lg-4">
                                                     <div class="menu-entry">
-                                                        {% if object.imagen  %}
-                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{object.imagen.url}});"></a>
+                                                        {% if producto.imagen  %}
+                                                            <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{producto.imagen.url}});"></a>
                                                         {% else %}
                                                             <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></a>
                                                         {% endif %}
                                                         <div class="text text-center pt-4">
                                                             <h3><a href="{% url 'productos:item' producto.id %}">{{ producto.nombre }}</a></h3>
-                                                            <p>{{ producto.descripcion }}</p>
+                                                            {% if producto.descripcion|length < 31 %}
+                                                                <p>{{ producto.descripcion }}</p>
+                                                                {% else %}
+                                                                <p>{{ producto.descripcion|truncatechars:30 }}</p>
+                                                                {% endif %}
                                                             <p class="price"><span>${{ producto.precio }}</span></p>
                                                             <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                                         </div>
@@ -170,9 +194,6 @@
                                         {% endfor %}
                                     </div>
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
