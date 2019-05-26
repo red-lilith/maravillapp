@@ -1,18 +1,19 @@
 from django.http.response import JsonResponse
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.auth import views as auth_views
 from django.shortcuts import get_object_or_404
 from apps.usuarios.utilities import generar_pdf_usuarios
-from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
-from apps.usuarios.models import *
 from apps.tenants.models import *
 from django.db import connection
 from django.contrib.auth.hashers import make_password
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
+from django.core import serializers
+import json
+import os
+
 
 
 def home(request):
@@ -154,8 +155,23 @@ def usuario_desactivar(request, id_usuario):
     usuario.is_active = False
     usuario.save()
     if not usuario.is_staff:
-        send_mail('Maravilla - Eliminación de cuenta', 'Este es un correo de prueba', 'maravilla.franquicias@gmail.com',
-                  ['dianagarco@gmail.com',], fail_silently=False)
+        json_data = serializers.serialize('json', [usuario])
+
+        with open("data_id_" + str(usuario.id) + "_" + str(usuario.username) + ".json", "w") as outfile:
+            json.dump(json.JSONDecoder().decode(json_data), outfile, indent=4)
+
+        msg = EmailMessage('Maravilla - Eliminación de cuenta', "Tu cuenta ha sido eliminada exitosamente.<br><br>"
+                                                                "Muchas gracias por utilizar nuestros servicios y "
+                                                                "esperamos que vuelvas de nuevo algún día. :) <br>"
+                                                                "Adjunto encontrarás todos tus datos.<br><br>"
+                                                                "Hasta Pronto.",
+                           'maravilla.franquicias@gmail.com', ['dianagarco@gmail.com'])
+        msg.content_subtype = "html"
+        msg.attach_file("data_id_" + str(usuario.id) + "_" + str(usuario.username) + ".json")
+        msg.send()
+
+        os.remove("data_id_" + str(usuario.id) + "_" + str(usuario.username) + ".json")
+
     return redirect('usuarios:salir')
 
 
