@@ -13,9 +13,10 @@ from datetime import datetime
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-pdfmetrics.registerFont(TTFont('Times New Roman', 'times.ttf'))
-pdfmetrics.registerFont(TTFont('Times New Roman Bold', 'timesbd.ttf'))
-pdfmetrics.registerFont(TTFont('Times New Roman Italic', 'timesi.ttf'))
+pdfmetrics.registerFont(TTFont('Vera', 'Vera.ttf'))
+pdfmetrics.registerFont(TTFont('VeraBd', 'VeraBd.ttf'))
+pdfmetrics.registerFont(TTFont('VeraIt', 'VeraIt.ttf'))
+pdfmetrics.registerFont(TTFont('VeraBI', 'VeraBI.ttf'))
 
 
 def generar_pdf_usuarios(usuarios, tipo):
@@ -43,25 +44,25 @@ def generar_pdf_usuarios(usuarios, tipo):
 
     #Header
     p.setLineWidth(.3)
-    p.setFont('Times New Roman', 22)
+    p.setFont('Vera', 22)
     p.drawString(30, 750, 'Franquicias Maravilla')
-    p.setFont('Times New Roman', 16)
+    p.setFont('Vera', 16)
     if tipo:
         p.drawString(30, 735, 'Listado de Digitadores')
     else:
         p.drawString(30, 735, 'Listado de Clientes')
 
-    p.setFont('Times New Roman Bold', 12)
+    p.setFont('Vera', 10)
     p.drawString(470, 750, datetime.now().strftime("%Y-%m-%d %H:%M"))
-    p.line(460, 747, 560, 747)
+    p.line(468, 747, 560, 747)
 
 
     #Table Header
     styles = getSampleStyleSheet()
     stylesBH = ParagraphStyle('Parrafos',
                               alignment=TA_CENTER,
-                              fontSize=14,
-                              fontName='Times-Bold')
+                              fontSize=12,
+                              fontName='Vera')
 
     documento = Paragraph('''Documento''', stylesBH)
     nombres = Paragraph('''Nombres y Apellidos''', stylesBH)
@@ -75,7 +76,7 @@ def generar_pdf_usuarios(usuarios, tipo):
     #Table
     styleN = styles["BodyText"]
     styleN.alignment = TA_CENTER
-    styleN.fontSize = 14
+    styleN.fontSize = 12
 
     high = 650
 

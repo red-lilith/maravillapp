@@ -3,7 +3,6 @@ from .views import *
 
 app_name = 'tenants'
 urlpatterns = [
-    path('', home, name='home'),
     path('dashboard', dashboard, name='dashboard'),
     path('crear-tenant', tenant_crear , name='tenant_crear'),
     path('listar-tenants', tenants_listar , name='tenants_listar'),

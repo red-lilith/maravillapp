@@ -8,25 +8,7 @@ from django.core.mail import send_mail, EmailMessage
 # Create your views here.
 
 
-def home(request):
-    schema = connection.schema_name
-    usuario = request.user
-    tenants = Dominio.objects.exclude(tenant__schema_name='public')
-    public = Tenant.objects.get(schema_name=schema)
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
 
-            msg = EmailMessage('Maravilla Tenants - Solicitud de Información', "Nombre Completo: " +
-                               form.cleaned_data['nombre'] + "<br><br>Correo Electrónico: " +
-                               form.cleaned_data['correo'] + "<br><br>Mensaje: " + form.cleaned_data['mensaje'],
-                               'maravilla.franquicias@gmail.com', ['dianagarco@gmail.com'])
-            msg.content_subtype = "html"
-            msg.send()
-            return redirect('tenants:home')
-    else:
-        form = ContactForm()
-    return render(request, 'tenants/home_franquicia.html', {'public': public, 'usuario': usuario, 'tenants': tenants, 'form': form})
 
 
 def dashboard(request):
@@ -98,5 +80,3 @@ def tenant_activar(request, id_tenant):
     tenant = Tenant.objects.get(id=id_tenant)
     tenant.estado = True
     Dominio.objects.create(domain='%s%s' % (tenant.schema_name, settings.DOMAIN), is_primary=True, tenant=tenant)
-
-

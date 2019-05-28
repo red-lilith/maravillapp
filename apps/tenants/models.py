@@ -3,6 +3,7 @@ from django.db import models
 from django_tenants.models import TenantMixin, DomainMixin
 from django_tenants.postgresql_backend.base import _is_valid_schema_name
 from apps.usuarios.models import Usuario
+from datetime import datetime
 
 
 class Tenant(TenantMixin):
@@ -20,7 +21,7 @@ class Tenant(TenantMixin):
     direccion = models.CharField(max_length=100,  blank=False)
     telefono = models.CharField(max_length=100,  blank=False)
     paquete = models.CharField(max_length=10, default='BÁSICO', choices=TIPOS_PAQUETES)
-    pagado_hasta = models.DateField()
+    pagado_hasta = models.DateField(default=datetime.now)
     estado = models.BooleanField(default=True)
 
     def __str__(self):

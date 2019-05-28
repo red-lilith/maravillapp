@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404
 from apps.usuarios.utilities import generar_pdf_usuarios
 from django.urls import reverse_lazy
 from apps.tenants.models import *
+from .forms import *
 from django.db import connection
 from django.contrib.auth.hashers import make_password
 from django.core.mail import send_mail, EmailMessage
@@ -22,8 +23,23 @@ def home(request):
     tenants = Dominio.objects.exclude(tenant__schema_name='public')
     tenant_data = Tenant.objects.get(schema_name=schema)
     if schema == 'public':
-        return render(request, 'tenants/home_franquicia.html',
-                      {'public': tenant_data, 'usuario': usuario, 'tenants': tenants})
+        if request.method == 'POST':
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                msg = EmailMessage('Maravilla Tenants - Solicitud de Información', "Nombre Completo: " +
+                                   form.cleaned_data['nombre'] + "<br><br>Correo Electrónico: " +
+                                   form.cleaned_data['correo'] + "<br><br>Mensaje: " + form.cleaned_data['mensaje'],
+                                   'maravilla.franquicias@gmail.com', ['dianagarco@gmail.com'])
+                msg.content_subtype = "html"
+                msg.send()
+                return redirect('usuarios:home')
+        else:
+            form = ContactForm()
+            return render(request, 'tenants/home_franquicia.html', {'public': tenant_data, 'usuario': usuario, 'form': form})
+
+        return render(request, 'usuarios/home_tenant.html',
+                      {'public': tenant_data, 'usuario': usuario, 'tenants': tenants,
+                       'form': form})
     else:
         return render(request, 'usuarios/home_tenant.html', {'tenant': tenant_data, 'usuario': usuario})
 

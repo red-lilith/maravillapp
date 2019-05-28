@@ -45,7 +45,7 @@ class Producto(models.Model):
 	)
 	nombre= models.CharField(max_length=200)
 	descripcion = models.TextField(max_length=500)
-	tipo = models.CharField(max_length=15, choices=TIPOS_PRODUCTOS)
+	tipo = models.CharField(max_length=15, choices=TIPOS_PRODUCTOS, default='Bebida')
 	precio = models.PositiveIntegerField()
 	estado = models.BooleanField(default=True)
 	imagen = models.FileField(upload_to="productos_imagenes/", null=True, blank=True)
