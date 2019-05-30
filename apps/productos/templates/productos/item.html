@@ -41,7 +41,7 @@
 	             	</span>
                         </div>
                     </div>
-                    <p><a href="#" class="btn btn-primary py-3 px-5">Agregar al Carrito</a></p>
+                    <p><a href="{% url 'carrito:agregar_a_carrito' object.id %}" class="btn btn-primary py-3 px-5">Agregar al Carrito</a></p>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                                         <p>{{ carne.descripcion|truncatechars:30 }}</p>
                                     {% endif %}
                                     <p class="price"><span>${{ carne.precio }}</span></p>
-                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                    <p><a href="{% url 'carrito:agregar_a_carrito' carne.id %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                                         <p>{{ pasta.descripcion|truncatechars:30 }}</p>
                                     {% endif %}
                                     <p class="price"><span>${{ pasta.precio }}</span></p>
-                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                    <p><a href="{% url 'carrito:agregar_a_carrito' pasta.id %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                                         <p>{{ rapida.descripcion|truncatechars:30 }}</p>
                                     {% endif %}
                                     <p class="price"><span>${{ rapida.precio }}</span></p>
-                                    <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                    <p><a href="{% url 'carrito:agregar_a_carrito' rapida.id %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                                     <p>{{ infantil.descripcion|truncatechars:30 }}</p>
                                 {% endif %}
                                 <p class="price"><span>${{ infantil.precio }}</span></p>
-                                <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                <p><a href="{% url 'carrito:agregar_a_carrito' infantil.id %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                                     <p>{{ bebida.descripcion|truncatechars:30 }}</p>
                                 {% endif %}
                                 <p class="price"><span>${{ bebida.precio }}</span></p>
-                                <p><a href="{% url 'usuarios:carrito' %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
+                                <p><a href="{% url 'carrito:agregar_a_carrito' bebida.id %}" class="btn btn-primary btn-outline-primary">Agregar Al carrito</a></p>
                             </div>
                         </div>
                     </div>

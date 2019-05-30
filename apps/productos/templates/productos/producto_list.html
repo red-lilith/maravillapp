@@ -32,8 +32,9 @@
                         <thead class="thead-dark">
                         <tr>
                             <th style="width: 16%">Nombre</th>
+                            <th style="width: 8%">Tipo</th>
                             <th style="width: 26%">Descripcion</th>
-                            <th style="width: 16%">Precio</th>
+                            <th style="width: 8%">Precio</th>
                             <th style="width: 16%">Stock</th>
                             <th style="width: 26%">Acciones</th>
                         </tr>
@@ -42,8 +43,9 @@
                         {% for producto in producto_list %}
                             <tr>
                                 <td  style="width: 16%" >{{producto.nombre}}</td>
+                                <td  style="width: 8%" >{{producto.tipo}}</td>
                                 <td  style="width: 26%">{{producto.descripcion}}</td>
-                                <td  style="width: 16%">{{producto.precio}}</td>
+                                <td  style="width: 8%">{{producto.precio}}</td>
                                 <td  style="width: 16%">{{ producto.cantidad}}</td>
                                 <td style="width: 26%">
                                     <div class="container">

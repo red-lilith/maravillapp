@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import render, redirect, get_object_or_404
 from apps.productos.models import Producto
+from django.db import connection
+from apps.tenants.models import *
 
 from apps.carrito.extras import generar_orden_id, transact, generar_token_cliente
 from apps.carrito.models import ItemCarrito, Carrito, Transaccion, Perfil
@@ -64,16 +66,20 @@ def borrar_de_carrito(request, item_id):
     if item_a_borrar.exists():
         item_a_borrar[0].delete()
         messages.info(request, "Producto borrado")
-    return redirect(reverse('productos:orden_detalle'))
+    return redirect(reverse('carrito:orden_detalle'))
 
 
 @login_required()
 def orden_detalle(request, **kwargs):
 		usuario = request.user
+		schema = connection.schema_name
+		tenant = Tenant.objects.get(schema_name=schema)
 		orden_existente = get_orden_usuario_pendiente(request)
 		context = {
 		'orden': orden_existente,
-		'usuario': usuario
+		'usuario': usuario,
+		'total': orden_existente.get_carrito_total(),
+		'tenant': tenant,
 		}
 		return render(request, 'carrito/orden_detalle.html', context)
 

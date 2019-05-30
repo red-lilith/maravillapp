@@ -11,7 +11,7 @@
         <div class="container">
             <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Tienda</span></p>
             <div class="row d-md-flex">
-                <div class="col-lg-12 ftco-animate p-md-5">
+                <div class="col-lg-12 ftco-animate ">
                     <div class="row">
                         <div class="col-md-12 nav-link-wrap mb-5">
                             <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -30,13 +30,13 @@
                             </div>
                         </div>
 
-                        <div class="col-md-12 d-flex align-items-center">
+                        <div class="col-lg-12">
                             <div class="tab-content ftco-animate" id="v-pills-tabContent">
                                 <div class="tab-pane fade show active" id="v-pills-0" role="tabpanel" aria-labelledby="v-pills-0-tab">
                                     <div class="row">
                                         {% for producto in producto_list %}
                                             {% if producto.tipo == "Carne/Pollo" and producto.estado %}
-                                                <div class="col-md-4">
+                                                <div class="col-lg-4">
                                                     <div class="menu-entry">
                                                         {% if producto.imagen  %}
                                                             <a href="{% url 'productos:item' producto.id %}" class="img" style="background-image: url({{producto.imagen.url}});"></a>

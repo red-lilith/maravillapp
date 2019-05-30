@@ -8,6 +8,7 @@ from django.db import connection
 from apps.tenants.models import *
 from django.contrib import messages
 from .forms import *
+from apps.carrito.views import *
 # Create your views here.
 
 
@@ -19,6 +20,8 @@ class Tienda(ListView):
         context['usuario'] = self.request.user
         schema = connection.schema_name
         context['tenant'] = Tenant.objects.get(schema_name=schema)
+        if self.request.user.is_authenticated:
+            context['orden'] = get_orden_usuario_pendiente(self.request)
         return context
 
 
@@ -35,6 +38,8 @@ class Item(DetailView):
         context['rapida'] = Producto.objects.filter(tipo="Comida Rápida", estado=True).last()
         context['infantil'] = Producto.objects.filter(tipo="Infantil", estado=True).last()
         context['bebida'] = Producto.objects.filter(tipo="Bebida", estado=True).last()
+        if self.request.user.is_authenticated:
+            context['orden'] = get_orden_usuario_pendiente(self.request)
         return context
 
 
@@ -69,7 +74,8 @@ class ProductoCrear(SuccessMessageMixin, CreateView):
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
-        total = 0
+
+        total = form.cleaned_data.get('precio');
         for ing in form.cleaned_data.get('ingredientes'):
             total += ing.precio_por_unidad
 
@@ -94,7 +100,7 @@ class ProductoActualizar(SuccessMessageMixin, UpdateView):
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
-        total = 0
+        total = form.cleaned_data.get('precio');
         for ing in form.cleaned_data.get('ingredientes'):
             total += ing.precio_por_unidad
 

@@ -30,29 +30,25 @@
                     <table id="example" class="table table-striped">
                         <thead class="thead-dark">
                         <tr>
-                            <th style="width: 20%">Imagen</th>
-                            <th style="width: 15%">Nombre</th>
-                            <th style="width: 15%">Precio</th>
-                            <th style="width: 15%">Cantidad</th>
-                            <th style="width: 15%">Unidad</th>
-                            <th style="width: 20%">Acciones</th>
+                            <th style="width: 25%">Imagen</th>
+                            <th style="width: 25%">Nombre</th>
+                            <th style="width: 25%">Precio</th>
+                            <th style="width: 25%">Acciones</th>
                         </tr>
                         </thead>
                         <tbody>
                         {% for ingrediente in ingrediente_list %}
                             <tr>
-                                <td  style="width: 20%">
+                                <td  style="width: 25%">
                                     {% if ingrediente.imagen  %}
                                         <img style="width: 150px; height: 110px;" src="{{ingrediente.imagen.url}}" class="img img-fluid centerImage ">
                                     {% else %}
                                         <img style="width: 150px; height: 110px; " src="{% static 'imagenes (acomodar)/no_image.jpg' %}" class="img img-fluid centerImage">
                                     {% endif %}
                                 </td>
-                                <td  style="width: 15%" >{{ingrediente.nombre}}</td>
-                                <td  style="width: 15%">{{ingrediente.precio_por_unidad}}</td>
-                                <td  style="width: 15%">{{ingrediente.cantidad}}</td>
-                                <td  style="width: 15%">{{ingrediente.unidad}}</td>
-                                <td style="width: 20%">
+                                <td  style="width: 25%" >{{ingrediente.nombre}}</td>
+                                <td  style="width: 25%">{{ingrediente.precio_por_unidad}}</td>
+                                <td style="width: 25%">
                                     <p class="mb-1"><a href="{% url 'productos:ingrediente_detalle' ingrediente.id %}" class="btn btn-outline-info custom-btn">Ver Detalle</a></p>
                                     <p class="mb-1"><a href="{% url 'productos:ingrediente_actualizar' ingrediente.id %}" class="btn btn-outline-warning custom-btn">Modificar</a></p>
                                     <p><a href="{% url 'productos:ingrediente_eliminar' ingrediente.id %}" class="btn btn-outline-danger custom-btn">Eliminar</a></p>

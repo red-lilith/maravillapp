@@ -15,6 +15,7 @@ from django.core import serializers
 import json
 import os
 from apps.carrito import *
+from apps.carrito.views import *
 
 
 def home(request):
@@ -41,7 +42,12 @@ def home(request):
                       {'public': tenant_data, 'usuario': usuario, 'tenants': tenants,
                        'form': form})
     else:
-        return render(request, 'usuarios/home_tenant.html', {'tenant': tenant_data, 'usuario': usuario})
+        if usuario.is_authenticated:
+            return render(request, 'usuarios/home_tenant.html',
+            {'tenant': tenant_data, 'usuario': usuario, 'orden': get_orden_usuario_pendiente(request)})
+        else:
+            return render(request, 'usuarios/home_tenant.html',
+            {'tenant': tenant_data, 'usuario': usuario})
 
 
 def dashboard(request):
@@ -60,6 +66,8 @@ class DatosActualizar(SuccessMessageMixin, UpdateView):
         context['usuario'] = self.request.user
         schema = connection.schema_name
         context['tenant'] = Tenant.objects.get(schema_name=schema)
+        if self.request.user.is_authenticated:
+            context['orden'] = get_orden_usuario_pendiente(self.request)
         return context
 
     def get_success_url(self, **kwargs):

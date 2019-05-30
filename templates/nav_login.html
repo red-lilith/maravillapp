@@ -1,5 +1,5 @@
 <li class="nav-item cart"><a href="{% url 'carrito:orden_detalle' %}" class="nav-link"><span class="icon icon-shopping_cart"></span>
-    <span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a>
+    <span class="bag d-flex justify-content-center align-items-center"><small>{{ orden.get_carrito_items|length }}</small></span></a>
 </li>
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"

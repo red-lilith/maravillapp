@@ -16,7 +16,7 @@
             <thead class="thead-primary">
               <tr class="text-center">
                 <th>&nbsp;</th>
-                <th>&nbsp;</th>
+                <th>Imagen</th>
                 <th>Producto</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
@@ -26,9 +26,12 @@
             <tbody>
               {% for item in orden.get_carrito_items %}
               <tr class="text-center">
-                <td class="product-remove"><a href="#"><span class="icon-close"></span></a></td>
-
-                <td class="image-prod"><div class="img" style="background-image:url(images/menu-2.jpg);"></div></td>
+                <td class="product-remove"><a href="{% url 'carrito:borrar_de_carrito' item.producto.id %}"><span class="icon-close"></span></a></td>
+                {% if item.producto.imagen  %}
+                <td class="image-prod"><div class="img" style="background-image:url({{ item.producto.imagen.url }});"></div></td>
+                {% else %}
+                <td class="image-prod"><div class="img" style="background-image: url({% static 'imagenes (acomodar)/no_image.jpg' %});"></div></td>
+                {% endif %}
 
                 <td class="product-name">
                   <h3>{{item.producto.nombre}}</h3>
@@ -43,11 +46,11 @@
                   </div>
                 </td>
 
-                <td class="total">$4.90</td>
+                <td class="total">${{item.producto.precio}}</td>
               </tr><!-- END TR-->
               {% empty %}
               <tr>
-                <td colspan= 3> No hay ningùn item.</td>
+                <td colspan= 3> No hay ningún producto en el carrito.</td>
               </tr>
               {% endfor %}
             </tbody>
@@ -61,7 +64,7 @@
           <h3>Facturación</h3>
           <p class="d-flex">
             <span>Subtotal</span>
-            <span>$20.60</span>
+            <span>${{ total }}</span>
           </p>
           <p class="d-flex">
             <span>Domicilio</span>
@@ -69,12 +72,12 @@
           </p>
           <p class="d-flex">
             <span>Descuentos</span>
-            <span>$3.00</span>
+            <span>$0.00</span>
           </p>
           <hr>
           <p class="d-flex total-price">
             <span>Total</span>
-            <span>$17.60</span>
+            <span>${{total}}</span>
           </p>
         </div>
         <p class="text-center"><a href="#" class="btn btn-primary py-3 px-4">Pagar</a></p>
