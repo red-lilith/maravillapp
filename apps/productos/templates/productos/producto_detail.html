@@ -60,12 +60,24 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="names">Estado</label>
+                                    <label for="names">Stock</label>
                                     <input class="form-control" id="id_estado" type="text" name="estado" placeholder="Estado" value="{{object.estado|yesno:"Disponible,No disponible"}}" disabled="true">
                                 </div>
                             </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="names">Ingredientes</label>
+
+                                          {% for ing in ingredientes_list %}
+                                          <input class="form-control" id="id_estado" type="text" name="estado"  value="{{ing.nombre}}" disabled="true">
+
+                                          {% endfor %}
+                              </div>
+                            </div>
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>

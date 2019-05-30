@@ -23,7 +23,6 @@ urlpatterns = [
     path('ver-cliente/<int:pk>', views.UsuarioDetalle.as_view(template_name='usuarios/cliente_detail.html'), name='cliente_detalle'),
     path('pdf-clientes/<staff>', pdf_usuario, name='pdf_clientes'),
 
-    path('carrito', carrito, name='carrito'),
 
     path('login', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='usuarios/login.html'),
          name='login'),

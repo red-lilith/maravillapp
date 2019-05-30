@@ -3,53 +3,50 @@
 {% load static %}
 {% load staticfiles %}
 
-{% block titulo %}Inventario{% endblock titulo %}
-
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static 'dist/css/dataTables.bootstrap4.min.css' %}">
     <link rel="stylesheet" href="{% static 'coffee_template/css/producto-listar.css' %}">
 
 {% endblock css %}
 
+{% block titulo %}Ingredientes del Producto{% endblock titulo %}
+
 {% block contenido %}
 
     <section class="ftco-section center">
         <div class="container">
-            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span>
-                <span>Inventario</span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Lista de Ingredientes</span></p>
             <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
                 <div class="row justify-content-center">
                     <div class="col-xl-10 ftco-animate">
-                        <h3 class="mb-4 billing-heading">Inventario</h3>
+                        <h3 class="mb-4 billing-heading">Lista de Ingredientes del Producto {{nombre_producto}} </h3>
                     </div>
                     <div class="col-xl-2 ftco-animate" >
-                        <p><a href="{% url 'productos:producto_crear' %}" style="width: 145px;" class="btn btn-primary p-2">Agregar Producto</a></p>
+                        <p><a href="{% url 'productos:intento_crear' pk %}" style="width: 145px;" class="btn btn-primary p-2">Agregar producto</a></p>
                     </div>
                 </div>
                 <div class="table-responsive">
-
                     <table id="example" class="table table-striped">
                         <thead class="thead-dark">
                         <tr>
-                            <th style="width: 16%">Nombre</th>
-                            <th style="width: 26%">Descripcion</th>
-                            <th style="width: 16%">Precio</th>
-                            <th style="width: 16%">Stock</th>
-                            <th style="width: 26%">Acciones</th>
+                            <th style="width: 25%">Nombre</th>
+                            <th style="width: 25%">Producto</th>
+                            <th style="width: 25%">Cantidad</th>
+                            <th style="width: 25%">Acciones</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {% for producto in producto_list %}
+                        {% for combos in comboproductos_list %}
                             <tr>
-                                <td  style="width: 16%" >{{producto.nombre}}</td>
-                                <td  style="width: 26%">{{producto.descripcion}}</td>
-                                <td  style="width: 16%">{{producto.precio}}</td>
-                                <td  style="width: 16%">{{ producto.cantidad}}</td>
-                                <td style="width: 26%">
+
+                                <td  style="width: 25%">{{combos.combo.nombre}}</td>
+                                <td  style="width: 25%">{{combos.producto.nombre}}</td>
+                                <td  style="width: 25%">{{combos.cantidad_productos}}</td>
+                                <td style="width: 25%">
                                     <div class="container">
-                                        <p class="mb-1"><a href="{% url 'productos:producto_detalle' producto.id %}" class="btn btn-outline-info custom-btn">Ver detalle</a></p>
-                                        <p class="mb-1"><a href="{% url 'productos:producto_actualizar' producto.id %}" class="btn btn-outline-warning custom-btn">Modificar</a></p>
-                                        <p class="mb-1"><a href="{% url 'productos:producto_eliminar' producto.id %}" class="btn btn-outline-danger custom-btn">Eliminar</a></p>
+                                        <p><a href="{% url 'productos:ingrediente_producto_detalle' combos.id %}" class="btn btn-outline-info custom-btn">Ver Detalle</a></p>
+                                        <p><a href="{% url 'productos:ingrediente_producto_actualizar' combos.id %}" class="btn btn-outline-warning custom-btn">Modificar</a></p>
+                                        <p><a href="{% url 'productos:ingrediente_producto_eliminar' combos.id %}" class="btn btn-outline-danger custom-btn">Eliminar</a></p>
                                     </div>
                                 </td>
                             </tr>

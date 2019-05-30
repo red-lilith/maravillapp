@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from django.db import connection
 from apps.tenants.models import *
 from django.contrib import messages
+from .forms import *
 # Create your views here.
 
 
@@ -53,6 +54,8 @@ class ProductoDetalle(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductoDetalle, self).get_context_data(**kwargs)
+        prod = Producto.objects.get(pk = int(self.kwargs.get('pk')))
+        context['ingredientes_list'] = prod.ingredientes.all()
         context['usuario'] = self.request.user
         schema = connection.schema_name
         context['tenant'] = Tenant.objects.get(schema_name=schema)
@@ -61,8 +64,17 @@ class ProductoDetalle(DetailView):
 
 class ProductoCrear(SuccessMessageMixin, CreateView):
     model = Producto
-    fields = '__all__'
+    form_class = ProductoForm
     success_message = 'Producto agregado con exito'
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        total = 0
+        for ing in form.cleaned_data.get('ingredientes'):
+            total += ing.precio_por_unidad
+
+        form.instance.precio = total
+        return super(ProductoCrear, self).form_valid(form)
 
     def get_context_data(self, **kwargs):
         context = super(ProductoCrear, self).get_context_data(**kwargs)
@@ -78,7 +90,16 @@ class ProductoCrear(SuccessMessageMixin, CreateView):
 class ProductoActualizar(SuccessMessageMixin, UpdateView):
     model = Producto
     success_message = 'Producto modificado con exito'
-    fields = '__all__'
+    form_class = ProductoForm
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        total = 0
+        for ing in form.cleaned_data.get('ingredientes'):
+            total += ing.precio_por_unidad
+
+        form.instance.precio = total
+        return super(ProductoActualizar, self).form_valid(form)
 
     def get_context_data(self, **kwargs):
         context = super(ProductoActualizar, self).get_context_data(**kwargs)
@@ -103,6 +124,93 @@ class ProductoEliminar(DeleteView):
 
     def get_success_url(self, **kwargs):
         return reverse_lazy("productos:productos_listar")
+
+
+class ComboListar(ListView):
+    model = Combo
+
+    def get_context_data(self, **kwargs):
+        context = super(ComboListar, self).get_context_data(**kwargs)
+        context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
+        return context
+
+
+class ComboDetalle(DetailView):
+    model = Combo
+
+    def get_context_data(self, **kwargs):
+        context = super(ComboDetalle, self).get_context_data(**kwargs)
+        context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
+        return context
+
+
+class ComboCrear(SuccessMessageMixin, CreateView):
+    model = Combo
+    success_message = 'Combo agregado con exito'
+    form_class = ComboForm
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        total = 0
+        for precio in form.cleaned_data.get('productos'):
+            total += ing.precio
+
+        form.instance.precio = total
+        return super(ComboCrear, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super(ComboCrear, self).get_context_data(**kwargs)
+        context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
+        return context
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("productos:combos_listar")
+
+
+class ComboActualizar(SuccessMessageMixin, UpdateView):
+    model = Combo
+    success_message = 'Combo modificado con exito'
+    form_class = ComboForm
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        total = 0
+        for precio in form.cleaned_data.get('productos'):
+            total += ing.precio
+
+        form.instance.precio = total
+        return super(ComboActualizar, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super(ComboActualizar, self).get_context_data(**kwargs)
+        context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
+        return context
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("productos:combos_listar")
+
+
+class ComboEliminar(DeleteView):
+    model = Combo
+
+    def get_context_data(self, **kwargs):
+        context = super(ComboEliminar, self).get_context_data(**kwargs)
+        context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
+        return context
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("productos:combos_listar")
+
 
 
 class IngredientesListar(ListView):
@@ -171,97 +279,3 @@ class IngredienteEliminar(DeleteView):
 
     def get_success_url(self, **kwargs):
         return reverse_lazy("productos:ingredientes_listar")
-
-
-class ProductoIngredientesListar(ListView):
-    model = ProductoIngrediente
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        pk = int(self.kwargs.get('pk'))
-        context['usuario'] = self.request.user
-        context['pk'] = pk
-        producto = Producto.objects.get(pk = int(self.kwargs.get('pk')))
-        context['nombre_producto'] = producto.nombre
-        context['productoingrediente_list'] = ProductoIngrediente.objects.filter(producto__pk = pk)
-        schema = connection.schema_name
-        context['tenant'] = Tenant.objects.get(schema_name=schema)
-        return context
-
-
-class ProductoIngredienteDetalle(DetailView):
-    model = ProductoIngrediente
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['usuario'] = self.request.user
-        pk = int(self.kwargs.get('pk'))
-        producto = ProductoIngrediente.objects.get(pk = int(self.kwargs.get('pk'))).producto
-        context['producto_pk'] = producto.pk
-        schema = connection.schema_name
-        context['tenant'] = Tenant.objects.get(schema_name=schema)
-        return context
-
-
-class ProductoIngredienteCrear(SuccessMessageMixin, CreateView):
-    model = ProductoIngrediente
-    fields = '__all__'
-    success_message = 'Ingrediente agregado con exito'
-
-    def form_valid(self, form):
-        form.instance.producto = Producto.objects.get(pk = int(self.kwargs.get('pk')))
-        return super(ProductoIngredienteCrear, self).form_valid(form)
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        pk = int(self.kwargs.get('pk'))
-        context['pk'] = pk
-        context['usuario'] = self.request.user
-        schema = connection.schema_name
-        context['tenant'] = Tenant.objects.get(schema_name=schema)
-        return context
-
-    def get_success_url(self, **kwargs):
-        return reverse_lazy("productos:ingredientes_producto_listar",kwargs={'pk': self.kwargs['pk']})
-
-
-class ProductoIngredienteActualizar(SuccessMessageMixin, UpdateView):
-    model = ProductoIngrediente
-    success_message = 'Ingrediente modificado con exito'
-    fields = '__all__'
-
-    def form_valid(self, form):
-        form.instance.producto = ProductoIngrediente.objects.get(pk = int(self.kwargs.get('pk'))).producto
-        return super(ProductoIngredienteActualizar, self).form_valid(form)
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        pk = int(self.kwargs.get('pk'))
-        context['pk'] = pk
-        context['usuario'] = self.request.user
-        schema = connection.schema_name
-        context['tenant'] = Tenant.objects.get(schema_name=schema)
-        return context
-
-    def get_success_url(self, **kwargs):
-        producto = ProductoIngrediente.objects.get(pk = int(self.kwargs.get('pk'))).producto
-        return reverse_lazy("productos:ingredientes_producto_listar",kwargs={'pk': producto.pk})
-
-
-class ProductoIngredienteEliminar(DeleteView):
-    model = ProductoIngrediente
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        pk = int(self.kwargs.get('pk'))
-        producto = ProductoIngrediente.objects.get(pk = int(self.kwargs.get('pk'))).producto
-        context['producto_pk'] = producto.pk
-        context['pk'] = pk
-        context['usuario'] = self.request.user
-        schema = connection.schema_name
-        context['tenant'] = Tenant.objects.get(schema_name=schema)
-        return context
-
-    def get_success_url(self, **kwargs):
-        producto = ProductoIngrediente.objects.get(pk = int(self.kwargs.get('pk'))).producto
-        return reverse_lazy("productos:ingredientes_producto_listar",kwargs={'pk': producto.pk})

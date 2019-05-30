@@ -1,8 +1,7 @@
 from django.db import models
 from cities_light.models import City
 from django.contrib.auth.models import AbstractUser
-
-# Create your models here.
+from apps.productos.models import Producto
 
 
 class Usuario(AbstractUser):
@@ -13,4 +12,3 @@ class Usuario(AbstractUser):
     direccion = models.CharField(max_length=200)
     telefono = models.CharField(max_length=20)
     USERNAME_FIELD = 'username'
-

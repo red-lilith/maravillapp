@@ -1,0 +1,88 @@
+{% extends 'base_tenant.html' %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+{% block titulo %}Carrito de Compras{% endblock titulo %}
+
+
+{% block contenido %}
+<section class="ftco-section ftco-cart">
+  <div class="container">
+    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span> <span>Carrito de Compras</span></p>
+    <div class="row">
+      <div class="col-md-12 ftco-animate">
+        <div class="cart-list">
+          <table class="table">
+            <thead class="thead-primary">
+              <tr class="text-center">
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in orden.get_carrito_items %}
+              <tr class="text-center">
+                <td class="product-remove"><a href="#"><span class="icon-close"></span></a></td>
+
+                <td class="image-prod"><div class="img" style="background-image:url(images/menu-2.jpg);"></div></td>
+
+                <td class="product-name">
+                  <h3>{{item.producto.nombre}}</h3>
+                  <p>{{item.producto.descripcion}}</p>
+                </td>
+
+                <td class="price">${{item.producto.precio}}</td>
+
+                <td class="quantity">
+                  <div class="input-group mb-3">
+                    <input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+                  </div>
+                </td>
+
+                <td class="total">$4.90</td>
+              </tr><!-- END TR-->
+              {% empty %}
+              <tr>
+                <td colspan= 3> No hay ningùn item.</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col col-lg-3 col-md-6 mt-5 cart-wrap ftco-animate">
+        <div class="cart-total mb-3">
+          <h3>Facturación</h3>
+          <p class="d-flex">
+            <span>Subtotal</span>
+            <span>$20.60</span>
+          </p>
+          <p class="d-flex">
+            <span>Domicilio</span>
+            <span>$0.00</span>
+          </p>
+          <p class="d-flex">
+            <span>Descuentos</span>
+            <span>$3.00</span>
+          </p>
+          <hr>
+          <p class="d-flex total-price">
+            <span>Total</span>
+            <span>$17.60</span>
+          </p>
+        </div>
+        <p class="text-center"><a href="#" class="btn btn-primary py-3 px-4">Pagar</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock contenido %}
+{% block js %}
+
+{% endblock js %}

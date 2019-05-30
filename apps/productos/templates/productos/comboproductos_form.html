@@ -7,60 +7,58 @@
 
 {% block css %}
     <link rel="stylesheet" media="screen" href="{% static 'coffee_template/css/producto-crear.css' %}">
+    <style type="text/css">
+        option {
+            color: black;
+        }
+    </style>
 {% endblock css %}
 
-{% block titulo %}Agregar Ingrediente a Producto{% endblock titulo %}
+{% block titulo %}Crear Producto{% endblock titulo %}
 
 {% block contenido %}
-    {% if form.errors %}
-        {% for field in form %}
-            {% for error in field.errors %}
-                <div class="alert alert-danger">
-                    <strong> {{ error|escape }}</strong>
-                </div>
-            {% endfor %}
-        {% endfor %}
-        {% for error in form.non_field_errors %}
-            <div class="alert alert-danger">
-                <strong>{{ error|escape }}</strong>
-            </div>
-        {% endfor %}
-    {% endif %}
+
     <section class="ftco-section center">
         <div class = "container">
             <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span>
-                <span class="mr-2"><a href="{% url 'productos:ingredientes_producto_listar' pk %}">Listar Ingredientes</a></span>
-                <span>Agregar Ingrediente</span></p>
+                <span class="mr-2"><a href="{% url 'productos:intento_listar' pk %}">Listar Combos</a></span>
+                <span>Crear Combo</span></p>
             <div class="row justify-content-center">
                 <div class="col-xl-9 ftco-animate">
                     <form method="post" enctype="multipart/form-data" action="#" class="billing-form ftco-bg-dark p-3 p-md-5 ">
                         {% csrf_token %}
                         <div class="row align-items-end">
                             <div class="col-xl-9 ftco-animate">
-                                <h3 class="mb-4 billing-heading">Agregar Ingrediente</h3>
+                                <h3 class="mb-4 billing-heading">Crear producto</h3>
                             </div>
                             <div class="col-xl-3 ftco-animate ">
-                                <p><a href="{% url 'productos:ingredientes_producto_listar' pk %}" style="width: 160px;" class="btn btn-white btn-outline-white p-2">Ver Ingredientes</a></p>
+                                <p><a href="{% url 'productos:intento_listar' pk %}" style="width: 160px;" class="btn btn-white btn-outline-white p-2">Ver Inventario</a></p>
                             </div>
                         </div>
                         <div class="row align-items-end">
+
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="names">Ingredientes</label>
-                                    {% render_field form.ingrediente class="form-control" %}
+                                    <label for="names">product</label>
+                                    {% render_field form.producto class="form-control" %}
                                 </div>
                             </div>
+
+                            </div>
+                            <div class="w-100"></div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="names">Cantidad</label>
-                                    {% render_field form.cantidad_necesaria class="form-control" %}
+                                    <label>cantidad</label>
+                                    {% render_field form.cantidad_productos class="form-control" %}
                                 </div>
                             </div>
+
+
                             <div class="w-100"></div>
                             <div class="col-md-12 align-items-end">
                                 <div class="form-group mt-2">
                                     <div class="text-center w-full p-t-15 p-b-15">
-                                        <input class="btn btn-primary py-4 px-4"  type="submit"  value="Crear Ingrediente" />
+                                        <input class="btn btn-primary py-4 px-4"  type="submit"  value="Crear Producto" />
                                     </div>
                                 </div>
                             </div>

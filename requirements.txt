@@ -16,3 +16,13 @@ send==0.2.0
 social-auth-app-django==3.1.0
 whitenoise==3.3.1
 django-widget-tweaks==1.4.3
+requests-oauthlib==1.0.0
+sqlparse==0.3.0
+stripe==1.82.1
+urllib3==1.24.2
+braintree==3.53.0
+certifi==2018.4.16
+chardet==3.0.4
+defusedxml==0.5.0
+django-allauth==0.36.0
+idna==2.7

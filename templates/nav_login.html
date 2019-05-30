@@ -1,4 +1,4 @@
-<li class="nav-item cart"><a href="{% url 'usuarios:carrito' %}" class="nav-link"><span class="icon icon-shopping_cart"></span>
+<li class="nav-item cart"><a href="{% url 'carrito:orden_detalle' %}" class="nav-link"><span class="icon icon-shopping_cart"></span>
     <span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a>
 </li>
 <li class="nav-item dropdown">
@@ -7,7 +7,7 @@
     <div class="dropdown-menu" aria-labelledby="dropdown04">
         <a class="dropdown-item" href="{% url 'usuarios:datos' usuario.id %}">Mi cuenta</a>
         <a class="dropdown-item" href="{% url 'usuarios:contrasena' usuario.id %}">Cambiar contraseña</a>
-        <a class="dropdown-item" href="{% url 'usuarios:carrito' %}">Carrito de Compras</a>
+        <a class="dropdown-item" href="{% url 'carrito:orden_detalle' %}">Carrito de Compras</a>
         <a class="dropdown-item" href="#">Mis Compras</a>
         <a class="dropdown-item" href="{% url 'usuarios:salir' %}">Salir</a>
     </div>

@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from apps.usuarios.utilities import generar_pdf_usuarios
 from django.urls import reverse_lazy
 from apps.tenants.models import *
@@ -14,7 +14,7 @@ from django.core.mail import send_mail, EmailMessage
 from django.core import serializers
 import json
 import os
-
+from apps.carrito import *
 
 
 def home(request):
@@ -195,10 +195,3 @@ def usuario_desactivar(request, id_usuario):
         os.remove("data_id_" + str(usuario.id) + "_" + str(usuario.username) + ".json")
 
     return redirect('usuarios:salir')
-
-
-def carrito(request):
-    schema = connection.schema_name
-    usuario = request.user
-    tenant_data = Tenant.objects.get(schema_name=schema)
-    return render(request, 'usuarios/carrito.html', {'tenant': tenant_data, 'usuario': usuario})

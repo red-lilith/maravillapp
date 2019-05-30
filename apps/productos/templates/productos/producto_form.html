@@ -12,6 +12,7 @@
             color: black;
         }
     </style>
+    {{form.media.css}}
 {% endblock css %}
 
 {% block titulo %}Crear Producto{% endblock titulo %}
@@ -64,6 +65,13 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <label>Stock</label>
+                                    {% render_field form.cantidad class="form-control" %}
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
                                     <label for="paquete">Tipo de Producto</label>
                                     {% bootstrap_field form.tipo show_label=false %}
                                 </div>
@@ -75,6 +83,12 @@
                                     {% render_field form.estado %}
                                 </div>
                             </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Ingredientes</label>
+                                    {% render_field form.ingredientes class="form-control" %}
+                                </div>
                             <div class="w-100"></div>
                             <div class="col-md-12 align-items-end">
                                 <div class="form-group mt-2">
@@ -93,6 +107,5 @@
 {% endblock contenido %}
 
 {% block js %}
-    <script>
-    </script>
+    {{form.media.js}}
 {% endblock js %}
