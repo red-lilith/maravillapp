@@ -26,7 +26,7 @@
             <tbody>
               {% for item in orden.get_carrito_items %}
               <tr class="text-center">
-                <td class="product-remove"><a href="{% url 'carrito:borrar_de_carrito' item.producto.id %}"><span class="icon-close"></span></a></td>
+                <td class="product-remove"><a href="{% url 'carrito:borrar_de_carrito' item.id %}"><span class="icon-close"></span></a></td>
                 {% if item.producto.imagen  %}
                 <td class="image-prod"><div class="img" style="background-image:url({{ item.producto.imagen.url }});"></div></td>
                 {% else %}
