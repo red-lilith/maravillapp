@@ -61,6 +61,7 @@ class DatosActualizar(SuccessMessageMixin, UpdateView):
     model = Usuario
     fields = ['first_name', 'last_name', 'documento', 'ciudad', 'barrio', 'direccion', 'telefono', 'username', 'email']
 
+    success_message = "Datos actualizados exitosamente"
     def get_context_data(self, **kwargs):
         context = super(DatosActualizar, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
@@ -93,6 +94,7 @@ class Registro(SuccessMessageMixin, CreateView):
     model = Usuario
     fields = ['first_name', 'last_name', 'documento', 'ciudad', 'barrio', 'direccion', 'telefono', 'username', 'email', 'password']
 
+    success_message = "Gracias por registrarte"
     def form_valid(self, form):
         form_data =form.cleaned_data
         try:
@@ -118,6 +120,7 @@ class CrearDigitador(SuccessMessageMixin, CreateView):
     fields = ['first_name', 'last_name', 'documento', 'ciudad', 'barrio', 'direccion', 'telefono', 'username', 'email',
               'password']
 
+    success_message = "Digitador creado exitosamente"
     def form_valid(self, form):
         form.instance.is_staff = True
         form_data =form.cleaned_data

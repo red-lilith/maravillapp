@@ -22,12 +22,22 @@
     <link rel="stylesheet" href="{% static 'coffee_template/css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'coffee_template/css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'coffee_template/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css' %}">
 </head>
+
+<style type="text/css">
+    body {
+      color: #c49b63 !important;
+    }
+</style>
 
 {% block css %}
     <style type="text/css">
         .ftco-navbar-dark {
             border: 1px solid white !important;
+        }
+        body {
+          color: #c49b63 !important;
         }
     </style>
 {% endblock css %}
@@ -95,7 +105,26 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <!-- <script src="{% static 'coffee_template/js/google-map.js' %}"></script> -->
 <script src="{% static 'coffee_template/js/main.js' %}"></script>
+<script src="{% static 'plugins/toastr/toastr.min.js' %}"></script>
 
+
+<script>
+    {% for msg in messages %}
+    $(document).ready(function () {
+        setTimeout(function () {
+            toastr.options = {
+                "closeButtons": true,
+                "progressBar": true,
+                "preventDuplicates": true,
+                "showEasing": "swing",
+                "extendedTimeOut": 30000,
+                "timeOut": 4000
+            }
+            toastr["{{ msg.tags }}"]("{{ msg }}")
+        }, 500);
+    });
+    {% endfor %}
+</script>
 {% block js %}
 
 {% endblock js %}

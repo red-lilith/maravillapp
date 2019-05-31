@@ -43,7 +43,7 @@ def agregar_a_carrito(request, **kwargs):
     producto = Producto.objects.filter(id=kwargs.get('item_id', "")).first()
     # check if the user already owns this product
     if producto in request.user.perfil.productos.all():
-        messages.info(request, 'Este producto ya está en el carrito')
+        messages.error(request, 'Este producto ya está en el carrito')
         return redirect(reverse('productos:tienda'))
     # create orderItem of the selected product
     orden_item, status = ItemCarrito.objects.get_or_create(producto=producto)
@@ -56,7 +56,7 @@ def agregar_a_carrito(request, **kwargs):
         orden_usuario.save()
 
     # show confirmation message and redirect back to the same page
-    messages.info(request, "Producto agregado al carrito!")
+    messages.success(request, "Producto agregado al carrito!")
     return redirect(reverse('productos:tienda'))
 
 
