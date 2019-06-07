@@ -8,7 +8,8 @@ import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
-class Perfil(models.Model):
+
+class Perfil_Compra(models.Model):
     usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)
     productos = models.ManyToManyField(Producto, blank=True)
     stripe_id = models.CharField(max_length=200, null=True, blank=True)
@@ -18,7 +19,7 @@ class Perfil(models.Model):
 
 
 def post_guardar_perfil(sender, instance, created, *args, **kwargs):
-    user_profile, created = Perfil.objects.get_or_create(usuario=instance)
+    user_profile, created = Perfil_Compra.objects.get_or_create(usuario=instance)
 
     if user_profile.stripe_id is None or user_profile.stripe_id == '':
         new_stripe_id = stripe.Customer.create(email=instance.email)
@@ -27,6 +28,7 @@ def post_guardar_perfil(sender, instance, created, *args, **kwargs):
 
 
 post_save.connect(post_guardar_perfil, sender=Usuario)
+
 
 class ItemCarrito(models.Model):
     producto = models.OneToOneField(Producto, on_delete=models.SET_NULL, null=True)
@@ -40,7 +42,7 @@ class ItemCarrito(models.Model):
 
 class Carrito(models.Model):
     cod_ref = models.CharField(max_length=15)
-    owner = models.ForeignKey(Perfil, on_delete=models.SET_NULL, null=True)
+    owner = models.ForeignKey(Perfil_Compra, on_delete=models.SET_NULL, null=True)
     is_ordered = models.BooleanField(default=False)
     items = models.ManyToManyField(ItemCarrito)
     date_ordered = models.DateTimeField(auto_now=True)
@@ -56,7 +58,7 @@ class Carrito(models.Model):
 
 
 class Transaccion(models.Model):
-    perfil = models.ForeignKey(Perfil, on_delete=models.CASCADE)
+    perfil = models.ForeignKey(Perfil_Compra, on_delete=models.CASCADE)
     token = models.CharField(max_length=120)
     orden_id = models.CharField(max_length=120)
     cantidad = models.DecimalField(max_digits=100, decimal_places=2)

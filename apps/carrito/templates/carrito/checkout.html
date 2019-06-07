@@ -1,0 +1,33 @@
+{% extends 'base_tenant.html' %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+{% block titulo %}Carrito de Compras{% endblock titulo %}
+{% block contenido %}
+
+<section class="ftco-section ftco-cart">
+ 
+    <div class="row justify-content-center">
+      <div class="col col-lg-3 col-md-6 mt-5 cart-wrap ftco-animate">
+        <div class="cart-total mb-3">
+          <h3 class="row justify-content-center">Muchas Gracias Por Su Compra</h3>
+        </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <p class="text-center"><a href="#" class="btn btn-primary py-3 px-4">Imprimir Factura</a></p>
+              </div>
+               <div class="col-md-6">
+                   <p class="text-center"><a href="#" class="btn btn-primary py-3 px-4">Ver Compras</a></p>
+               </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock contenido %}
+{% block js %}
+
+{% endblock js %}
