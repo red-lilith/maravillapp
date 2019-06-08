@@ -6,9 +6,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from apps.productos.models import Producto
 from django.db import connection
 from apps.tenants.models import *
+from apps.carrito.utilities import generar_pdf_factura
 
-from apps.carrito.extras import generar_orden_id, transact, generar_token_cliente
-from apps.carrito.models import ItemCarrito, Carrito, Transaccion, Perfil_Compra
+from apps.carrito.extras import generar_orden_id
+from apps.carrito.models import ItemCarrito, Carrito, Perfil_Compra
 
 import datetime
 import stripe
@@ -19,10 +20,22 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 def mis_compras(request):
     mi_usuario_perfil = Perfil_Compra.objects.filter(usuario=request.user).first()
     mis_ordenes = Carrito.objects.filter(is_ordered=True, owner=mi_usuario_perfil)
+    schema = connection.schema_name
     context = {
-        'mis_ordenes': mis_ordenes
+        'mis_ordenes': mis_ordenes,
+        'usuario': request.user,
+        'tenant': Tenant.objects.get(schema_name=schema)
+
     }
-    return render(request, "productos:tienda", context)
+    return render(request, "carrito/compras.html", context)
+
+
+def generar_factura(request, cod):
+    mi_orden = Carrito.objects.get(cod_ref=cod)
+    usuario = request.user
+    schema = connection.schema_name
+    tenant = Tenant.objects.get(schema_name=schema)
+    return generar_pdf_factura(mi_orden,usuario,tenant)
 
 
 def get_orden_usuario_pendiente(request):
@@ -37,10 +50,6 @@ def get_orden_usuario_pendiente(request):
 def agregar_a_carrito(request, **kwargs):
     perfil_usuario = get_object_or_404(Perfil_Compra, usuario=request.user)
     producto = Producto.objects.filter(id=kwargs.get('item_id', "")).first()
-    # check if the user already owns this product
-    if producto in request.user.perfil.productos.all():
-        messages.error(request, 'Este producto ya está en el carrito')
-        return redirect(reverse('productos:tienda'))
     # create orderItem of the selected product
     orden_item, status = ItemCarrito.objects.get_or_create(producto=producto)
     # create order associated with the user
@@ -74,68 +83,31 @@ def orden_detalle(request, **kwargs):
     context = {
         'orden': orden_existente,
         'usuario': usuario,
-        'total': orden_existente.get_carrito_total(),
         'tenant': tenant,
     }
     return render(request, 'carrito/orden_detalle.html', context)
 
 
 @login_required()
-def checkout(request, **kwargs):
-    token_cliente = generar_token_cliente()
-    orden_existente = get_orden_usuario_pendiente(request)
-    publishKey = settings.STRIPE_PUBLISHABLE_KEY
-    if request.method == 'POST':
-        token = request.POST.get('stripeToken', False)
-        if token:
-            try:
-                cargo = stripe.Charge.create(
-                    amount=100*orden_existente.get_carrito_total(),
-                    currency='cop',
-                    description='Factura de compra',
-                    source=token,
-                )
-
-                return redirect(reverse('carrito:actualizar_transaccion',
-                        kwargs={
-                            'token': token
-                        })
-                    )
-            except stripe.CardError as e:
-                message.info(request, "Pago rechazado.")
-        else:
-            resultado = transact({
-                'amount': orden_existente.get_carrito_total(),
-                'payment_method_nonce': request.POST['payment_method_nonce'],
-                'options': {
-                    "submit_for_settlement": True
-                }
-            })
-
-            if resultado.is_success or resultado.transaction:
-                return redirect(reverse('carrito:actualizar_transaccion',
-                        kwargs={
-                            'token': resultado.transaction.id
-                        })
-                    )
-            else:
-                for x in resultado.errors.deep_errors:
-                    messages.info(request, x)
-                return redirect(reverse('carrito:checkout'))
-
-    context = {
-        'orden': orden_existente,
-        'token_cliente': token_cliente,
-        'STRIPE_PUBLISHABLE_KEY': publishKey
-    }
-
-    return render(request, 'carrito/checkout.html', context)
+def checkout(request, cod):
+        usuario = request.user
+        schema = connection.schema_name
+        tenant = Tenant.objects.get(schema_name=schema)
+        orden_existente = get_orden_usuario_pendiente(request)
+        context = {
+            'orden': orden_existente,
+            'usuario': usuario,
+            'tenant': tenant,
+            'orden_id':cod
+        }
+        return render(request, 'carrito/checkout.html', context)
 
 
 @login_required()
-def actualizar_transaccion(request, token):
+def actualizar_transaccion(request):
 
     order_a_comprar = get_orden_usuario_pendiente(request)
+    cod = order_a_comprar.cod_ref
 
     # actualiza orden
     order_a_comprar.is_ordered = True
@@ -149,27 +121,12 @@ def actualizar_transaccion(request, token):
     items.update(is_ordered=True, date_ordered=datetime.datetime.now())
 
     # Add products to user profile
-    perfil_usuario = get_object_or_404(Perfil_Compra, user=request.user)
+    perfil_usuario = get_object_or_404(Perfil_Compra, usuario=request.user)
     # get the products from the items
     productos_comprados = [item.producto for item in items]
-    perfil_usuario.ebooks.add(*productos_comprados)
+    perfil_usuario.productos.add(*productos_comprados)
     perfil_usuario.save()
 
-    # create a transaction
-    transaccion= Transaccion(perfil=request.user.profile,
-                            token=token,
-                            orden_id=order_a_comprar.id,
-                            cantidad=order_a_comprar.get_carrito_total(),
-                            success=True)
-    # save the transcation (otherwise doesn't exist)
-    transaccion.save()
-
-    # send an email to the customer
-    # look at tutorial on how to send emails with sendgrid
+    #enviar correo de la compra
     messages.info(request, "Compra realizada con éxito.")
-    return redirect(reverse('carrito:mis_compras'))
-
-
-def success(request, **kwargs):
-     # a view signifying the transcation was successful
-     return render(request, 'shopping_cart/purchase_success.html', {})
+    return redirect('carrito:checkout', cod=cod)

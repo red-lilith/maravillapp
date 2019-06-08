@@ -8,7 +8,7 @@
         <a class="dropdown-item" href="{% url 'usuarios:datos' usuario.id %}">Mi cuenta</a>
         <a class="dropdown-item" href="{% url 'usuarios:contrasena' usuario.id %}">Cambiar contraseña</a>
         <a class="dropdown-item" href="{% url 'carrito:orden_detalle' %}">Carrito de Compras</a>
-        <a class="dropdown-item" href="#">Mis Compras</a>
+        <a class="dropdown-item" href="{% url 'usuarios:mis_compras' %}">Mis Compras</a>
         <a class="dropdown-item" href="{% url 'usuarios:salir' %}">Salir</a>
     </div>
 </li>

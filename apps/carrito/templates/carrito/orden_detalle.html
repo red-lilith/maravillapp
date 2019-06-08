@@ -16,7 +16,7 @@
             <thead class="thead-primary">
               <tr class="text-center">
                 <th>&nbsp;</th>
-                <th>Imagen</th>
+                <th> </th>
                 <th>Producto</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
@@ -64,7 +64,7 @@
           <h3>Facturación</h3>
           <p class="d-flex">
             <span>Subtotal</span>
-            <span>${{ total }}</span>
+            <span>${{orden.get_carrito_total}}</span>
           </p>
           <p class="d-flex">
             <span>Domicilio</span>
@@ -77,10 +77,10 @@
           <hr>
           <p class="d-flex total-price">
             <span>Total</span>
-            <span>${{total}}</span>
+            <span>${{orden.get_carrito_total}}</span>
           </p>
         </div>
-        <p class="text-center"><a href="#" class="btn btn-primary py-3 px-4">Pagar</a></p>
+        <p class="text-center"><a href="{% url 'carrito:actualizar_transaccion' %}" class="btn btn-primary py-3 px-4">Pagar</a></p>
       </div>
     </div>
   </div>
