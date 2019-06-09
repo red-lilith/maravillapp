@@ -8,9 +8,6 @@ from django.core.mail import send_mail, EmailMessage
 # Create your views here.
 
 
-
-
-
 def dashboard(request):
     schema = connection.schema_name
     usuario = request.user

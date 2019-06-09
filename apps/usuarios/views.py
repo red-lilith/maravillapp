@@ -13,9 +13,12 @@ from django.core.mail import send_mail, EmailMessage
 from django.core import serializers
 import json
 import os
-from apps.carrito import *
+import locale
+from apps.usuarios.reports import *
 from apps.carrito.views import *
 
+locale.setlocale(locale.LC_ALL, "esp")
+#locale.setlocale(locale.LC_ALL, "es_CO.utf8")
 
 def home(request):
     schema = connection.schema_name
@@ -41,19 +44,22 @@ def home(request):
                       {'public': tenant_data, 'usuario': usuario, 'tenants': tenants,
                        'form': form})
     else:
-        if usuario.is_authenticated:
-            return render(request, 'usuarios/home_tenant.html',
-            {'tenant': tenant_data, 'usuario': usuario, 'orden': get_orden_usuario_pendiente(request)})
-        else:
-            return render(request, 'usuarios/home_tenant.html',
-            {'tenant': tenant_data, 'usuario': usuario})
+        return render(request, 'usuarios/home_tenant.html',
+                      {'tenant': tenant_data, 'usuario': usuario, 'orden': get_orden_usuario_pendiente(request)})
 
 
 def dashboard(request):
     schema = connection.schema_name
-    usuario = request.user
     tenant_data = Tenant.objects.get(schema_name=schema)
-    return render(request, 'usuarios/dash_admin.html', {'tenant': tenant_data, 'usuario': usuario})
+    usuario = request.user
+    mes = datetime.date(datetime.date.today().year, datetime.date.today().month, 1).strftime('%B')
+    counter = reportes_counter()
+    datos_ventas_diarias = reporte_ventas_diarias()
+    datos_productos_vendidos = reporte_productos_vendidos()
+
+    return render(request, 'usuarios/dash_admin.html', {'tenant': tenant_data, 'usuario': usuario, 'mes':mes,
+                                                        'datos_ventas_diarias': datos_ventas_diarias, 'counter': counter,
+                                                        'datos_productos_vendidos': datos_productos_vendidos})
 
 
 class DatosActualizar(SuccessMessageMixin, UpdateView):

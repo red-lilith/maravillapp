@@ -1,12 +1,257 @@
 {% extends 'base_dash.html' %}
-{% load staticfiles %}
 {% load bootstrap4 %}
+{% load staticfiles %}
+{% block css %}
+    <style type="text/css">
 
-{% block titulo %}Dashboard{% endblock titulo %}
+        .line, .bar{
+            width: 99% !important;
+            height: 250px !important;
+        }
+        .polar, .pie, .doughnut, .radar {
+            width: 100% !important;
+        }
+
+        .text-color {
+            color: #c49b63;
+        }
+    </style>
+
+{% endblock css %}
+
+{% block titulo %} Dashboard {% endblock titulo %}
 
 {% block contenido %}
 
+    <section class="pb-1 ftco-section center">
+        <div class = "pb-1 container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 ftco-animate">
+                    <div class="p-5 ftco-counter img" id="section-counter" data-stellar-background-ratio="0.5">
+                        <div class="col-md-12 justify-content-center">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                                    <div class="block-18 text-center">
+                                        <div class="text">
+                                            <div class="icon"><span class="icon-restaurant_menu"></span></div>
+                                            <strong class="number" data-number="{{ counter.total_productos }}">0</strong>
+                                            <span>Productos en Menú</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                                    <div class="block-18 text-center">
+                                        <div class="text">
+                                            <div class="icon"><span class="icon-user"></span></div>
+                                            <strong class="number" data-number="{{ counter.total_clientes }}">0</strong>
+                                            <span>Clientes Registrados</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                                    <div class="block-18 text-center">
+                                        <div class="text">
+                                            <div class="icon"><span class="icon-local_mall"></span></div>
+                                            <strong class="number" data-number="{{ counter.total_compras }}">0</strong>
+                                            <span>Clientes Compradores</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                                    <div class="block-18 text-center">
+                                        <div class="text">
+                                            <div class="icon"><span class="icon-star"></span></div>
+                                            <strong class="number" data-number="{{ counter.num_vendidos }}">0</strong>
+                                            <span>Productos Vendidos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 col-xl-12 ftco-animate">
+                    <div style="border: 1px solid #c49b63" class="p-2 line-chart rounded">
+                        <canvas id="line" class="line"> </canvas>
+                        <script>
+                            var lineChartData = {
+                                labels : ["Día 1","Día 2","Día 3","Día 4","Día 5","Día 6","Día 7","Día 8","Día 9","Día 10",
+                                    "Día 11","Día 12","Día 13","Día 14","Día 15","Día 16","Día 17","Día 18","Día 19","Día 20",
+                                    "Día 21","Día 22","Día 23","Día 24","Día 25","Día 26","Día 27","Día 28","Día 29","Día 30","Día 31"],
+                                datasets : [
+                                    {
+                                        fillColor : "#c49b63",
+                                        strokeColor : "#c49b63",
+                                        pointColor : "black",
+                                        pointStrokeColor : "#c49b63",
+                                        data : {{ datos_ventas_diarias|safe }}
+                                    },
+                                ],
+                            };
+                            new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
+                        </script>
+                        <div class="row justify-content-start">
+                            <div class="col-xl-12 ftco-animate">
+                                <h4 class="text-center">Ventas del mes de {{ mes }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "p-2 col-xl-6 container">
+                    <div class="ftco-animate rounded">
+                        <div style="border: 1px solid #c49b63" class="p-2 polararea">
+                            <canvas id="polarArea" class="polar"></canvas>
+                            <script>
+                                var chartData = {{ datos_productos_vendidos|safe }};
+                                new Chart(document.getElementById("polarArea").getContext("2d")).PolarArea(chartData);
+                            </script>
+                            <div class="row justify-content-start">
+                                <div class="col-xl-12 ftco-animate">
+                                    <h4 class="text-center">Productos más vendidos</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "p-2 col-xl-6 container">
+                    <div class="ftco-animate rounded">
+                        <div style="border: 1px solid #c49b63" class="p-2 chart-other">
+                            <canvas id="pie" class="pie"></canvas>
+                            <script>
+                                var pieData = [
+                                    {
+                                        value: 30,
+                                        color:"#b88547"
+                                    },
+                                    {
+                                        value : 50,
+                                        color : "#672b21"
+                                    },
+                                    {
+                                        value : 100,
+                                        color : "#8bc34a"
+                                    }
+
+                                ];
+                                new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+                            </script>
+                            <div class="row justify-content-start">
+                                <div class="col-xl-12 ftco-animate">
+                                    <h4 class="text-center">Torta</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "p-2 col-xl-6 container">
+                    <div class="ftco-animate ftco-services rounded">
+                        <div class="p-5 dygno">
+                            <div class="row justify-content-start">
+                                <div class="col-xl-12 ftco-animate">
+                                    <h3 class="text-color mb-4 billing-heading">Una donita</h3>
+                                </div>
+                            </div>
+                            <canvas id="doughnut" class="doughnut"></canvas>
+                            <script>
+                                var doughnutData = [
+                                    {
+                                        value: 30,
+                                        color:"#421d15"
+                                    },
+                                    {
+                                        value : 50,
+                                        color : "#dc853b"
+                                    },
+                                    {
+                                        value : 100,
+                                        color : "#63bc41"
+                                    },
+                                    {
+                                        value : 40,
+                                        color : "#55bcb3"
+                                    },
+                                ];
+                                new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class = "p-2 col-xl-6 container">
+                    <div class="ftco-animate ftco-services rounded">
+                        <div class="p-5 revenue">
+                            <div class="row justify-content-start">
+                                <div class="col-xl-12 ftco-animate">
+                                    <h3 class="text-color mb-4 billing-heading">Una cosa rara</h3>
+                                </div>
+                            </div>
+                            <canvas id="radar" class="radar"></canvas>
+                            <script>
+                                var radarChartData = {
+                                    labels : ["","","","","","",""],
+                                    datasets : [
+                                        {
+                                            fillColor : "rgba(220, 133, 59, 0.83)",
+                                            strokeColor : "#dc853b",
+                                            pointColor : "#dc853b",
+                                            pointStrokeColor : "#fff",
+                                            data : [65,59,90,81,56,55,40]
+                                        },
+                                        {
+                                            fillColor : "rgba(103, 43, 33, 0.82)",
+                                            strokeColor : "#672b21",
+                                            pointColor : "#672b21",
+                                            pointStrokeColor : "#fff",
+                                            data : [28,48,40,19,96,27,100]
+                                        }
+                                    ]
+
+                                };
+                                new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 col-xl-12 ftco-animate">
+                    <div class="p-5 glocy-chart ftco-services rounded">
+                        <div class="row justify-content-start">
+                            <div class="col-xl-9 ftco-animate ">
+                                <h3 class="text-color mb-4 billing-heading">Unas barritas</h3>
+                            </div>
+                        </div>
+                        <canvas id="bar" class="bar"></canvas>
+                        <script>
+                            var barChartData = {
+                                labels : ["Ene","Feb","Mar","Abr","May","Jun","Jul"],
+                                datasets : [
+                                    {
+                                        fillColor : "#a77245",
+                                        data : [65,59,90,81,56,55,40]
+                                    },
+                                    {
+                                        fillColor : "#421d15",
+                                        data : [28,48,40,19,96,27,100]
+                                    }
+                                ]
+
+                            };
+                            new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock contenido %}
+
 {% block js %}
+    <script>
+        $(function () {
+
+
+        });
+
+    </script>
 
 {% endblock js %}

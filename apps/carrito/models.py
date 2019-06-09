@@ -10,9 +10,10 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 class Perfil_Compra(models.Model):
-    usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE, null=True)
     productos = models.ManyToManyField(Producto, blank=True)
     stripe_id = models.CharField(max_length=200, null=True, blank=True)
+    session_key = models.CharField(max_length=40)
 
     def __str__(self):
         return self.usuario.username
@@ -52,6 +53,10 @@ class Carrito(models.Model):
 
     def get_carrito_total(self):
         return sum([item.producto.precio for item in self.items.all()])
+
+    @staticmethod
+    def get_total_compradores():
+        return Carrito.objects.filter(is_ordered=True).distinct('owner_id').count()
 
     def __str__(self):
         return '{0} - {1}'.format(self.owner, self.cod_ref)

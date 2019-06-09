@@ -12,3 +12,8 @@ class Usuario(AbstractUser):
     direccion = models.CharField(max_length=200)
     telefono = models.CharField(max_length=20)
     USERNAME_FIELD = 'username'
+
+    @staticmethod
+    def get_total_clientes():
+        total = Usuario.objects.filter(is_staff=False, is_superuser=False).count()
+        return total

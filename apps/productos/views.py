@@ -15,13 +15,15 @@ from apps.carrito.views import *
 class Tienda(ListView):
     model = Producto
 
+    def get_queryset(self):
+        return Producto.objects.filter(estado=True, cantidad__gte=1)
+
     def get_context_data(self, **kwargs):
         context = super(Tienda, self).get_context_data(**kwargs)
         context['usuario'] = self.request.user
         schema = connection.schema_name
         context['tenant'] = Tenant.objects.get(schema_name=schema)
-        if self.request.user.is_authenticated:
-            context['orden'] = get_orden_usuario_pendiente(self.request)
+        context['orden'] = get_orden_usuario_pendiente(self.request)
         return context
 
 
@@ -38,8 +40,7 @@ class Item(DetailView):
         context['rapida'] = Producto.objects.filter(tipo="Comida Rápida", estado=True).last()
         context['infantil'] = Producto.objects.filter(tipo="Infantil", estado=True).last()
         context['bebida'] = Producto.objects.filter(tipo="Bebida", estado=True).last()
-        if self.request.user.is_authenticated:
-            context['orden'] = get_orden_usuario_pendiente(self.request)
+        context['orden'] = get_orden_usuario_pendiente(self.request)
         return context
 
 

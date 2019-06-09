@@ -7,7 +7,7 @@ from apps.productos.models import Producto
 from django.db import connection
 from apps.tenants.models import *
 from apps.carrito.utilities import generar_pdf_factura
-
+from django.utils import timezone
 from apps.carrito.extras import generar_orden_id
 from apps.carrito.models import ItemCarrito, Carrito, Perfil_Compra
 
@@ -39,16 +39,30 @@ def generar_factura(request, cod):
 
 
 def get_orden_usuario_pendiente(request):
-    perfil_usuario = get_object_or_404(Perfil_Compra, usuario=request.user)
+    if request.user.is_authenticated:
+        perfil_usuario = get_object_or_404(Perfil_Compra, usuario=request.user)
+    else:
+        perfil_usuario = get_object_or_404(Perfil_Compra, session_key=request.session.session_key)
     carrito = Carrito.objects.filter(owner=perfil_usuario, is_ordered=False)
     if carrito.exists():
         return carrito[0]
     return 0
 
 
-@login_required()
+#@login_required()
 def agregar_a_carrito(request, **kwargs):
-    perfil_usuario = get_object_or_404(Perfil_Compra, usuario=request.user)
+    if request.user.is_authenticated:
+        perfil_usuario, created = Perfil_Compra.objects.get_or_create(usuario=request.user)
+        perfil_usuario.session_key = request.session.session_key
+        perfil_usuario.save()
+    else:
+        request.session.save()
+        perfil_usuario, created = Perfil_Compra.objects.get_or_create(usuario=None, session_key=request.session.session_key)
+        new_stripe_id = stripe.Customer.create(email=None)
+        perfil_usuario.stripe_id = new_stripe_id['id']
+        perfil_usuario.save()
+
+    #perfil_usuario = Perfil_Compra.objects.get_or_create(usuario=request.user)
     producto = Producto.objects.filter(id=kwargs.get('item_id', "")).first()
     # create orderItem of the selected product
     orden_item, status = ItemCarrito.objects.get_or_create(producto=producto)
@@ -65,7 +79,7 @@ def agregar_a_carrito(request, **kwargs):
     return redirect(reverse('productos:tienda'))
 
 
-@login_required()
+#@login_required()
 def borrar_de_carrito(request, item_id):
     item_a_borrar = ItemCarrito.objects.filter(pk=item_id)
     if item_a_borrar.exists():
@@ -74,7 +88,7 @@ def borrar_de_carrito(request, item_id):
     return redirect(reverse('carrito:orden_detalle'))
 
 
-@login_required()
+#@login_required()
 def orden_detalle(request, **kwargs):
     usuario = request.user
     schema = connection.schema_name
@@ -88,7 +102,7 @@ def orden_detalle(request, **kwargs):
     return render(request, 'carrito/orden_detalle.html', context)
 
 
-@login_required()
+#@login_required()
 def checkout(request, cod):
         usuario = request.user
         schema = connection.schema_name
@@ -103,7 +117,7 @@ def checkout(request, cod):
         return render(request, 'carrito/checkout.html', context)
 
 
-@login_required()
+#@login_required()
 def actualizar_transaccion(request):
 
     order_a_comprar = get_orden_usuario_pendiente(request)
@@ -111,17 +125,24 @@ def actualizar_transaccion(request):
 
     # actualiza orden
     order_a_comprar.is_ordered = True
-    order_a_comprar.date_ordered = datetime.datetime.now()
+    order_a_comprar.date_ordered = datetime.datetime.now(tz=timezone.utc)
     order_a_comprar.save()
 
     # traer todos los items
     items = order_a_comprar.items.all()
 
     # actualizar items
-    items.update(is_ordered=True, date_ordered=datetime.datetime.now())
+    items.update(is_ordered=True, date_ordered=datetime.datetime.now(tz=timezone.utc))
+    for item in items:
+        cantidad = item.producto.cantidad
+        item.producto.cantidad = int(cantidad)-1
+        item.producto.save()
 
     # Add products to user profile
-    perfil_usuario = get_object_or_404(Perfil_Compra, usuario=request.user)
+    if request.user.is_authenticated:
+        perfil_usuario = get_object_or_404(Perfil_Compra, usuario=request.user)
+    else:
+        perfil_usuario = get_object_or_404(Perfil_Compra, session_key=request.session.session_key)
     # get the products from the items
     productos_comprados = [item.producto for item in items]
     perfil_usuario.productos.add(*productos_comprados)

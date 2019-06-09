@@ -51,8 +51,12 @@ def generar_pdf_factura(orden, usuario, tenant):
     p.drawString(20, 280, "Factura # " + str(orden.cod_ref))
     p.setFillColor(colors.black)
     p.drawString(20, 270, "Fecha de Compra: " + str(orden.date_ordered))
-    p.drawString(20, 262, "Nombre del Cliente: " + str(usuario.first_name+" "+usuario.last_name))
-    p.drawString(20, 254, "CC.: " + str(usuario.documento))
+    if usuario.is_authenticated:
+        p.drawString(20, 262, "Nombre del Cliente: " + str(usuario.first_name + " " + usuario.last_name))
+        p.drawString(20, 254, "CC.: " + str(usuario.documento))
+    else:
+        p.drawString(20, 262, "Nombre del Cliente: ")
+        p.drawString(20, 254, "CC.: ")
     p.drawString(20, 240, "==================================")
 
     styles = getSampleStyleSheet()
