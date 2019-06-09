@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="{% static 'coffee_template/css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'coffee_template/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css' %}">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 {% block css %}
@@ -31,32 +33,21 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'usuarios:home' %}">Maravilla<small>{{tenant.nombre}}</small></a>
+        <a class="navbar-brand" href="{% url 'usuarios:home' %}">Maravilla<small>Iniciar Sesión</small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="{% url 'productos:menu' %}" class="nav-link">Nuestro Menú</a></li>
-                <li class="nav-item"><a href="{% url 'productos:tienda' %}" class="nav-link">Tienda</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Promociones</a></li>
-                {% if usuario.is_anonymous %}
-                    {% include 'nav_logout.html' %}
-                {% elif usuario.is_staff %}
-                    {% include 'nav_dash.html' %}
-                {% else %}
-                    {% include 'nav_login.html' %}
-                {% endif %}
+                {% include 'nav_logout.html' %}
             </ul>
         </div>
     </div>
 </nav>
 <!-- END nav -->
-
 {% block contenido %}
 
 {% endblock contenido %}
-
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
@@ -104,3 +95,4 @@
 
 </body>
 </html>
+

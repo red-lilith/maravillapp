@@ -3,10 +3,10 @@
 </li>
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
-       aria-haspopup="true" aria-expanded="false">{{ usuario.username }}</a>
+       aria-haspopup="true" aria-expanded="false">{{ request.user.username }}</a>
     <div class="dropdown-menu" aria-labelledby="dropdown04">
-        <a class="dropdown-item" href="{% url 'usuarios:datos' usuario.id %}">Mi cuenta</a>
-        <a class="dropdown-item" href="{% url 'usuarios:contrasena' usuario.id %}">Cambiar contraseña</a>
+        <a class="dropdown-item" href="{% url 'usuarios:datos' request.user.id %}">Mi cuenta</a>
+        <a class="dropdown-item" href="{% url 'usuarios:contrasena' %}">Cambiar contraseña</a>
         <a class="dropdown-item" href="{% url 'carrito:orden_detalle' %}">Carrito de Compras</a>
         <a class="dropdown-item" href="{% url 'usuarios:mis_compras' %}">Mis Compras</a>
         <a class="dropdown-item" href="{% url 'usuarios:salir' %}">Salir</a>

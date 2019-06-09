@@ -3,12 +3,11 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import get_object_or_404, render
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
 from apps.usuarios.utilities import generar_pdf_usuarios
 from django.urls import reverse_lazy
-from apps.tenants.models import *
 from .forms import *
-from django.db import connection
 from django.contrib.auth.hashers import make_password
 from django.core.mail import send_mail, EmailMessage
 from django.core import serializers
@@ -73,21 +72,6 @@ class DatosActualizar(SuccessMessageMixin, UpdateView):
 
     def get_success_url(self, **kwargs):
         return reverse_lazy("usuarios:home")
-
-
-class ContrasenaActualizar(SuccessMessageMixin, UpdateView):
-    model = Usuario
-    fields = ['password']
-
-    def get_context_data(self, **kwargs):
-        context = super(ContrasenaActualizar, self).get_context_data(**kwargs)
-        context['usuario'] = self.request.user
-        schema = connection.schema_name
-        context['tenant'] = Tenant.objects.get(schema_name=schema)
-        return context
-
-    def get_success_url(self, **kwargs):
-        return reverse_lazy("usuarios:contrasena")
 
 
 class Registro(SuccessMessageMixin, CreateView):
@@ -206,3 +190,22 @@ def usuario_desactivar(request, id_usuario):
         os.remove("data_id_" + str(usuario.id) + "_" + str(usuario.username) + ".json")
 
     return redirect('usuarios:salir')
+
+
+def cambiar_contrasena(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(data=request.POST, user=request.user)
+
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            messages.success(request, "La contraseña ha sido actualizada.")
+            return redirect(reverse('usuarios:home'))
+        else:
+            messages.error(request, "Contraseña incorrecta. Intente de nuevo.")
+            return redirect(reverse('usuarios:contrasena'))
+    else:
+        form = PasswordChangeForm(user=request.user)
+
+        args = {'form': form}
+        return render(request, 'usuarios/contrasena.html', args)

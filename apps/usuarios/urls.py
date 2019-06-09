@@ -3,7 +3,8 @@ from apps.usuarios.views import *
 from django.contrib.auth import views as auth_views
 from apps.usuarios import views
 from apps.carrito.views import mis_compras, generar_factura
-#from apps.accounts.decorators import check_recaptcha
+from apps.usuarios.decorators import check_recaptcha
+from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
 app_name = 'usuarios'
 
@@ -12,7 +13,22 @@ urlpatterns = [
     path('dashboard', dashboard, name='dashboard'),
     path('registro', views.Registro.as_view(), name='registrarme'),
     path('mi-cuenta/<int:pk>', views.DatosActualizar.as_view(template_name='usuarios/datos.html'), name='datos'),
-    path('contrasena/<int:pk>', views.ContrasenaActualizar.as_view(template_name='usuarios/contrasena.html'), name='contrasena'),
+    path('cambiar-contraseña/', cambiar_contrasena, name="contrasena"),
+    path('restablecer-contrasena/', PasswordResetView.as_view(template_name='usuarios/restablecer_contrasena.html',
+                                                             success_url='usuarios:link_enviado',
+                                                             email_template_name='usuarios/restablecer_contrasena_email.html'),
+         name='restablecer_contrasena'),
+    path('restablecer-contrasena/enviado/', PasswordResetDoneView.as_view(
+        template_name='usuarios/link_enviado.html'),
+         name='link_enviado'),
+    path('restablecer-contrasena/confirmar/(<uidb64>)-(<token>)/',
+         PasswordResetConfirmView.as_view(template_name='usuarios/confirmar_restablecer.html',
+                                          success_url=reverse_lazy('usuarios:restablecer_completo'),),
+         name='restablecer_contrasena_confirmar'),
+    path('restablecer-contrasena/completo/',
+         PasswordResetCompleteView.as_view(template_name='usuarios/restablecer_completo.html',),
+         name='restablecer_completo'),
+
     path('desactivar/<int:id_usuario>', usuario_desactivar, name='desactivar'),
 
     path('crear-digitador', views.CrearDigitador.as_view(template_name='usuarios/digitador_crear.html'), name='crear_digitador'),
@@ -24,10 +40,8 @@ urlpatterns = [
     path('ver-cliente/<int:pk>', views.UsuarioDetalle.as_view(template_name='usuarios/cliente_detail.html'), name='cliente_detalle'),
     path('pdf-clientes/<staff>', pdf_usuario, name='pdf_clientes'),
 
-
-    path('login', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='usuarios/login.html'),
-         name='login'),
-
+    path('login', check_recaptcha(auth_views.LoginView.as_view(redirect_authenticated_user=True,
+                                                          template_name='usuarios/login.html')), name='login'),
     path('mis-compras', mis_compras, name='mis_compras'),
     path('factura/orden-<int:cod>', generar_factura, name='factura'),
     path('salir', auth_views.LogoutView.as_view(), name='salir'),

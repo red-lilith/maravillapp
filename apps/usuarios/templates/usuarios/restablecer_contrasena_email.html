@@ -1,0 +1,15 @@
+{% load i18n %}{% autoescape off %}
+{% blocktrans %}Estás recibiendo este correo porque has solicitado restablecer tu contraseña en el sitio
+    {{ site_name }}.{% endblocktrans %}
+
+{% trans "Por favor vaya a la siguiente página para restablecer su contraseña:" %}
+{% block reset_link %}
+{{ protocol }}://{{ domain }}{% url 'usuarios:restablecer_contrasena_confirmar' uidb64=uid token=token %}
+{% endblock %}
+{% trans "Nombre de Usuario:" %} {{ user.get_username }}
+
+{% trans "Muchas gracias por visitar nuestro sitio!" %}
+
+{% blocktrans %}El equipo de {{ site_name }}{% endblocktrans %}
+
+{% endautoescape %}

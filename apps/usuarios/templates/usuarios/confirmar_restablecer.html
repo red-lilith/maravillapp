@@ -1,4 +1,4 @@
-{% extends 'base_perfil.html' %}
+{% extends 'base_logout.html' %}
 {# Load the tag library #}
 {% load bootstrap4 %}
 {% load static %}
@@ -18,12 +18,6 @@
                         {% csrf_token %}
                         <h3 class="mb-4 billing-heading">Cambiar Contraseña</h3>
                         <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <label for="password">Contraseña Actual</label>
-                                    {% render_field form.old_password class="form-control" type="password" %}
-                                </div>
-                            </div>
 
                             <div class="col-md-8">
                                 <div class="form-group">
