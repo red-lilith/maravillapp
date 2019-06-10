@@ -40,9 +40,15 @@ def generar_factura(request, cod):
 
 def get_orden_usuario_pendiente(request):
     if request.user.is_authenticated:
-        perfil_usuario = get_object_or_404(Perfil_Compra, usuario=request.user)
+        perfil_usuario, created = Perfil_Compra.objects.get_or_create(usuario=request.user)
+        perfil_usuario.session_key = request.session.session_key
+        perfil_usuario.save()
     else:
-        perfil_usuario = get_object_or_404(Perfil_Compra, session_key=request.session.session_key)
+        request.session.save()
+        perfil_usuario, created = Perfil_Compra.objects.get_or_create(usuario=None, session_key=request.session.session_key)
+        new_stripe_id = stripe.Customer.create(email=None)
+        perfil_usuario.stripe_id = new_stripe_id['id']
+        perfil_usuario.save()
     carrito = Carrito.objects.filter(owner=perfil_usuario, is_ordered=False)
     if carrito.exists():
         return carrito[0]
@@ -53,14 +59,9 @@ def get_orden_usuario_pendiente(request):
 def agregar_a_carrito(request, **kwargs):
     if request.user.is_authenticated:
         perfil_usuario, created = Perfil_Compra.objects.get_or_create(usuario=request.user)
-        perfil_usuario.session_key = request.session.session_key
-        perfil_usuario.save()
     else:
         request.session.save()
         perfil_usuario, created = Perfil_Compra.objects.get_or_create(usuario=None, session_key=request.session.session_key)
-        new_stripe_id = stripe.Customer.create(email=None)
-        perfil_usuario.stripe_id = new_stripe_id['id']
-        perfil_usuario.save()
 
     #perfil_usuario = Perfil_Compra.objects.get_or_create(usuario=request.user)
     producto = Producto.objects.filter(id=kwargs.get('item_id', "")).first()

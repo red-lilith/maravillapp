@@ -46,6 +46,9 @@
                 <li class="nav-item"><a href="{% url 'productos:menu' %}" class="nav-link">Nuestro Menú</a></li>
                 <li class="nav-item active"><a href="{% url 'productos:tienda' %}" class="nav-link">Pide Ahora</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Promociones</a></li>
+ <li class="nav-item cart"><a href="{% url 'carrito:orden_detalle' %}" class="nav-link"><span class="icon icon-shopping_cart"></span>
+    <span class="bag d-flex justify-content-center align-items-center"><small>{{ orden.get_carrito_items|length }}</small></span></a>
+</li>
                 {% if usuario.is_anonymous %}
                     {% include 'nav_logout.html' %}
                 {% elif usuario.is_staff %}

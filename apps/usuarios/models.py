@@ -17,3 +17,5 @@ class Usuario(AbstractUser):
     def get_total_clientes():
         total = Usuario.objects.filter(is_staff=False, is_superuser=False).count()
         return total
+
+
