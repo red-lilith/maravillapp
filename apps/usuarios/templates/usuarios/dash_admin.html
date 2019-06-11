@@ -80,10 +80,10 @@
                                     "Día 21","Día 22","Día 23","Día 24","Día 25","Día 26","Día 27","Día 28","Día 29","Día 30","Día 31"],
                                 datasets : [
                                     {
-                                        fillColor : "#c49b63",
-                                        strokeColor : "#c49b63",
-                                        pointColor : "black",
-                                        pointStrokeColor : "#c49b63",
+                                        fillColor : "rgb(153, 102, 255)",
+                                        strokeColor : "rgb(153, 102, 255)",
+                                        pointColor : "rgb(255, 99, 132)",
+                                        pointStrokeColor : "rgb(153, 102, 255)",
                                         data : {{ datos_ventas_diarias|safe }}
                                     },
                                 ],
@@ -92,11 +92,12 @@
                         </script>
                         <div class="row justify-content-start">
                             <div class="col-xl-12 ftco-animate">
-                                <h4 class="text-center">Ventas del mes de {{ mes }}</h4>
+                                <h4 class="text-center">Ventas del mes de {{ mes }} ($$$)</h4>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% if tenant.paquete == "STANDARD" or tenant.paquete == "PREMIUM" %}
                 <div class = "p-2 col-xl-6 container">
                     <div class="ftco-animate rounded">
                         <div style="border: 1px solid #c49b63" class="p-2 polararea">
@@ -107,7 +108,7 @@
                             </script>
                             <div class="row justify-content-start">
                                 <div class="col-xl-12 ftco-animate">
-                                    <h4 class="text-center">Productos más vendidos</h4>
+                                    <h4 class="text-center">Productos vendidos (por categoría)</h4>
                                 </div>
                             </div>
                         </div>
@@ -118,118 +119,50 @@
                         <div style="border: 1px solid #c49b63" class="p-2 chart-other">
                             <canvas id="pie" class="pie"></canvas>
                             <script>
-                                var pieData = [
-                                    {
-                                        value: 30,
-                                        color:"#b88547"
-                                    },
-                                    {
-                                        value : 50,
-                                        color : "#672b21"
-                                    },
-                                    {
-                                        value : 100,
-                                        color : "#8bc34a"
-                                    }
-
-                                ];
+                                var pieData = {{ datos_usuarios|safe}};
                                 new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
                             </script>
                             <div class="row justify-content-start">
                                 <div class="col-xl-12 ftco-animate">
-                                    <h4 class="text-center">Torta</h4>
+                                    <h4 class="text-center">Usuarios en la Aplicación</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% endif %}
+                {% if tenant.paquete == "PREMIUM" %}
                 <div class = "p-2 col-xl-6 container">
-                    <div class="ftco-animate ftco-services rounded">
-                        <div class="p-5 dygno">
-                            <div class="row justify-content-start">
-                                <div class="col-xl-12 ftco-animate">
-                                    <h3 class="text-color mb-4 billing-heading">Una donita</h3>
-                                </div>
-                            </div>
+                    <div class="ftco-animate rounded">
+                        <div style="border: 1px solid #c49b63" class="p-2 dygno">
                             <canvas id="doughnut" class="doughnut"></canvas>
                             <script>
-                                var doughnutData = [
-                                    {
-                                        value: 30,
-                                        color:"#421d15"
-                                    },
-                                    {
-                                        value : 50,
-                                        color : "#dc853b"
-                                    },
-                                    {
-                                        value : 100,
-                                        color : "#63bc41"
-                                    },
-                                    {
-                                        value : 40,
-                                        color : "#55bcb3"
-                                    },
-                                ];
+                                var doughnutData = {{ ventas_porcentaje|safe}};
                                 new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
                             </script>
-                        </div>
-                    </div>
-                </div>
-                <div class = "p-2 col-xl-6 container">
-                    <div class="ftco-animate ftco-services rounded">
-                        <div class="p-5 revenue">
                             <div class="row justify-content-start">
                                 <div class="col-xl-12 ftco-animate">
-                                    <h3 class="text-color mb-4 billing-heading">Una cosa rara</h3>
+                                    <h4 class="text-center">Porcentaje de Ventas en el Año</h4>
                                 </div>
                             </div>
-                            <canvas id="radar" class="radar"></canvas>
-                            <script>
-                                var radarChartData = {
-                                    labels : ["","","","","","",""],
-                                    datasets : [
-                                        {
-                                            fillColor : "rgba(220, 133, 59, 0.83)",
-                                            strokeColor : "#dc853b",
-                                            pointColor : "#dc853b",
-                                            pointStrokeColor : "#fff",
-                                            data : [65,59,90,81,56,55,40]
-                                        },
-                                        {
-                                            fillColor : "rgba(103, 43, 33, 0.82)",
-                                            strokeColor : "#672b21",
-                                            pointColor : "#672b21",
-                                            pointStrokeColor : "#fff",
-                                            data : [28,48,40,19,96,27,100]
-                                        }
-                                    ]
-
-                                };
-                                new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
-                            </script>
                         </div>
                     </div>
                 </div>
-                <div class="p-2 col-xl-12 ftco-animate">
-                    <div class="p-5 glocy-chart ftco-services rounded">
-                        <div class="row justify-content-start">
-                            <div class="col-xl-9 ftco-animate ">
-                                <h3 class="text-color mb-4 billing-heading">Unas barritas</h3>
-                            </div>
-                        </div>
+                <div class="p-2 col-xl-12 container">
+                    <div style="border: 1px solid #c49b63" class="p-2 glocy-chart rounded">
                         <canvas id="bar" class="bar"></canvas>
                         <script>
                             var barChartData = {
-                                labels : ["Ene","Feb","Mar","Abr","May","Jun","Jul"],
+                                labels : ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre",
+                                "Octubre","Noviembre", "Diciembre"],
                                 datasets : [
                                     {
-                                        fillColor : "#a77245",
-                                        data : [65,59,90,81,56,55,40]
+                                        fillColor : "rgb(255, 205, 86)",
+                                        data : {{ ventas_anonimos|safe }}
                                     },
                                     {
-                                        fillColor : "#421d15",
-                                        data : [28,48,40,19,96,27,100]
+                                      fillColor : "rgb(255, 159, 64)",
+                                        data : {{ ventas_registrados|safe }}
                                     }
                                 ]
 
@@ -237,8 +170,14 @@
                             new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
 
                         </script>
+                        <div class="row justify-content-start">
+                            <div class="col-xl-12 ftco-animate">
+                                <h4 class="text-center">Ventas Anuales (# de Productos)</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                {% endif %}
             </div>
         </div>
     </section>

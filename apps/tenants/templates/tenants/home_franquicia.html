@@ -130,6 +130,22 @@
         </div>
     </section>
 
+    <section>
+      <h1>MUNDO</h1>
+      <div style="width:500px; heigth:500px" id="map" class="contenido_mapa"></div>
+    </<section>
+
+      </section>
+    <section class="ftco-appointment">
+        <div class="overlay"></div>
+        <div class="container-wrap">
+            <div class="row no-gutters d-md-flex align-items-center">
+                <div class="col-md-12 d-flex align-self-stretch">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="modal fade" id="contactar">
         <div class="modal-dialog">
             <div class="modal-content ftco-bg-dark" >
@@ -183,6 +199,56 @@
 
 
 {% endblock contenido %}
+
+
+
 {% block js %}
+
+
+<script >
+
+      function cargar_infraestructura() {
+
+          let token = '{{csrf_token}}';
+          $.ajax({
+              type: "POST",
+              headers: {
+                  "X-CSRFToken": token,
+                  contentType: "application/json"
+              },
+              url: '/instalaciones/api/obtener-infraestructura',
+              data: {
+                  'json_text': JSON.stringify({
+                      'pk_instalacion': pk_instalacion
+                  })
+              },
+              dataType: "json",
+              success: construir_en_mapa
+          });
+
+      }
+
+      function poner_marcadores(data) {
+
+
+      }
+function initMap(){
+  var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: {
+          lat: 3.557367,
+          lng: -76.421197
+      }, // Center the map on Chicago, USA.
+      streetViewControl: false,
+      fullscreenControlOptions: {
+          position: google.maps.ControlPosition.LEFT_BOTTOM
+      },
+  });
+
+}
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4oSTs4_S9XgMbmCYY5PBQQemgZ5jrrpc&libraries=places&callback=initMap">
+</script>
 
 {% endblock js %}

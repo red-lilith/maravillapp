@@ -13,11 +13,11 @@ from django.core.mail import send_mail, EmailMessage
 from django.core import serializers
 import json
 import os
-import locale
+#import locale
 from apps.usuarios.reports import *
 from apps.carrito.views import *
 
-locale.setlocale(locale.LC_ALL, "esp")
+#locale.setlocale(locale.LC_ALL, "esp")
 #locale.setlocale(locale.LC_ALL, "es_CO.utf8")
 
 def home(request):
@@ -56,11 +56,18 @@ def dashboard(request):
     counter = reportes_counter()
     datos_ventas_diarias = reporte_ventas_diarias()
     datos_productos_vendidos = reporte_productos_vendidos()
-
+    datos_usuarios = reporte_usuarios()
+    ventas_anon = reporte_ventas_anuales_anonimos()
+    ventas_reg = reporte_ventas_anuales_registrados()
+    anual_porcentajes = reporte_ventas_anuales_porcentaje()
     return render(request, 'usuarios/dash_admin.html', {'tenant': tenant_data, 'usuario': usuario, 'mes':mes,
                                                         'datos_ventas_diarias': datos_ventas_diarias, 'counter': counter,
-                                                        'datos_productos_vendidos': datos_productos_vendidos})
-
+                                                        'datos_productos_vendidos': datos_productos_vendidos,
+                                                        'datos_usuarios': datos_usuarios,
+                                                        'ventas_anonimos': ventas_anon,
+                                                        'ventas_registrados': ventas_reg,
+                                                        'ventas_porcentaje': anual_porcentajes}
+                                                        )
 
 class DatosActualizar(SuccessMessageMixin, UpdateView):
     model = Usuario

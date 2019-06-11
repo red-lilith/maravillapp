@@ -15,6 +15,56 @@ def reporte_ventas_diarias():
             for item in items:
                 total += item.producto.precio
         data.append(str(total))
+    print(data)
+    return data
+
+def reporte_ventas_anuales_anonimos():
+    data = []
+    compradores_anonimos = Perfil_Compra.objects.filter(usuario=None)
+    for i in range(1, 13):
+        total = 0
+        for anon in compradores_anonimos:
+            carritos = Carrito.objects.filter(is_ordered=True, owner_id=anon.id,
+            date_ordered__month=i, date_ordered__year=datetime.now().year)
+            if carritos.exists():
+                for carro in carritos:
+                    total = total + carro.get_carrito_items().count()
+        data.append(total)
+    print(data)
+    return data
+
+def reporte_ventas_anuales_registrados():
+    data = []
+    registrados = Perfil_Compra.objects.exclude(usuario=None)
+    for i in range(1, 13):
+        total = 0
+        for reg in registrados:
+            carritos = Carrito.objects.filter(is_ordered=True, owner_id=reg.id,
+            date_ordered__month=i, date_ordered__year=datetime.now().year)
+            if carritos.exists():
+                for carro in carritos:
+                    total = total + carro.get_carrito_items().count()
+        data.append(total)
+    print(data)
+    return data
+
+
+def reporte_ventas_anuales_porcentaje():
+    data = []
+    no_registrados = reporte_ventas_anuales_anonimos()
+    total_no = 0
+    for dato in no_registrados:
+        total_no = total_no + dato
+
+    registrados = reporte_ventas_anuales_registrados()
+    total_si = 0
+    for dato in registrados:
+        total_si = total_si + dato
+    total = total_no + total_si
+    porc1 = (total_no/total)*100
+    porc2 = (total_si/total)*100
+    data.append({'value': int(porc1), 'color': "rgb(255, 99, 132)", 'label': "No Registrados (%)"})
+    data.append({'value': int(porc2), 'color': "#55bcb3", 'label': "Registrados (%)"})
     return data
 
 
@@ -47,28 +97,29 @@ def reporte_productos_vendidos():
                 pasta = pasta + 1
             elif item.producto.tipo == "Bebida":
                 bebida = bebida + 1
-    data.append({'value': carne, 'color': "#C49B63", 'label': "Carne/Pollo"})
-    data.append({'value': pasta, 'color': "#672b21", 'label': "Pasta"})
-    data.append({'value': infantil, 'color': "#dc853b", 'label': "Infantil"})
-    data.append({'value': bebida, 'color': "#4b9538", 'label': "Bebida"})
-    data.append({'value': rapida, 'color': "#2c2c2c", 'label': "Comidas Rápidas"})
-    print(data)
+    data.append({'value': carne, 'color': "rgb(255, 205, 86)", 'label': "Carne/Pollo"})
+    data.append({'value': pasta, 'color': "rgb(255, 99, 132)", 'label': "Pasta"})
+    data.append({'value': infantil, 'color': "rgb(201, 203, 207)", 'label': "Infantil"})
+    data.append({'value': bebida, 'color': "rgb(75, 192, 192)", 'label': "Bebida"})
+    data.append({'value': rapida, 'color': "rgb(153, 102, 255)", 'label': "Comidas Rápidas"})
     return data
 
-# def reporte_boletas_diarias(y, m):
-#     data = []
-#     sucursales = Sucursal.objects.all()
-#     for i in range(1, 31):
-#         datos = {'y': 'Día  ' + str(i)}
-#         for sucursal in sucursales:
-#             boletas = Boleta.objects.filter(funcion__sala__sucursal=sucursal, fecha_compra__month=m,
-#                                             fecha_compra__day=i, fecha_compra__year=y)
-#             total = boletas.count()
-#             datos.update({str(sucursal.nombre): str(total)})
-#         data.append(datos)
-#     return data
-#
-#
+def reporte_usuarios():
+    data = []
+    compradores_anonimos = Perfil_Compra.objects.filter(usuario=None)
+    carritos = Carrito.objects.filter(is_ordered=True)
+    anonimos_total = 0
+    for anon in compradores_anonimos:
+        anonimos_total = anonimos_total + Carrito.objects.filter(is_ordered=True, owner_id=anon.id).count()
+    no_anonimos_total = carritos.count() - anonimos_total
+    digitadores = Usuario.objects.filter(is_staff=True,is_superuser=False, is_active=True).count()
+    usuarios = Usuario.objects.filter(is_staff=False, is_superuser=False, is_active=True).count()
+    data.append({'value': anonimos_total, 'color': "rgb(75, 192, 192)", 'label': "Compradores No Registrados"})
+    data.append({'value': no_anonimos_total, 'color': "rgb(255, 99, 132)", 'label': "Compradores Registrados"})
+    data.append({'value': digitadores, 'color': "rgb(255, 205, 86)", 'label': "Digitadores Registrados"})
+    data.append({'value': usuarios, 'color': "rgb(54, 162, 235)", 'label': "Usuarios Registrados"})
+    return data
+
 # # Reporte numero de boletas compradas clientes registrados vs anonimos
 # def reporte_clientes(y, m):
 #     datos = []
@@ -158,7 +209,3 @@ def reporte_productos_vendidos():
 #         datos.append({'label': str(pelicula.nombre), 'value': str(peliculas[i]['contador'])})
 #
 #     return datos
-
-
-
-
