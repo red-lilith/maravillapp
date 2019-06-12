@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{% static 'coffee_template/css/market.css' %}">
     <link href="{% static 'dashboard_template/css/font-awesome.css' %}" rel="stylesheet">
     <script src="{% static 'dashboard_template/js/Chart.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css' %}">
 
 
 
@@ -142,7 +143,25 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <!-- <script src="{% static 'coffee_template/js/google-map.js' %}"></script> -->
 <script src="{% static 'coffee_template/js/main.js' %}"></script>
+<script src="{% static 'plugins/toastr/toastr.min.js' %}"></script>
 
+<script>
+    {% for msg in messages %}
+        $(document).ready(function () {
+            setTimeout(function () {
+                toastr.options = {
+                    "closeButtons": true,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "showEasing": "swing",
+                    "extendedTimeOut": 30000,
+                    "timeOut": 4000
+                }
+                toastr["{{ msg.tags }}"]("{{ msg }}")
+            }, 500);
+        });
+    {% endfor %}
+</script>
 {% block js %}
 
     <script type="application/javascript">

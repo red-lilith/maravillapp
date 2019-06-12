@@ -1,0 +1,284 @@
+
+a {
+    color: white; }
+a:hover, a:active, a:focus {
+    color: white; }
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+    color: #fff;}
+
+
+.text3 {
+    color: white !important;
+}
+.text {
+    color: white !important;
+}
+.services .icon > span, h3{
+    color: black !important;
+    }
+
+.services .icon {
+    bordeR: 1px solid black !important;
+    }
+
+.text-primary {
+    color: white !important; }
+.text-primary {
+    color: white !important; }
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover, .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:focus {
+    color: white; }
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a {
+    color: #fff;
+    border: 1px solid white;
+    background: white;}
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a span {
+    display: inline-block;
+    color: #fff; }
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a:hover {
+    background: white;
+    border: 1px solid white; }
+.ftco-navbar-light .navbar-nav > .nav-item.cta.cta-colored span {
+    border-color: white; }
+.ftco-navbar-light .navbar-nav > .nav-item.active > a {
+    color: white; }
+.ftco-navbar-light .navbar-nav > .nav-item.active > a:after {
+    opacity: 1;
+    background: white; }
+.ftco-navbar-light.scrolled .nav-item.active > a {
+    color: white !important; }
+.ftco-navbar-light.scrolled .nav-item.cta > a {
+    color: #fff !important;
+    background: white;}
+.ftco-navbar-light.scrolled .nav-item.cta > a span {
+    color: #fff !important; }
+.ftco-navbar-light.scrolled .nav-item.cta.cta-colored span {
+    border-color: white; }
+.ftco-navbar-light.scrolled .nav-link.active {
+    color: white !important; }
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+
+    color: white !important;
+}
+.owl-carousel.home-slider .slider-item .slider-text .subheading {
+    color: white; }
+.bg-primary {
+    background: white; }
+.btn:hover, .btn:active, .btn:focus {
+    outline: none; }
+.btn.btn-primary {
+    background: white;
+    border: 1px solid white;
+    color: #000; }
+.btn.btn-primary:hover {
+    border: 1px solid white;
+    background: transparent;
+    color: white; }
+.btn.btn-primary.btn-outline-primary {
+    border: 1px solid white;
+    background: transparent;
+    color: white; }
+.btn.btn-primary.btn-outline-primary:hover {
+    border: 1px solid transparent;
+    background: white;
+    color: #fff; }
+.btn.btn-white.btn-outline-white:hover, .btn.btn-white.btn-outline-white:focus, .btn.btn-white.btn-outline-white:active {
+    background: white;
+    border-color: white;
+    color: #000; }
+.ftco-intro .wrap .book {
+    width: 35%;
+    background: white; }
+.ftco-intro .wrap .icon span {
+    color: white;
+    font-size: 20px; }
+
+.ftco-services {
+    color: #1d150b;
+    background: white; }
+.ftco-services .heading-section h2 {
+    color: black; }
+
+.services .icon {
+    bordeR: 1px solid #674c27; }
+.services .icon span {
+    color: #1d150b;}
+
+.services h3 {
+    color: black;}
+
+.services .media-body {
+    color: #1d150b; }
+
+.services-wrap .text .price span {
+    color: white; }
+
+.gallery .icon:after {
+    background: white;
+}
+.gallery .icon span {
+    color: #fff; }
+.pricing-entry .text:after {
+    border-bottom: 1px dashed #674c27;
+}
+.pricing-entry .text .price {
+    color: white;
+    background: #151111;}
+
+.product-details button i {
+    color: white; }
+
+.product-details button, .product-details .form-control {
+    bordeR: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;}
+
+.product-details .form-group .icon {
+    color: white; }
+.product-details .form-group .icon span {
+    color: white; }
+.ftco-cart button i {
+    color: white; }
+
+.ftco-cart button, .ftco-cart .form-control {
+    bordeR: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;}
+.ftco-cart .form-group .icon {
+    color: white; }
+.ftco-cart .form-group .icon span {
+    color: white; }
+.table .thead-primary {
+    background: white; }
+.table .thead-primary tr th {
+    color: #fff !important;}
+.table tbody tr td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; }
+.table tbody tr td.product-remove a {
+    bordeR: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 5px 10px; }
+.table tbody tr td.product-remove a:hover {
+    background: white; }
+.table tbody tr td.product-remove a:hover span {
+    color: #000; }
+.cart-total p.total-price span:last-child {
+    color: white; }
+.cart-total hr {
+    background: rgba(255, 255, 255, 0.1); }
+
+.billing-form .form-control:focus, .billing-form .form-control:active {
+    border-color: white !important; }
+
+.ftco-appointment .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    opacity: 0; }
+
+.staff .info h3 a {
+    color: white; }
+.staff:hover, .staff:focus {
+    -webkit-box-shadow: 0 3px 66px -24px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 3px 66px -24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 66px -24px rgba(0, 0, 0, 0.2);
+    border: 1px solid white; }
+.staff:hover .img, .staff:focus .img {
+    border: 1px solid white; }
+
+.ftco-social a span {
+    color: white; }
+
+.form-control:focus, .form-control:active {
+    border-color: white; }
+
+textarea.form-control {
+    height: inherit !important; }
+
+.bg-primary {
+    background: white !important; }
+
+.ftco-bg-dark {
+    background: #030202; }
+
+.ftco-footer {
+    background: #120f0f; }
+.heading-section .subheading {
+    font-family: "Great Vibes", cursive;
+    color: white;}
+.heading-section h2 span {
+    color: white; }
+.heading-section p.flip:after {
+    background: #423119;
+    margin: 0 auto; }
+.heading-section p.flip:before {
+    background: #423119;
+    margin: 0 auto; }
+.heading-section p.flip span.deg1 {
+    background: white;}
+.heading-section p.flip span.deg2 {
+    background: white;
+}
+.heading-section p.flip span.deg3 {
+    background: white;
+}
+
+.heading-section-dark p.flip:after {
+    background: white;
+    margin: 0 auto; }
+.heading-section-dark p.flip:before {
+    background: white;
+    margin: 0 auto; }
+
+#section-counter .overlay {
+    background: #000;
+    opacity: .5; }
+
+.ftco-counter .icon:after {
+    bordeR: 1px solid white;
+}
+
+.ftco-counter .icon span {
+    color: white; }
+.ftco-counter .text strong.number {
+    color: white; }
+.ftco-counter .text:hover .icon span, .ftco-counter .text:focus .icon span {
+    color: #000; }
+.ftco-counter .text:hover .icon:after, .ftco-counter .text:focus .icon:after {
+    background: white; }
+.ftco-menu .nav-pills .nav-link {
+    color: white;
+    border-bottom: 1px solid white;}
+.ftco-menu .nav-pills .nav-link.active, .ftco-menu .nav-pills .nav-link:hover {
+    color: black;
+    background: white;
+    border-bottom: 1px solid transparent; }
+.blog-entry .text .heading a {
+    color: #fff; }
+.blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
+    color: white; }
+.block-27 ul li a, .block-27 ul li span {
+    color: white;
+    border: 1px solid #674c27; }
+.block-27 ul li.active a, .block-27 ul li.active span {
+    background: white;
+    color: #fff;
+    border: 1px solid transparent; }
+
+.contact-form .form-control:focus, .contact-form .form-control:active {
+    border-color: white !important; }
+.block-21 .text .heading a {
+    color: #cccccc; }
+.block-21 .text .heading a:hover, .block-21 .text .heading a:active, .block-21 .text .heading a:focus {
+    color: white; }
+.block-21 .text .meta > div a {
+    color: gray; }
+.custom-pagination li.active a, .custom-pagination .prev.active a, .custom-pagination .next.active a {
+    background: white;
+    color: #fff; }
+

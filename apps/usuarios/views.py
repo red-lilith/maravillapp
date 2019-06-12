@@ -220,5 +220,17 @@ def cambiar_contrasena(request):
     else:
         form = PasswordChangeForm(user=request.user)
 
-        args = {'form': form}
-        return render(request, 'usuarios/contrasena.html', args)
+        return render(request, 'usuarios/contrasena.html', {'usuario': request.user, 'form': form})
+
+def cambiarEstilo(request):
+    if request.is_ajax():
+        usuario = request.user
+        estilo = request.GET.get('estilo', None)
+        try:
+            usuario.estilo = str(estilo)
+            usuario.save()
+            messages.success(request, "El tema ha sido cambiado.")
+            return JsonResponse({'success': True})
+        except:
+            messages.error(request, "Por favor intente de nuevo.")
+            return JsonResponse({'estilo': 0})

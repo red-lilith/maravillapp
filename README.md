@@ -2,14 +2,21 @@
 
 **SQL para Tenants**
 
-`INSERT INTO "tenants_tenant" ("schema_name", "nombre", "paquete", "direccion", "telefono","pagado_hasta","estado") VALUES
-('public', 'public','none','Cll 100 #12-03','5555555', '2099-01-01','True');`
+`INSERT INTO "tenants_tenant" ("schema_name", "nombre", "direccion", "telefono","pagado_hasta","estado") VALUES
+('public', 'public','Cll 100 #12-03','5555555', '2099-01-01','True');`
 
 `INSERT INTO "tenants_dominio" ("domain", "is_primary", "tenant_id") VALUES
 ('127.0.0.1', true, 1);`
 
+`INSERT INTO "tenants_estilos" ("nombre") VALUES ('Blanco');`
+`INSERT INTO "tenants_estilos" ("nombre") VALUES ('Dorado');`
+`INSERT INTO "tenants_estilos" ("nombre") VALUES ('Indigo');`
+`INSERT INTO "tenants_estilos" ("nombre") VALUES ('Mora');`
+
 
 **NOTA:** Debe crearse un superuser para cada tenant el cual será su administrador
+
+python manage.py tenant_command createsuperuser --schema="t1"
 
 **IMPORTAR cities a cada Tenant**
 `python manage.py tenant_command loaddata cities_light_country.json --schema="t1"`

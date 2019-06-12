@@ -24,12 +24,16 @@
     <link rel="stylesheet" href="{% static 'coffee_template/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css' %}">
     <script src="{% static 'dashboard_template/js/Chart.min.js' %}"></script>
+    {% if usuario.estilo == "1" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_indigo.css' %}">
+    {% elif usuario.estilo == "2" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_mora.css' %}">
+    {% elif usuario.estilo == "2" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_blanco.css' %}">
+    {% endif %}
 </head>
 
 <style type="text/css">
-    body {
-        color: #c49b63 !important;
-    }
 </style>
 
 {% block css %}

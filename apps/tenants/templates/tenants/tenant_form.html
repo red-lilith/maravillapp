@@ -9,6 +9,7 @@
             color: black;
         }
     </style>
+    {{form.media.css}}
 {% endblock css %}
 
 {% block titulo %} Crear Tenant {% endblock titulo %}
@@ -27,7 +28,7 @@
 
                         <div class="row justify-content-center">
                             <div class="col-xl-9 ftco-animate">
-                                <h3 class="mb-4 billing-heading">Crear Tenant</h3>
+                                <h3 class="text3 mb-4 billing-heading">Crear Tenant</h3>
                             </div>
                             <div class="col-xl-3 ftco-animate ">
                                 <p><a href="{% url 'tenants:tenants_listar' %}" style="width: 160px;" class="btn btn-white btn-outline-white p-2">Ver Tenants</a></p>
@@ -96,4 +97,5 @@
 {% block js %}
     <script>
     </script>
+    {{form.media.js}}
 {% endblock js %}

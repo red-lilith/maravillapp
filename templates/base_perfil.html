@@ -23,15 +23,16 @@
     <link rel="stylesheet" href="{% static 'coffee_template/css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'coffee_template/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css' %}">
+    {% if usuario.estilo == "1" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_indigo.css' %}">
+    {% elif usuario.estilo == "2" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_mora.css' %}">
+    {% elif usuario.estilo == "2" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_blanco.css' %}">
+    {% endif %}
 </head>
 
 {% block css %}
-<style type="text/css">
-    .ftco-animate {
-      background-color: #831947 !important;
-    }
-
-</style>
 {% endblock css %}
 <body>
 

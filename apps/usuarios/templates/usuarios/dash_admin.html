@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                {% if tenant.paquete == "STANDARD" or tenant.paquete == "PREMIUM" %}
+                {% if tenant.paquete.nombre == "Standard" or tenant.paquete.nombre == "Premium" %}
                 <div class = "p-2 col-xl-6 container">
                     <div class="ftco-animate rounded">
                         <div style="border: 1px solid #c49b63" class="p-2 polararea">
@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 {% endif %}
-                {% if tenant.paquete == "PREMIUM" %}
+                {% if tenant.paquete.nombre == "Premium" %}
                 <div class = "p-2 col-xl-6 container">
                     <div class="ftco-animate rounded">
                         <div style="border: 1px solid #c49b63" class="p-2 dygno">

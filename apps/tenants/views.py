@@ -4,9 +4,26 @@ from django.db import transaction
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import *
 from django.db import connection
+from django.views.generic.edit import CreateView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
 from django.core.mail import send_mail, EmailMessage
 # Create your views here.
 
+class PaqueteCrear(SuccessMessageMixin, CreateView):
+    model = Paquete
+    form_class = PaqueteForm
+    success_message = 'Paquete creado con exito'
+
+    def get_context_data(self, **kwargs):
+        context = super(PaqueteCrear, self).get_context_data(**kwargs)
+        context['usuario'] = self.request.user
+        schema = connection.schema_name
+        context['tenant'] = Tenant.objects.get(schema_name=schema)
+        return context
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("tenants:paquete_crear")
 
 def dashboard(request):
     schema = connection.schema_name

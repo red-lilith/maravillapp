@@ -23,21 +23,24 @@
     <link rel="stylesheet" href="{% static 'coffee_template/css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'coffee_template/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css' %}">
+    {% if usuario.estilo == "1" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_indigo.css' %}">
+    {% elif usuario.estilo == "2" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_mora.css' %}">
+    {% elif usuario.estilo == "3" %}
+        <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_blanco.css' %}">
+    {% endif %}
+
 </head>
 
 <style type="text/css">
     body {
-      color: #FFF0E3 !important;
+        color: white !important;
     }
-    .ftco-services {
-      background-color: #FFF0E3 !important;
+    .text2, .ftco-heading-2 {
+        color: black !important;
     }
-    .btn-primary {
-      background-color: #FFF0E3 !important;
-    }
-    .text, .ftco-heading-2 {
-      color: black !important;
-    }
+
 </style>
 
 {% block css %}
@@ -55,9 +58,9 @@
                 <li class="nav-item"><a href="{% url 'productos:menu' %}" class="nav-link">Nuestro Menú</a></li>
                 <li class="nav-item active"><a href="{% url 'productos:tienda' %}" class="nav-link">Pide Ahora</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Promociones</a></li>
- <li class="nav-item cart"><a href="{% url 'carrito:orden_detalle' %}" class="nav-link"><span class="icon icon-shopping_cart"></span>
-    <span class="bag d-flex justify-content-center align-items-center"><small>{{ orden.get_carrito_items|length }}</small></span></a>
-</li>
+                <li class="nav-item cart"><a href="{% url 'carrito:orden_detalle' %}" class="nav-link"><span class="icon icon-shopping_cart"></span>
+                    <span class="bag d-flex justify-content-center align-items-center"><small>{{ orden.get_carrito_items|length }}</small></span></a>
+                </li>
                 {% if usuario.is_anonymous %}
                     {% include 'nav_logout.html' %}
                 {% elif usuario.is_staff %}
@@ -65,6 +68,20 @@
                 {% else %}
                     {% include 'nav_login.html' %}
                 {% endif %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Tema</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a onclick="cambiar_estilo(0)" class="dropdown-item">Dorado</a>
+                        {% if tenant.paquete_id == 1 %} <!-- premium -->
+                            <a onclick="cambiar_estilo(1)" class="dropdown-item">Indigo</a>
+                            <a onclick="cambiar_estilo(2)" class="dropdown-item">Mora</a>
+                            <a onclick="cambiar_estilo(3)" class="dropdown-item">Blanco</a>
+                        {% elif tenant.paquete_id == 3 %} <!-- standard -->
+                            <a onclick="cambiar_estilo(1)" class="dropdown-item">Indigo</a>
+                        {% endif %}
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -82,7 +99,7 @@
             <div class="col-lg-6 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Acerca de Nosotros</h2>
-                    <p class="text">La empresa Maravilla es una franquicia individual de carácter nacional para la elaboración, producción,
+                    <p class="text2">La empresa Maravilla es una franquicia individual de carácter nacional para la elaboración, producción,
                         promoción y comercialización de alimentos procesados en diferentes líneas.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#"><span class="icon-twitter text"></span></a></li>
@@ -95,9 +112,9 @@
                 <div class="ftco-footer-widget mb-4 ml-md-4">
                     <h2 class="ftco-heading-2">Servicios</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block text">Elaboración</a></li>
-                        <li><a href="#" class="py-2 d-block text">Ventas</a></li>
-                        <li><a href="#" class="py-2 d-block text">Entregas</a></li>
+                        <li><a href="#" class="py-2 d-block text2">Elaboración</a></li>
+                        <li><a href="#" class="py-2 d-block text2">Ventas</a></li>
+                        <li><a href="#" class="py-2 d-block text2">Entregas</a></li>
                     </ul>
                 </div>
             </div>
@@ -106,9 +123,9 @@
                     <h2 class="ftco-heading-2">¿Preguntas?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker text"></span><span class="text">{{tenant.direccion}}, Cali, Valle del Cauca, Colombia</span></li>
-                            <li><a href="#"><span class="icon icon-phone text"></span><span class="text">+57 2 {{tenant.telefono}}</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope text"></span><span class="text">tenant1@gmail.com</span></a></li>
+                            <li><span class="icon icon-map-marker text2"></span><span class="text2">{{tenant.direccion}}, Cali, Valle del Cauca, Colombia</span></li>
+                            <li><a href="#"><span class="icon icon-phone text2"></span><span class="text2">+57 2 {{tenant.telefono}}</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope text2"></span><span class="text2">tenant1@gmail.com</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -145,27 +162,46 @@
 <script src="{% static 'coffee_template/js/bootstrap-datepicker.js' %}"></script>
 <script src="{% static 'coffee_template/js/jquery.timepicker.min.js' %}"></script>
 <script src="{% static 'coffee_template/js/scrollax.min.js' %}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <!-- <script src="{% static 'coffee_template/js/google-map.js' %}"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="{% static 'coffee_template/js/main.js' %}"></script>
 <script src="{% static 'plugins/toastr/toastr.min.js' %}"></script>
 
 <script>
     {% for msg in messages %}
-    $(document).ready(function () {
-        setTimeout(function () {
-            toastr.options = {
-                "closeButtons": true,
-                "progressBar": true,
-                "preventDuplicates": true,
-                "showEasing": "swing",
-                "extendedTimeOut": 30000,
-                "timeOut": 4000
-            }
-            toastr["{{ msg.tags }}"]("{{ msg }}")
-        }, 500);
-    });
+        $(document).ready(function () {
+            setTimeout(function () {
+                toastr.options = {
+                    "closeButtons": true,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "showEasing": "swing",
+                    "extendedTimeOut": 30000,
+                    "timeOut": 4000
+                }
+                toastr["{{ msg.tags }}"]("{{ msg }}")
+            }, 500);
+        });
     {% endfor %}
+
+    function cambiar_estilo(id){
+        $.ajax({
+            type: "GET",
+            url: '{% url "usuarios:cambiar_estilo" %}',
+            data: {
+                'estilo': id
+            },
+            dataType: 'json',
+            success: function(data){
+                console.log(id);
+                //if(data.success == true){ // if true (1)
+                setTimeout(function(){// wait for 5 secs(2)
+                    location.reload(); // then reload the page.(3)
+                }, 100);
+                //}
+            }
+        });
+    }
 </script>
 
 {% block js %}

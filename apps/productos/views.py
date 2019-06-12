@@ -76,7 +76,7 @@ class ProductoCrear(SuccessMessageMixin, CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
 
-        total = form.cleaned_data.get('precio');
+        total = form.cleaned_data.get('precio')
         for ing in form.cleaned_data.get('ingredientes'):
             total += ing.precio_por_unidad
 

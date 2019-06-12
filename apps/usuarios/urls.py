@@ -45,4 +45,6 @@ urlpatterns = [
     path('mis-compras', mis_compras, name='mis_compras'),
     path('factura/orden-<int:cod>', generar_factura, name='factura'),
     path('salir', auth_views.LogoutView.as_view(), name='salir'),
+
+    path("api/cambiar-estilo", cambiarEstilo, name='cambiar_estilo'),
 ]
