@@ -57,8 +57,8 @@ def get_orden_usuario_pendiente(request):
     else:
         request.session.save()
         perfil_usuario, created = Perfil_Compra.objects.get_or_create(usuario=None, session_key=request.session.session_key)
-        new_stripe_id = stripe.Customer.create(email=None)
-        perfil_usuario.stripe_id = new_stripe_id['id']
+        #new_stripe_id = stripe.Customer.create(email=None)
+        #perfil_usuario.stripe_id = new_stripe_id['id']
         perfil_usuario.save()
     carrito = Carrito.objects.filter(owner=perfil_usuario, is_ordered=False)
     if carrito.exists():
