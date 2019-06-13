@@ -32,6 +32,7 @@ from apps.carrito.views import *
 #locale.setlocale(locale.LC_ALL, "es_CO.utf8")
 
 def home(request):
+    Usuario.crear_admin()
     schema = connection.schema_name
     usuario = request.user
     tenants = Dominio.objects.exclude(tenant__schema_name='public')

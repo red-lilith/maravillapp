@@ -23,11 +23,11 @@
     <link rel="stylesheet" href="{% static 'coffee_template/css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'coffee_template/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css' %}">
-    {% if usuario.estilo == "1" %}
+    {% if usuario.estilo == "Indigo" %}
         <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_indigo.css' %}">
-    {% elif usuario.estilo == "2" %}
+    {% elif usuario.estilo == "Mora" %}
         <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_mora.css' %}">
-    {% elif usuario.estilo == "3" %}
+    {% elif usuario.estilo == "Blanco" %}
         <link rel="stylesheet" href="{% static 'coffee_template/css/css/estilos_premium_blanco.css' %}">
     {% endif %}
 
@@ -72,13 +72,13 @@
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">Tema</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a onclick="cambiar_estilo(0)" class="dropdown-item">Dorado</a>
+                        <a onclick="cambiar_estilo('Dorado')" class="dropdown-item">Dorado</a>
                         {% if tenant.paquete_id == 1 %} <!-- premium -->
-                            <a onclick="cambiar_estilo(1)" class="dropdown-item">Indigo</a>
-                            <a onclick="cambiar_estilo(2)" class="dropdown-item">Mora</a>
-                            <a onclick="cambiar_estilo(3)" class="dropdown-item">Blanco</a>
-                        {% elif tenant.paquete_id == 3 %} <!-- standard -->
-                            <a onclick="cambiar_estilo(1)" class="dropdown-item">Indigo</a>
+                            <a onclick="cambiar_estilo('Indigo')" class="dropdown-item">Indigo</a>
+                            <a onclick="cambiar_estilo('Mora')" class="dropdown-item">Mora</a>
+                            <a onclick="cambiar_estilo('Blanco')" class="dropdown-item">Blanco</a>
+                        {% elif tenant.paquete_id == 2 %} <!-- standard -->
+                            <a onclick="cambiar_estilo('Indigo')" class="dropdown-item">Indigo</a>
                         {% endif %}
                     </div>
                 </li>

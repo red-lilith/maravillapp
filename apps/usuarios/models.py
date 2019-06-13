@@ -23,7 +23,7 @@ class Usuario(AbstractUser):
     def crear_admin():
         total_usuarios = Usuario.objects.all().count()
         if total_usuarios == 0:
-            password = "admin"
+            password = "artemisa"
             usuario = Usuario.objects.create_user('admin', 'admin@correo.com', password)
             usuario.set_password(password)
             usuario.first_name = 'Administrador'
