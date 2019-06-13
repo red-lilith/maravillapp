@@ -12,9 +12,8 @@ from apps.carrito.extras import generar_orden_id
 from apps.carrito.models import ItemCarrito, Carrito, Perfil_Compra
 
 import datetime
-import stripe
+#import stripe
 
-stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 def mis_compras(request):

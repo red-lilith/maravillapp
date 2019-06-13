@@ -1,18 +1,19 @@
+
 from __future__ import unicode_literals
 from django.db import models
 from django.conf import settings
 from apps.usuarios.models import Usuario
 from apps.productos.models import Producto
 from django.db.models.signals import post_save
-import stripe
+#import stripe
 
-stripe.api_key = settings.STRIPE_SECRET_KEY
+#stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 class Perfil_Compra(models.Model):
     usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE, null=True)
     productos = models.ManyToManyField(Producto, blank=True)
-    stripe_id = models.CharField(max_length=200, null=True, blank=True)
+    #stripe_id = models.CharField(max_length=200, null=True, blank=True)
     session_key = models.CharField(max_length=40)
 
     def __str__(self):
@@ -22,10 +23,10 @@ class Perfil_Compra(models.Model):
 def post_guardar_perfil(sender, instance, created, *args, **kwargs):
     user_profile, created = Perfil_Compra.objects.get_or_create(usuario=instance)
 
-    if user_profile.stripe_id is None or user_profile.stripe_id == '':
-        new_stripe_id = stripe.Customer.create(email=instance.email)
-        user_profile.stripe_id = new_stripe_id['id']
-        user_profile.save()
+    # if user_profile.stripe_id is None or user_profile.stripe_id == '':
+    #     new_stripe_id = stripe.Customer.create(email=instance.email)
+    #     user_profile.stripe_id = new_stripe_id['id']
+    #     user_profile.save()
 
 
 post_save.connect(post_guardar_perfil, sender=Usuario)

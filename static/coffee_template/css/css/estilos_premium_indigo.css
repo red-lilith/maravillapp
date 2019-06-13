@@ -15,9 +15,8 @@ h1, h2, h3, h4, h5,
     color: white !important;
 }
 .services .icon > span, h3{
-    color: #0B4052 !important;
+    color: #000 !important;
     }
-
 .services .icon {
     bordeR: 1px solid black !important;
     }
