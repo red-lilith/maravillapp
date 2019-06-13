@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5,
 }
 .services .icon > span, h3{
     color: black !important;
+
     }
 
 .services .icon {
@@ -154,7 +155,7 @@ h1, h2, h3, h4, h5,
 .table .thead-primary {
     background: white; }
 .table .thead-primary tr th {
-    color: #fff !important;}
+    color: black !important;}
 .table tbody tr td {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; }
 .table tbody tr td.product-remove a {
@@ -281,4 +282,3 @@ textarea.form-control {
 .custom-pagination li.active a, .custom-pagination .prev.active a, .custom-pagination .next.active a {
     background: white;
     color: #fff; }
-

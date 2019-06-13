@@ -1,4 +1,15 @@
 from django.http.response import JsonResponse
+import openpyxl
+
+#Vista genérica para mostrar resultados
+from django.views.generic.base import TemplateView
+from openpyxl.utils import get_column_letter
+#Workbook nos permite crear libros en excel
+from openpyxl import Workbook
+from openpyxl.styles import Alignment
+
+#Nos devuelve un objeto resultado, en este caso un archivo de excel
+from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView
@@ -221,6 +232,147 @@ def cambiar_contrasena(request):
         form = PasswordChangeForm(user=request.user)
 
         return render(request, 'usuarios/contrasena.html', {'usuario': request.user, 'form': form})
+#Vista genérica para mostrar resultados
+from django.views.generic.base import TemplateView
+#Workbook nos permite crear libros en excel
+from openpyxl import Workbook
+#Nos devuelve un objeto resultado, en este caso un archivo de excel
+from django.http.response import HttpResponse
+
+#Nuestra clase hereda de la vista genérica TemplateView
+class ReporteClientesExcel(TemplateView):
+
+    #Usamos el método get para generar el archivo excel
+    def get(self, request, *args, **kwargs):
+        #Obtenemos todas las personas de nuestra base de datos
+        personas = Usuario.objects.filter(is_superuser=False, is_staff=False)
+        #Creamos el libro de trabajo
+        wb = Workbook()
+        #Definimos como nuestra hoja de trabajo, la hoja activa, por defecto la primera del libro
+        ws = wb.active
+
+        ws.cell(row=2, column=1).alignment  = openpyxl.styles.Alignment(horizontal='left', vertical='center', wrap_text=True)
+        ws.cell(row=2, column=1).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=1).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=2).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=3).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=4).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=5).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=6).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=7).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+
+        #En la celda B1 ponemos el texto 'REPORTE DE PERSONAS'
+        ws['A1'] = 'Franquicias Maravilla'
+        ws['A2'] = 'REPORTE DE CLIENTES'
+
+        ws.column_dimensions['A'].width = 5
+        ws.column_dimensions['B'].width = 15
+        ws.column_dimensions['C'].width = 15
+        ws.column_dimensions['D'].width = 15
+        ws.column_dimensions['E'].width = 15
+        ws.column_dimensions['F'].width = 25
+        ws.column_dimensions['G'].width = 15
+
+
+
+        ws.merge_cells('A1:G1')
+        ws.merge_cells('A2:G2')
+
+        #Creamos los encabezados desde la celda B3 hasta la E3
+        ws['A3'] = 'ID'
+        ws['B3'] = 'USUARIO'
+        ws['C3'] = 'DOCUMENTO'
+        ws['D3'] = 'NOMBRES'
+        ws['E3'] = 'APELLIDOS'
+        ws['F3'] = 'CORREO ELECTRONICO'
+        ws['G3'] = 'ESTADO'
+
+        cont=4
+        #Recorremos el conjunto de personas y vamos escribiendo cada uno de los datos en las celdas
+        for persona in personas:
+            ws.cell(row=cont,column=1).value = persona.id
+            ws.cell(row=cont,column=2).value = persona.username
+            ws.cell(row=cont,column=3).value = persona.documento
+            ws.cell(row=cont,column=4).value = persona.first_name
+            ws.cell(row=cont,column=5).value = persona.last_name
+            ws.cell(row=cont,column=6).value = persona.email
+            ws.cell(row=cont,column=7).value = persona.is_active
+            cont = cont + 1
+        #Establecemos el nombre del archivo
+        nombre_archivo ="ReporteClientesExcel.xlsx"
+        #Definimos que el tipo de respuesta a devolver es un archivo de microsoft excel
+        response = HttpResponse(content_type="application/ms-excel")
+        contenido = "attachment; filename={0}".format(nombre_archivo)
+        response["Content-Disposition"] = contenido
+        wb.save(response)
+        return response
+
+class ReporteDigitadoresExcel(TemplateView):
+
+    #Usamos el método get para generar el archivo excel
+    def get(self, request, *args, **kwargs):
+        #Obtenemos todas las personas de nuestra base de datos
+        personas = Usuario.objects.filter(is_superuser=False, is_staff=True)
+        #Creamos el libro de trabajo
+        wb = Workbook()
+        #Definimos como nuestra hoja de trabajo, la hoja activa, por defecto la primera del libro
+        ws = wb.active
+        ws.cell(row=2, column=1).alignment  = openpyxl.styles.Alignment(horizontal='left', vertical='center', wrap_text=True)
+        ws.cell(row=2, column=1).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=1).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=2).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=3).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=4).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=5).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=6).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.cell(row=3, column=7).alignment  = openpyxl.styles.Alignment(horizontal='center', vertical='center', wrap_text=True)
+
+
+        #En la celda B1 ponemos el texto 'REPORTE DE PERSONAS'
+        ws['A1'] = 'Franquicias Maravilla'
+        ws['A2'] = 'REPORTE DE DIGITADORES'
+
+        ws.column_dimensions['A'].width = 5
+        ws.column_dimensions['B'].width = 15
+        ws.column_dimensions['C'].width = 15
+        ws.column_dimensions['D'].width = 15
+        ws.column_dimensions['E'].width = 15
+        ws.column_dimensions['F'].width = 25
+        ws.column_dimensions['G'].width = 15
+
+
+
+        ws.merge_cells('A1:G1')
+        ws.merge_cells('A2:G2')
+
+        #Creamos los encabezados desde la celda B3 hasta la E3
+        ws['A3'] = 'ID'
+        ws['B3'] = 'USUARIO'
+        ws['C3'] = 'DOCUMENTO'
+        ws['D3'] = 'NOMBRES'
+        ws['E3'] = 'APELLIDOS'
+        ws['F3'] = 'CORREO ELECTRONICO'
+        ws['G3'] = 'ESTADO'
+
+        cont=4
+        #Recorremos el conjunto de personas y vamos escribiendo cada uno de los datos en las celdas
+        for persona in personas:
+            ws.cell(row=cont,column=1).value = persona.id
+            ws.cell(row=cont,column=2).value = persona.username
+            ws.cell(row=cont,column=3).value = persona.documento
+            ws.cell(row=cont,column=4).value = persona.first_name
+            ws.cell(row=cont,column=5).value = persona.last_name
+            ws.cell(row=cont,column=6).value = persona.email
+            ws.cell(row=cont,column=7).value = persona.is_active
+            cont = cont + 1
+        #Establecemos el nombre del archivo
+        nombre_archivo ="ReporteClientesExcel.xlsx"
+        #Definimos que el tipo de respuesta a devolver es un archivo de microsoft excel
+        response = HttpResponse(content_type="application/ms-excel")
+        contenido = "attachment; filename={0}".format(nombre_archivo)
+        response["Content-Disposition"] = contenido
+        wb.save(response)
+        return response
 
 def cambiarEstilo(request):
     if request.is_ajax():

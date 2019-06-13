@@ -1,0 +1,85 @@
+{% extends 'base_tenant.html' %}
+{# Load the tag library #}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dist/css/dataTables.bootstrap4.min.css' %}">
+    <link rel="stylesheet" href="{% static 'coffee_template/css/tenant-listar.css' %}">
+    <style media="screen"></style>
+{% endblock css %}
+
+{% block titulo %} Todas las Compras {% endblock titulo %}
+
+{% block contenido %}
+    <section class="ftco-section">
+        <div class = "container">
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'usuarios:home' %}">Home</a></span>
+                <span>Todas las compras</span></p>
+            <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
+                <div class="row justify-content-center">
+                    <h3 class="text3 mb-4 billing-heading">Compras Realizadas</h3>
+                </div>
+                <div class="table-responsive">
+                    <table id="tabla_items" class="table table-striped">
+
+                        <thead class="thead-dark">
+                        <tr>
+                          <th style="width: 8%" scope="col">Usuario</th>
+                            <th style="width: 12.5%" scope="col">Fecha de Compra</th>
+                            <th style="width: 12.5%" scope="col">Código de Referencia</th>
+                            <th style="width: 5%" scope="col">Productos</th>
+                            <th style="width: 5%" scope="col">Cantidad</th>
+                            <th style="width: 5%" scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody >
+                        {% for orden in todas_ordenes %}
+                            <tr>
+                              <td style="width: 8%">
+                                {{orden.owner}}
+                              </td>
+                                <td style="width: 12.5%">
+                                    {{orden.date_ordered}}
+                                </td>
+                                <td style="width: 12.5%">
+                                    {{orden.cod_ref}}
+                                </td>
+
+                                <td  style="width: 5%">
+                                  {% for itemcarrito in orden.get_carrito_items %}
+                                <li> {{ itemcarrito  }}</li>
+
+                                  {% endfor %}
+                                </td>
+                                <td  style="width: 5%">
+                                {{orden.get_carrito_items| length}}
+                                </td>
+                                <td style="width: 5%">
+                                    {{orden.get_carrito_total}}
+                                </td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+{% endblock contenido %}
+
+{% block js %}
+    <script type="text/javascript" language="javascript" src="{% static 'dist/js/jquery-3.3.1.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'dist/js/jquery.dataTables.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'dist/js/dataTables.bootstrap4.min.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#tabla_items').DataTable({
+                responsive: true
+            });
+        } );
+    </script>
+
+{% endblock js %}

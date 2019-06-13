@@ -29,6 +29,17 @@ def mis_compras(request):
     }
     return render(request, "carrito/compras.html", context)
 
+def todas_compras(request):
+    todas_ordenes = Carrito.objects.filter(is_ordered=True)
+    schema = connection.schema_name
+    context = {
+        'todas_ordenes': todas_ordenes,
+        'tenant': Tenant.objects.get(schema_name=schema)
+
+    }
+    return render(request, "carrito/todas_compras.html", context)
+
+
 
 def generar_factura(request, cod):
     mi_orden = Carrito.objects.get(cod_ref=cod)

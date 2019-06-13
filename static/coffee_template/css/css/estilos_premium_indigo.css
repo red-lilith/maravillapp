@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5,
     color: white !important;
 }
 .services .icon > span, h3{
-    color: black !important;
+    color: #0B4052 !important;
     }
 
 .services .icon {
@@ -278,4 +278,3 @@ textarea.form-control {
 .custom-pagination li.active a, .custom-pagination .prev.active a, .custom-pagination .next.active a {
     background: #0B4052;
     color: #fff; }
-

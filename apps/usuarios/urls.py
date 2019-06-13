@@ -2,7 +2,7 @@ from django.urls import path , include
 from apps.usuarios.views import *
 from django.contrib.auth import views as auth_views
 from apps.usuarios import views
-from apps.carrito.views import mis_compras, generar_factura
+from apps.carrito.views import mis_compras, generar_factura,todas_compras
 from apps.usuarios.decorators import check_recaptcha
 from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
@@ -35,6 +35,8 @@ urlpatterns = [
     path('listar-digitadores', views.DigitadoresListar.as_view(template_name='usuarios/digitador_list.html'), name='listar_digitadores'),
     path('ver-digitador/<int:pk>', views.UsuarioDetalle.as_view(template_name='usuarios/digitador_detail.html'), name='digitador_detalle'),
     path('pdf-digitadores/<int:staff>', pdf_usuario, name='pdf_digitadores'),
+    path('reporte_clientes_excel', ReporteClientesExcel.as_view(), name="reporte_clientes_xslx"),
+    path('reporte_digitadores_excel', ReporteDigitadoresExcel.as_view(), name="reporte_digitadores_xslx"),
 
     path('listar-clientes', views.ClientesListar.as_view(template_name='usuarios/cliente_list.html'), name='listar_clientes'),
     path('ver-cliente/<int:pk>', views.UsuarioDetalle.as_view(template_name='usuarios/cliente_detail.html'), name='cliente_detalle'),
@@ -43,6 +45,8 @@ urlpatterns = [
     path('login', check_recaptcha(auth_views.LoginView.as_view(redirect_authenticated_user=True,
                                                           template_name='usuarios/login.html')), name='login'),
     path('mis-compras', mis_compras, name='mis_compras'),
+    path('todas-compras', todas_compras, name='todas_compras'),
+
     path('factura/orden-<int:cod>', generar_factura, name='factura'),
     path('salir', auth_views.LogoutView.as_view(), name='salir'),
 

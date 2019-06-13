@@ -17,11 +17,14 @@
                 <span>Lista de Clientes</span></p>
                     <form action="#" class="billing-form ftco-bg-dark p-3 p-md-5">
                         <div class="row justify-content-center">
-                            <div class="col-xl-10 ftco-animate">
+                            <div class="col-xl-8 ftco-animate">
                                 <h3 class="text3 mb-4 billing-heading">Lista de Clientes</h3>
                             </div>
                             <div class="col-xl-2 ftco-animate">
                                 <p><a href="{% url 'usuarios:pdf_clientes' 0 %}" style="width: 143px;" class="btn btn-danger custom-btn p-2">Generar PDF</a></p>
+                            </div>
+                            <div class="col-xl-2 ftco-animate">
+                                <p><a href="{% url 'usuarios:reporte_clientes_xslx'%}" style="width: 143px;" class="btn btn-success custom-btn p-2">Generar EXCEL</a></p>
                             </div>
                         </div>
                         <div class="table-responsive">
