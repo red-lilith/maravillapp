@@ -130,12 +130,8 @@
         </div>
     </section>
 
-    <section>
-      <h1>MUNDO</h1>
-      <div style="width:500px; heigth:500px" id="map" class="contenido_mapa"></div>
-    </<section>
 
-      </section>
+  
     <section class="ftco-appointment">
         <div class="overlay"></div>
         <div class="container-wrap">
@@ -233,16 +229,28 @@
 
       }
 function initMap(){
+  var myLatLng = {lat: 3.4304397, lng: -76.5235919};
+  var myLatLng2 = {lat: 3.4825472, lng: -76.4936695};
   var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
       center: {
-          lat: 3.557367,
-          lng: -76.421197
+          lat: 3.4304397,
+          lng: -76.5235919
       }, // Center the map on Chicago, USA.
       streetViewControl: false,
       fullscreenControlOptions: {
           position: google.maps.ControlPosition.LEFT_BOTTOM
       },
+  });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+  var marker = new google.maps.Marker({
+    position: myLatLng2,
+    map: map,
+    title: 'Hello World!'
   });
 
 }
